@@ -97,7 +97,7 @@ var palette = new ej.diagrams.SymbolPalette({
         return { fit: true };
     }
 });
-palette.appendTo('#element');
+palette.appendTo('#symbolpalette');
 
 
 function createNode(id, offsetX, offsetY, height,width, pathData, ports) 
@@ -161,11 +161,235 @@ var connectors =
     createConnector('con6',null,null,'Not1','XOR1','Not_port2','Or_port3',decorator,null),
 ];
 
-var diagram = new ej.diagrams.Diagram({ width: '100%', height: '900px', nodes: nodes , connectors: connectors });
+var diagram = new ej.diagrams.Diagram({ width: '100%', height: '900px', nodes: nodes , connectors: connectors, drawingObject: {type: 'Orthogonal'} });
 
 diagram.appendTo('#diagram');
 
-function undo() {
-    diagram.isModified = true;
-    diagram.undo();
+var menuItems = [
+    {
+        text: 'File',
+        // iconCss: 'em-icons e-file',
+        items: [
+            { text: 'New' },
+            { separator: true },
+            { text: 'Save' },
+            { separator: true },
+            { text: 'Print' },
+
+        ]
+    },
+    {
+        text: 'Edit',
+        // iconCss: 'em-icons e-edit',
+        items: [
+            { text: 'Undo' },
+            { text: 'Redo' },
+            { separator: true },
+            { text: 'Cut' },
+            { text: 'Copy' },
+            { text: 'Paste' },
+            { separator: true },
+            { text: 'Rotate Clockwise' },
+            { text: 'Rotate Counter Clockwise' },
+            { text: 'Delete' },
+            { separator: true },
+            { text: 'Bring To Front' },
+            { text: 'Send To Back' },
+        ]
+    },
+    {
+        text: 'Design',
+        // iconCss: 'em-icons e-edit',
+        items: [
+            { text: 'Orientation',
+            items:[
+                { text: 'Landscape' },
+                { text: 'Portraite' }
+            ]    
+            },
+            { text: 'Size',
+            items:[
+                 { text: 'Letter' },
+                 { text: 'Folio' },
+                 { text: 'Legal' },
+                 { text: 'Ledger' },
+                 { text: 'A5' },
+                 { text: 'A4' },
+                 { text: 'A3' },
+                 { text: 'A2' },
+                 { text: 'A1' },
+                 { text: 'A0' },
+                 { text: 'Custom' },
+
+            ]
+            },
+        ]
+    },
+    {
+        text: 'Select',
+        // iconCss: 'em-icons e-edit',
+        items: [
+            { text: 'Select All' },
+            { text: 'Select All Nodes' },
+            { text: 'Select All Connectors' },
+            { text: 'Deselect All' }
+
+        ]
+    },
+    {
+        text: 'Tools',
+        items: [
+            { text: 'Selection Tool' },
+            { text: 'Pan Tool' },
+            { text: 'Connector Tool' },
+            { text: 'Connectors',items:[
+                {text:'Straight' },
+                {text:'Orthogonal' },
+                {text:'Bezier' },
+            ] }
+
+        ]
+    },
+    {
+        text: 'View',
+        items: [
+               { text: 'Show Lines'},
+               { text: 'Snap To Grid'},
+               { text: 'Snap To Object'},
+               { text: 'Show Ruler'},
+               { text: 'Show Page Breaks'},
+               { separator: true },
+               { text: 'Fit To Width'},
+               { text: 'Fit To Page'},
+               { text: 'Reset View'},
+
+        ]
+    },
+];
+
+var menuObj = new ej.navigations.Menu({ items: menuItems,height:'10px',select:onMenuSelect}, '#menu');
+
+    function onMenuSelect(args)
+ {
+    var option = args.item.text;
+    switch(option)
+    {
+        case 'New':
+            diagram.clear();
+            break;
+        case 'Save':
+            download(diagram.saveDiagram());
+            break;
+        case 'Print':
+            var options = {};
+            options.mode = 'Data';
+            diagram.print(options)
+            break;
+        case 'Undo':
+            diagram.undo();
+            break;
+        case 'Redo':
+            diagram.redo();
+            break;
+        case 'Cut':
+            diagram.cut();
+            pasteClick();
+            break;
+        case 'Copy':
+            diagram.copy();
+            pasteClick();
+            break;
+        case 'Paste':
+            diagram.paste();
+            break;
+        case 'Rotate Clockwise':
+            diagram.rotate(diagram.selectedItems,90);
+            break;
+        case 'Rotate Counter Clockwise':
+            diagram.rotate(diagram.selectedItems,-90);
+            break;
+        case 'Delete':
+            diagram.remove();
+        case 'Send To Back':
+            diagram.sendToBack();
+            break;
+        case 'Bring To Front':
+            diagram.bringToFront();
+            break;
+        case 'Select All':
+            diagram.clearSelection();
+            diagram.selectAll();
+            break;
+        case 'Select All Nodes':
+            diagram.clearSelection();
+            diagram.select(diagram.nodes);
+            break;
+        case 'Select All Connectors':
+            diagram.clearSelection();
+            diagram.select(diagram.connectors);
+            break;
+        case 'Deselect All':
+            diagram.clearSelection();
+            break;
+        case 'Selection Tool':
+            diagram.tool = ej.diagrams.DiagramTools.Default;
+            break;
+        case 'Pan Tool':
+            diagram.tool = ej.diagrams.DiagramTools.ZoomPan;
+            break;
+        case 'Connector Tool':
+            diagram.tool = ej.diagrams.DiagramTools.ContinuousDraw;
+            break;
+        case 'Orthogonal':
+            diagram.drawingObject.type = 'Orthogonal';
+            break;
+        case 'Straight':
+            diagram.drawingObject.type = 'Straight';
+            break;
+        case 'Bezier':
+            diagram.drawingObject.type = 'Bezier';
+            break;
+        case 'Show Lines':
+            diagram.snapSettings.constraints = diagram.snapSettings.constraints ^ ej.diagrams.SnapConstraints.ShowLines;
+            break;
+        case 'Snap To Grid':
+            diagram.snapSettings.constraints = diagram.snapSettings.constraints ^ ej.diagrams.SnapConstraints.SnapToLines;
+            break;
+        case 'Snap To Object':
+            diagram.snapSettings.constraints = diagram.snapSettings.constraints ^ ej.diagrams.SnapConstraints.SnapToObject;            
+            break;
+        case 'Show Ruler':            
+            diagram.rulerSettings.showRulers = !diagram.rulerSettings.showRulers;
+            break;
+        case 'Show Page Breaks':
+            diagram.pageSettings.showPageBreaks = true;
+            break;
+        case 'Fit To Width':
+            diagram.fitToPage({mode: 'Width'});
+            break;
+        case 'Fit To Page':
+            diagram.fitToPage();
+            break;
+        case 'Reset View':
+            diagram.reset();
+            break;
+
+    }
+    diagram.dataBind();
+ }
+
+ function download(data) {
+    if (window.navigator.msSaveBlob) {
+        var blob = new Blob([data], { type: 'data:text/json;charset=utf-8,' });
+        window.navigator.msSaveOrOpenBlob(blob, 'Diagram.json');
+    }
+    else {
+        var dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(data);
+        var a = document.createElement('a');
+        a.href = dataStr;
+        a.download = 'Diagram.json';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+    }
 }
