@@ -13,6 +13,7 @@ var pushbuttondata = 'M0 1C0 0.447715 0.447715 0 1 0H43C43.5523 0 44 0.447715 44
 var clockdata = 'M0 0H50V21H60.083C60.559 18.1623 63.027 16 66 16C69.3137 16 72 18.6863 72 22C72 25.3137 69.3137 28 66 28C63.027 28 60.559 25.8377 60.083 23H50V44H0V0ZM2 2V42H48V2H2ZM9 13H26V29H39V21H41V31H24V15H11V23H9V13ZM66 18C63.7909 18 62 19.7909 62 22C62 24.2091 63.7909 26 66 26C68.2091 26 70 24.2091 70 22C70 19.7909 68.2091 18 66 18Z';
 var highconstantdata = 'M50 0H0V44H50V23H60.083C60.559 25.8377 63.027 28 66 28C69.3137 28 72 25.3137 72 22C72 18.6863 69.3137 16 66 16C63.027 16 60.559 18.1623 60.083 21H50V0ZM2 42V2H48V42H2ZM62 22C62 19.7909 63.7909 18 66 18C68.2091 18 70 19.7909 70 22C70 24.2091 68.2091 26 66 26C63.7909 26 62 24.2091 62 22ZM20.2759 16.728C21.0972 16.5414 21.6666 16.392 21.9839 16.28V28.068L18.6239 28.348V30H29.2919V28.348L26.0999 28.04V12.64L23.8879 12.332H23.8599C23.1692 12.9107 22.2732 13.4707 21.1719 14.012C20.0892 14.5347 19.0439 14.8987 18.0359 15.104L18.3439 17.064C18.8106 17.008 19.4546 16.896 20.2759 16.728Z';
 var lowconstantdata = 'M50 0H0V44H50V23H60.083C60.559 25.8377 63.027 28 66 28C69.3137 28 72 25.3137 72 22C72 18.6863 69.3137 16 66 16C63.027 16 60.559 18.1623 60.083 21H50V0ZM2 42V2H48V42H2ZM62 22C62 19.7909 63.7909 18 66 18C68.2091 18 70 19.7909 70 22C70 24.2091 68.2091 26 66 26C63.7909 26 62 24.2091 62 22ZM18.1081 29.452C19.6201 31.356 21.8974 32.308 24.9401 32.308C26.8254 32.308 28.4961 31.8506 29.9521 30.936C31.4081 30.0213 32.5374 28.7333 33.3401 27.072C34.1614 25.392 34.5721 23.4693 34.5721 21.304C34.5721 18.0373 33.7974 15.4986 32.2481 13.688C30.7174 11.8586 28.4121 10.944 25.3321 10.944C23.4654 10.944 21.8134 11.3826 20.3761 12.26C18.9388 13.1373 17.8188 14.388 17.0161 16.012C16.2321 17.636 15.8401 19.5213 15.8401 21.668C15.8401 24.9533 16.5961 27.548 18.1081 29.452ZM21.6361 14.92C22.4948 13.408 23.6894 12.652 25.2201 12.652C26.7694 12.652 27.9548 13.3706 28.7761 14.808C29.5974 16.2266 30.0081 18.392 30.0081 21.304C30.0081 24.3093 29.5788 26.6146 28.7201 28.22C27.8614 29.8066 26.6761 30.6 25.1641 30.6C23.6148 30.6 22.4201 29.844 21.5801 28.332C20.7588 26.8013 20.3481 24.5706 20.3481 21.64C20.3481 18.672 20.7774 16.432 21.6361 14.92Z';
+var switchoffdata = 'M0 1C0 0.447715 0.447715 0 1 0H43C43.5523 0 44 0.447715 44 1V26H59.083C59.559 23.1623 62.027 21 65 21C68.3137 21 71 23.6863 71 27C71 30.3137 68.3137 33 65 33C62.027 33 59.559 30.8377 59.083 28H44V53C44 53.5523 43.5523 54 43 54H1C0.447715 54 0 53.5523 0 53V1ZM2 2V52H42V2H2ZM6 8C6 7.44772 6.44772 7 7 7H36C36.5523 7 37 7.44772 37 8V46C37 46.5523 36.5523 47 36 47H7C6.44772 47 6 46.5523 6 46V8ZM8 9V45H35V9H8ZM11 12C11 11.4477 11.4477 11 12 11H31C31.5523 11 32 11.4477 32 12V26.9172L33.9864 38.8356C34.0132 38.9965 34.0003 39.1615 33.9487 39.3162L32.9487 42.3162C32.8126 42.7246 32.4304 43 32 43H11C10.5696 43 10.1874 42.7246 10.0513 42.3162L9.05132 39.3162C8.99974 39.1615 8.98679 38.9965 9.01361 38.8356L11 26.9172V12ZM12.8471 28L11.1805 38H31.8195L30.1529 28H12.8471ZM30 26V13H13V26H30ZM31.6126 40H11.3874L11.7208 41H31.2792L31.6126 40ZM65 23C62.7909 23 61 24.7909 61 27C61 29.2091 62.7909 31 65 31C67.2091 31 69 29.2091 69 27C69 24.7909 67.2091 23 65 23Z';
 
 var bulbdata = 'M9 37.0015H10C10 36.687 9.85204 36.3908 9.60058 36.2019L9 37.0015ZM33 37.0015L32.3994 36.2019C32.148 36.3908 32 36.687 32 37.0015H33ZM11 19L11.6247 18.2191C11.2928 17.9536 10.8292 17.9269 10.469 18.1526C10.1088 18.3783 9.93066 18.8071 10.0249 19.2216L11 19ZM16 23L15.3753 23.7809C15.5866 23.9499 15.8575 24.0261 16.1259 23.992C16.3944 23.958 16.6376 23.8165 16.8 23.6L16 23ZM19 19L19.8 18.4C19.6111 18.1482 19.3148 18 19 18C18.6852 18 18.3889 18.1482 18.2 18.4L19 19ZM22 23L21.2 23.6C21.3889 23.8518 21.6852 24 22 24C22.3148 24 22.6111 23.8518 22.8 23.6L22 23ZM25 19L25.8944 18.5528C25.7394 18.2428 25.435 18.0352 25.0898 18.004C24.7446 17.9729 24.4079 18.1227 24.2 18.4L25 19ZM27 23L26.1056 23.4472C26.2406 23.7173 26.4905 23.9119 26.7855 23.9767C27.0804 24.0415 27.3889 23.9695 27.6247 23.7809L27 23ZM32 19L32.9648 19.2631C33.0787 18.8454 32.9109 18.4019 32.549 18.1642C32.1871 17.9265 31.7134 17.9487 31.3753 18.2191L32 19ZM21 62.5C17.6863 62.5 15 65.1863 15 68.5H17C17 66.2909 18.7909 64.5 21 64.5V62.5ZM15 68.5C15 71.8137 17.6863 74.5 21 74.5V72.5C18.7909 72.5 17 70.7091 17 68.5H15ZM21 74.5C24.3137 74.5 27 71.8137 27 68.5H25C25 70.7091 23.2091 72.5 21 72.5V74.5ZM27 68.5C27 65.1863 24.3137 62.5 21 62.5V64.5C23.2091 64.5 25 66.2909 25 68.5H27ZM22 63.5V55H20V63.5H22ZM2 21C2 10.5066 10.5066 2 21 2V0C9.40202 0 0 9.40202 0 21H2ZM21 2C31.4934 2 40 10.5066 40 21H42C42 9.40202 32.598 0 21 0V2ZM21 54C17.7065 54 14.9584 52.9731 13.0457 51.2436C11.1421 49.5222 10 47.0473 10 44H8C8 47.5801 9.35785 50.6052 11.7043 52.727C14.0416 54.8406 17.2935 56 21 56V54ZM32 44C32 47.0473 30.8579 49.5222 28.9543 51.2436C27.0416 52.9731 24.2935 54 21 54V56C24.7065 56 27.9584 54.8406 30.2957 52.727C32.6421 50.6052 34 47.5801 34 44H32ZM9.60058 36.2019C4.98342 32.7338 2 27.2155 2 21H0C0 27.8711 3.301 33.9715 8.39942 37.801L9.60058 36.2019ZM40 21C40 27.2155 37.0166 32.7338 32.3994 36.2019L33.6006 37.801C38.699 33.9715 42 27.8711 42 21H40ZM10 44V41H8V44H10ZM10 41V37.0015H8V41H10ZM32 37.0015V41H34V37.0015H32ZM32 41V44H34V41H32ZM9 42H33V40H9V42ZM16.9751 40.7784L11.9751 18.7784L10.0249 19.2216L15.0249 41.2216L16.9751 40.7784ZM10.3753 19.7809L15.3753 23.7809L16.6247 22.2191L11.6247 18.2191L10.3753 19.7809ZM16.8 23.6L19.8 19.6L18.2 18.4L15.2 22.4L16.8 23.6ZM18.2 19.6L21.2 23.6L22.8 22.4L19.8 18.4L18.2 19.6ZM22.8 23.6L25.8 19.6L24.2 18.4L21.2 22.4L22.8 23.6ZM24.1056 19.4472L26.1056 23.4472L27.8944 22.5528L25.8944 18.5528L24.1056 19.4472ZM27.6247 23.7809L32.6247 19.7809L31.3753 18.2191L26.3753 22.2191L27.6247 23.7809ZM31.0352 18.7369L25.0352 40.7369L26.9648 41.2631L32.9648 19.2631L31.0352 18.7369Z';
 var digitdata = 'M24 1V0C23.4477 0 23 0.447715 23 1L24 1ZM72 1H73C73 0.447715 72.5523 0 72 0V1ZM72 65V66C72.5523 66 73 65.5523 73 65H72ZM24 65H23C23 65.5523 23.4477 66 24 66V65ZM10 9C10 11.2091 8.20914 13 6 13V15C9.31371 15 12 12.3137 12 9H10ZM6 13C3.79086 13 2 11.2091 2 9H0C0 12.3137 2.68629 15 6 15V13ZM2 9C2 6.79086 3.79086 5 6 5V3C2.68629 3 0 5.68629 0 9H2ZM6 5C8.20914 5 10 6.79086 10 9H12C12 5.68629 9.31371 3 6 3V5ZM10 25C10 27.2091 8.20914 29 6 29V31C9.31371 31 12 28.3137 12 25H10ZM6 29C3.79086 29 2 27.2091 2 25H0C0 28.3137 2.68629 31 6 31V29ZM2 25C2 22.7909 3.79086 21 6 21V19C2.68629 19 0 21.6863 0 25H2ZM6 21C8.20914 21 10 22.7909 10 25H12C12 21.6863 9.31371 19 6 19V21ZM10 41C10 43.2091 8.20914 45 6 45V47C9.31371 47 12 44.3137 12 41H10ZM6 45C3.79086 45 2 43.2091 2 41H0C0 44.3137 2.68629 47 6 47V45ZM2 41C2 38.7909 3.79086 37 6 37V35C2.68629 35 0 37.6863 0 41H2ZM6 37C8.20914 37 10 38.7909 10 41H12C12 37.6863 9.31371 35 6 35V37ZM10 57C10 59.2091 8.20914 61 6 61V63C9.31371 63 12 60.3137 12 57H10ZM6 61C3.79086 61 2 59.2091 2 57H0C0 60.3137 2.68629 63 6 63V61ZM2 57C2 54.7909 3.79086 53 6 53V51C2.68629 51 0 53.6863 0 57H2ZM6 53C8.20914 53 10 54.7909 10 57H12C12 53.6863 9.31371 51 6 51V53ZM11 26H24V24H11V26ZM11 10H24V8H11V10ZM11 42H24V40H11V42ZM11 58H24V56H11V58ZM24 2H72V0H24V2ZM71 1V65H73V1H71ZM72 64H24V66H72V64ZM25 9V1H23V9H25ZM25 25V9H23V25H25ZM25 41V25H23V41H25ZM25 65V57H23V65H25ZM25 57V41H23V57H25Z M36 11H60L56 15H40L36 11Z M36 54H60L56 50H40L36 54Z M39 33L41 31H55L57 33L55 35H41L39 33Z M36 30V13L40 17V30L38 32L36 30Z M36 36V52L40 48V36L38 34L36 36Z M60 30V13L56 17V30L58 32L60 30Z M60 36V52L56 48V36L58 34L60 36Z';
@@ -27,201 +28,198 @@ var busdata = 'M31 0C30.4477 0 30 0.447715 30 1V12H11.917C11.441 9.16229 8.973 7
 var pullupdata = 'M32 0C31.4477 0 31 0.447715 31 1V13H11.917C11.441 10.1623 8.973 8 6 8C2.68629 8 0 10.6863 0 14C0 17.3137 2.68629 20 6 20C8.973 20 11.441 17.8377 11.917 15H31V31H11.917C11.441 28.1623 8.973 26 6 26C2.68629 26 0 28.6863 0 32C0 35.3137 2.68629 38 6 38C8.973 38 11.441 35.8377 11.917 33H31V46C31 46.5523 31.4477 47 32 47H71V24H88.083C88.559 26.8377 91.027 29 94 29C97.3137 29 100 26.3137 100 23C100 19.6863 97.3137 17 94 17C91.027 17 88.559 19.1623 88.083 22H71V0H32ZM33 45V2H69V45H33ZM2 14C2 11.7909 3.79086 10 6 10C8.20914 10 10 11.7909 10 14C10 16.2091 8.20914 18 6 18C3.79086 18 2 16.2091 2 14ZM54.8685 16L51 10.1972L47.1315 16H50V18.2792L44.6838 20.0513L44.8356 21.9864L52.093 23.196L44.7575 25.0299V26.9701L52.8769 29L44.7575 31.0299L44.8356 32.9864L50 33.8471V39H52V32.1529L49.907 31.804L57.2425 29.9701V28.0299L49.1231 26L57.2425 23.9701L57.1644 22.0136L49.1358 20.6755L52 19.7208V16H54.8685ZM51 13.8028L51.1315 14H50.8685L51 13.8028ZM90 23C90 20.7909 91.7909 19 94 19C96.2091 19 98 20.7909 98 23C98 25.2091 96.2091 27 94 27C91.7909 27 90 25.2091 90 23ZM2 32C2 29.7909 3.79086 28 6 28C8.20914 28 10 29.7909 10 32C10 34.2091 8.20914 36 6 36C3.79086 36 2 34.2091 2 32ZM39.4041 12.312C39.7561 12.232 40.0001 12.168 40.1361 12.12V17.172L38.6961 17.292V18H43.2681V17.292L41.9001 17.16V10.56L40.9521 10.428H40.9401C40.6441 10.676 40.2601 10.916 39.7881 11.148C39.3241 11.372 38.8761 11.528 38.4441 11.616L38.5761 12.456C38.7761 12.432 39.0521 12.384 39.4041 12.312Z';
 var pulldowndata = 'M70 0H31V13H11.917C11.441 10.1623 8.973 8 6 8C2.68629 8 0 10.6863 0 14C0 17.3137 2.68629 20 6 20C8.973 20 11.441 17.8377 11.917 15H31V31H11.917C11.441 28.1623 8.973 26 6 26C2.68629 26 0 28.6863 0 32C0 35.3137 2.68629 38 6 38C8.973 38 11.441 35.8377 11.917 33H31V47H70C70.5523 47 71 46.5523 71 46V24H88.083C88.559 26.8377 91.027 29 94 29C97.3137 29 100 26.3137 100 23C100 19.6863 97.3137 17 94 17C91.027 17 88.559 19.1623 88.083 22H71V1C71 0.447715 70.5523 0 70 0ZM33 45V2H69V45H33ZM2 14C2 11.7909 3.79086 10 6 10C8.20914 10 10 11.7909 10 14C10 16.2091 8.20914 18 6 18C3.79086 18 2 16.2091 2 14ZM52 12H50V17.1529L44.8356 18.0136L44.7575 19.9701L52.8769 22L44.7575 24.0299V25.9701L52.093 27.804L44.8356 29.0136L44.6838 30.9487L50 32.7208V35H47.1315L51 40.8028L54.8685 35H52V31.2792L49.1358 30.3245L57.1644 28.9864L57.2425 27.0299L49.1231 25L57.2425 22.9701V21.0299L49.907 19.196L52 18.8471V12ZM90 23C90 20.7909 91.7909 19 94 19C96.2091 19 98 20.7909 98 23C98 25.2091 96.2091 27 94 27C91.7909 27 90 25.2091 90 23ZM2 32C2 29.7909 3.79086 28 6 28C8.20914 28 10 29.7909 10 32C10 34.2091 8.20914 36 6 36C3.79086 36 2 34.2091 2 32ZM62.1219 38.0959C61.4979 38.0959 60.9639 37.9679 60.5199 37.7119C60.0799 37.4559 59.7199 37.1079 59.4399 36.6679C59.1639 36.2239 58.9619 35.7219 58.8339 35.1619C58.7059 34.5979 58.6439 34.0099 58.6479 33.3979C58.6599 32.4979 58.8259 31.7179 59.1459 31.0579C59.4699 30.3939 59.9019 29.8819 60.4419 29.5219C60.9819 29.1619 61.5899 28.9819 62.2659 28.9819C62.8979 28.9819 63.4319 29.1019 63.8679 29.3419C64.3079 29.5779 64.6619 29.9039 64.9299 30.3199C65.2019 30.7359 65.3979 31.2159 65.5179 31.7599C65.6379 32.2999 65.6959 32.8739 65.6919 33.4819C65.6839 34.4099 65.5259 35.2199 65.2179 35.9119C64.9139 36.5999 64.4939 37.1359 63.9579 37.5199C63.4219 37.9039 62.8099 38.0959 62.1219 38.0959ZM62.1699 36.6919C62.6859 36.6959 63.0779 36.4419 63.3459 35.9299C63.6179 35.4179 63.7539 34.6219 63.7539 33.5419C63.7539 32.9019 63.6979 32.3459 63.5859 31.8739C63.4739 31.4019 63.3019 31.0359 63.0699 30.7759C62.8379 30.5159 62.5459 30.3859 62.1939 30.3859C61.6779 30.3859 61.2819 30.6339 61.0059 31.1299C60.7339 31.6259 60.5979 32.3659 60.5979 33.3499C60.5979 33.9859 60.6539 34.5559 60.7659 35.0599C60.8819 35.5599 61.0559 35.9559 61.2879 36.2479C61.5199 36.5399 61.8139 36.6879 62.1699 36.6919Z';
 
-var bulbport = 
-[
-    {id: 'Bulb_port', offset: { x:0.5, y: 0.96 } },
-];
+var bulbport =
+    [
+        { id: 'Bulb_port', offset: { x: 0.5, y: 0.96 } },
+    ];
 
-var orPort = 
-[
-    { id: 'Or_port1', offset: { x: 0.01, y: 0.1963 } }, { id: 'Or_port2', offset: { x: 0.26, y: 0.5 } },
-    { id: 'Or_port3', offset: { x: 0.01, y: 0.805 } }, { id: 'Or_port4', offset: { x: 0.99, y: 0.5 } }
-];
+var orPort =
+    [
+        { id: 'Or_port1', offset: { x: 0.01, y: 0.1963 } }, { id: 'Or_port2', offset: { x: 0.26, y: 0.5 } },
+        { id: 'Or_port3', offset: { x: 0.01, y: 0.805 } }, { id: 'Or_port4', offset: { x: 0.99, y: 0.5 } }
+    ];
 
-var andPort = 
-[
-    { id: 'And_port1', offset: { x: 0.01, y: 0.215 } }, { id: 'And_port2', offset: { x: 0.22, y: 0.5 } },
-    { id: 'And_port3', offset: { x: 0.01, y: 0.805 } }, { id: 'And_port4', offset: { x: 0.99, y: 0.5 } }
-];
+var andPort =
+    [
+        { id: 'And_port1', offset: { x: 0.01, y: 0.215 } }, { id: 'And_port2', offset: { x: 0.22, y: 0.5 } },
+        { id: 'And_port3', offset: { x: 0.01, y: 0.805 } }, { id: 'And_port4', offset: { x: 0.99, y: 0.5 } }
+    ];
 
-var notPort = 
-[
-    { id: 'Not_port1', offset: { x: 0.01, y: 0.5 } }, { id: 'Not_port2', offset: { x: 0.99, y: 0.5 } }
-];
+var notPort =
+    [
+        { id: 'Not_port1', offset: { x: 0.01, y: 0.5 } }, { id: 'Not_port2', offset: { x: 0.99, y: 0.5 } }
+    ];
 
 var flipPorts = [{ offset: { x: 0.01, y: 0.221 } }, { offset: { x: 0.01, y: 0.779 } }, { offset: { x: 0.99, y: 0.221 } }, { offset: { x: 0.99, y: 0.779 } }];
 var jkPorts = [{ offset: { x: 0.01, y: 0.270 } }, { offset: { x: 0.01, y: 0.5 } }, { offset: { x: 0.01, y: 0.720 } }, { offset: { x: 0.99, y: 0.270 } }, { offset: { x: 0.99, y: 0.720 } }, { offset: { x: 0.5, y: 0.01 } }, { offset: { x: 0.5, y: 0.99 } }];
 var rPorts = [{ offset: { x: 0.01, y: 0.210 } }, { offset: { x: 0.01, y: 0.778 } }, { offset: { x: 0.5, y: 0.218 } }, { offset: { x: 0.99, y: 0.210 } }, { offset: { x: 0.99, y: 0.778 } }];
 
-var gates = 
-[
-    { 
-        id: 'OR Gate', shape: { type: 'Path', data: orData, shape: 'OR Gate' }, ports: orPort , style: { fill: '#000000' }
-    },
+var gates =
+    [
+        {
+            id: 'OR Gate', shape: { type: 'Path', data: orData, shape: 'OR Gate' }, ports: orPort, style: { fill: '#000000' }
+        },
 
-    {
-        id: 'NOR Gate', shape: { type: 'Path', data: nordata, shape: 'NOR Gate' }, ports: orPort , style: { fill: '#000000' }
-    },
+        {
+            id: 'NOR Gate', shape: { type: 'Path', data: nordata, shape: 'NOR Gate' }, ports: orPort, style: { fill: '#000000' }
+        },
 
-    { 
-        id: 'AND Gate', shape: { type: 'Path', data: andData, shape: 'AND Gate' }, ports: andPort , style: { fill: '#000000' }
-    },
+        {
+            id: 'AND Gate', shape: { type: 'Path', data: andData, shape: 'AND Gate' }, ports: andPort, style: { fill: '#000000' }
+        },
 
-    {
-        id: 'NAND Gate', shape: { type: 'Path', data: nanddata, shape: 'NAND Gate' }, ports: andPort , style: { fill: '#000000' }
-    },
+        {
+            id: 'NAND Gate', shape: { type: 'Path', data: nanddata, shape: 'NAND Gate' }, ports: andPort, style: { fill: '#000000' }
+        },
 
-    {
-        id: 'Buffer', ports: [{ offset: { x: 0.01, y: 0.5 } }, { offset: { x: 0.99, y: 0.5 } }], 
-        shape: { type: 'Path', data: buffer, shape: 'Buffer' }, style: { fill: '#000000' }
-    },
+        {
+            id: 'Buffer', ports: [{ offset: { x: 0.01, y: 0.5 } }, { offset: { x: 0.99, y: 0.5 } }],
+            shape: { type: 'Path', data: buffer, shape: 'Buffer' }, style: { fill: '#000000' }
+        },
 
-    { 
-        id: 'Not Gate', shape: { type: 'Path', data: notData, shape: 'NOT Gate' }, ports: notPort , style: { fill: '#000000' }
-    },
+        {
+            id: 'Not Gate', shape: { type: 'Path', data: notData, shape: 'NOT Gate' }, ports: notPort, style: { fill: '#000000' }
+        },
 
-    {
-        id: 'XOR Gate', ports: orPort, shape: { type: 'Path', data: xorData, shape: 'XOR Gate' } , style: { fill: '#000000' }
-    },
+        {
+            id: 'XOR Gate', ports: orPort, shape: { type: 'Path', data: xorData, shape: 'XOR Gate' }, style: { fill: '#000000' }
+        },
 
-    {
-        id: 'XNOR Gate', ports: orPort, shape: { type: 'Path', data: xnorData, shape: 'XNOR Gate' } , style: { fill: '#000000' }
-    },
-];
+        {
+            id: 'XNOR Gate', ports: orPort, shape: { type: 'Path', data: xnorData, shape: 'XNOR Gate' }, style: { fill: '#000000' }
+        },
+    ];
 
-var flipflops = 
-[
-    {
-        id: 'JK Flip-Flop', ports: jkPorts,
-        shape: { shape: 'JK Flip-Flop', type: 'Path', data: jkflipflopdata},
-        style: { fill: '#000000' }
-    },
+var flipflops =
+    [
+        {
+            id: 'JK Flip-Flop', ports: jkPorts,
+            shape: { shape: 'JK Flip-Flop', type: 'Path', data: jkflipflopdata },
+            style: { fill: '#000000' }
+        },
 
-    {
-        id: 'D Flip-Flop', ports: flipPorts,
-        shape: { shape: 'D Flip-Flop', type: 'Path', data: dflipflop},
-        style: { fill: '#000000' }
-    },
+        {
+            id: 'D Flip-Flop', ports: flipPorts,
+            shape: { shape: 'D Flip-Flop', type: 'Path', data: dflipflop },
+            style: { fill: '#000000' }
+        },
 
-    {
-        id: 'T Flip-Flop',
-        shape: { shape: 'T Flip-Flop', type: 'Path', data: tflipflopdata},
-        style: { fill: '#000000' }
-    },
+        {
+            id: 'T Flip-Flop',
+            shape: { shape: 'T Flip-Flop', type: 'Path', data: tflipflopdata },
+            style: { fill: '#000000' }
+        },
 
-    {
-        id: 'SR Flip-Flop',
-        shape: { shape: 'SR Flip-Flop', type: 'Path', data: srflipflopdata},
-        style: { fill: '#000000' }
-    },
-];
+        {
+            id: 'SR Flip-Flop',
+            shape: { shape: 'SR Flip-Flop', type: 'Path', data: srflipflopdata },
+            style: { fill: '#000000' }
+        },
+    ];
 
-var input = 
-[
-    {
-        id: 'Toggle Switch',
-        shape: {shape: 'Toggle Switch', type: 'Path', data: toggleswitchdata },
-        style: {fill: '#000000'}
-    },
+var input =
+    [
+        {
+            id: 'Toggle Switch',
+            shape: { shape: 'Toggle Switch', type: 'Path', data: toggleswitchdata },
+            style: { fill: '#000000' }
+        },
 
-    {
-        id: 'Push Button',
-        shape: {shape: 'Push Button', type: 'Path', data: pushbuttondata },
-        style: {fill: '#000000'}
-    },
+        {
+            id: 'Push Button',
+            shape: { shape: 'Push Button', type: 'Path', data: pushbuttondata },
+            style: { fill: '#000000' }
+        },
 
-    {
-        id: 'Clock',
-        shape: {shape: 'Clock', type: 'Path', data: clockdata },
-        style: {fill: '#000000'}
-    },
+        {
+            id: 'Clock',
+            shape: { shape: 'Clock', type: 'Path', data: clockdata },
+            style: { fill: '#000000' }
+        },
 
-    {
-        id: 'High Constant',
-        shape: {shape: 'High Constant', type: 'Path', data: highconstantdata },
-        style: {fill: '#000000'}
-    },
+        {
+            id: 'High Constant',
+            shape: { shape: 'High Constant', type: 'Path', data: highconstantdata },
+            style: { fill: '#000000' }
+        },
 
-    {
-        id: 'Low Constant',
-        shape: {shape: 'Log Constant', type: 'Path', data: lowconstantdata },
-        style: {fill: '#000000'}
-    },
-];
+        {
+            id: 'Low Constant',
+            shape: { shape: 'Log Constant', type: 'Path', data: lowconstantdata },
+            style: { fill: '#000000' }
+        },
+    ];
 
-var output = 
-[
-    {
-        id:'Bulb',
-        shape: { type: 'Path', data: bulbdata, shape: 'Light Bulb' },
-        style: { fill: '#000000' },
-    },
+var output =
+    [
+        {
+            id: 'Bulb',
+            shape: { type: 'Path', data: bulbdata, shape: 'Light Bulb' },
+            style: { fill: '#000000' },
+        },
 
-    {
-        id: '4-Bit Digit',
-        shape: { type: 'Path', data: digitdata, shape: '4-Bit Digit' },
-        style: { fill: '#000000' }
-    },
-];
+        {
+            id: '4-Bit Digit',
+            shape: { type: 'Path', data: digitdata, shape: '4-Bit Digit' },
+            style: { fill: '#000000' }
+        },
+    ];
 
-var other = 
-[
-    {
-        id: 'Label',
-        shape: { type:'Path', data: Labeldata, shape: 'Label' },
-        style: { fill: '#FFFFFF' }
-    },
+var other =
+    [
+        {
+            id: 'Label',
+            shape: { type: 'Path', data: Labeldata, shape: 'Label' },
+            style: { fill: '#FFFFFF' }
+        },
 
-    {
-        id: 'Bus',
-        shape: { type:'Path', data: busdata, shape: 'Bus' },
-        style: { fill: '#000000' }
-    },
+        {
+            id: 'Bus',
+            shape: { type: 'Path', data: busdata, shape: 'Bus' },
+            style: { fill: '#000000' }
+        },
 
-    {
-        id: 'Pull Up',
-        shape: { type:'Path', data: pullupdata, shape: 'Pull Up' },
-        style: { fill: '#000000' }
-    },
+        {
+            id: 'Pull Up',
+            shape: { type: 'Path', data: pullupdata, shape: 'Pull Up' },
+            style: { fill: '#000000' }
+        },
 
-    {
-        id: 'Pull Down',
-        shape: { type:'Path', data: pulldowndata, shape: 'Pull Down' },
-        style: { fill: '#000000' }
-    },
-];
+        {
+            id: 'Pull Down',
+            shape: { type: 'Path', data: pulldowndata, shape: 'Pull Down' },
+            style: { fill: '#000000' }
+        },
+    ];
 
 var palette = new ej.diagrams.SymbolPalette({
     expandMode: 'Multiple',
-    palettes: 
-    [
-        { id: 'input', expanded: true, symbols: input, title: 'Input Controls'},        
-        { id: 'output', expanded: true, symbols: output, title: 'Output Controls' },
-        { id: 'flow', expanded: true, symbols: gates, title: 'Logic Gates' },
-        { id: 'flipflop', expanded: true, symbols: flipflops, title: 'Flip flops' },
-        { id: 'other', expanded: true, symbols: other, title: 'Other' },
-    ],
+    palettes:
+        [
+            { id: 'input', expanded: true, symbols: input, title: 'Input Controls' },
+            { id: 'output', expanded: true, symbols: output, title: 'Output Controls' },
+            { id: 'flow', expanded: true, symbols: gates, title: 'Logic Gates' },
+            { id: 'flipflop', expanded: true, symbols: flipflops, title: 'Flip flops' },
+            { id: 'other', expanded: true, symbols: other, title: 'Other' },
+        ],
     width: '100%', height: '100%',
     symbolMargin: { left: 10, right: 10, top: 10, bottom: 10 },
     symbolHeight: 100, symbolWidth: 67,
-    getNodeDefaults: function (symbol) 
-    {
+    getNodeDefaults: function (symbol) {
         symbol.width = 55;
         symbol.height = 40;
         symbol.offsetX = 20;
         symbol.offsetY = 20;
     },
     symbolPreview: { height: 50, width: 50 },
-    getSymbolInfo: function (symbol) 
-    {
-        return { fit: true, description: { text: symbol.shape['shape'], overflow:'Wrap', fontSize: 11 } };
+    getSymbolInfo: function (symbol) {
+        return { fit: true, description: { text: symbol.shape['shape'], overflow: 'Wrap', fontSize: 11 } };
     }
 });
 palette.appendTo('#symbolpalette');
 
 
-function createNode(id, offsetX, offsetY, height,width, pathData, ports, fill, binarystate) 
-{
+function createNode(id, offsetX, offsetY, height, width, pathData, ports, fill, binarystate, controltype) {
     var node = {};
     node.id = id;
     node.offsetX = offsetX;
@@ -231,74 +229,437 @@ function createNode(id, offsetX, offsetY, height,width, pathData, ports, fill, b
     node.shape = { type: 'Path', data: pathData };
     node.ports = ports;
     node.style = { fill: fill };
-    node.addinfo = {binarystate: binarystate}
+    node.addinfo = { binarystate: binarystate, controltype: controltype };
     return node;
 }
 
-function createConnector(id, sourcePoint, targetPoint, sourceID, targetID, sourcePortID, targetPortID) 
-{
+function createConnector(id, sourcePoint, targetPoint, sourceID, targetID, sourcePortID, targetPortID, binarystate) {
     var connector = {};
     connector.id = id;
-    if (sourcePoint) 
-    {
+    if (sourcePoint) {
         connector.sourcePoint = { x: sourcePoint.x, y: sourcePoint.y - nodeY };
     }
-    if (targetPoint) 
-    {
+    if (targetPoint) {
         connector.targetPoint = { x: targetPoint.x, y: targetPoint.y - nodeY };
     }
     connector.sourceID = sourceID;
     connector.targetID = targetID;
     connector.type = 'Bezier';
+    connector.sourceDecorator = { shape: null };
+    connector.targetDecorator = { shape: null };
+    connector.style = { strokeWidth: 2 };
     connector.sourcePortID = sourcePortID;
     connector.targetPortID = targetPortID;
+    connector.addinfo = { binarystate: binarystate };
     return connector;
 }
 
-var nodes = 
-[
-    createNode('Switch1',150,100,60,100,toggleswitchdata,orPort, '#000000',1),
-    createNode('PushButton',150,270,60,100,pushbuttondata,orPort,'#000000',0),
-    createNode('Clock',140,470,60,80,clockdata,orPort,'#000000',0),
-    createNode('Switch2',150,630,60,100,toggleswitchdata,orPort, '#000000',1),
-    createNode('OR1', 350, 330, 60, 100, orData, orPort, '#000000',null),
-    createNode('And1', 350, 170, 60,100, andData, andPort, '#000000',null),
-    createNode('And2', 350, 530, 60,100, andData, andPort, '#000000',null),
-    createNode('And3', 550, 450, 60,100, andData, andPort, '#000000',null),
-    createNode('OR2', 750, 270, 60, 100, orData, orPort, '#000000',null),
-    createNode('Not',750,530,60,100, notData, notPort, '#000000',null),
-    createNode('XOR',950,430,60,100, xorData,orPort, '#000000',null),
-    createNode('Bulb',1050,170,60,40,bulbdata,bulbport,'#000000',null)
-];
+var nodes =
+    [
+        createNode('Switch1', 150, 100, 60, 100, toggleswitchdata, orPort, '#000000', 1, 'inputcontrol'),
+        createNode('PushButton1', 150, 270, 60, 100, pushbuttondata, orPort, '#000000', 0, 'inputcontrol'),
+        createNode('PushButton2', 140, 470, 60, 80, pushbuttondata, orPort, '#000000', 0, 'inputcontrol'),
+        createNode('Switch2', 150, 630, 60, 100, toggleswitchdata, orPort, '#000000', 1, 'inputcontrol'),
+        createNode('OR1', 350, 330, 60, 100, orData, orPort, '#000000', null, 'gate'),
+        createNode('And1', 350, 170, 60, 100, andData, andPort, '#000000', null, 'gate'),
+        createNode('And2', 350, 530, 60, 100, andData, andPort, '#000000', null, 'gate'),
+        createNode('And3', 550, 450, 60, 100, andData, andPort, '#000000', null, 'gate'),
+        createNode('OR2', 750, 270, 60, 100, orData, orPort, '#000000', null, 'gate'),
+        createNode('Not', 750, 530, 60, 100, notData, notPort, '#000000', null, 'gate'),
+        createNode('XOR', 950, 430, 60, 100, xorData, orPort, '#000000', null, 'gate'),
+        createNode('Bulb', 1050, 170, 60, 40, bulbdata, bulbport, '#000000', null, 'outputcontrol')
+    ];
 
 var connectors =
-[
-    createConnector('con1',null,null,'And1','OR2','And_port4','Or_port1'),
-    createConnector('con2',null,null,'OR1','And3','Or_port4','And_port1'),
-    createConnector('con3',null,null,'And2','And3','And_port4','And_port3'),
-    createConnector('con4',null,null,'And3','OR2','And_port4','Or_port3'),
-    createConnector('con5',null,null,'OR2','XOR','Or_port4','Or_port1'),
-    createConnector('con6',null,null,'Not','XOR','Not_port2','Or_port3'),
-    createConnector('con7',null,null,'Switch1','And1','Or_port4','And_port1'),
-    createConnector('con8',null,null,'PushButton','And1','Or_port4','And_port3'),
-    createConnector('con9',null,null,'PushButton','OR1','Or_port4','Or_port1'),
-    createConnector('con10',null,null,'PushButton','And2','Or_port4','And_port1'),
-    createConnector('con11',null,null,'Clock','OR1','Or_port4','Or_port3'),
-    createConnector('con12',null,null,'Clock','And2','Or_port4','And_port3'),
-    createConnector('con13',null,null,'Switch2','Not','Or_port4','Not_port1'),
-    createConnector('con14',null,null,'XOR','Bulb','Or_port4','Bulb_port'),
-];
+    [
+        createConnector('con1', null, null, 'And1', 'OR2', 'And_port4', 'Or_port1', 0),
+        createConnector('con2', null, null, 'OR1', 'And3', 'Or_port4', 'And_port1', 0),
+        createConnector('con3', null, null, 'And2', 'And3', 'And_port4', 'And_port3', 0),
+        createConnector('con4', null, null, 'And3', 'OR2', 'And_port4', 'Or_port3', 0),
+        createConnector('con5', null, null, 'OR2', 'XOR', 'Or_port4', 'Or_port1', 0),
+        createConnector('con6', null, null, 'Not', 'XOR', 'Not_port2', 'Or_port3', 0),
+        createConnector('con7', null, null, 'Switch1', 'And1', 'Or_port4', 'And_port1', 0),
+        createConnector('con8', null, null, 'PushButton1', 'And1', 'Or_port4', 'And_port3', 0),
+        createConnector('con9', null, null, 'PushButton1', 'OR1', 'Or_port4', 'Or_port1', 0),
+        createConnector('con10', null, null, 'PushButton1', 'And2', 'Or_port4', 'And_port1', 0),
+        createConnector('con11', null, null, 'PushButton2', 'OR1', 'Or_port4', 'Or_port3', 0),
+        createConnector('con12', null, null, 'PushButton2', 'And2', 'Or_port4', 'And_port3', 0),
+        createConnector('con13', null, null, 'Switch2', 'Not', 'Or_port4', 'Not_port1', 0),
+        createConnector('con14', null, null, 'XOR', 'Bulb', 'Or_port4', 'Bulb_port', 0),
+    ];
 
-var diagram = new ej.diagrams.Diagram({ width: '100%', height: '5000px', nodes: nodes , connectors: connectors, drawingObject: {type: 'Orthogonal'} });
+var diagram = new ej.diagrams.Diagram({
+    width: '100%', height: '5000px',
+    nodes: nodes, connectors: connectors, drawingObject: { type: 'Orthogonal' }, created: created, click: click, mouseLeave: mouseLeave
+});
 
 diagram.appendTo('#diagram');
 
-diagram.propertyChange = function (args) 
-{
-
-         
+diagram.propertyChange = function (args) {
 
 };
+
+function click(args) {
+    let clickedbutton = args.button;
+    if (clickedbutton == "Left") {
+        diagram.nodes.forEach(element => {
+            if (element == args.element) {
+                OnInputChanged(element);
+            }
+        });
+    };
+};
+
+function mouseLeave(args) {
+    if (args.element.id == "PushButton1" || args.element.id == "PushButton2") {
+        args.element.style.fill = "black";
+        args.element.addinfo.binarystate = 0;
+        diagram.clearSelection();
+        setBinaryStateFromInput(args.element);
+    }
+
+    diagram.nodes.forEach(element => {
+        if(element.addinfo.controltype == "gate")
+        {
+            GatesOutput(element);
+        }
+    });
+
+    diagram.nodes.forEach(element => {
+        if(element.addinfo.controltype == "outputcontrol")
+        {
+            OutputControl(element);
+        }
+    });
+};
+
+function created(args) {
+    diagram.nodes.forEach(element => {
+        if (element.addinfo.controltype == "inputcontrol") {
+            setBinaryStateFromInput(element);
+        }
+        if(element.addinfo.controltype == "gate")
+        {
+            GatesOutput(element);
+        }
+        
+        if(element.addinfo.controltype == "outputcontrol")
+        {
+            OutputControl(element);
+        }
+    });
+};
+
+function OutputControl(element)
+{
+    if(element.id == "Bulb")
+    {
+        var InputCon1 = diagram.getObject(element.inEdges[0]);
+        var Inputstate1 = InputCon1.addinfo.binarystate;
+        if(Inputstate1 == 0)
+        {
+            element.style.fill = "black";
+            element.style.strokeColor = "black";
+        }
+        else
+        {
+            element.style.fill = "grey";
+            element.style.strokeColor = "grey";
+        }
+    }
+};
+
+function GatesOutput(element){
+    if(element.id == "OR1" || element.id == "OR2")
+    {
+        var InputCon1 = diagram.getObject(element.inEdges[0]);
+        var InputCon2 = diagram.getObject(element.inEdges[1]);
+        var Inputstate1 = InputCon1.addinfo.binarystate;
+        var Inputstate2 = InputCon2.addinfo.binarystate;
+        var state = null;
+        if(Inputstate1 == 0 && Inputstate2 == 0)
+        {
+            state = 0;
+        }
+        else
+        {
+            state = 1;
+        }
+        element.addinfo.binarystate = state;
+        if(state == 1)
+        {
+            var con = diagram.getObject(element.outEdges[0]);
+            con.addinfo.binarystate = 1;
+            con.style.strokeColor = "yellow";
+            con.style.strokeWidth = 2;
+        }
+        else
+        {
+            var con = diagram.getObject(element.outEdges[0]);
+            con.addinfo.binarystate = 0;
+            con.style.strokeColor = "black";
+            con.style.strokeWidth = 2;
+        }
+    }
+    if(element.id == "And1" || element.id == "And2" || element.id == "And3")
+    {
+        var InputCon1 = diagram.getObject(element.inEdges[0]);
+        var InputCon2 = diagram.getObject(element.inEdges[1]);
+        var Inputstate1 = InputCon1.addinfo.binarystate;
+        var Inputstate2 = InputCon2.addinfo.binarystate;
+        var state = null;
+        if(Inputstate1 == 1 && Inputstate2 == 1)
+        {
+            state = 1;
+        }
+        else
+        {
+            state = 0;
+        }
+        element.addinfo.binarystate = state;
+
+        if(state == 1)
+        {
+            var con = diagram.getObject(element.outEdges[0]);
+            con.addinfo.binarystate = 1;
+            con.style.strokeColor = "yellow";
+            con.style.strokeWidth = 2;
+        }
+        else
+        {
+            var con = diagram.getObject(element.outEdges[0]);
+            con.addinfo.binarystate = 0;
+            con.style.strokeColor = "black";
+            con.style.strokeWidth = 2;
+        }
+    }
+    if(element.id == "Not")
+    {
+        var InputCon1 = diagram.getObject(element.inEdges[0]);
+        var Inputstate1 = InputCon1.addinfo.binarystate;
+        var state = null;
+        if(Inputstate1 == 0)
+        {
+            element.addinfo.binarystate = 1;
+            var con = diagram.getObject(element.outEdges[0]);
+            con.addinfo.binarystate = 1;
+            con.style.strokeColor = "yellow";
+            con.style.strokeWidth = 2;
+        }
+        else
+        {
+            element.addinfo.binarystate = 0;
+            var con = diagram.getObject(element.outEdges[0]);
+            con.addinfo.binarystate = 0;
+            con.style.strokeColor = "black";
+            con.style.strokeWidth = 2;
+        }
+    }
+
+    if(element.id == "Buffer")
+    {
+        var InputCon1 = diagram.getObject(element.inEdges[0]);
+        var Inputstate1 = InputCon1.addinfo.binarystate;
+        var state = null;
+        if(Inputstate1 == 1)
+        {
+            element.addinfo.binarystate = 1;
+            var con = diagram.getObject(element.outEdges[0]);
+            con.addinfo.binarystate = 1;
+            con.style.strokeColor = "yellow";
+            con.style.strokeWidth = 2;
+        }
+        else
+        {
+            element.addinfo.binarystate = 0;
+            var con = diagram.getObject(element.outEdges[0]);
+            con.addinfo.binarystate = 0;
+            con.style.strokeColor = "black";
+            con.style.strokeWidth = 2;
+        }
+    }
+
+    if(element.id == "XOR")
+    {
+        var InputCon1 = diagram.getObject(element.inEdges[0]);
+        var InputCon2 = diagram.getObject(element.inEdges[1]);
+        var Inputstate1 = InputCon1.addinfo.binarystate;
+        var Inputstate2 = InputCon2.addinfo.binarystate;
+        var state = null;
+        if((Inputstate1 == 0 && Inputstate2 == 0) || (Inputstate1 == 1 && Inputstate2 == 1))
+        {
+            state = 0;
+        }
+        else
+        {
+            state = 1;
+        }
+        element.addinfo.binarystate = state;
+        if(state == 1)
+        {
+            var con = diagram.getObject(element.outEdges[0]);
+            con.addinfo.binarystate = 1;
+            con.style.strokeColor = "yellow";
+            con.style.strokeWidth = 2;
+        }
+        else
+        {
+            var con = diagram.getObject(element.outEdges[0]);
+            con.addinfo.binarystate = 0;
+            con.style.strokeColor = "black";
+            con.style.strokeWidth = 2;
+        }
+    }
+
+    if(element.id == "XNOR")
+    {
+        var InputCon1 = diagram.getObject(element.inEdges[0]);
+        var InputCon2 = diagram.getObject(element.inEdges[1]);
+        var Inputstate1 = InputCon1.addinfo.binarystate;
+        var Inputstate2 = InputCon2.addinfo.binarystate;
+        var state = null;
+        if((Inputstate1 == 0 && Inputstate2 == 0) || (Inputstate1 == 1 && Inputstate2 == 1))
+        {
+            state = 1;
+        }
+        else
+        {
+            state = 0;
+        }
+        element.addinfo.binarystate = state;
+        if(state == 1)
+        {
+            var con = diagram.getObject(element.outEdges[0]);
+            con.addinfo.binarystate = 1;
+            con.style.strokeColor = "yellow";
+            con.style.strokeWidth = 2;
+        }
+        else
+        {
+            var con = diagram.getObject(element.outEdges[0]);
+            con.addinfo.binarystate = 0;
+            con.style.strokeColor = "black";
+            con.style.strokeWidth = 2;
+        }
+    }
+
+    if(element.id == "NOR")
+    {
+        var InputCon1 = diagram.getObject(element.inEdges[0]);
+        var InputCon2 = diagram.getObject(element.inEdges[1]);
+        var Inputstate1 = InputCon1.addinfo.binarystate;
+        var Inputstate2 = InputCon2.addinfo.binarystate;
+        var state = null;
+        if(Inputstate1 == 0 && Inputstate2 == 0)
+        {
+            state = 1;
+        }
+        else
+        {
+            state = 0;
+        }
+        element.addinfo.binarystate = state;
+        if(state == 1)
+        {
+            var con = diagram.getObject(element.outEdges[0]);
+            con.addinfo.binarystate = 1;
+            con.style.strokeColor = "yellow";
+            con.style.strokeWidth = 2;
+        }
+        else
+        {
+            var con = diagram.getObject(element.outEdges[0]);
+            con.addinfo.binarystate = 0;
+            con.style.strokeColor = "black";
+            con.style.strokeWidth = 2;
+        }
+    }
+
+    if(element.id == "NAND")
+    {
+        var InputCon1 = diagram.getObject(element.inEdges[0]);
+        var InputCon2 = diagram.getObject(element.inEdges[1]);
+        var Inputstate1 = InputCon1.addinfo.binarystate;
+        var Inputstate2 = InputCon2.addinfo.binarystate;
+        var state = null;
+        if(Inputstate1 == 1 && Inputstate2 == 1)
+        {
+            state = 0;
+        }
+        else
+        {
+            state = 1;
+        }
+        element.addinfo.binarystate = state;
+        if(state == 1)
+        {
+            var con = diagram.getObject(element.outEdges[0]);
+            con.addinfo.binarystate = 1;
+            con.style.strokeColor = "yellow";
+            con.style.strokeWidth = 2;
+        }
+        else
+        {
+            var con = diagram.getObject(element.outEdges[0]);
+            con.addinfo.binarystate = 0;
+            con.style.strokeColor = "black";
+            con.style.strokeWidth = 2;
+        }
+    }
+};
+
+function setBinaryStateFromInput(element) {
+    if (element.id == "Switch1" || element.id == "Switch2" || element.id == "PushButton1" || element.id == "PushButton2") {
+        if (element.addinfo.binarystate == 0) {
+            element.outEdges.forEach(cons => {
+                var con = diagram.getObject(cons);
+                con.addinfo.binarystate = 0;
+                con.style.strokeColor = "black";
+                con.style.strokeWidth = 2;
+            });
+        }
+        else {
+            element.outEdges.forEach(cons => {
+                var con = diagram.getObject(cons);
+                con.addinfo.binarystate = 1;
+                con.style.strokeColor = "yellow";
+                con.style.strokeWidth = 2;
+            });
+        }
+    }
+
+    diagram.nodes.forEach(element => {
+        if(element.addinfo.controltype == "gate")
+        {
+            GatesOutput(element);
+        }
+    });
+
+    diagram.nodes.forEach(element => {
+        if(element.addinfo.controltype == "outputcontrol")
+        {
+            OutputControl(element);
+        }
+    });
+};
+
+function OnInputChanged(args) {
+    if (args.id == "Switch1" || args.id == "Switch2") {
+        if (args.addinfo.binarystate == 1) {
+            args.addinfo.binarystate = 0;
+            args.shape.data = switchoffdata;
+        }
+        else if (args.addinfo.binarystate == 0) {
+            args.addinfo.binarystate = 1;
+            args.shape.data = toggleswitchdata;
+        }
+    }
+    if (args.id == "PushButton1" || args.id == "PushButton2") {
+        args.style.fill = "grey";
+        args.addinfo.binarystate = 1;
+    }
+    setBinaryStateFromInput(args);
+}
 
 var menuItems = [
     {
@@ -336,27 +697,29 @@ var menuItems = [
         text: 'Design',
         // iconCss: 'em-icons e-edit',
         items: [
-            { text: 'Orientation',
-            items:[
-                { text: 'Landscape' },
-                { text: 'Portraite' }
-            ]    
+            {
+                text: 'Orientation',
+                items: [
+                    { text: 'Landscape' },
+                    { text: 'Portraite' }
+                ]
             },
-            { text: 'Size',
-            items:[
-                 { text: 'Letter' },
-                 { text: 'Folio' },
-                 { text: 'Legal' },
-                 { text: 'Ledger' },
-                 { text: 'A5' },
-                 { text: 'A4' },
-                 { text: 'A3' },
-                 { text: 'A2' },
-                 { text: 'A1' },
-                 { text: 'A0' },
-                 { text: 'Custom' },
+            {
+                text: 'Size',
+                items: [
+                    { text: 'Letter' },
+                    { text: 'Folio' },
+                    { text: 'Legal' },
+                    { text: 'Ledger' },
+                    { text: 'A5' },
+                    { text: 'A4' },
+                    { text: 'A3' },
+                    { text: 'A2' },
+                    { text: 'A1' },
+                    { text: 'A0' },
+                    { text: 'Custom' },
 
-            ]
+                ]
             },
         ]
     },
@@ -377,38 +740,38 @@ var menuItems = [
             { text: 'Selection Tool' },
             { text: 'Pan Tool' },
             { text: 'Connector Tool' },
-            { text: 'Connectors',items:[
-                {text:'Straight' },
-                {text:'Orthogonal' },
-                {text:'Bezier' },
-            ] }
+            {
+                text: 'Connectors', items: [
+                    { text: 'Straight' },
+                    { text: 'Orthogonal' },
+                    { text: 'Bezier' },
+                ]
+            }
 
         ]
     },
     {
         text: 'View',
         items: [
-               { text: 'Show Lines'},
-               { text: 'Snap To Grid'},
-               { text: 'Snap To Object'},
-               { text: 'Show Ruler'},
-               { text: 'Show Page Breaks'},
-               { separator: true },
-               { text: 'Fit To Width'},
-               { text: 'Fit To Page'},
-               { text: 'Reset View'},
+            { text: 'Show Lines' },
+            { text: 'Snap To Grid' },
+            { text: 'Snap To Object' },
+            { text: 'Show Ruler' },
+            { text: 'Show Page Breaks' },
+            { separator: true },
+            { text: 'Fit To Width' },
+            { text: 'Fit To Page' },
+            { text: 'Reset View' },
 
         ]
     },
 ];
 
-var menuObj = new ej.navigations.Menu({ items: menuItems,height:'10px',select:onMenuSelect}, '#menu');
+var menuObj = new ej.navigations.Menu({ items: menuItems, height: '10px', select: onMenuSelect }, '#menu');
 
-    function onMenuSelect(args)
- {
+function onMenuSelect(args) {
     var option = args.item.text;
-    switch(option)
-    {
+    switch (option) {
         case 'New':
             diagram.clear();
             break;
@@ -438,10 +801,10 @@ var menuObj = new ej.navigations.Menu({ items: menuItems,height:'10px',select:on
             diagram.paste();
             break;
         case 'Rotate Clockwise':
-            diagram.rotate(diagram.selectedItems,90);
+            diagram.rotate(diagram.selectedItems, 90);
             break;
         case 'Rotate Counter Clockwise':
-            diagram.rotate(diagram.selectedItems,-90);
+            diagram.rotate(diagram.selectedItems, -90);
             break;
         case 'Delete':
             diagram.remove();
@@ -491,16 +854,16 @@ var menuObj = new ej.navigations.Menu({ items: menuItems,height:'10px',select:on
             diagram.snapSettings.constraints = diagram.snapSettings.constraints ^ ej.diagrams.SnapConstraints.SnapToLines;
             break;
         case 'Snap To Object':
-            diagram.snapSettings.constraints = diagram.snapSettings.constraints ^ ej.diagrams.SnapConstraints.SnapToObject;            
+            diagram.snapSettings.constraints = diagram.snapSettings.constraints ^ ej.diagrams.SnapConstraints.SnapToObject;
             break;
-        case 'Show Ruler':            
+        case 'Show Ruler':
             diagram.rulerSettings.showRulers = !diagram.rulerSettings.showRulers;
             break;
         case 'Show Page Breaks':
             diagram.pageSettings.showPageBreaks = true;
             break;
         case 'Fit To Width':
-            diagram.fitToPage({mode: 'Width'});
+            diagram.fitToPage({ mode: 'Width' });
             break;
         case 'Fit To Page':
             diagram.fitToPage();
@@ -511,9 +874,9 @@ var menuObj = new ej.navigations.Menu({ items: menuItems,height:'10px',select:on
 
     }
     diagram.dataBind();
- }
+}
 
- function download(data) {
+function download(data) {
     if (window.navigator.msSaveBlob) {
         var blob = new Blob([data], { type: 'data:text/json;charset=utf-8,' });
         window.navigator.msSaveOrOpenBlob(blob, 'Diagram.json');
