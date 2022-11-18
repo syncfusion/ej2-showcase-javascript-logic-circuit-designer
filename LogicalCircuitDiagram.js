@@ -28,26 +28,68 @@ var busdata = 'M31 0C30.4477 0 30 0.447715 30 1V12H11.917C11.441 9.16229 8.973 7
 var pullupdata = 'M32 0C31.4477 0 31 0.447715 31 1V13H11.917C11.441 10.1623 8.973 8 6 8C2.68629 8 0 10.6863 0 14C0 17.3137 2.68629 20 6 20C8.973 20 11.441 17.8377 11.917 15H31V31H11.917C11.441 28.1623 8.973 26 6 26C2.68629 26 0 28.6863 0 32C0 35.3137 2.68629 38 6 38C8.973 38 11.441 35.8377 11.917 33H31V46C31 46.5523 31.4477 47 32 47H71V24H88.083C88.559 26.8377 91.027 29 94 29C97.3137 29 100 26.3137 100 23C100 19.6863 97.3137 17 94 17C91.027 17 88.559 19.1623 88.083 22H71V0H32ZM33 45V2H69V45H33ZM2 14C2 11.7909 3.79086 10 6 10C8.20914 10 10 11.7909 10 14C10 16.2091 8.20914 18 6 18C3.79086 18 2 16.2091 2 14ZM54.8685 16L51 10.1972L47.1315 16H50V18.2792L44.6838 20.0513L44.8356 21.9864L52.093 23.196L44.7575 25.0299V26.9701L52.8769 29L44.7575 31.0299L44.8356 32.9864L50 33.8471V39H52V32.1529L49.907 31.804L57.2425 29.9701V28.0299L49.1231 26L57.2425 23.9701L57.1644 22.0136L49.1358 20.6755L52 19.7208V16H54.8685ZM51 13.8028L51.1315 14H50.8685L51 13.8028ZM90 23C90 20.7909 91.7909 19 94 19C96.2091 19 98 20.7909 98 23C98 25.2091 96.2091 27 94 27C91.7909 27 90 25.2091 90 23ZM2 32C2 29.7909 3.79086 28 6 28C8.20914 28 10 29.7909 10 32C10 34.2091 8.20914 36 6 36C3.79086 36 2 34.2091 2 32ZM39.4041 12.312C39.7561 12.232 40.0001 12.168 40.1361 12.12V17.172L38.6961 17.292V18H43.2681V17.292L41.9001 17.16V10.56L40.9521 10.428H40.9401C40.6441 10.676 40.2601 10.916 39.7881 11.148C39.3241 11.372 38.8761 11.528 38.4441 11.616L38.5761 12.456C38.7761 12.432 39.0521 12.384 39.4041 12.312Z';
 var pulldowndata = 'M70 0H31V13H11.917C11.441 10.1623 8.973 8 6 8C2.68629 8 0 10.6863 0 14C0 17.3137 2.68629 20 6 20C8.973 20 11.441 17.8377 11.917 15H31V31H11.917C11.441 28.1623 8.973 26 6 26C2.68629 26 0 28.6863 0 32C0 35.3137 2.68629 38 6 38C8.973 38 11.441 35.8377 11.917 33H31V47H70C70.5523 47 71 46.5523 71 46V24H88.083C88.559 26.8377 91.027 29 94 29C97.3137 29 100 26.3137 100 23C100 19.6863 97.3137 17 94 17C91.027 17 88.559 19.1623 88.083 22H71V1C71 0.447715 70.5523 0 70 0ZM33 45V2H69V45H33ZM2 14C2 11.7909 3.79086 10 6 10C8.20914 10 10 11.7909 10 14C10 16.2091 8.20914 18 6 18C3.79086 18 2 16.2091 2 14ZM52 12H50V17.1529L44.8356 18.0136L44.7575 19.9701L52.8769 22L44.7575 24.0299V25.9701L52.093 27.804L44.8356 29.0136L44.6838 30.9487L50 32.7208V35H47.1315L51 40.8028L54.8685 35H52V31.2792L49.1358 30.3245L57.1644 28.9864L57.2425 27.0299L49.1231 25L57.2425 22.9701V21.0299L49.907 19.196L52 18.8471V12ZM90 23C90 20.7909 91.7909 19 94 19C96.2091 19 98 20.7909 98 23C98 25.2091 96.2091 27 94 27C91.7909 27 90 25.2091 90 23ZM2 32C2 29.7909 3.79086 28 6 28C8.20914 28 10 29.7909 10 32C10 34.2091 8.20914 36 6 36C3.79086 36 2 34.2091 2 32ZM62.1219 38.0959C61.4979 38.0959 60.9639 37.9679 60.5199 37.7119C60.0799 37.4559 59.7199 37.1079 59.4399 36.6679C59.1639 36.2239 58.9619 35.7219 58.8339 35.1619C58.7059 34.5979 58.6439 34.0099 58.6479 33.3979C58.6599 32.4979 58.8259 31.7179 59.1459 31.0579C59.4699 30.3939 59.9019 29.8819 60.4419 29.5219C60.9819 29.1619 61.5899 28.9819 62.2659 28.9819C62.8979 28.9819 63.4319 29.1019 63.8679 29.3419C64.3079 29.5779 64.6619 29.9039 64.9299 30.3199C65.2019 30.7359 65.3979 31.2159 65.5179 31.7599C65.6379 32.2999 65.6959 32.8739 65.6919 33.4819C65.6839 34.4099 65.5259 35.2199 65.2179 35.9119C64.9139 36.5999 64.4939 37.1359 63.9579 37.5199C63.4219 37.9039 62.8099 38.0959 62.1219 38.0959ZM62.1699 36.6919C62.6859 36.6959 63.0779 36.4419 63.3459 35.9299C63.6179 35.4179 63.7539 34.6219 63.7539 33.5419C63.7539 32.9019 63.6979 32.3459 63.5859 31.8739C63.4739 31.4019 63.3019 31.0359 63.0699 30.7759C62.8379 30.5159 62.5459 30.3859 62.1939 30.3859C61.6779 30.3859 61.2819 30.6339 61.0059 31.1299C60.7339 31.6259 60.5979 32.3659 60.5979 33.3499C60.5979 33.9859 60.6539 34.5559 60.7659 35.0599C60.8819 35.5599 61.0559 35.9559 61.2879 36.2479C61.5199 36.5399 61.8139 36.6879 62.1699 36.6919Z';
 
+
+var grpnodedata1 = 'M6.5 43.5H34.5V7.5H6.5V43.5Z';
+var grpnodedata2 = 'M6 44H35V7H6V44ZM7 43V8H34V43H7Z';
+var grpnodedata3 = 'M62.75 31.5C59.5744 31.5 57 28.9256 57 25.75C57 22.5744 59.5744 20 62.75 20C65.9256 20 68.5 22.5744 68.5 25.75C68.5 28.9256 65.9256 31.5 62.75 31.5ZM56 25.75C56 26.1771 56.0397 26.5949 56.1155 27C56.7017 30.1307 59.4492 32.5 62.75 32.5C66.4779 32.5 69.5 29.4779 69.5 25.75C69.5 22.0221 66.4779 19 62.75 19C59.2756 19 56.4143 21.625 56.0412 25C56.014 25.2463 56 25.4965 56 25.75Z';
+var grpnodedata4 = 'M42 52H0V0H42V25H56.0412C56.014 25.2463 56 25.4965 56 25.75C56 26.1771 56.0397 26.5949 56.1155 27H42V52ZM2 50V2H40V50H2Z';
+var grpnodedata5 = 'M30.5 25.5H30.56L32.5 37.5H8.5L10.44 25.5H10.5H30.5Z';
+var grpnodedata6 = 'M30.5 25.5H10.5V10.5H30.5V25.5Z';
+var grpnodedata7 = 'M9.5 40.5L8.5 37.5H32.5L31.5 40.5H9.5Z';
+var grpnodedata8 = 'M9.02566 40.6581C9.09372 40.8623 9.28478 41 9.5 41H31.5C31.7152 41 31.9063 40.8623 31.9743 40.6581L32.9743 37.6581C32.9999 37.5815 33.0065 37.4999 32.9936 37.4202L31.0536 25.4202C31.0444 25.3636 31.026 25.3105 31 25.2624V10H10V25.2624C9.97399 25.3105 9.95556 25.3636 9.94641 25.4202L8.00641 37.4202C7.99352 37.4999 8.00013 37.5815 8.02566 37.6581L9.02566 40.6581ZM11 25V11H30V25H11ZM30.1343 26L31.9127 37H9.08733L10.8657 26H30.1343ZM9.19371 38H31.8063L31.1396 40H9.86038L9.19371 38Z';
+
+var n1 = creategpNode('Node1', 1200, 300, 60, 40, grpnodedata1, '#00FFFF');
+var n2 = creategpNode('Node2', 1200, 300, 60, 40, grpnodedata2, '#000000');
+var n3 = creategpNode('Node3', 1200, 300, 60, 40, grpnodedata3, '#000000');
+var n4 = creategpNode('Node4', 1200, 300, 60, 40, grpnodedata4, '#000000');
+var n5 = creategpNode('Node5', 1200, 300, 60, 40, grpnodedata5, '#FFFFFF');
+var n6 = creategpNode('Node6', 1200, 300, 60, 40, grpnodedata6, '#FFFFFF');
+var n7 = creategpNode('Node7', 1200, 300, 60, 40, grpnodedata7, '#FFFFFF');
+var n8 = creategpNode('Node8', 1200, 300, 60, 40, grpnodedata8, '#000000');
+
+var grp = {id : 'group', children: ['n1','n2','n3','n4','n5','n6','n7','n8']};
+
+function creategpNode(id, offsetX, offsetY, height, width, pathData, fill) {
+    var node = {};
+    node.id = id;
+    node.offsetX = offsetX;
+    node.offsetY = offsetY;
+    node.height = height;
+    node.width = width;
+    node.shape = { type: 'Path', data: pathData };
+    node.style = { fill: fill };
+    return node;
+}
+
 var bulbport =
     [
-        { id: 'Bulb_port', offset: { x: 0.5, y: 0.96 } },
+        { id: 'Bulb_port', offset: { x: 0.5, y: 0.95 } },
     ];
 
+var toggleswitchport =
+    [
+        { id: 'toggleport1', offset: { x: 0.92, y: 0.5 } },
+    ];
+
+var pushbuttonport = 
+    [
+        { id: 'pushbuttonport1', offset: { x: 0.92, y: 0.5 } },
+    ];
 var orPort =
     [
-        { id: 'Or_port1', offset: { x: 0.01, y: 0.1963 } }, { id: 'Or_port2', offset: { x: 0.26, y: 0.5 } },
-        { id: 'Or_port3', offset: { x: 0.01, y: 0.805 } }, { id: 'Or_port4', offset: { x: 0.99, y: 0.5 } }
+        { id: 'Or_port1', offset: { x: 0.05, y: 0.25 } },
+        { id: 'Or_port3', offset: { x: 0.05, y: 0.73 } }, { id: 'Or_port4', offset: { x: 0.94, y: 0.5 } }
     ];
 
 var andPort =
     [
-        { id: 'And_port1', offset: { x: 0.01, y: 0.215 } }, { id: 'And_port2', offset: { x: 0.22, y: 0.5 } },
-        { id: 'And_port3', offset: { x: 0.01, y: 0.805 } }, { id: 'And_port4', offset: { x: 0.99, y: 0.5 } }
+        { id: 'And_port1', offset: { x: 0.05, y: 0.25 } },
+        { id: 'And_port3', offset: { x: 0.05, y: 0.73 } }, { id: 'And_port4', offset: { x: 0.94, y: 0.5 } }
     ];
 
 var notPort =
     [
-        { id: 'Not_port1', offset: { x: 0.01, y: 0.5 } }, { id: 'Not_port2', offset: { x: 0.99, y: 0.5 } }
+        { id: 'Not_port1', offset: { x: 0.05, y: 0.5 } }, { id: 'Not_port2', offset: { x: 0.94, y: 0.5 } }
     ];
 
 var flipPorts = [{ offset: { x: 0.01, y: 0.221 } }, { offset: { x: 0.01, y: 0.779 } }, { offset: { x: 0.99, y: 0.221 } }, { offset: { x: 0.99, y: 0.779 } }];
@@ -122,7 +164,7 @@ var input =
         {
             id: 'Toggle Switch',
             shape: { shape: 'Toggle Switch', type: 'Path', data: toggleswitchdata },
-            style: { fill: '#000000' }
+            style: { fill: '#000000' },
         },
 
         {
@@ -228,6 +270,11 @@ function createNode(id, offsetX, offsetY, height, width, pathData, ports, fill, 
     node.width = width;
     node.shape = { type: 'Path', data: pathData };
     node.ports = ports;
+    node.ports.forEach(element => {
+        element.shape = 'Circle';
+        element.visibility = ej.diagrams.PortVisibility.Visible;
+        element.constraints = ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw;
+    });
     node.style = { fill: fill };
     node.addinfo = { binarystate: binarystate, controltype: controltype };
     return node;
@@ -256,18 +303,19 @@ function createConnector(id, sourcePoint, targetPoint, sourceID, targetID, sourc
 
 var nodes =
     [
-        createNode('Switch1', 150, 100, 60, 100, toggleswitchdata, orPort, '#000000', 1, 'inputcontrol'),
-        createNode('PushButton1', 150, 270, 60, 100, pushbuttondata, orPort, '#000000', 0, 'inputcontrol'),
-        createNode('PushButton2', 140, 470, 60, 80, pushbuttondata, orPort, '#000000', 0, 'inputcontrol'),
-        createNode('Switch2', 150, 630, 60, 100, toggleswitchdata, orPort, '#000000', 1, 'inputcontrol'),
-        createNode('OR1', 350, 330, 60, 100, orData, orPort, '#000000', null, 'gate'),
-        createNode('And1', 350, 170, 60, 100, andData, andPort, '#000000', null, 'gate'),
-        createNode('And2', 350, 530, 60, 100, andData, andPort, '#000000', null, 'gate'),
-        createNode('And3', 550, 450, 60, 100, andData, andPort, '#000000', null, 'gate'),
-        createNode('OR2', 750, 270, 60, 100, orData, orPort, '#000000', null, 'gate'),
-        createNode('Not', 750, 530, 60, 100, notData, notPort, '#000000', null, 'gate'),
-        createNode('XOR', 950, 430, 60, 100, xorData, orPort, '#000000', null, 'gate'),
-        createNode('Bulb', 1050, 170, 60, 40, bulbdata, bulbport, '#000000', null, 'outputcontrol')
+        createNode('Switch1', 150, 100, 60, 100, toggleswitchdata, toggleswitchport, '#000000', 1, 'inputcontrol'),
+        createNode('PushButton1', 150, 270, 60, 100, pushbuttondata, pushbuttonport, '#000000', 0, 'inputcontrol'),
+        createNode('PushButton2', 140, 470, 60, 80, pushbuttondata, pushbuttonport, '#000000', 0, 'inputcontrol'),
+        createNode('Switch2', 150, 630, 60, 100, toggleswitchdata, toggleswitchport, '#000000', 1, 'inputcontrol'),
+        createNode('OR1', 350, 350, 40, 100, orData, orPort, '#000000', null, 'gate'),
+        createNode('And1', 350, 180, 40, 100, andData, andPort, '#000000', null, 'gate'),
+        createNode('And2', 350, 520, 40, 100, andData, andPort, '#000000', null, 'gate'),
+        createNode('And3', 550, 440, 40, 100, andData, andPort, '#000000', null, 'gate'),
+        createNode('OR2', 750, 280, 40, 100, orData, orPort, '#000000', null, 'gate'),
+        createNode('Not', 750, 520, 40, 100, notData, notPort, '#000000', null, 'gate'),
+        createNode('XOR', 950, 420, 40, 100, xorData, orPort, '#000000', null, 'gate'),
+        createNode('Bulb', 1050, 170, 60, 40, bulbdata, bulbport, '#000000', null, 'outputcontrol'),
+        
     ];
 
 var connectors =
@@ -278,20 +326,41 @@ var connectors =
         createConnector('con4', null, null, 'And3', 'OR2', 'And_port4', 'Or_port3', 0),
         createConnector('con5', null, null, 'OR2', 'XOR', 'Or_port4', 'Or_port1', 0),
         createConnector('con6', null, null, 'Not', 'XOR', 'Not_port2', 'Or_port3', 0),
-        createConnector('con7', null, null, 'Switch1', 'And1', 'Or_port4', 'And_port1', 0),
-        createConnector('con8', null, null, 'PushButton1', 'And1', 'Or_port4', 'And_port3', 0),
-        createConnector('con9', null, null, 'PushButton1', 'OR1', 'Or_port4', 'Or_port1', 0),
-        createConnector('con10', null, null, 'PushButton1', 'And2', 'Or_port4', 'And_port1', 0),
-        createConnector('con11', null, null, 'PushButton2', 'OR1', 'Or_port4', 'Or_port3', 0),
-        createConnector('con12', null, null, 'PushButton2', 'And2', 'Or_port4', 'And_port3', 0),
-        createConnector('con13', null, null, 'Switch2', 'Not', 'Or_port4', 'Not_port1', 0),
+        createConnector('con7', null, null, 'Switch1', 'And1', 'toggleport1', 'And_port1', 0),
+        createConnector('con8', null, null, 'PushButton1', 'And1', 'pushbuttonport1', 'And_port3', 0),
+        createConnector('con9', null, null, 'PushButton1', 'OR1', 'pushbuttonport1', 'Or_port1', 0),
+        createConnector('con10', null, null, 'PushButton1', 'And2', 'pushbuttonport1', 'And_port1', 0),
+        createConnector('con11', null, null, 'PushButton2', 'OR1', 'pushbuttonport1', 'Or_port3', 0),
+        createConnector('con12', null, null, 'PushButton2', 'And2', 'pushbuttonport1', 'And_port3', 0),
+        createConnector('con13', null, null, 'Switch2', 'Not', 'toggleport1', 'Not_port1', 0),
         createConnector('con14', null, null, 'XOR', 'Bulb', 'Or_port4', 'Bulb_port', 0),
     ];
 
 var diagram = new ej.diagrams.Diagram({
     width: '100%', height: '5000px',
-    nodes: nodes, connectors: connectors, drawingObject: { type: 'Orthogonal' }, created: created, click: click, mouseLeave: mouseLeave
+    nodes: nodes, connectors: connectors, drawingObject: { type: 'Orthogonal' },
+    created: created, click: click, mouseLeave: mouseLeave, collectionChange: collectionChange,
+    connectionChange: connectionChange, targetPointChange: targetPointChange,
 });
+
+function targetPointChange(args){
+    if(args.state == "completed" && args.targetPort == null)
+    {
+        args.cancel = true;
+    }
+};
+
+function connectionChange(args) {
+    if (args.state == "completed" && args.connectorEnd == "ConnectorSourceEnd") {
+        
+    }
+};
+
+function collectionChange(args) {
+    if (args.state == "Changed" && args.type == "Addition") {
+        
+    }
+};
 
 diagram.appendTo('#diagram');
 
@@ -319,15 +388,13 @@ function mouseLeave(args) {
     }
 
     diagram.nodes.forEach(element => {
-        if(element.addinfo.controltype == "gate")
-        {
+        if (element.addinfo.controltype == "gate") {
             GatesOutput(element);
         }
     });
 
     diagram.nodes.forEach(element => {
-        if(element.addinfo.controltype == "outputcontrol")
-        {
+        if (element.addinfo.controltype == "outputcontrol") {
             OutputControl(element);
         }
     });
@@ -338,116 +405,97 @@ function created(args) {
         if (element.addinfo.controltype == "inputcontrol") {
             setBinaryStateFromInput(element);
         }
-        if(element.addinfo.controltype == "gate")
-        {
+        if (element.addinfo.controltype == "gate") {
             GatesOutput(element);
         }
-        
-        if(element.addinfo.controltype == "outputcontrol")
-        {
+
+        if (element.addinfo.controltype == "outputcontrol") {
             OutputControl(element);
         }
     });
 };
 
-function OutputControl(element)
-{
-    if(element.id == "Bulb")
-    {
+function OutputControl(element) {
+    if (element.id == "Bulb") {
         var InputCon1 = diagram.getObject(element.inEdges[0]);
         var Inputstate1 = InputCon1.addinfo.binarystate;
-        if(Inputstate1 == 0)
-        {
+        if (Inputstate1 == 0) {
             element.style.fill = "black";
             element.style.strokeColor = "black";
         }
-        else
-        {
-            element.style.fill = "grey";
-            element.style.strokeColor = "grey";
+        else {
+            element.style.fill = "#05DAC5";
+            element.style.strokeColor = "#05DAC5";
         }
     }
 };
 
-function GatesOutput(element){
-    if(element.id == "OR1" || element.id == "OR2")
-    {
+function GatesOutput(element) {
+    if (element.id == "OR1" || element.id == "OR2") {
         var InputCon1 = diagram.getObject(element.inEdges[0]);
         var InputCon2 = diagram.getObject(element.inEdges[1]);
         var Inputstate1 = InputCon1.addinfo.binarystate;
         var Inputstate2 = InputCon2.addinfo.binarystate;
         var state = null;
-        if(Inputstate1 == 0 && Inputstate2 == 0)
-        {
+        if (Inputstate1 == 0 && Inputstate2 == 0) {
             state = 0;
         }
-        else
-        {
+        else {
             state = 1;
         }
         element.addinfo.binarystate = state;
-        if(state == 1)
-        {
+        if (state == 1) {
             var con = diagram.getObject(element.outEdges[0]);
             con.addinfo.binarystate = 1;
-            con.style.strokeColor = "yellow";
+            con.style.strokeColor = "#05DAC5";
             con.style.strokeWidth = 2;
         }
-        else
-        {
+        else {
             var con = diagram.getObject(element.outEdges[0]);
             con.addinfo.binarystate = 0;
             con.style.strokeColor = "black";
             con.style.strokeWidth = 2;
         }
     }
-    if(element.id == "And1" || element.id == "And2" || element.id == "And3")
-    {
+    if (element.id == "And1" || element.id == "And2" || element.id == "And3") {
         var InputCon1 = diagram.getObject(element.inEdges[0]);
         var InputCon2 = diagram.getObject(element.inEdges[1]);
         var Inputstate1 = InputCon1.addinfo.binarystate;
         var Inputstate2 = InputCon2.addinfo.binarystate;
         var state = null;
-        if(Inputstate1 == 1 && Inputstate2 == 1)
-        {
+        if (Inputstate1 == 1 && Inputstate2 == 1) {
             state = 1;
         }
-        else
-        {
+        else {
             state = 0;
         }
         element.addinfo.binarystate = state;
 
-        if(state == 1)
-        {
+        if (state == 1) {
             var con = diagram.getObject(element.outEdges[0]);
             con.addinfo.binarystate = 1;
-            con.style.strokeColor = "yellow";
+            con.style.strokeColor = "#05DAC5";
             con.style.strokeWidth = 2;
         }
-        else
-        {
+        else {
             var con = diagram.getObject(element.outEdges[0]);
             con.addinfo.binarystate = 0;
             con.style.strokeColor = "black";
             con.style.strokeWidth = 2;
         }
     }
-    if(element.id == "Not")
-    {
+    if (element.id == "Not") {
         var InputCon1 = diagram.getObject(element.inEdges[0]);
         var Inputstate1 = InputCon1.addinfo.binarystate;
         var state = null;
-        if(Inputstate1 == 0)
-        {
+        if (Inputstate1 == 0) {
             element.addinfo.binarystate = 1;
             var con = diagram.getObject(element.outEdges[0]);
             con.addinfo.binarystate = 1;
-            con.style.strokeColor = "yellow";
+            con.style.strokeColor = "#05DAC5";
             con.style.strokeWidth = 2;
         }
-        else
-        {
+        else {
             element.addinfo.binarystate = 0;
             var con = diagram.getObject(element.outEdges[0]);
             con.addinfo.binarystate = 0;
@@ -456,21 +504,18 @@ function GatesOutput(element){
         }
     }
 
-    if(element.id == "Buffer")
-    {
+    if (element.id == "Buffer") {
         var InputCon1 = diagram.getObject(element.inEdges[0]);
         var Inputstate1 = InputCon1.addinfo.binarystate;
         var state = null;
-        if(Inputstate1 == 1)
-        {
+        if (Inputstate1 == 1) {
             element.addinfo.binarystate = 1;
             var con = diagram.getObject(element.outEdges[0]);
             con.addinfo.binarystate = 1;
-            con.style.strokeColor = "yellow";
+            con.style.strokeColor = "#05DAC5";
             con.style.strokeWidth = 2;
         }
-        else
-        {
+        else {
             element.addinfo.binarystate = 0;
             var con = diagram.getObject(element.outEdges[0]);
             con.addinfo.binarystate = 0;
@@ -479,31 +524,26 @@ function GatesOutput(element){
         }
     }
 
-    if(element.id == "XOR")
-    {
+    if (element.id == "XOR") {
         var InputCon1 = diagram.getObject(element.inEdges[0]);
         var InputCon2 = diagram.getObject(element.inEdges[1]);
         var Inputstate1 = InputCon1.addinfo.binarystate;
         var Inputstate2 = InputCon2.addinfo.binarystate;
         var state = null;
-        if((Inputstate1 == 0 && Inputstate2 == 0) || (Inputstate1 == 1 && Inputstate2 == 1))
-        {
+        if ((Inputstate1 == 0 && Inputstate2 == 0) || (Inputstate1 == 1 && Inputstate2 == 1)) {
             state = 0;
         }
-        else
-        {
+        else {
             state = 1;
         }
         element.addinfo.binarystate = state;
-        if(state == 1)
-        {
+        if (state == 1) {
             var con = diagram.getObject(element.outEdges[0]);
             con.addinfo.binarystate = 1;
-            con.style.strokeColor = "yellow";
+            con.style.strokeColor = "#05DAC5";
             con.style.strokeWidth = 2;
         }
-        else
-        {
+        else {
             var con = diagram.getObject(element.outEdges[0]);
             con.addinfo.binarystate = 0;
             con.style.strokeColor = "black";
@@ -511,31 +551,26 @@ function GatesOutput(element){
         }
     }
 
-    if(element.id == "XNOR")
-    {
+    if (element.id == "XNOR") {
         var InputCon1 = diagram.getObject(element.inEdges[0]);
         var InputCon2 = diagram.getObject(element.inEdges[1]);
         var Inputstate1 = InputCon1.addinfo.binarystate;
         var Inputstate2 = InputCon2.addinfo.binarystate;
         var state = null;
-        if((Inputstate1 == 0 && Inputstate2 == 0) || (Inputstate1 == 1 && Inputstate2 == 1))
-        {
+        if ((Inputstate1 == 0 && Inputstate2 == 0) || (Inputstate1 == 1 && Inputstate2 == 1)) {
             state = 1;
         }
-        else
-        {
+        else {
             state = 0;
         }
         element.addinfo.binarystate = state;
-        if(state == 1)
-        {
+        if (state == 1) {
             var con = diagram.getObject(element.outEdges[0]);
             con.addinfo.binarystate = 1;
-            con.style.strokeColor = "yellow";
+            con.style.strokeColor = "#05DAC5";
             con.style.strokeWidth = 2;
         }
-        else
-        {
+        else {
             var con = diagram.getObject(element.outEdges[0]);
             con.addinfo.binarystate = 0;
             con.style.strokeColor = "black";
@@ -543,31 +578,26 @@ function GatesOutput(element){
         }
     }
 
-    if(element.id == "NOR")
-    {
+    if (element.id == "NOR") {
         var InputCon1 = diagram.getObject(element.inEdges[0]);
         var InputCon2 = diagram.getObject(element.inEdges[1]);
         var Inputstate1 = InputCon1.addinfo.binarystate;
         var Inputstate2 = InputCon2.addinfo.binarystate;
         var state = null;
-        if(Inputstate1 == 0 && Inputstate2 == 0)
-        {
+        if (Inputstate1 == 0 && Inputstate2 == 0) {
             state = 1;
         }
-        else
-        {
+        else {
             state = 0;
         }
         element.addinfo.binarystate = state;
-        if(state == 1)
-        {
+        if (state == 1) {
             var con = diagram.getObject(element.outEdges[0]);
             con.addinfo.binarystate = 1;
-            con.style.strokeColor = "yellow";
+            con.style.strokeColor = "#05DAC5";
             con.style.strokeWidth = 2;
         }
-        else
-        {
+        else {
             var con = diagram.getObject(element.outEdges[0]);
             con.addinfo.binarystate = 0;
             con.style.strokeColor = "black";
@@ -575,31 +605,26 @@ function GatesOutput(element){
         }
     }
 
-    if(element.id == "NAND")
-    {
+    if (element.id == "NAND") {
         var InputCon1 = diagram.getObject(element.inEdges[0]);
         var InputCon2 = diagram.getObject(element.inEdges[1]);
         var Inputstate1 = InputCon1.addinfo.binarystate;
         var Inputstate2 = InputCon2.addinfo.binarystate;
         var state = null;
-        if(Inputstate1 == 1 && Inputstate2 == 1)
-        {
+        if (Inputstate1 == 1 && Inputstate2 == 1) {
             state = 0;
         }
-        else
-        {
+        else {
             state = 1;
         }
         element.addinfo.binarystate = state;
-        if(state == 1)
-        {
+        if (state == 1) {
             var con = diagram.getObject(element.outEdges[0]);
             con.addinfo.binarystate = 1;
-            con.style.strokeColor = "yellow";
+            con.style.strokeColor = "#05DAC5";
             con.style.strokeWidth = 2;
         }
-        else
-        {
+        else {
             var con = diagram.getObject(element.outEdges[0]);
             con.addinfo.binarystate = 0;
             con.style.strokeColor = "black";
@@ -622,22 +647,20 @@ function setBinaryStateFromInput(element) {
             element.outEdges.forEach(cons => {
                 var con = diagram.getObject(cons);
                 con.addinfo.binarystate = 1;
-                con.style.strokeColor = "yellow";
+                con.style.strokeColor = "#05DAC5";
                 con.style.strokeWidth = 2;
             });
         }
     }
 
     diagram.nodes.forEach(element => {
-        if(element.addinfo.controltype == "gate")
-        {
+        if (element.addinfo.controltype == "gate") {
             GatesOutput(element);
         }
     });
 
     diagram.nodes.forEach(element => {
-        if(element.addinfo.controltype == "outputcontrol")
-        {
+        if (element.addinfo.controltype == "outputcontrol") {
             OutputControl(element);
         }
     });
@@ -655,7 +678,7 @@ function OnInputChanged(args) {
         }
     }
     if (args.id == "PushButton1" || args.id == "PushButton2") {
-        args.style.fill = "grey";
+        args.style.fill = "#05DAC5";
         args.addinfo.binarystate = 1;
     }
     setBinaryStateFromInput(args);
