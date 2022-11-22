@@ -47,7 +47,7 @@ var n6 = creategpNode('Node6', 1200, 300, 60, 40, grpnodedata6, '#FFFFFF');
 var n7 = creategpNode('Node7', 1200, 300, 60, 40, grpnodedata7, '#FFFFFF');
 var n8 = creategpNode('Node8', 1200, 300, 60, 40, grpnodedata8, '#000000');
 
-var grp = {id : 'group', children: ['n1','n2','n3','n4','n5','n6','n7','n8']};
+var grp = { id: 'group', children: ['n1', 'n2', 'n3', 'n4', 'n5', 'n6', 'n7', 'n8'] };
 
 function creategpNode(id, offsetX, offsetY, height, width, pathData, fill) {
     var node = {};
@@ -71,7 +71,7 @@ var toggleswitchport =
         { id: 'toggleport1', offset: { x: 0.92, y: 0.5 } },
     ];
 
-var pushbuttonport = 
+var pushbuttonport =
     [
         { id: 'pushbuttonport1', offset: { x: 0.92, y: 0.5 } },
     ];
@@ -115,7 +115,7 @@ var gates =
         },
 
         {
-            id: 'Buffer', ports: [{ offset: { x: 0.01, y: 0.5 } }, { offset: { x: 0.99, y: 0.5 } }],
+            id: 'Buffer Gate', ports: [{ offset: { x: 0.01, y: 0.5 } }, { offset: { x: 0.99, y: 0.5 } }],
             shape: { type: 'Path', data: buffer, shape: 'Buffer' }, style: { fill: '#000000' }
         },
 
@@ -176,7 +176,7 @@ var input =
         {
             id: 'Clock',
             shape: { shape: 'Clock', type: 'Path', data: clockdata },
-            style: { fill: '#000000' }
+            style: { fill: '#05DAC5' }
         },
 
         {
@@ -187,7 +187,7 @@ var input =
 
         {
             id: 'Low Constant',
-            shape: { shape: 'Log Constant', type: 'Path', data: lowconstantdata },
+            shape: { shape: 'Low Constant', type: 'Path', data: lowconstantdata },
             style: { fill: '#000000' }
         },
     ];
@@ -315,7 +315,7 @@ var nodes =
         createNode('Not', 750, 520, 40, 100, notData, notPort, '#000000', null, 'gate'),
         createNode('XOR', 950, 420, 40, 100, xorData, orPort, '#000000', null, 'gate'),
         createNode('Bulb', 1050, 170, 60, 40, bulbdata, bulbport, '#000000', null, 'outputcontrol'),
-        
+
     ];
 
 var connectors =
@@ -340,25 +340,58 @@ var diagram = new ej.diagrams.Diagram({
     width: '100%', height: '5000px',
     nodes: nodes, connectors: connectors, drawingObject: { type: 'Orthogonal' },
     created: created, click: click, mouseLeave: mouseLeave, collectionChange: collectionChange,
-    connectionChange: connectionChange, targetPointChange: targetPointChange,
+    connectionChange: connectionChange, targetPointChange: targetPointChange, drop: drop,
 });
 
-function targetPointChange(args){
-    if(args.state == "completed" && args.targetPort == null)
-    {
+function drop(args) {
+    if (args.element.id.indexOf("Switch") != -1) {
+        args.element.addinfo = { binarystate: 1, controltype: 'inputcontrol' };
+        args.element.ports = toggleswitchport;
+
+        args.element.ports.forEach(element => {
+            element.shape = 'Circle';
+            element.visibility = ej.diagrams.PortVisibility.Visible;
+            element.constraints = ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw;
+        });
+    }
+    else if (args.element.id.indexof("Low") != -1) {
+        args.element.addinfo = { binarystate: 0, controltype: 'inputcontrol' };
+    }
+    else if (args.element.id.indexof("High") != -1) {
+        args.element.addinfo = { binarystate: 1, controltype: 'inputcontrol' };
+    }
+    else if (args.element.id.indexof("Push") != -1) {
+        args.element.addinfo = { binarystate: 0, controltype: 'inputcontrol' };
+    }
+    else if (args.element.id.indexOf("Gate") != -1) {
+        args.element.addinfo = { binarystate: 0, controltype: 'gate' };
+    }
+    else if (args.element.id.indexof("Flop") != -1) {
+        args.element.addinfo = { binarystate: 0, controltype: 'flipflop' };
+    }
+    else if (args.element.id.indexof("Pull") != -1 || args.element.id.indexof("Bus") != -1) {
+        args.element.addinfo = { binarystate: 0, controltype: 'othercontrol' };
+    }
+    else if (args.element.id.indexof("Bulb") != -1 || args.element.id.indexof("Digit") != -1) {
+        args.element.addinfo = { binarystate: 0, controltype: 'outputcontrol' };
+    }    
+}
+
+function targetPointChange(args) {
+    if (args.state == "completed" && args.targetPort == null) {
         args.cancel = true;
     }
 };
 
 function connectionChange(args) {
     if (args.state == "completed" && args.connectorEnd == "ConnectorSourceEnd") {
-        
+
     }
 };
 
 function collectionChange(args) {
     if (args.state == "Changed" && args.type == "Addition") {
-        
+
     }
 };
 
@@ -671,10 +704,12 @@ function OnInputChanged(args) {
         if (args.addinfo.binarystate == 1) {
             args.addinfo.binarystate = 0;
             args.shape.data = switchoffdata;
+            args.style.fill = "#05DAC5";
         }
         else if (args.addinfo.binarystate == 0) {
             args.addinfo.binarystate = 1;
             args.shape.data = toggleswitchdata;
+            args.style.fill = "black";
         }
     }
     if (args.id == "PushButton1" || args.id == "PushButton2") {
@@ -684,127 +719,716 @@ function OnInputChanged(args) {
     setBinaryStateFromInput(args);
 }
 
-var menuItems = [
-    {
-        text: 'File',
-        // iconCss: 'em-icons e-file',
-        items: [
-            { text: 'New' },
-            { separator: true },
-            { text: 'Save' },
-            { separator: true },
-            { text: 'Print' },
+var ExportSettings = (function () {
+    function ExportSettings() {
+        this.m_fileName = 'Diagram';
+        this.m_format = 'JPG';
+        this.m_region = 'PageSettings';
+    }
+    Object.defineProperty(ExportSettings.prototype, "fileName", {
+        get: function () {
+            return this.m_fileName;
+        },
+        set: function (fileName) {
+            this.m_fileName = fileName;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ExportSettings.prototype, "format", {
+        get: function () {
+            return this.m_format;
+        },
+        set: function (format) {
+            this.m_format = format;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ExportSettings.prototype, "region", {
+        get: function () {
+            return this.m_region;
+        },
+        set: function (region) {
+            this.m_region = region;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return ExportSettings;
+}());
 
-        ]
-    },
-    {
-        text: 'Edit',
-        // iconCss: 'em-icons e-edit',
-        items: [
-            { text: 'Undo' },
-            { text: 'Redo' },
-            { separator: true },
-            { text: 'Cut' },
-            { text: 'Copy' },
-            { text: 'Paste' },
-            { separator: true },
-            { text: 'Rotate Clockwise' },
-            { text: 'Rotate Counter Clockwise' },
-            { text: 'Delete' },
-            { separator: true },
-            { text: 'Bring To Front' },
-            { text: 'Send To Back' },
-        ]
-    },
-    {
-        text: 'Design',
-        // iconCss: 'em-icons e-edit',
-        items: [
-            {
-                text: 'Orientation',
-                items: [
-                    { text: 'Landscape' },
-                    { text: 'Portraite' }
-                ]
-            },
-            {
-                text: 'Size',
-                items: [
-                    { text: 'Letter' },
-                    { text: 'Folio' },
-                    { text: 'Legal' },
-                    { text: 'Ledger' },
-                    { text: 'A5' },
-                    { text: 'A4' },
-                    { text: 'A3' },
-                    { text: 'A2' },
-                    { text: 'A1' },
-                    { text: 'A0' },
-                    { text: 'Custom' },
+var exportSettings = new ExportSettings();
 
-                ]
-            },
-        ]
-    },
-    {
-        text: 'Select',
-        // iconCss: 'em-icons e-edit',
-        items: [
-            { text: 'Select All' },
-            { text: 'Select All Nodes' },
-            { text: 'Select All Connectors' },
-            { text: 'Deselect All' }
-
-        ]
-    },
-    {
-        text: 'Tools',
-        items: [
-            { text: 'Selection Tool' },
-            { text: 'Pan Tool' },
-            { text: 'Connector Tool' },
-            {
-                text: 'Connectors', items: [
-                    { text: 'Straight' },
-                    { text: 'Orthogonal' },
-                    { text: 'Bezier' },
-                ]
+var PrintSettings = (function () {
+    function PrintSettings() {
+        this.m_region = 'PageSettings';
+        this.m_pageWidth = 0;
+        this.m_pageHeight = 0;
+        this.m_isPortrait = true;
+        this.m_isLandscape = false;
+        this.m_multiplePage = false;
+        this.m_paperSize = 'Letter';
+    }
+    Object.defineProperty(PrintSettings.prototype, "region", {
+        get: function () {
+            return this.m_region;
+        },
+        set: function (region) {
+            this.m_region = region;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(PrintSettings.prototype, "pageWidth", {
+        get: function () {
+            return this.m_pageWidth;
+        },
+        set: function (pageWidth) {
+            this.m_pageWidth = pageWidth;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(PrintSettings.prototype, "pageHeight", {
+        get: function () {
+            return this.m_pageHeight;
+        },
+        set: function (pageHeight) {
+            this.m_pageHeight = pageHeight;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(PrintSettings.prototype, "isPortrait", {
+        get: function () {
+            return this.m_isPortrait;
+        },
+        set: function (isPortrait) {
+            this.m_isPortrait = isPortrait;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(PrintSettings.prototype, "isLandscape", {
+        get: function () {
+            return this.m_isLandscape;
+        },
+        set: function (isLandscape) {
+            this.m_isLandscape = isLandscape;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(PrintSettings.prototype, "multiplePage", {
+        get: function () {
+            return this.m_multiplePage;
+        },
+        set: function (multiplePage) {
+            this.m_multiplePage = multiplePage;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(PrintSettings.prototype, "paperSize", {
+        get: function () {
+            return this.m_paperSize;
+        },
+        set: function (paperSize) {
+            this.m_paperSize = paperSize;
+            document.getElementById('printCustomSize').style.display = 'none';
+            document.getElementById('printOrientation').style.display = 'none';
+            if (paperSize === 'Custom') {
+                document.getElementById('printCustomSize').style.display = '';
             }
+            else {
+                document.getElementById('printOrientation').style.display = '';
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return PrintSettings;
+}());
 
-        ]
-    },
-    {
-        text: 'View',
-        items: [
-            { text: 'Show Lines' },
-            { text: 'Snap To Grid' },
-            { text: 'Snap To Object' },
-            { text: 'Show Ruler' },
-            { text: 'Show Page Breaks' },
-            { separator: true },
-            { text: 'Fit To Width' },
-            { text: 'Fit To Page' },
-            { text: 'Reset View' },
+var printSettings = new PrintSettings();
 
-        ]
-    },
+var PageSettings = (function () {
+    function PageSettings() {
+        this.pageWidth = 1056;
+        this.pageHeight = 816;
+        this.backgroundColor = '#ffffff';
+        this.isPortrait = false;
+        this.isLandscape = true;
+        this.paperSize = 'Letter';
+        this.pageBreaks = false;
+    }
+    return PageSettings;
+}());
+
+var pageSettings = new PageSettings();
+
+
+function renameDiagram(args) {
+    document.getElementsByClassName('db-diagram-name-container')[0].classList.add('db-edit-name');
+    var element = document.getElementById('diagramEditable');
+    element.value = document.getElementById('diagramName').innerHTML;
+    element.focus();
+    element.select();
+}
+
+function diagramNameKeyDown(args) {
+    if (args.which === 13) {
+        document.getElementById('diagramName').innerHTML = document.getElementById('diagramEditable').value;
+        document.getElementsByClassName('db-diagram-name-container')[0].classList.remove('db-edit-name');
+    }
+}
+
+function diagramNameChange(args) {
+    document.getElementById('diagramName').innerHTML = document.getElementById('diagramEditable').value;
+    document.getElementsByClassName('db-diagram-name-container')[0].classList.remove('db-edit-name');
+    document.getElementById("exportfileName").value = document.getElementById('diagramName').innerHTML;
+}
+
+var btnFileMenu = new ej.splitbuttons.DropDownButton({
+    cssClass: 'db-dropdown-menu',
+    items: getFileMenuItems(),
+    content: 'File',
+    select: menuClick,
+    beforeItemRender: beforeItemRender,
+    beforeOpen: arrangeMenuBeforeOpen,
+    beforeClose: arrangeMenuBeforeClose
+});
+btnFileMenu.appendTo('#btnFileMenu');
+
+
+var btnSelectMenu = new ej.splitbuttons.DropDownButton({
+    cssClass: 'db-dropdown-menu',
+    items: getSelectMenuItems(),
+    content: 'Select',
+    select: menuClick,
+    beforeItemRender: beforeItemRender,
+    beforeOpen: arrangeMenuBeforeOpen,
+    beforeClose: arrangeMenuBeforeClose
+});
+btnSelectMenu.appendTo('#btnSelectMenu');
+
+
+
+var btnViewMenu = new ej.splitbuttons.DropDownButton({
+    cssClass: 'db-dropdown-menu',
+    items: getViewMenuItems(),
+    content: 'View',
+    select: menuClick,
+    beforeItemRender: beforeItemRender,
+    beforeOpen: arrangeMenuBeforeOpen,
+    beforeClose: arrangeMenuBeforeClose
+});
+btnViewMenu.appendTo('#btnViewMenu');
+
+
+
+
+function getFileMenuItems() {
+    var items = [
+        { text: 'New', iconCss: 'sf-icon-New' },
+        { text: 'Open', iconCss: 'sf-icon-Open' },
+        { separator: true },
+        { text: 'Save', iconCss: 'sf-icon-Save' },
+        { separator: true },
+        {
+            text: 'Export', iconCss: 'sf-icon-Export',
+            items: [
+                { text: 'JPG' }, { text: 'PNG' }, { text: 'BMP' }, { text: 'SVG' }
+            ]
+        },
+        { text: 'Print', iconCss: 'sf-icon-Print' },
+
+    ]
+    return items;
+};
+
+function getEditMenuItems() {
+    var items = [
+        { text: 'Undo', iconCss: 'sf-icon-Undo' },
+        { text: 'Redo', iconCss: 'sf-icon-Redo' },
+        { separator: true },
+        { text: 'Cut', iconCss: 'sf-icon-Cut' },
+        { text: 'Copy', iconCss: 'sf-icon-Copy' },
+        { text: 'Paste', iconCss: 'sf-icon-Paste' },
+        { separator: true },
+        {
+            text: 'Rotate', iconCss: '', items: [
+                { text: 'Rotate Right 90', iconCss: 'sf-icon-Redo' },
+                { text: 'Rotate Left 90', iconCss: 'sf-icon-Undo' },
+                { text: 'Flip Vertical', iconCss: 'sf-icon-Undo' },
+                { text: 'Flip Horizontal', iconCss: 'sf-icon-Undo' },
+            ]
+        },
+        { text: 'Delete', iconCss: 'sf-icon-Delete' },
+        { separator: true },
+        {
+            text: 'Order Commands', iconCss: 'tb-item-end tb-item-order tb-dropdown-btn-icon',
+            items: [{ text: 'Bring Forward', iconCss: 'sf-icon-BringForward' },
+            { text: 'Bring To Front', iconCss: 'sf-icon-BringFront' },
+            { text: 'Send Backward', iconCss: 'sf-icon-SendBackward' },
+            { text: 'Send To Back', iconCss: 'sf-icon-Sendback' },
+            ]
+        }
+    ]
+    return items;
+};
+
+function getDesignMenuItems() {
+    var items = [
+        {
+            text: 'Orientation',
+            items: [
+                { text: 'Landscape', iconCss: 'sf-icon-Selection' },
+                { text: 'Portrait', iconCss: '' }
+            ]
+        },
+        {
+            text: 'Size', iconCss: 'em-icons e-copy',
+            items: paperList1()
+        },
+    ]
+    return items;
+};
+
+function paperList() {
+    var paperList = [
+        { text: 'Letter (8.5 in x 11 in)', value: 'Letter' }, { text: 'Legal (8.5 in x 14 in)', value: 'Legal' },
+        { text: 'Tabloid (279 mm x 432 mm)', value: 'Tabloid' }, { text: 'A3 (297 mm x 420 mm)', value: 'A3' },
+        { text: 'A4 (210 mm x 297 mm)', value: 'A4' }, { text: 'A5 (148 mm x 210 mm)', value: 'A5' },
+        { text: 'A6 (105 mm x 148 mm)', value: 'A6' }, { text: 'Custom', value: 'Custom' },
+    ];
+    return paperList;
+};
+function paperList1() {
+    var paperList1 = [
+        { text: 'Letter (8.5 in x 11 in)', value: 'Letter', iconCss: 'sf-icon-Selection' }, { text: 'Legal (8.5 in x 14 in)', value: 'Legal' },
+        { text: 'Tabloid (279 mm x 432 mm)', value: 'Tabloid' }, { text: 'A3 (297 mm x 420 mm)', value: 'A3' },
+        { text: 'A4 (210 mm x 297 mm)', value: 'A4' }, { text: 'A5 (148 mm x 210 mm)', value: 'A5' },
+        { text: 'A6 (105 mm x 148 mm)', value: 'A6' },
+    ];
+    return paperList1;
+};
+
+function getSelectMenuItems() {
+    var items = [
+        { text: 'Select All', iconCss: 'em-icons e-cut' },
+        { text: 'Select All Nodes', iconCss: 'em-icons e-copy' },
+        { text: 'Select All Connectors', iconCss: 'em-icons e-paste' },
+        { text: 'Deselect All', iconCss: 'em-icons e-paste' }
+    ]
+    return items;
+};
+
+function getToolsMenuItems() {
+    var items1 = [
+        { text: 'Selection Tool', iconCss: 'sf-icon-Selector tb-icons' },
+        { text: 'Pan Tool', iconCss: 'sf-icon-Pan tb-icons' },
+        { separator: true },
+        {
+            text: 'Connector Tool', iconCss: 'sf-icon-ConnectorMode', items: [
+                { text: 'Straight', iconCss: 'sf-icon-StraightLine' },
+                { text: 'Orthogonal', iconCss: 'sf-icon-ConnectorMode' },
+                { text: 'Bezier', iconCss: 'sf-icon-BeizerLine' },
+            ]
+        }
+    ]
+    return items1;
+};
+
+function getViewMenuItems() {
+    var items = [
+        { text: 'Show Lines', iconCss: 'sf-icon-Selection' },
+        { text: 'Snap To Grid', iconCss: 'sf-icon-Selection' },
+        { text: 'Snap To Object', iconCss: 'sf-icon-Selection' },
+        { text: 'Show Ruler', iconCss: 'sf-icon-Selection' },
+        { text: 'Show Page Breaks', iconCss: 'sf-icon-Selection' },
+        { text: 'Show Multiple page', iconCss: '' },
+        { separator: true },
+        { text: 'Fit To Width' },
+        { text: 'Fit To Page' },
+    ]
+    return items;
+};
+
+function toolsContextMenuOpen(args) {
+    if (args.element.classList.contains('e-menu-parent')) {
+        var popup = document.querySelector('#btnToolsMenu-popup');
+        args.element.style.left = ej.base.formatUnit(parseInt(args.element.style.left, 10) - parseInt(popup.style.left, 10));
+        args.element.style.top = ej.base.formatUnit(parseInt(args.element.style.top, 10) - parseInt(popup.style.top, 10));
+    }
+}
+function designContextMenuOpen(args) {
+    if (args.element.classList.contains('e-menu-parent')) {
+        var popup = document.querySelector('#btnDesignMenu-popup');
+        args.element.style.left = ej.base.formatUnit(parseInt(args.element.style.left, 10) - parseInt(popup.style.left, 10));
+        args.element.style.top = ej.base.formatUnit(parseInt(args.element.style.top, 10) - parseInt(popup.style.top, 10));
+    }
+}
+function editContextMenuOpen(args) {
+    if (args.element.classList.contains('e-menu-parent')) {
+        var popup = document.querySelector('#btnEditMenu-popup');
+        args.element.style.left = ej.base.formatUnit(parseInt(args.element.style.left, 10) - parseInt(popup.style.left, 10));
+        args.element.style.top = ej.base.formatUnit(parseInt(args.element.style.top, 10) - parseInt(popup.style.top, 10));
+    }
+}
+
+function arrangeMenuBeforeOpen(args) {
+    for (var i = 0; i < args.element.children.length; i++) {
+        args.element.children[i].style.display = 'block';
+    }
+    //(args.element.children[0]).style.display = 'block';
+    if (args.event && ej.base.closest(args.event.target, '.e-dropdown-btn') !== null) {
+        args.cancel = true;
+    }
+}
+
+function arrangeMenuBeforeClose(args) {
+    if (args.event && ej.base.closest(args.event.target, '.e-dropdown-btn') !== null) {
+        args.cancel = true;
+    }
+    if (!args.element) {
+        args.cancel = true;
+    }
+}
+
+function beforeItemRender(args) {
+    var shortCutText = getShortCutKey(args.item.text);
+    if (shortCutText) {
+        var shortCutSpan = document.createElement('span');
+        var text = args.item.text;
+        shortCutSpan.textContent = shortCutText;
+        shortCutSpan.style.pointerEvents = 'none';
+        args.element.appendChild(shortCutSpan);
+        shortCutSpan.setAttribute('class', 'db-shortcut');
+    }
+    var status = enableMenuItems(args.item.text, diagram);
+    if (status) {
+        args.element.classList.add('e-disabled');
+    } else {
+        if (args.element.classList.contains('e-disabled')) {
+            args.element.classList.remove('e-disabled');
+        }
+    }
+}
+
+function getShortCutKey(menuItem) {
+    var shortCutKey = navigator.platform.indexOf('Mac') > -1 ? 'Cmd' : 'Ctrl';
+    switch (menuItem) {
+        case 'New':
+            shortCutKey = 'Shift' + '+N';
+            break;
+        case 'Open':
+            shortCutKey = shortCutKey + '+O';
+            break;
+        case 'Save':
+            shortCutKey = shortCutKey + '+S';
+            break;
+        case 'Undo':
+            shortCutKey = shortCutKey + '+Z';
+            break;
+        case 'Redo':
+            shortCutKey = shortCutKey + '+Y';
+            break;
+        case 'Cut':
+            shortCutKey = shortCutKey + '+X';
+            break;
+        case 'Copy':
+            shortCutKey = shortCutKey + '+C';
+            break;
+        case 'Paste':
+            shortCutKey = shortCutKey + '+V';
+            break;
+        case 'Delete':
+            shortCutKey = 'Delete';
+            break;
+        case 'Select All':
+            shortCutKey = shortCutKey + '+A';
+            break;
+        case 'Zoom In':
+            shortCutKey = shortCutKey + '++';
+            break;
+        case 'Zoom Out':
+            shortCutKey = shortCutKey + '+-';
+            break;
+        // case 'Rotate Right 90':
+        //     shortCutKey = shortCutKey + '+R';
+        //     break;
+        // case 'Rotate Left 90':
+        //     shortCutKey = shortCutKey + '+L';
+        //     break;
+        // case 'Flip Horizontal':
+        //     shortCutKey = shortCutKey + '+H';
+        //     break;
+        // case 'Flip Vertical':
+        //     shortCutKey = shortCutKey + '+J';
+        default:
+            shortCutKey = '';
+            break;
+    }
+    return shortCutKey;
+}
+
+function enableMenuItems(itemText, diagram) {
+    var selectedItems = diagram.selectedItems.nodes;
+    selectedItems = selectedItems.concat(diagram.selectedItems.connectors);
+    if (itemText) {
+        var commandType = itemText.replace(/[' ']/g, '');
+        if (selectedItems.length === 0) {
+            switch (commandType.toLowerCase()) {
+                case 'cut':
+                    return true;
+                case 'copy':
+                    return true;
+                case 'delete':
+                    return true;
+            }
+        }
+        if (!(diagram.commandHandler.clipboardData.pasteIndex !== undefined
+            && diagram.commandHandler.clipboardData.clipObject !== undefined) && itemText === 'Paste') {
+            return true;
+        }
+        if (itemText === 'Undo' && diagram.historyManager.undoStack.length < 1) {
+            return true;
+        }
+        if (itemText === 'Redo' && diagram.historyManager.redoStack.length < 1) {
+            return true;
+        }
+        if (itemText === 'Rotate Clockwise' && diagram.selectedItems.nodes.length < 1) {
+            return true;
+        }
+        if (itemText === 'Rotate Counter Clockwise' && diagram.selectedItems.nodes.length < 1) {
+            return true;
+        }
+        if (itemText === 'Send To Back' && selectedItems.length === 0) {
+            return true;
+        }
+        if (itemText === 'Bring To Front' && selectedItems.length === 0) {
+            return true;
+        }
+        if (itemText === 'Bring Forward' && selectedItems.length === 0) {
+            return true;
+        }
+        if (itemText === 'Send Backward' && selectedItems.length === 0) {
+            return true;
+        }
+    }
+    return false;
+};
+
+function menumouseover(args) {
+    var target = args.target;
+    if (target && (target.className === 'e-control e-dropdown-btn e-lib e-btn db-dropdown-menu' ||
+        target.className === 'e-control e-dropdown-btn e-lib e-btn db-dropdown-menu e-ddb-active')) {
+        if (this.buttonInstance && this.buttonInstance.id !== target.id) {
+            if (this.buttonInstance.getPopUpElement().classList.contains('e-popup-open')) {
+                this.buttonInstance.toggle();
+                var buttonElement = document.getElementById(this.buttonInstance.element.id);
+                buttonElement.classList.remove('e-btn-hover');
+            }
+        }
+        var button1 = target.ej2_instances[0];
+        this.buttonInstance = button1;
+        if (button1.getPopUpElement().classList.contains('e-popup-close')) {
+            button1.toggle();
+            // if (button1.element.id === 'btnToolsMenu') {
+            //     enableToolsMenuItems(diagram);
+            // }
+            if (button1.element.id === 'btnEditMenu') {
+                enableEditMenuItems(diagram);
+            }
+            var buttonElement1 = document.getElementById(this.buttonInstance.element.id);
+            buttonElement1.classList.add('e-btn-hover');
+        }
+    } else {
+        if (ej.base.closest(target, '.e-dropdown-popup') === null && ej.base.closest(target, '.e-dropdown-btn') === null) {
+            if (this.buttonInstance && this.buttonInstance.getPopUpElement().classList.contains('e-popup-open')) {
+                this.buttonInstance.toggle();
+                var buttonElement2 = document.getElementById(this.buttonInstance.element.id);
+                buttonElement2.classList.remove('e-btn-hover');
+            }
+        }
+    }
+};
+
+function enableEditMenuItems(diagram) {
+    var contextInstance = document.getElementById('editContextMenu');
+    var contextMenu = contextInstance.ej2_instances[0];
+    var selectedItems = diagram.selectedItems.nodes;
+    selectedItems = selectedItems.concat(diagram.selectedItems.connectors);
+    for (var i = 0; i < contextMenu.items.length; i++) {
+        contextMenu.enableItems([contextMenu.items[i].text], false);
+    }
+    var objects = diagram.selectedItems.nodes.concat(diagram.selectedItems.connectors);
+    if (objects.length > 0) {
+        contextMenu.enableItems(['Cut', 'Copy', 'Delete', 'Order Commands', 'Rotate']);
+    }
+    if (diagram.historyManager.undoStack.length > 0) {
+        contextMenu.enableItems(['Undo']);
+    }
+    if (diagram.historyManager.redoStack.length > 0) {
+        contextMenu.enableItems(['Redo']);
+    }
+    if ((diagram.commandHandler.clipboardData.pasteIndex !== undefined
+        && diagram.commandHandler.clipboardData.clipObject !== undefined)) {
+        contextMenu.enableItems(['Paste']);
+    }
+}
+
+var disabledItems = ['Cut', 'Copy', 'Send To Back', 'Bring To Front', 'Delete'];
+var undoRedoItems = ['Undo', 'Redo'];
+var rotateItems = ['Rotate Clockwise', 'Rotate Counter Clockwise'];
+var pasteItem = ['Paste'];
+
+//Initialize Toolbar component
+var toolbarObj = new ej.navigations.Toolbar({
+    clicked: toolbarClick,
+    items: [
+        { prefixIcon: 'e-ddb-icons e-paste', tooltipText: 'New Diagram', cssClass: 'tb-item-start' },
+        { prefixIcon: 'e-icons e-copy', tooltipText: 'Open Diagram', cssClass: 'tb-item-middle' },
+        { prefixIcon: 'sf-icon-Save', tooltipText: 'Save Diagram', cssClass: 'tb-item-middle' },
+        { prefixIcon: 'e-print e-icons', tooltipText: 'Print Diagram', cssClass: 'tb-item-middle' },
+        { type: 'Input', tooltipText: 'Export Diagram', template: '<button id="custombtn" style="width:100%;"></button>', cssClass: 'tb-item-end tb-dropdown-btn-icon' },
+        { type: 'Separator' },
+        { prefixIcon: 'e-icons e-undo', tooltipText: 'Undo', disabled: true, cssClass: 'tb-item-start' },
+        { prefixIcon: 'e-icons e-redo', tooltipText: 'Redo', disabled: true, cssClass: 'tb-item-end' },
+        { type: 'Seperator' },
+        { prefixIcon: 'sf-icon-Cut', tooltipText: 'Cut', click: pasteClick, disabled: true, cssClass: 'tb-item-start' },
+        { prefixIcon: 'sf-icon-Copy', tooltipText: 'Copy', click: pasteClick, disabled: true, cssClass: 'tb-item-middle' },
+        { prefixIcon: 'e-icons e-paste', tooltipText: 'Paste', disabled: true, cssClass: 'tb-item-end' },
+        { type: 'Separator' },
+        {
+            prefixIcon: 'sf-icon-ZoomOut tb-icons', tooltipText: 'Zoom Out(Ctrl + -)', cssClass: 'tb-item-start'
+        },
+        {
+            cssClass: 'tb-item-end tb-zoom-dropdown-btn', template: '<button id="btnZoomIncrement"></button>'
+        },
+        {
+            prefixIcon: 'sf-icon-ZoomIn tb-icons', tooltipText: 'Zoom In(Ctrl + +)', cssClass: 'tb-item-end'
+        },
+        {
+            type: 'Separator'
+        },
+        { prefixIcon: 'sf-icon-Pan tb-icons', tooltipText: 'Pan Tool', cssClass: 'tb-item-start' },
+        { prefixIcon: 'sf-icon-Selector tb-icons', tooltipText: 'Select Tool', cssClass: 'tb-item-middle tb-item-selected' },
+        { tooltipText: 'Change Connector Type', template: '<button id="conTypeBtn" style="width:100%;"></button>', cssClass: 'tb-item-end' },
+        { type: 'Separator' },
+
+        { prefixIcon: 'sf-icon-Lock tb-icons', tooltipText: 'Lock', disabled: true, cssClass: 'tb-item-start' },
+        { prefixIcon: 'sf-icon-Delete', tooltipText: 'Delete', disabled: true, cssClass: 'tb-item-end' },
+        { type: 'Separator' },
+        { prefixIcon: 'sf-icon-Redo', tooltipText: 'Rotate Clockwise', disabled: true, cssClass: 'tb-item-start' },
+        { prefixIcon: 'sf-icon-Undo', tooltipText: 'Rotate Counter-clockwise', disabled: true, cssClass: 'tb-item-end' },
+        { type: 'Separator' },
+        { prefixIcon: 'sf-icon-BringFront', tooltipText: 'Bring To Front', disabled: true, cssClass: 'tb-item-start' },
+        { prefixIcon: 'sf-icon-Sendback', tooltipText: 'Send To Back', disabled: true, cssClass: 'tb-item-middle' },
+        { prefixIcon: 'sf-icon-BringForward', tooltipText: 'Bring Forward', disabled: true, cssClass: 'tb-item-middle' },
+        { prefixIcon: 'sf-icon-SendBackward', tooltipText: 'Send Backward', disabled: true, cssClass: 'tb-item-end' },
+        { type: 'Separator' },
+        { prefixIcon: 'sf-icon-Flip-Horizontal', tooltipText: 'Flip Horizontal', disabled: true, cssClass: 'tb-item-start' },
+        { prefixIcon: 'sf-icon-Flip-Vertical', tooltipText: 'Flip Vertical', disabled: true, cssClass: 'tb-item-end' },
+
+    ],
+    width: '100%'
+});
+//Render initialized Toolbar component
+var items = [{ text: 'JPG' }, { text: 'PNG' }, { text: 'BMP' }, { text: 'SVG' }];
+var conTypeItems = [
+    { text: 'Straight', iconCss: 'sf-icon-StraightLine' },
+    { text: 'Orthogonal', iconCss: 'sf-icon-ConnectorMode' },
+    { text: 'Bezier', iconCss: 'sf-icon-BeizerLine' }
 ];
+var zoomMenuItems = [
+    { text: '400%' }, { text: '300%' }, { text: '200%' }, { text: '150%' },
+    { text: '100%' }, { text: '75%' }, { text: '50%' }, { text: '25%' }, { separator: true },
+    { text: 'Fit To Screen' }
+];
+var fontType = [
+    { type: 'Arial', text: 'Arial' },
+    { type: 'Aharoni', text: 'Aharoni' },
+    { type: 'Bell MT', text: 'Bell MT' },
+    { type: 'Fantasy', text: 'Fantasy' },
+    { type: 'Times New Roman', text: 'Times New Roman' },
+    { type: 'Segoe UI', text: 'Segoe UI' },
+    { type: 'Verdana', text: 'Verdana' }
+];
+btnObj = new ej.splitbuttons.DropDownButton({
+    items: items, iconCss: 'sf-icon-Export', select: onselectExport,
+});
+conTypeBtn = new ej.splitbuttons.DropDownButton({
+    items: conTypeItems, iconCss: 'sf-icon-ConnectorMode', select: onConnectorSelect
+});
 
-var menuObj = new ej.navigations.Menu({ items: menuItems, height: '10px', select: onMenuSelect }, '#menu');
+function onConnectorSelect(args) {
+    diagram.clearSelection();
+    diagram.drawingObject.sourceID = '';
+    diagram.drawingObject.type = args.item.text;
+    diagram.tool = ej.diagrams.DiagramTools.ContinuousDraw;
+    diagram.selectedItems.userHandles = [];
+    diagram.dataBind();
+    removeSelectedToolbarItem();
+    document.getElementById('conTypeBtn').classList.add('tb-item-selected');
+}
 
-function onMenuSelect(args) {
+var uploadObj = new ej.inputs.Uploader({
+    asyncSettings: {
+        saveUrl: 'https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save',
+        removeUrl: 'https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove'
+    },
+    success: onUploadSuccess,
+    showFileList: false
+});
+uploadObj.appendTo('#fileupload');
+
+
+toolbarObj.appendTo('#toolbarEditor');
+var btnHideToolbar = new ej.buttons.Button({ iconCss: 'sf-icon-Collapse tb-icons' });
+btnHideToolbar.appendTo('#btnHideToolbar');
+btnObj.appendTo('#custombtn');
+conTypeBtn.appendTo('#conTypeBtn');
+
+
+function menuClick(args) {
+    var buttonElement = document.getElementsByClassName('e-btn-hover')[0];
+    if (buttonElement) {
+        buttonElement.classList.remove('e-btn-hover');
+    }
     var option = args.item.text;
     switch (option) {
         case 'New':
             diagram.clear();
+            historyChange();
             break;
         case 'Save':
             download(diagram.saveDiagram());
             break;
         case 'Print':
-            var options = {};
-            options.mode = 'Data';
-            diagram.print(options)
+            // var options = {};
+            // options.mode = 'Data';
+            // diagram.print(options)
+            printSettings.pageHeight = pageSettings.pageHeight;
+            printSettings.pageWidth = pageSettings.pageWidth;
+            printSettings.paperSize = pageSettings.paperSize;
+            printSettings.isPortrait = pageSettings.isPortrait;
+            printSettings.isLandscape = !pageSettings.isPortrait;
+            printDialog.show();
+            break;
+        case 'Export':
+            exportDialog.show();
+            break;
+        case 'JPG':
+        case 'PNG':
+        case 'BMP':
+        case 'SVG':
+            onselectExport(args);
+            break;
+        case 'Open':
+            document.getElementsByClassName('e-file-select-wrap')[0].querySelector('button').click();
             break;
         case 'Undo':
             diagram.undo();
@@ -823,11 +1447,17 @@ function onMenuSelect(args) {
         case 'Paste':
             diagram.paste();
             break;
-        case 'Rotate Clockwise':
+        case 'Rotate Right 90':
             diagram.rotate(diagram.selectedItems, 90);
             break;
-        case 'Rotate Counter Clockwise':
+        case 'Rotate Left 90':
             diagram.rotate(diagram.selectedItems, -90);
+            break;
+        case 'Flip Vertical':
+            flipObjects(option);
+            break;
+        case 'Flip Horizontal':
+            flipObjects(option);
             break;
         case 'Delete':
             diagram.remove();
@@ -836,6 +1466,37 @@ function onMenuSelect(args) {
             break;
         case 'Bring To Front':
             diagram.bringToFront();
+            break;
+        case 'Send Backward':
+            diagram.sendBackward();
+            break;
+        case 'Bring Forward':
+            diagram.moveForward();
+            break;
+        case 'Landscape':
+            args.item.parentObj.items[1].iconCss = '';
+            args.item.iconCss = 'sf-icon-Selection';
+            diagram.pageSettings.orientation = 'Landscape';
+            pagePortrait.checked = false;
+            pageLandscape.checked = true;
+            break;
+        case 'Portrait':
+            args.item.parentObj.items[0].iconCss = '';
+            args.item.iconCss = 'sf-icon-Selection';
+            diagram.pageSettings.orientation = 'Portrait';
+            pagePortrait.checked = true;
+            pageLandscape.checked = false;
+            break;
+        case 'Letter (8.5 in x 11 in)':
+        case 'Legal (8.5 in x 14 in)':
+        case 'A3 (297 mm x 420 mm)':
+        case 'A4 (210 mm x 297 mm)':
+        case 'A5 (148 mm x 210 mm)':
+        case 'A6 (105 mm x 148 mm)':
+        case 'Tabloid (279 mm x 432 mm)':
+            paperListChange(args)
+            pageSettingsList.text = args.item.text;
+            updateSelection(args.item)
             break;
         case 'Select All':
             diagram.clearSelection();
@@ -851,52 +1512,329 @@ function onMenuSelect(args) {
             break;
         case 'Deselect All':
             diagram.clearSelection();
+            // diagram.selectedItems.nodes = [];
+            // diagram.selectedItems.connectors = [];
             break;
         case 'Selection Tool':
             diagram.tool = ej.diagrams.DiagramTools.Default;
+            removeSelectedToolbarItem();
             break;
         case 'Pan Tool':
+            diagram.clearSelection();
             diagram.tool = ej.diagrams.DiagramTools.ZoomPan;
-            break;
-        case 'Connector Tool':
-            diagram.tool = ej.diagrams.DiagramTools.ContinuousDraw;
+            removeSelectedToolbarItem();
             break;
         case 'Orthogonal':
+            diagram.clearSelection();
+            diagram.drawingObject.sourceID = '';
+            diagram.tool = ej.diagrams.DiagramTools.ContinuousDraw;
+            diagram.selectedItems.userHandles = [];
             diagram.drawingObject.type = 'Orthogonal';
+            removeSelectedToolbarItem();
             break;
         case 'Straight':
+            diagram.clearSelection();
+            diagram.drawingObject.sourceID = '';
+            diagram.tool = ej.diagrams.DiagramTools.ContinuousDraw;
+            diagram.selectedItems.userHandles = [];
             diagram.drawingObject.type = 'Straight';
+            removeSelectedToolbarItem();
             break;
         case 'Bezier':
+            diagram.clearSelection();
+            diagram.drawingObject.sourceID = '';
+            diagram.tool = ej.diagrams.DiagramTools.ContinuousDraw;
+            diagram.selectedItems.userHandles = [];
             diagram.drawingObject.type = 'Bezier';
+            removeSelectedToolbarItem();
             break;
         case 'Show Lines':
             diagram.snapSettings.constraints = diagram.snapSettings.constraints ^ ej.diagrams.SnapConstraints.ShowLines;
+            args.item.iconCss = args.item.iconCss ? '' : 'sf-icon-Selection';
             break;
         case 'Snap To Grid':
             diagram.snapSettings.constraints = diagram.snapSettings.constraints ^ ej.diagrams.SnapConstraints.SnapToLines;
+            args.item.iconCss = args.item.iconCss ? '' : 'sf-icon-Selection';
             break;
         case 'Snap To Object':
             diagram.snapSettings.constraints = diagram.snapSettings.constraints ^ ej.diagrams.SnapConstraints.SnapToObject;
+            args.item.iconCss = args.item.iconCss ? '' : 'sf-icon-Selection';
             break;
         case 'Show Ruler':
+            args.item.iconCss = args.item.iconCss ? '' : 'sf-icon-Selection';
             diagram.rulerSettings.showRulers = !diagram.rulerSettings.showRulers;
             break;
         case 'Show Page Breaks':
-            diagram.pageSettings.showPageBreaks = true;
+            args.item.iconCss = args.item.iconCss ? '' : 'sf-icon-Selection';
+            diagram.pageSettings.showPageBreaks = !diagram.pageSettings.showPageBreaks;
+            showPageBreaks.checked = !showPageBreaks.checked;
+            break;
+        case 'Show Multiple page':
+            args.item.iconCss = args.item.iconCss ? '' : 'sf-icon-Selection';
+            diagram.pageSettings.multiplePage = !diagram.pageSettings.multiplePage;
             break;
         case 'Fit To Width':
             diagram.fitToPage({ mode: 'Width' });
             break;
         case 'Fit To Page':
-            diagram.fitToPage();
+            diagram.fitToPage({ mode: 'Page', region: 'Content' });
             break;
-        case 'Reset View':
-            diagram.reset();
-            break;
+    }
+    if (option === 'Pan Tool') {
+        if (toolbarObj.items[17].cssClass.indexOf('tb-item-selected') === -1) {
+            toolbarObj.items[17].cssClass += ' tb-item-selected';
+        }
+    }
+    else if (option === 'Selection Tool') {
+        if (toolbarObj.items[18].cssClass.indexOf('tb-item-selected') === -1) {
+            toolbarObj.items[18].cssClass += ' tb-item-selected';
+        }
+    }
+    else if (option === 'Orthogonal' || option === 'Straight' || option === 'Bezier') {
+        document.getElementById('conTypeBtn').classList.add('tb-item-selected');
+    }
 
+    diagram.dataBind();
+}
+
+function updateSelection(item) {
+    for (i = 0; i < item.parentObj.items.length; i++) {
+        if (item.text === item.parentObj.items[i].text) {
+            item.parentObj.items[i].iconCss = 'sf-icon-Selection';
+        }
+        else {
+            item.parentObj.items[i].iconCss = '';
+        }
+    }
+}
+
+
+function toolbarClick(args) {
+    let item = args.item.tooltipText;
+    var zoomCurrentValue = document.getElementById("btnZoomIncrement").ej2_instances[0];
+    switch (item) {
+        case 'Undo':
+            diagram.undo();
+            break;
+        case 'Redo':
+            diagram.redo();
+            break;
+        case 'Zoom In(Ctrl + +)':
+            diagram.zoomTo({ type: 'ZoomIn', zoomFactor: 0.2 });
+            zoomCurrentValue.content = diagram.scrollSettings.currentZoom = (diagram.scrollSettings.currentZoom * 100).toFixed() + '%';
+            break;
+        case 'Zoom Out(Ctrl + -)':
+            diagram.zoomTo({ type: 'ZoomOut', zoomFactor: 0.2 });
+            zoomCurrentValue.content = diagram.scrollSettings.currentZoom = (diagram.scrollSettings.currentZoom * 100).toFixed() + '%';
+            break;
+        case 'Lock':
+            lockObject();
+            break;
+        case 'Cut':
+            diagram.cut();
+            break;
+        case 'Copy':
+            diagram.copy();
+            break;
+        case 'Paste':
+            diagram.paste();
+            break;
+        case 'Delete':
+            diagram.remove();
+            break;
+        case 'Select Tool':
+            diagram.tool = ej.diagrams.DiagramTools.Default;
+            break;
+        case 'Pan Tool':
+            diagram.tool = ej.diagrams.DiagramTools.ZoomPan;
+            break;
+        case 'Rotate Clockwise':
+            diagram.rotate(diagram.selectedItems, 90);
+            break;
+        case 'Rotate Counter-clockwise':
+            diagram.rotate(diagram.selectedItems, -90);
+            break;
+        case 'Bring To Front':
+            diagram.bringToFront();
+            break;
+        case 'Send To Back':
+            diagram.sendToBack();
+            break;
+        case 'Bring Forward':
+            diagram.moveForward();
+            break;
+        case 'Send Backward':
+            diagram.sendBackward();
+            break;
+        case 'New Diagram':
+            diagram.clear();
+            historyChange();
+            break;
+        case 'Print Diagram':
+            printDialog.show();
+            // var options = {};
+            // options.mode = 'Data';
+            // diagram.print(options)
+            break;
+        case 'Save Diagram':
+            download(diagram.saveDiagram());
+            break;
+        case 'Open Diagram':
+            document.getElementsByClassName('e-file-select-wrap')[0].querySelector('button').click();
+            break;
+        case 'Flip Vertical':
+            flipObjects(item);
+            break;
+        case 'Flip Horizontal':
+            flipObjects(item);
+            break;
+    }
+    if (item === 'Select Tool' || item === 'Pan Tool' || item === 'Connector Tool') {
+        if (args.item.cssClass.indexOf('tb-item-selected') === -1) {
+            removeSelectedToolbarItem();
+            args.item.cssClass += ' tb-item-selected';
+        }
     }
     diagram.dataBind();
+}
+
+function removeSelectedToolbarItem(args) {
+    // var toolbarEd = selectedItem.utilityMethods.toolbarEditor;
+    for (var i = 0; i < toolbarObj.items.length; i++) {
+        var item = toolbarObj.items[i];
+        if (item.cssClass.indexOf('tb-item-selected') !== -1) {
+            item.cssClass = item.cssClass.replace(' tb-item-selected', '');
+        }
+    }
+    toolbarObj.dataBind();
+    document.getElementById('conTypeBtn').classList.remove('tb-item-selected');
+}
+
+function flipObjects(flipType) {
+    var selectedObjects = diagram.selectedItems.nodes.concat(diagram.selectedItems.connectors);
+    for (i = 0; i < selectedObjects.length; i++) {
+        selectedObjects[i].flip = flipType === 'Flip Horizontal' ? 'Horizontal' : 'Vertical';
+    }
+    diagram.dataBind();
+}
+
+function onUploadSuccess(args) {
+    var file1 = args.file;
+    var file = file1.rawFile;
+    var reader = new FileReader();
+    reader.readAsText(file);
+    reader.onloadend = loadDiagram;
+}
+//Load the diagraming object.
+function loadDiagram(event) {
+    diagram.loadDiagram(event.target.result);
+}
+
+function lockObject(args) {
+    for (var i = 0; i < diagram.selectedItems.nodes.length; i++) {
+        var node = diagram.selectedItems.nodes[i];
+        if (node.constraints & ej.diagrams.NodeConstraints.Drag) {
+            node.constraints = ej.diagrams.NodeConstraints.PointerEvents | ej.diagrams.NodeConstraints.Select;
+        } else {
+            node.constraints = ej.diagrams.NodeConstraints.Default;
+        }
+    }
+    for (var j = 0; j < diagram.selectedItems.connectors.length; j++) {
+        var connector = diagram.selectedItems.connectors[j];
+        if (connector.constraints & ej.diagrams.ConnectorConstraints.Drag) {
+            connector.constraints = ej.diagrams.ConnectorConstraints.PointerEvents | ej.diagrams.ConnectorConstraints.Select;
+        } else {
+            connector.constraints = ej.diagrams.ConnectorConstraints.Default;
+        }
+    }
+    diagram.dataBind();
+}
+
+function zoomChange(args) {
+    var zoomCurrentValue = document.getElementById("btnZoomIncrement").ej2_instances[0];
+    if (args.item.text === 'Custom') {
+        var ss = '';
+    } else if (args.item.text === 'Fit To Screen') {
+        zoomCurrentValue.content = diagram.scrollSettings.currentZoom = 'Fit ...';
+        diagram.fitToPage({ mode: 'Page', region: 'Content', margin: { left: 0, top: 0, right: 0, bottom: 0 } });
+    } else {
+        var currentZoom = diagram.scrollSettings.currentZoom;
+        var zoom = {};
+        switch (args.item.text) {
+            case '400%':
+                zoom.zoomFactor = (4 / currentZoom) - 1;
+                break;
+            case '300%':
+                zoom.zoomFactor = (3 / currentZoom) - 1;
+                break;
+            case '200%':
+                zoom.zoomFactor = (2 / currentZoom) - 1;
+                break;
+            case '150%':
+                zoom.zoomFactor = (1.5 / currentZoom) - 1;
+                break;
+            case '100%':
+                zoom.zoomFactor = (1 / currentZoom) - 1;
+                break;
+            case '75%':
+                zoom.zoomFactor = (0.75 / currentZoom) - 1;
+                break;
+            case '50%':
+                zoom.zoomFactor = (0.5 / currentZoom) - 1;
+                break;
+            case '25%':
+                zoom.zoomFactor = (0.25 / currentZoom) - 1;
+                break;
+        }
+        zoomCurrentValue.content = diagram.scrollSettings.currentZoom = args.item.text;
+        diagram.zoomTo(zoom);
+    }
+}
+function pasteClick() {
+    toolbarObj.items[11].disabled = false;
+}
+
+function onClickDisable(args) {
+    if (args === false) {
+        toolbarObj.items[9].disabled = false;
+        toolbarObj.items[10].disabled = false;
+        toolbarObj.items[21].disabled = false;
+        toolbarObj.items[22].disabled = false;
+        toolbarObj.items[24].disabled = false;
+        toolbarObj.items[25].disabled = false;
+        toolbarObj.items[27].disabled = false;
+        toolbarObj.items[28].disabled = false;
+        toolbarObj.items[29].disabled = false;
+        toolbarObj.items[30].disabled = false;
+        toolbarObj.items[32].disabled = false;
+        toolbarObj.items[33].disabled = false;
+    }
+    else if (args === true) {
+        var isTrue;
+
+        if (diagram.selectedItems.connectors.length > 0) {
+            isTrue = false;
+            // toolbarObj.items[24].disabled = true;
+            // toolbarObj.items[25].disabled = true;
+        }
+        else {
+            isTrue = true;
+            // toolbarObj.items[24].disabled = true;
+            // toolbarObj.items[25].disabled = true;
+        }
+        toolbarObj.items[9].disabled = isTrue;
+        toolbarObj.items[10].disabled = isTrue;
+        toolbarObj.items[21].disabled = isTrue;
+        toolbarObj.items[22].disabled = isTrue;
+        toolbarObj.items[24].disabled = isTrue;
+        toolbarObj.items[25].disabled = isTrue;
+        toolbarObj.items[27].disabled = isTrue;
+        toolbarObj.items[28].disabled = isTrue;
+        toolbarObj.items[29].disabled = isTrue;
+        toolbarObj.items[30].disabled = isTrue;
+        toolbarObj.items[32].disabled = isTrue;
+        toolbarObj.items[33].disabled = isTrue;
+    }
 }
 
 function download(data) {
@@ -908,9 +1846,600 @@ function download(data) {
         var dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(data);
         var a = document.createElement('a');
         a.href = dataStr;
-        a.download = 'Diagram.json';
+        a.download = document.getElementById('diagramName').innerHTML + '.json';
         document.body.appendChild(a);
         a.click();
         a.remove();
     }
+}
+function onfocus(args) {
+    document.getElementById('menu').focus();
+}
+
+//Export the diagraming object based on the format.
+function onselectExport(args) {
+    exportFormat.value = args.item.text;
+    exportDialog.show();
+}
+
+function selectionChange(args) {
+    if (args.state === 'Changed') {
+        var selectedItems = diagram.selectedItems.nodes;
+        selectedItems = selectedItems.concat(diagram.selectedItems.connectors);
+        var nodeContainer = document.getElementById('nodePropertyContainer');
+        nodeContainer.classList.remove('multiple');
+        nodeContainer.classList.remove('connector');
+        if (selectedItems.length > 1) {
+            multipleSelectionSettings(selectedItems);
+        }
+        else if (selectedItems.length === 1) {
+            singleSelectionSettings(selectedItems[0]);
+        }
+        else {
+            objectTypeChange('diagram');
+        }
+        if (args.newValue.length > 0 && args.newValue[0] instanceof ej.diagrams.Node) {
+            diagram.selectedItems = { constraints: ej.diagrams.SelectorConstraints.All | ej.diagrams.SelectorConstraints.UserHandle, userHandles: handles };
+            onClickDisable(false);
+            if (diagram.selectedItems.nodes.length > 0) {
+                drawingNode = diagram.selectedItems.nodes[diagram.selectedItems.nodes.length - 1];
+            }
+        }
+        else {
+            diagram.selectedItems = { constraints: ej.diagrams.SelectorConstraints.All & ~ej.diagrams.SelectorConstraints.UserHandle };
+            onClickDisable(true);
+        }
+    }
+}
+
+function historyChange() {
+    diagram.historyManager.undoStack.length > 0 ? toolbarObj.items[6].disabled = false : toolbarObj.items[6].disabled = true
+    diagram.historyManager.redoStack.length > 0 ? toolbarObj.items[7].disabled = false : toolbarObj.items[7].disabled = true
+}
+
+var PaperSize = (function () {
+    function PaperSize() {
+    }
+    return PaperSize;
+}());
+
+function getPaperSize(args) {
+    var paperSize = new PaperSize();
+    switch (args) {
+        case 'Letter':
+            paperSize.pageWidth = 816;
+            paperSize.pageHeight = 1056;
+            break;
+        case 'Legal':
+            paperSize.pageWidth = 816;
+            paperSize.pageHeight = 1344;
+            break;
+        case 'Tabloid':
+            paperSize.pageWidth = 1056;
+            paperSize.pageHeight = 1632;
+            break;
+        case 'A0':
+            paperSize.pageWidth = 3179;
+            paperSize.pageHeight = 4494;
+            break;
+        case 'A1':
+            paperSize.pageWidth = 2245;
+            paperSize.pageHeight = 3179;
+            break;
+        case 'A2':
+            paperSize.pageWidth = 1587;
+            paperSize.pageHeight = 2245;
+            break;
+        case 'A3':
+            paperSize.pageWidth = 1122;
+            paperSize.pageHeight = 1587;
+            break;
+        case 'A4':
+            paperSize.pageWidth = 793;
+            paperSize.pageHeight = 1122;
+            break;
+        case 'A5':
+            paperSize.pageWidth = 559;
+            paperSize.pageHeight = 793;
+            break;
+        case 'A6':
+            paperSize.pageWidth = 396;
+            paperSize.pageHeight = 559;
+            break;
+    }
+    return paperSize
+}
+
+function paperListChange(args) {
+    document.getElementById('pageDimension').style.display = 'none';
+    document.getElementById('pageOrientation').style.display = '';
+    var value = args.value || args.item.value;
+    var paperSize = getPaperSize(value);
+    var pageWidth = paperSize.pageWidth;
+    var pageHeight = paperSize.pageHeight;
+    if (pageWidth && pageHeight) {
+        if (diagram.pageSettings.orientation === 'Portrait') {
+            if (pageWidth > pageHeight) {
+                var temp = pageWidth;
+                pageWidth = pageHeight;
+                pageHeight = temp;
+            }
+        }
+        else {
+            if (pageHeight > pageWidth) {
+                var temp = pageHeight;
+                pageHeight = pageWidth;
+                pageWidth = temp;
+            }
+        }
+        diagram.pageSettings.width = pageWidth;
+        diagram.pageSettings.height = pageHeight;
+
+
+    }
+    else {
+        document.getElementById('pageOrientation').style.display = 'none';
+        document.getElementById('pageDimension').style.display = '';
+        diagram.pageSettings.width = 1460;
+        diagram.pageSettings.height = 600;
+    }
+    updatePaperSelection(designContextMenu.items[1], args.value);
+    diagram.dataBind();
+}
+
+function updatePaperSelection(items, value) {
+    for (i = 0; i < items.items.length; i++) {
+        if (value === items.items[i].value) {
+            items.items[i].iconCss = 'sf-icon-Selection';
+        }
+        else {
+            items.items[i].iconCss = '';
+        }
+    }
+}
+
+var editContextMenu = new ej.navigations.ContextMenu({
+    animationSettings: { effect: 'None' },
+    items: getEditMenuItems(),
+    onOpen: editContextMenuOpen,
+    cssClass: "EditMenu",
+    beforeItemRender: beforeItemRender,
+    select: menuClick,
+    beforeClose: arrangeMenuBeforeClose
+})
+editContextMenu.appendTo('#editContextMenu');
+
+var designContextMenu = new ej.navigations.ContextMenu({
+    animationSettings: { effect: 'None' },
+    items: getDesignMenuItems(),
+    onOpen: designContextMenuOpen,
+    cssClass: "DesignMenu",
+    beforeItemRender: beforeItemRender,
+    select: menuClick,
+    beforeClose: arrangeMenuBeforeClose
+})
+designContextMenu.appendTo('#designContextMenu');
+
+var toolsContextMenu = new ej.navigations.ContextMenu({
+    animationSettings: { effect: 'None' },
+    items: getToolsMenuItems(),
+    onOpen: toolsContextMenuOpen,
+    cssClass: "ToolsMenu",
+    beforeItemRender: beforeItemRender,
+    select: menuClick,
+    beforeClose: arrangeMenuBeforeClose
+});
+toolsContextMenu.appendTo('#toolsContextMenu');
+
+var btnDesignMenu = new ej.splitbuttons.DropDownButton({
+    cssClass: 'db-dropdown-menu',
+    target: '.e-contextmenu-wrapper.designMenu',
+    content: 'Design',
+    select: menuClick,
+    beforeItemRender: beforeItemRender,
+    beforeOpen: arrangeMenuBeforeOpen,
+    beforeClose: arrangeMenuBeforeClose
+});
+btnDesignMenu.appendTo('#btnDesignMenu');
+var btnToolsMenu = new ej.splitbuttons.DropDownButton({
+    cssClass: 'db-dropdown-menu',
+    target: '.e-contextmenu-wrapper.toolsMenu',
+    content: 'Tools',
+    items: getToolsMenuItems(),
+    select: menuClick,
+    beforeItemRender: beforeItemRender,
+    beforeOpen: arrangeMenuBeforeOpen,
+    beforeClose: arrangeMenuBeforeClose
+});
+btnToolsMenu.appendTo('#btnToolsMenu');
+
+var btnEditMenu = new ej.splitbuttons.DropDownButton({
+    cssClass: 'db-dropdown-menu',
+    target: '.e-contextmenu-wrapper.editMenu',
+    content: 'Edit',
+    select: menuClick,
+    beforeItemRender: beforeItemRender,
+    beforeOpen: arrangeMenuBeforeOpen,
+    beforeClose: arrangeMenuBeforeClose
+});
+btnEditMenu.appendTo('#btnEditMenu');
+var btnZoomIncrement = new ej.splitbuttons.DropDownButton({ items: zoomMenuItems, content: Math.round(diagram.scrollSettings.currentZoom * 100) + ' %', select: zoomChange });
+btnZoomIncrement.appendTo('#btnZoomIncrement');
+var hyperlinkDialog = new ej.popups.Dialog({
+    width: '400px',
+    header: 'Insert Link',
+    target: document.body,
+    isModal: true,
+    animationSettings: { effect: 'None' },
+    showCloseIcon: true,
+    visible: false,
+    buttons: getDialogButtons('hyperlink'),
+    content: '<div id="hyperlinkDialogContent"><div class="row"><div class="row">Enter URL</div><div class="row db-dialog-child-prop-row"><input type="text" id="hyperlink">' +
+        '</div></div><div class="row db-dialog-prop-row"><div class="row">Link Text (Optional)</div><div class="row db-dialog-child-prop-row"><input type="text" id="hyperlinkText"></div></div></div>'
+});
+hyperlinkDialog.appendTo('#hyperlinkDialog');
+
+var fileUploadDialog = new ej.popups.Dialog({
+    width: '500px',
+    height: '485px',
+    header: 'Upload File',
+    target: document.body,
+    isModal: true,
+    animationSettings: { effect: 'None' },
+    buttons: getUploadButtons(),
+    visible: false,
+    showCloseIcon: true,
+    allowDragging: true,
+    content: ' <div id="uploadDialogContent" class="db-upload-content firstPage"> <div id="tooltip"> <div id="uploadInformationDiv" class="row db-dialog-prop-row" style="margin-top: 0px;">' +
+        ' <div class="row"> <div class="row" style="font-size: 12px;font-weight: 500;color: black;"><div class="db-info-text">Choose Format</div>' +
+        ' <div class="db-format-type" style="display: none"> </div> </div><div class="row db-dialog-child-prop-row"><div class="col-xs-3 db-prop-col-style">' +
+        ' <input id="csvFormat" type="radio"></div> <div class="col-xs-3 db-prop-col-style"><input id="xmlFormat" type="radio"></div> <div class="col-xs-3 db-prop-col-style">' +
+        '<input id="jsonFormat" type="radio"> </div> </div> </div> <div class="row db-dialog-prop-row" style="padding: 10px; background-color: #FFF7B5; border: 1px solid #FFF7B5">' +
+        '<div class="db-info-parent" style="width: 10%; background-color:transparent; height: 60px;"></div> <div style="float:left; width: calc(90% - 5px)">' +
+        ' <ul style="padding-left: 25px; margin-bottom: 0px"><li style="margin-bottom: 5px"><span id="descriptionText1" style="color: #515151;font-size: 11px;line-height: 15px;">Makesure that the every column of your table has a header</span>' +
+        '</li><li><span id="descriptionText2" style="color: #515151;font-size: 11px;line-height: 15px;">Each employee should have a reporting person (except for top most employee of the organization) and it should be indicated by any field from your data source.</span></li></ul>' +
+        '</div></div><div class="row db-dialog-prop-row"><button id="btnDownloadFile"></button></div><div class="row"> <div id="dropArea">' +
+        '<span id="dropRegion" class="droparea"> Drop files here or <a href="" id="browseFile"><u>Browse</u></a></span><input type="file" id="defaultfileupload" name="UploadFiles"/>' +
+        '</div></div></div><div id="parentChildRelationDiv" class="row db-dialog-prop-row"> <div class="row db-dialog-child-prop-row" style="margin-top:20px">' +
+        '<div class="row"><div class="db-info-text">Employee Id</div><div class="db-info-style db-employee-id"></div></div><div class="row db-dialog-child-prop-row">' +
+        '<input type="text" id="employeeId"/></div></div><div class="row db-dialog-prop-row"><div class="row"><div class="db-info-text"> Supervisor Id</div>' +
+        ' <div class="db-info-style db-supervisor-id"> </div> </div> <div class="row db-dialog-child-prop-row"><input type="text" id="superVisorId"/></div></div></div>' +
+        '<div id="moreInformationDiv" class="row db-dialog-prop-row"><div id="bindingFields" class="row"><div class="row"><div class="db-info-text">Name</div>' +
+        '<div class="db-info-style db-nameField-id"></div></div><div class="row db-dialog-child-prop-row"><input type="text" id="orgNameField"/></div></div>' +
+        '<div id="bindingFields" class="row db-dialog-prop-row" style="margin-top:20px"><div class="row"><div class="db-info-text">Binding Fields</div><div class="db-info-style db-bindingField-id">' +
+        '</div></div><div class="row db-dialog-child-prop-row"><input type="text" id="orgBindingFields" /></div></div><div id="imageFields" class="row db-dialog-prop-row">' +
+        '<div class="row"><div class="db-info-text">Image Field</div><div class="db-info-style db-imageField-id"></div></div>' +
+        '<div class="row db-dialog-child-prop-row"><input type="text" id="orgImageField"/></div></div> <div id="additionalFields" class="row db-dialog-prop-row">' +
+        '<div class="row"><div class="db-info-text">Additional Fields</div><div class="db-info-style db-additionalField-id"></div></div><div class="row db-dialog-child-prop-row">' +
+        '<input type="text" id="orgAdditionalField"/></div></div></div></div></div>'
+});
+fileUploadDialog.appendTo('#fileUploadDialog');
+
+var printDialog = new ej.popups.Dialog({
+    width: '335px',
+    header: 'Print Diagram',
+    target: document.body,
+    isModal: true,
+    animationSettings: { effect: 'None' },
+    buttons: getDialogButtons('print'),
+    visible: false,
+    showCloseIcon: true,
+    content: '<div id="printDialogContent"><div class="row"><div class="row">Region</div> <div class="row db-dialog-child-prop-row">' +
+        '<input type="text" id="printRegionDropdown"/> </div> </div><div class="row db-dialog-prop-row"><div class="row">Print Settings</div>' +
+        '<div class="row db-dialog-child-prop-row"><input type="text" id="printPaperSizeDropdown"/> </div> </div>' +
+        '<div id="printCustomSize" class="row db-dialog-prop-row" style="display:none; height: 28px;"> <div class="col-xs-6 db-col-left">' +
+        '<div class="db-text-container"><div class="db-text"><span>W</span></div><div class="db-text-input"><input id="printPageWidth" type="text" />' +
+        '</div> </div> </div> <div class="col-xs-6 db-col-right"><div class="db-text-container"> <div class="db-text"><span>H</span></div>' +
+        '<div class="db-text-input"><input id="printPageHeight" type="text" /></div></div></div></div><div id="printOrientation" class="row db-dialog-prop-row" style="height: 28px; padding: 5px 0px;">' +
+        '<div class="col-xs-3 db-prop-col-style" style="margin-right: 8px;"><input id="printPortrait" type="radio"></div> <div class="col-xs-3 db-prop-col-style">' +
+        '<input id="printLandscape" type="radio"></div></div> <div class="row db-dialog-prop-row" style="margin-top: 16px"> <input id="printMultiplePage" type="checkbox" /> </div> </div>'
+});
+printDialog.appendTo('#printDialog');
+
+// dropdown template for printDialog control
+var printRegionDropdown = new ej.dropdowns.DropDownList({
+    dataSource: diagramRegions(),
+    fields: { text: 'text', value: 'value' },
+    value: printSettings.region
+});
+printRegionDropdown.appendTo('#printRegionDropdown');
+
+// dropdown template for printDialog control
+var printPaperSizeDropdown = new ej.dropdowns.DropDownList({
+    dataSource: paperList(),
+    fields: { text: 'text', value: 'value' },
+    value: printSettings.paperSize
+});
+printPaperSizeDropdown.appendTo('#printPaperSizeDropdown');
+
+// numerictextbox template for printDialog control
+var printPageWidth = new ej.inputs.NumericTextBox({
+    min: 100,
+    step: 1,
+    format: 'n0',
+    value: printSettings.pageWidth
+});
+printPageWidth.appendTo('#printPageWidth');
+
+// numerictextbox template for printDialog control
+var printPageHeight = new ej.inputs.NumericTextBox({
+    min: 100,
+    step: 1,
+    format: 'n0',
+    value: printSettings.pageHeight
+});
+printPageHeight.appendTo('#printPageHeight');
+
+// radiobutton template for printDialog control
+var printPortrait = new ej.buttons.RadioButton({ label: 'Portrait', name: 'printSettings', checked: printSettings.isPortrait });
+printPortrait.appendTo('#printPortrait');
+
+// radiobutton template for printDialog control
+var printLandscape = new ej.buttons.RadioButton({ label: 'Landscape', name: 'printSettings', checked: printSettings.isLandscape });
+printLandscape.appendTo('#printLandscape');
+
+// checkbox template for printDialog control
+var printMultiplePage = new ej.buttons.CheckBox({
+    label: 'Scale to fit 1 page', checked: printSettings.multiplePage,
+    change: function (args) { multiplePage(args); }
+});
+printMultiplePage.appendTo('#printMultiplePage');
+
+function multiplePage(args) {
+    if (args.event) {
+        printSettings.multiplePage = args.checked;
+    }
+};
+function diagramRegions() {
+    var diagramRegions = [
+        { text: 'Content', value: 'Content' }, { text: 'PageSettings', value: 'PageSettings' }
+    ];
+    return diagramRegions;
+};
+
+var exportDialog = new ej.popups.Dialog({
+    width: '400px',
+    header: 'Export Diagram',
+    target: document.body,
+    isModal: true,
+    animationSettings: { effect: 'None' },
+    buttons: getDialogButtons('export'),
+    visible: false,
+    showCloseIcon: true,
+    content: '<div id="exportDialogContent"><div class="row"><div class="row"> File Name </div> <div class="row db-dialog-child-prop-row">' +
+        '<input type="text" id="exportfileName" value = "Untitled Diagram"></div></div>' +
+        '<div class="row db-dialog-prop-row"> <div class="col-xs-6 db-col-left"> <div class="row"> Format </div>' +
+        '<div class="row db-dialog-child-prop-row"> <input type="text" id="exportFormat"/> </div> </div>' +
+        '<div class="col-xs-6 db-col-right"> <div class="row"> Region </div> <div class="row db-dialog-child-prop-row">' +
+        '<input type="text" id="exportRegion"/></div></div></div></div>'
+});
+exportDialog.appendTo('#exportDialog');
+
+var exportFormat = new ej.dropdowns.DropDownList({
+    dataSource: fileFormats(),
+    fields: { text: 'text', value: 'value' },
+    value: exportSettings.format,
+});
+exportFormat.appendTo('#exportFormat');
+
+// dropdown template for exportDialog control
+var exportRegion = new ej.dropdowns.DropDownList({
+    dataSource: diagramRegions(),
+    fields: { text: 'text', value: 'value' },
+    value: exportSettings.region
+});
+exportRegion.appendTo('#exportRegion');
+
+
+function fileFormats() {
+    var fileFormats = [
+        { text: 'JPG', value: 'JPG' }, { text: 'PNG', value: 'PNG' },
+        { text: 'BMP', value: 'BMP' }, { text: 'SVG', value: 'SVG' }
+    ];
+    return fileFormats;
+};
+function diagramRegions() {
+    var diagramRegions = [
+        { text: 'Content', value: 'Content' }, { text: 'PageSettings', value: 'PageSettings' }
+    ];
+    return diagramRegions;
+};
+function toolbarInsertClick(args) {
+    var commandType = args.item.tooltipText.replace(/[' ']/g, '');
+    if (diagram.selectedItems.nodes.length > 0) {
+        switch (commandType.toLowerCase()) {
+            case 'insertlink':
+                document.getElementById('hyperlink').value = '';
+                document.getElementById('hyperlinkText').value = '';
+                if (diagram.selectedItems.nodes[0].annotations.length > 0) {
+                    var annotation = diagram.selectedItems.nodes[0].annotations[0];
+                    if (annotation.hyperlink.link || annotation.content) {
+                        document.getElementById('hyperlink').value = annotation.hyperlink.link;
+                        document.getElementById('hyperlinkText').value = annotation.hyperlink.content || annotation.content;
+                    }
+                }
+                hyperlinkDialog.show();
+                break;
+            case 'insertimage':
+                openUploadBox(false, '.jpg,.png,.bmp');
+                break;
+        }
+    }
+}
+function openUploadBox(isOpen, extensionType) {
+    var defaultUpload = document.getElementById('defaultfileupload');
+    defaultUpload = defaultUpload.ej2_instances[0];
+    defaultUpload.clearAll();
+    diagram.orgDataSettings.extensionType = defaultUpload.allowedExtensions = extensionType;
+    defaultUpload.dataBind();
+    diagram.isOpen = isOpen;
+    document.getElementsByClassName('e-file-select-wrap')[0].children[0].click();
+}
+
+function getDialogButtons(dialogType) {
+    var buttons = [];
+    switch (dialogType) {
+        case 'export':
+            buttons.push({
+                click: btnExportClick.bind(this), buttonModel: { content: 'Export', cssClass: 'e-flat e-db-primary', isPrimary: true }
+            });
+            break;
+        case 'print':
+            buttons.push({
+                click: btnPrintClick.bind(this),
+                buttonModel: { content: 'Print', cssClass: 'e-flat e-db-primary', isPrimary: true }
+            });
+            break;
+        case 'hyperlink':
+            buttons.push({
+                click: btnHyperLink.bind(this),
+                buttonModel: { content: 'Apply', cssClass: 'e-flat e-db-primary', isPrimary: true }
+            });
+            break;
+
+    }
+    buttons.push({
+        click: btnCancelClick.bind(this),
+        buttonModel: { content: 'Cancel', cssClass: 'e-flat', isPrimary: true }
+    });
+    return buttons;
+}
+
+function btnCancelClick(args) {
+    var ss = args.target;
+    var key = ss.offsetParent.id;
+    switch (key) {
+        case 'exportDialog':
+            exportDialog.hide();
+            break;
+        case 'printDialog':
+            printDialog.hide();
+            break;
+        case 'saveDialog':
+            saveDialog.hide();
+            break;
+        case 'customPropertyDialog':
+            this.customPropertyDialog.hide();
+            break;
+        case 'tooltipDialog':
+            tooltipDialog.hide();
+            break;
+        case 'hyperlinkDialog':
+            this.hyperlinkDialog.hide();
+            break;
+        case 'deleteConfirmationDialog':
+            this.deleteConfirmationDialog.hide();
+            break;
+        case 'fileUploadDialog':
+            OrgChartUtilityMethods.uploadDialog.hide();
+            OrgChartUtilityMethods.isUploadSuccess = false;
+            break;
+        case 'moreShapesDialog':
+            moreShapesDialog.hide();
+            break;
+    }
+}
+
+function btnHyperLink() {
+    var node = diagram.selectedItems.nodes[0];
+    if (node.annotations.length > 0) {
+        node.annotations[0].hyperlink.link = document.getElementById('hyperlink').value;
+        node.annotations[0].hyperlink.content = document.getElementById('hyperlinkText').value;
+        applyToolTipforHyperlink(node);
+        diagram.dataBind();
+    } else {
+        var annotation = {
+            hyperlink: {
+                content: document.getElementById('hyperlinkText').value,
+                link: document.getElementById('hyperlink').value
+            }
+        };
+        diagram.addLabels(node, [annotation]);
+        applyToolTipforHyperlink(node);
+        diagram.dataBind();
+    }
+    hyperlinkDialog.hide();
+}
+
+function btnExportClick() {
+    diagram.exportDiagram({
+        fileName: document.getElementById("exportfileName").value,
+        format: exportFormat.value,
+        region: exportRegion.value
+    });
+    exportDialog.hide();
+}
+
+function btnPrintClick() {
+    var pageWidth = printSettings.pageWidth;
+    var pageHeight = printSettings.pageHeight;
+    var paperSize = getPaperSize(printSettings.paperSize);
+    if (paperSize.pageHeight && paperSize.pageWidth) {
+        pageWidth = paperSize.pageWidth;
+        pageHeight = paperSize.pageHeight;
+    }
+    if (pageSettings.isPortrait) {
+        if (pageWidth > pageHeight) {
+            var temp = pageWidth;
+            pageWidth = pageHeight;
+            pageHeight = temp;
+        }
+    } else {
+        if (pageHeight > pageWidth) {
+            var temp1 = pageHeight;
+            pageHeight = pageWidth;
+            pageWidth = temp1;
+        }
+    }
+    diagram.print({
+        region: printRegionDropdown.value, pageHeight: pageHeight, pageWidth: pageWidth,
+        multiplePage: printMultiplePage.checked,
+        pageOrientation: printPortrait.checked ? 'Portrait' : 'Landscape'
+    });
+    printDialog.hide();
+}
+
+function applyToolTipforHyperlink(node) {
+    node.constraints = ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InheritTooltip | ej.diagrams.NodeConstraints.Tooltip;
+    node.tooltip = {
+        content: node.annotations[0].hyperlink.link, relativeMode: 'Object',
+        position: 'TopCenter', showTipPointer: true,
+    };
+}
+
+function getUploadButtons() {
+    var buttons = [];
+    buttons.push({
+        click: btnCancelClick.bind(this),
+        buttonModel: { content: 'Cancel', cssClass: 'e-flat', isPrimary: true }
+    });
+    return buttons;
+}
+
+var splitObj = new ej.layouts.Splitter({
+    height: '500px',
+    paneSettings: [
+        { size: '75%', collapsible: false },
+        { collapsible: true }
+    ],
+    separatorSize: 5,
+    expanded: spliterExpanded,
+    collapsed: splitterColapsed,
+    width: '100%'
+});
+splitObj.appendTo('#splitter');
+// document.getElementById('splitter').onclick = (args) =>{
+// var proPan = document.getElementById('propertyPanel').style.display;
+// if(proPan !== 'none'){
+//     document.getElementById('propertyPanel').style.display = 'none';
+// }
+// else{
+//     document.getElementById('propertyPanel').style.display = 'block';
+// }
+// }
+function spliterExpanded(args) {
+    args.pane[1].style.display = 'none';
+}
+function splitterColapsed(args) {
+    args.pane[1].style.display = 'block';
 }
