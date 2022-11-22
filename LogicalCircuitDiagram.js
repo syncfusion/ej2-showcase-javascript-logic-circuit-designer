@@ -719,6 +719,40 @@ function OnInputChanged(args) {
     setBinaryStateFromInput(args);
 }
 
+window.onload = function()
+{
+    document.getElementById('btnHideToolbar').onclick = hideMenuBar.bind(this);
+    document.onmouseover = menumouseover.bind(this);
+    zoomCurrentValue = document.getElementById("btnZoomIncrement").ej2_instances[0];    
+}
+
+function hideMenuBar() {
+    var expandcollapseicon = document.getElementById('btnHideToolbar');
+    var button1 = expandcollapseicon.ej2_instances[0];
+    if (button1.iconCss.indexOf('sf-icon-Collapse tb-icons') > -1) {
+        button1.iconCss = 'sf-icon-DownArrow2 tb-icons';
+    } else {
+        button1.iconCss = 'sf-icon-Collapse tb-icons';
+    }
+    hideElements('hide-menubar', diagram);
+    // diagram.refresh();
+};
+
+function hideElements(elementType, diagram, diagramType) {
+    var diagramContainer = document.getElementsByClassName('diagrambuilder-container')[0];
+    if (diagramContainer.classList.contains(elementType)) {
+        if (!(diagramType === 'mindmap-diagram' || diagramType === 'orgchart-diagram')) {
+            diagramContainer.classList.remove(elementType);
+        }
+    }
+    else {
+        diagramContainer.classList.add(elementType);
+    }
+    if (diagram) {
+        diagram.updateViewPort();
+    }
+};
+
 var ExportSettings = (function () {
     function ExportSettings() {
         this.m_fileName = 'Diagram';
@@ -890,45 +924,6 @@ function diagramNameChange(args) {
     document.getElementById("exportfileName").value = document.getElementById('diagramName').innerHTML;
 }
 
-var btnFileMenu = new ej.splitbuttons.DropDownButton({
-    cssClass: 'db-dropdown-menu',
-    items: getFileMenuItems(),
-    content: 'File',
-    select: menuClick,
-    beforeItemRender: beforeItemRender,
-    beforeOpen: arrangeMenuBeforeOpen,
-    beforeClose: arrangeMenuBeforeClose
-});
-btnFileMenu.appendTo('#btnFileMenu');
-
-
-var btnSelectMenu = new ej.splitbuttons.DropDownButton({
-    cssClass: 'db-dropdown-menu',
-    items: getSelectMenuItems(),
-    content: 'Select',
-    select: menuClick,
-    beforeItemRender: beforeItemRender,
-    beforeOpen: arrangeMenuBeforeOpen,
-    beforeClose: arrangeMenuBeforeClose
-});
-btnSelectMenu.appendTo('#btnSelectMenu');
-
-
-
-var btnViewMenu = new ej.splitbuttons.DropDownButton({
-    cssClass: 'db-dropdown-menu',
-    items: getViewMenuItems(),
-    content: 'View',
-    select: menuClick,
-    beforeItemRender: beforeItemRender,
-    beforeOpen: arrangeMenuBeforeOpen,
-    beforeClose: arrangeMenuBeforeClose
-});
-btnViewMenu.appendTo('#btnViewMenu');
-
-
-
-
 function getFileMenuItems() {
     var items = [
         { text: 'New', iconCss: 'sf-icon-New' },
@@ -1056,6 +1051,42 @@ function getViewMenuItems() {
     return items;
 };
 
+var btnFileMenu = new ej.splitbuttons.DropDownButton({
+    cssClass: 'db-dropdown-menu',
+    items: getFileMenuItems(),
+    content: 'File',
+    select: menuClick,
+    beforeItemRender: beforeItemRender,
+    beforeOpen: arrangeMenuBeforeOpen,
+    beforeClose: arrangeMenuBeforeClose
+});
+btnFileMenu.appendTo('#btnFileMenu');
+
+
+var btnSelectMenu = new ej.splitbuttons.DropDownButton({
+    cssClass: 'db-dropdown-menu',
+    items: getSelectMenuItems(),
+    content: 'Select',
+    select: menuClick,
+    beforeItemRender: beforeItemRender,
+    beforeOpen: arrangeMenuBeforeOpen,
+    beforeClose: arrangeMenuBeforeClose
+});
+btnSelectMenu.appendTo('#btnSelectMenu');
+
+
+
+var btnViewMenu = new ej.splitbuttons.DropDownButton({
+    cssClass: 'db-dropdown-menu',
+    items: getViewMenuItems(),
+    content: 'View',
+    select: menuClick,
+    beforeItemRender: beforeItemRender,
+    beforeOpen: arrangeMenuBeforeOpen,
+    beforeClose: arrangeMenuBeforeClose
+});
+btnViewMenu.appendTo('#btnViewMenu');
+
 function toolsContextMenuOpen(args) {
     if (args.element.classList.contains('e-menu-parent')) {
         var popup = document.querySelector('#btnToolsMenu-popup');
@@ -1082,7 +1113,6 @@ function arrangeMenuBeforeOpen(args) {
     for (var i = 0; i < args.element.children.length; i++) {
         args.element.children[i].style.display = 'block';
     }
-    //(args.element.children[0]).style.display = 'block';
     if (args.event && ej.base.closest(args.event.target, '.e-dropdown-btn') !== null) {
         args.cancel = true;
     }
@@ -1156,17 +1186,6 @@ function getShortCutKey(menuItem) {
         case 'Zoom Out':
             shortCutKey = shortCutKey + '+-';
             break;
-        // case 'Rotate Right 90':
-        //     shortCutKey = shortCutKey + '+R';
-        //     break;
-        // case 'Rotate Left 90':
-        //     shortCutKey = shortCutKey + '+L';
-        //     break;
-        // case 'Flip Horizontal':
-        //     shortCutKey = shortCutKey + '+H';
-        //     break;
-        // case 'Flip Vertical':
-        //     shortCutKey = shortCutKey + '+J';
         default:
             shortCutKey = '';
             break;
@@ -1236,9 +1255,6 @@ function menumouseover(args) {
         this.buttonInstance = button1;
         if (button1.getPopUpElement().classList.contains('e-popup-close')) {
             button1.toggle();
-            // if (button1.element.id === 'btnToolsMenu') {
-            //     enableToolsMenuItems(diagram);
-            // }
             if (button1.element.id === 'btnEditMenu') {
                 enableEditMenuItems(diagram);
             }
@@ -1408,9 +1424,6 @@ function menuClick(args) {
             download(diagram.saveDiagram());
             break;
         case 'Print':
-            // var options = {};
-            // options.mode = 'Data';
-            // diagram.print(options)
             printSettings.pageHeight = pageSettings.pageHeight;
             printSettings.pageWidth = pageSettings.pageWidth;
             printSettings.paperSize = pageSettings.paperSize;
