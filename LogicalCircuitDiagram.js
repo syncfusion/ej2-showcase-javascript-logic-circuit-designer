@@ -1,3 +1,5 @@
+ej.diagrams.Diagram.Inject(ej.diagrams.ConnectorEditing);
+
 
 var orData = 'M70.9412 20L69.9412 20.0012L70.9412 20ZM33.5076 11L34.4744 10.7444L33.5076 11ZM33.7565 29L34.7303 29.2276L33.7565 29ZM29 1L29.0345 0.000594001C28.6575 -0.0124037 28.3053 0.187777 28.1237 0.518291C27.942 0.848804 27.9617 1.25342 28.1747 1.56469L29 1ZM29 40L28.1747 39.4353C27.9617 39.7466 27.942 40.1512 28.1237 40.4817C28.3053 40.8122 28.6575 41.0124 29.0345 40.9994L29 40ZM66.5674 29.1936L67.3548 29.8101L67.3548 29.8101L66.5674 29.1936ZM45.21 39.441L45.2445 40.4404L45.2445 40.4404L45.21 39.441ZM45.6846 1.57533L45.719 0.575923L45.6846 1.57533ZM66.5 11L67.2718 10.3641L66.5 11ZM10 11C10 13.2091 8.20914 15 6 15V17C9.31371 17 12 14.3137 12 11H10ZM6 15C3.79086 15 2 13.2091 2 11H0C0 14.3137 2.68629 17 6 17V15ZM2 11C2 8.79086 3.79086 7 6 7V5C2.68629 5 0 7.68629 0 11H2ZM6 7C8.20914 7 10 8.79086 10 11H12C12 7.68629 9.31371 5 6 5V7ZM10 29C10 31.2091 8.20914 33 6 33V35C9.31371 35 12 32.3137 12 29H10ZM6 33C3.79086 33 2 31.2091 2 29H0C0 32.3137 2.68629 35 6 35V33ZM2 29C2 26.7909 3.79086 25 6 25V23C2.68629 23 0 25.6863 0 29H2ZM6 25C8.20914 25 10 26.7909 10 29H12C12 25.6863 9.31371 23 6 23V25ZM98 20C98 22.2091 96.2091 24 94 24V26C97.3137 26 100 23.3137 100 20H98ZM94 24C91.7909 24 90 22.2091 90 20H88C88 23.3137 90.6863 26 94 26V24ZM90 20C90 17.7909 91.7909 16 94 16V14C90.6863 14 88 16.6863 88 20H90ZM94 16C96.2091 16 98 17.7909 98 20H100C100 16.6863 97.3137 14 94 14V16ZM70.9412 21H89V19H70.9412V21ZM11 12H33.5076V10H11V12ZM11 30H33.7565V28H11V30ZM28.9655 1.99941L45.6501 2.57474L45.719 0.575923L29.0345 0.000594001L28.9655 1.99941ZM45.1755 38.4416L28.9655 39.0006L29.0345 40.9994L45.2445 40.4404L45.1755 38.4416ZM65.7801 28.5771C60.9514 34.7438 53.1021 38.1683 45.1755 38.4416L45.2445 40.4404C53.6589 40.1503 62.1031 36.517 67.3548 29.8101L65.7801 28.5771ZM45.6501 2.57474C53.3279 2.83949 60.9322 5.81523 65.7282 11.6359L67.2718 10.3641C62.0267 3.99837 53.8221 0.85534 45.719 0.575923L45.6501 2.57474ZM34.4744 10.7444C33.499 7.05472 31.9517 3.54311 29.8253 0.435311L28.1747 1.56469C30.1606 4.46711 31.6183 7.76579 32.5408 11.2556L34.4744 10.7444ZM29.8253 40.5647C32.1482 37.1698 33.7801 33.2928 34.7303 29.2276L32.7827 28.7724C31.8833 32.6208 30.3442 36.2645 28.1747 39.4353L29.8253 40.5647ZM34.7303 29.2276C36.1399 23.1963 36.055 16.7243 34.4744 10.7444L32.5408 11.2556C34.0374 16.9173 34.1184 23.0575 32.7827 28.7724L34.7303 29.2276ZM65.7282 11.6359C68.669 15.205 69.9383 17.651 69.9412 20.0012L71.9412 19.9988C71.9374 16.896 70.246 13.9738 67.2718 10.3641L65.7282 11.6359ZM69.9412 20.0012C69.944 22.3473 68.6863 24.8654 65.7801 28.5771L67.3548 29.8101C70.2867 26.0656 71.9449 23.0763 71.9412 19.9988L69.9412 20.0012Z';
 var andData = 'M29 1C29 0.447715 29.4477 0 30 0H52.5C63.4538 0 72.4534 8.14084 72.976 19H88.083C88.559 16.1623 91.027 14 94 14C97.3137 14 100 16.6863 100 20C100 23.3137 97.3137 26 94 26C91.027 26 88.559 23.8377 88.083 21H72.9761C72.4556 31.8562 63.5176 41 52.5 41H30C29.4477 41 29 40.5523 29 40V30H11.917C11.441 32.8377 8.973 35 6 35C2.68629 35 0 32.3137 0 29C0 25.6863 2.68629 23 6 23C8.973 23 11.441 25.1623 11.917 28H29V12H11.917C11.441 14.8377 8.973 17 6 17C2.68629 17 0 14.3137 0 11C0 7.68629 2.68629 5 6 5C8.973 5 11.441 7.16229 11.917 10H29V1ZM31 2V39H52.5C62.6847 39 71 30.2504 71 20C71 9.81642 62.7516 2 52.5 2H31ZM6 7C3.79086 7 2 8.79086 2 11C2 13.2091 3.79086 15 6 15C8.20914 15 10 13.2091 10 11C10 8.79086 8.20914 7 6 7ZM94 16C91.7909 16 90 17.7909 90 20C90 22.2091 91.7909 24 94 24C96.2091 24 98 22.2091 98 20C98 17.7909 96.2091 16 94 16ZM6 25C3.79086 25 2 26.7909 2 29C2 31.2091 3.79086 33 6 33C8.20914 33 10 31.2091 10 29C10 26.7909 8.20914 25 6 25Z';
@@ -41,41 +43,8 @@ var tflipflopdata = 'M47 6C47 3.79086 48.7909 2 51 2C53.2091 2 55 3.79086 55 6C5
 
 var Labeldata = 'M82 0H0V42H82V0ZM2 40V2H80V40H2ZM26.0273 15.5625H30.8555V13.1953H18.4219V15.5625H23.2383V30H26.0273V15.5625ZM32.6484 24.7383H40.8281V23.6953C40.8281 21.8203 40.3789 20.3555 39.4805 19.3008C38.582 18.2461 37.3125 17.7188 35.6719 17.7188C34.0312 17.7188 32.6562 18.3086 31.5469 19.4883C30.4453 20.6602 29.8945 22.1797 29.8945 24.0469C29.8945 26.0234 30.3945 27.5586 31.3945 28.6523C32.4023 29.7383 33.7891 30.2812 35.5547 30.2812C37.3516 30.2812 38.7969 29.9375 39.8906 29.25V27.0586C38.8203 27.8242 37.6445 28.207 36.3633 28.207C35.2227 28.207 34.3242 27.9062 33.668 27.3047C33.0195 26.7031 32.6797 25.8477 32.6484 24.7383ZM37.5117 20.543C37.9648 21.082 38.1953 21.8398 38.2031 22.8164H32.6484C32.7734 21.8945 33.1055 21.1484 33.6445 20.5781C34.1914 20.0078 34.8555 19.7227 35.6367 19.7227C36.4336 19.7227 37.0586 19.9961 37.5117 20.543ZM53.4492 18L49.4531 24.0703L53.4023 30H50.25L48.1406 26.2852C48.0078 26.0586 47.8516 25.7695 47.6719 25.418H47.625C47.5938 25.4883 47.4297 25.7773 47.1328 26.2852L44.9883 30H41.8477L45.9258 24.1172L42.0586 18H45.2227L47.2969 21.9023C47.4531 22.1914 47.6055 22.4883 47.7539 22.793H47.7891L50.4727 18H53.4492ZM59.6719 30.2695C60.5391 30.2695 61.2383 30.1367 61.7695 29.8711V27.7148C61.4336 27.9805 61.0352 28.1133 60.5742 28.1133C59.9727 28.1133 59.543 27.9609 59.2852 27.6562C59.0273 27.3516 58.8984 26.8438 58.8984 26.1328V20.1328H61.7695V18H58.8984V14.4492L56.1797 15.2227V18H54.1758V20.1328H56.1797V26.918C56.1797 29.1523 57.3438 30.2695 59.6719 30.2695Z';
 var busdata = 'M31 0C30.4477 0 30 0.447715 30 1V12H11.917C11.441 9.16229 8.973 7 6 7C2.68629 7 0 9.68629 0 13C0 16.3137 2.68629 19 6 19C8.973 19 11.441 16.8377 11.917 14H30V30H11.917C11.441 27.1623 8.973 25 6 25C2.68629 25 0 27.6863 0 31C0 34.3137 2.68629 37 6 37C8.973 37 11.441 34.8377 11.917 32H30V44C30 44.5523 30.4477 45 31 45H71C71.5523 45 72 44.5523 72 44V23H88.083C88.559 25.8377 91.027 28 94 28C97.3137 28 100 25.3137 100 22C100 18.6863 97.3137 16 94 16C91.027 16 88.559 18.1623 88.083 21H72V1C72 0.447715 71.5523 0 71 0H31ZM32 43V2H70V43H32ZM2 13C2 10.7909 3.79086 9 6 9C8.20914 9 10 10.7909 10 13C10 15.2091 8.20914 17 6 17C3.79086 17 2 15.2091 2 13ZM90 22C90 19.7909 91.7909 18 94 18C96.2091 18 98 19.7909 98 22C98 24.2091 96.2091 26 94 26C91.7909 26 90 24.2091 90 22ZM2 31C2 28.7909 3.79086 27 6 27C8.20914 27 10 28.7909 10 31C10 33.2091 8.20914 35 6 35C3.79086 35 2 33.2091 2 31ZM56.4823 26.02C56.769 26.08 57.0923 26.11 57.4523 26.11C58.099 26.11 58.629 26 59.0423 25.78C59.4623 25.56 59.7623 25.2833 59.9423 24.95C60.129 24.6166 60.2223 24.2666 60.2223 23.9C60.2223 23.5266 60.1256 23.2033 59.9323 22.93C59.739 22.65 59.509 22.4233 59.2423 22.25C58.9756 22.0766 58.6556 21.9 58.2823 21.72C57.8223 21.4933 57.4856 21.32 57.2723 21.2C57.059 21.0733 56.8756 20.92 56.7223 20.74C56.5756 20.56 56.5023 20.3466 56.5023 20.1C56.5023 19.7933 56.6023 19.55 56.8023 19.37C57.009 19.1833 57.3123 19.09 57.7123 19.09C57.9323 19.09 58.1323 19.12 58.3123 19.18C58.4923 19.2333 58.6123 19.29 58.6723 19.35L58.8823 20.58H59.6823L59.7423 18.83C59.6556 18.8166 59.5256 18.7866 59.3523 18.74C59.059 18.66 58.7856 18.5966 58.5323 18.55C58.2856 18.5033 57.999 18.48 57.6723 18.48C57.119 18.48 56.649 18.57 56.2623 18.75C55.8823 18.9233 55.5956 19.1633 55.4023 19.47C55.209 19.77 55.1123 20.1066 55.1123 20.48C55.1123 21.08 55.2923 21.5566 55.6523 21.91C56.019 22.2566 56.479 22.5566 57.0323 22.81C57.439 22.99 57.759 23.15 57.9923 23.29C58.2256 23.4233 58.409 23.5766 58.5423 23.75C58.6756 23.9166 58.7423 24.1166 58.7423 24.35C58.7423 24.7033 58.629 24.98 58.4023 25.18C58.1823 25.3733 57.849 25.47 57.4023 25.47C57.1157 25.47 56.859 25.4333 56.6323 25.36C56.4123 25.2866 56.259 25.2033 56.1723 25.11L55.9523 23.82H55.1423L55.0523 25.67C55.1323 25.6766 55.289 25.7133 55.5223 25.78C55.8756 25.88 56.1956 25.96 56.4823 26.02ZM41.1799 19.32L40.3999 19.19V18.57H41.8899C42.1166 18.57 42.4099 18.5566 42.7699 18.53C42.8566 18.5233 42.9599 18.5166 43.0799 18.51C43.1999 18.5033 43.3399 18.5 43.4999 18.5C44.5066 18.5 45.2099 18.6433 45.6099 18.93C46.0166 19.21 46.2199 19.63 46.2199 20.19C46.2199 20.6833 46.0699 21.0966 45.7699 21.43C45.4766 21.7566 45.0899 21.9566 44.6099 22.03C45.2699 22.0233 45.7866 22.1733 46.1599 22.48C46.5399 22.7866 46.7299 23.2133 46.7299 23.76C46.7299 24.4533 46.4866 25.01 45.9999 25.43C45.5132 25.85 44.6999 26.06 43.5599 26.06C43.2599 26.06 42.9832 26.05 42.7299 26.03C42.6632 26.03 42.5499 26.0233 42.3899 26.01C42.2299 26.0033 42.0666 26 41.8999 26H40.3899V25.4L41.1799 25.3V19.32ZM42.6299 21.81C42.7032 21.8166 42.8532 21.82 43.0799 21.82H43.5499C43.9566 21.82 44.2599 21.6933 44.4599 21.44C44.6599 21.1866 44.7599 20.83 44.7599 20.37C44.7599 19.93 44.6566 19.61 44.4499 19.41C44.2432 19.21 43.8999 19.11 43.4199 19.11C43.2932 19.11 43.0299 19.1233 42.6299 19.15V21.81ZM42.6299 25.34C42.7832 25.4 43.0766 25.43 43.5099 25.43C44.0766 25.43 44.4866 25.2966 44.7399 25.03C44.9932 24.7633 45.1199 24.3766 45.1199 23.87C45.1199 23.3833 45.0032 23.0366 44.7699 22.83C44.5432 22.6166 44.1799 22.51 43.6799 22.51C43.1199 22.51 42.7699 22.5166 42.6299 22.53V25.34ZM50.9007 26.08C49.8873 26.08 49.134 25.8266 48.6407 25.32C48.1473 24.8133 47.9007 24.0166 47.9007 22.93V19.32L47.2407 19.19V18.57H50.2607V19.19L49.4107 19.33V23.06C49.4107 24.6466 49.974 25.44 51.1007 25.44C51.654 25.44 52.064 25.2366 52.3307 24.83C52.5973 24.4166 52.7307 23.84 52.7307 23.1V19.33L51.8707 19.19V18.57H54.3707V19.19L53.6907 19.32V23.02C53.6907 24.06 53.4373 24.83 52.9307 25.33C52.4307 25.83 51.754 26.08 50.9007 26.08Z';
-var pullupdata = 'M32 0C31.4477 0 31 0.447715 31 1V13H11.917C11.441 10.1623 8.973 8 6 8C2.68629 8 0 10.6863 0 14C0 17.3137 2.68629 20 6 20C8.973 20 11.441 17.8377 11.917 15H31V31H11.917C11.441 28.1623 8.973 26 6 26C2.68629 26 0 28.6863 0 32C0 35.3137 2.68629 38 6 38C8.973 38 11.441 35.8377 11.917 33H31V46C31 46.5523 31.4477 47 32 47H71V24H88.083C88.559 26.8377 91.027 29 94 29C97.3137 29 100 26.3137 100 23C100 19.6863 97.3137 17 94 17C91.027 17 88.559 19.1623 88.083 22H71V0H32ZM33 45V2H69V45H33ZM2 14C2 11.7909 3.79086 10 6 10C8.20914 10 10 11.7909 10 14C10 16.2091 8.20914 18 6 18C3.79086 18 2 16.2091 2 14ZM54.8685 16L51 10.1972L47.1315 16H50V18.2792L44.6838 20.0513L44.8356 21.9864L52.093 23.196L44.7575 25.0299V26.9701L52.8769 29L44.7575 31.0299L44.8356 32.9864L50 33.8471V39H52V32.1529L49.907 31.804L57.2425 29.9701V28.0299L49.1231 26L57.2425 23.9701L57.1644 22.0136L49.1358 20.6755L52 19.7208V16H54.8685ZM51 13.8028L51.1315 14H50.8685L51 13.8028ZM90 23C90 20.7909 91.7909 19 94 19C96.2091 19 98 20.7909 98 23C98 25.2091 96.2091 27 94 27C91.7909 27 90 25.2091 90 23ZM2 32C2 29.7909 3.79086 28 6 28C8.20914 28 10 29.7909 10 32C10 34.2091 8.20914 36 6 36C3.79086 36 2 34.2091 2 32ZM39.4041 12.312C39.7561 12.232 40.0001 12.168 40.1361 12.12V17.172L38.6961 17.292V18H43.2681V17.292L41.9001 17.16V10.56L40.9521 10.428H40.9401C40.6441 10.676 40.2601 10.916 39.7881 11.148C39.3241 11.372 38.8761 11.528 38.4441 11.616L38.5761 12.456C38.7761 12.432 39.0521 12.384 39.4041 12.312Z';
-var pulldowndata = 'M70 0H31V13H11.917C11.441 10.1623 8.973 8 6 8C2.68629 8 0 10.6863 0 14C0 17.3137 2.68629 20 6 20C8.973 20 11.441 17.8377 11.917 15H31V31H11.917C11.441 28.1623 8.973 26 6 26C2.68629 26 0 28.6863 0 32C0 35.3137 2.68629 38 6 38C8.973 38 11.441 35.8377 11.917 33H31V47H70C70.5523 47 71 46.5523 71 46V24H88.083C88.559 26.8377 91.027 29 94 29C97.3137 29 100 26.3137 100 23C100 19.6863 97.3137 17 94 17C91.027 17 88.559 19.1623 88.083 22H71V1C71 0.447715 70.5523 0 70 0ZM33 45V2H69V45H33ZM2 14C2 11.7909 3.79086 10 6 10C8.20914 10 10 11.7909 10 14C10 16.2091 8.20914 18 6 18C3.79086 18 2 16.2091 2 14ZM52 12H50V17.1529L44.8356 18.0136L44.7575 19.9701L52.8769 22L44.7575 24.0299V25.9701L52.093 27.804L44.8356 29.0136L44.6838 30.9487L50 32.7208V35H47.1315L51 40.8028L54.8685 35H52V31.2792L49.1358 30.3245L57.1644 28.9864L57.2425 27.0299L49.1231 25L57.2425 22.9701V21.0299L49.907 19.196L52 18.8471V12ZM90 23C90 20.7909 91.7909 19 94 19C96.2091 19 98 20.7909 98 23C98 25.2091 96.2091 27 94 27C91.7909 27 90 25.2091 90 23ZM2 32C2 29.7909 3.79086 28 6 28C8.20914 28 10 29.7909 10 32C10 34.2091 8.20914 36 6 36C3.79086 36 2 34.2091 2 32ZM62.1219 38.0959C61.4979 38.0959 60.9639 37.9679 60.5199 37.7119C60.0799 37.4559 59.7199 37.1079 59.4399 36.6679C59.1639 36.2239 58.9619 35.7219 58.8339 35.1619C58.7059 34.5979 58.6439 34.0099 58.6479 33.3979C58.6599 32.4979 58.8259 31.7179 59.1459 31.0579C59.4699 30.3939 59.9019 29.8819 60.4419 29.5219C60.9819 29.1619 61.5899 28.9819 62.2659 28.9819C62.8979 28.9819 63.4319 29.1019 63.8679 29.3419C64.3079 29.5779 64.6619 29.9039 64.9299 30.3199C65.2019 30.7359 65.3979 31.2159 65.5179 31.7599C65.6379 32.2999 65.6959 32.8739 65.6919 33.4819C65.6839 34.4099 65.5259 35.2199 65.2179 35.9119C64.9139 36.5999 64.4939 37.1359 63.9579 37.5199C63.4219 37.9039 62.8099 38.0959 62.1219 38.0959ZM62.1699 36.6919C62.6859 36.6959 63.0779 36.4419 63.3459 35.9299C63.6179 35.4179 63.7539 34.6219 63.7539 33.5419C63.7539 32.9019 63.6979 32.3459 63.5859 31.8739C63.4739 31.4019 63.3019 31.0359 63.0699 30.7759C62.8379 30.5159 62.5459 30.3859 62.1939 30.3859C61.6779 30.3859 61.2819 30.6339 61.0059 31.1299C60.7339 31.6259 60.5979 32.3659 60.5979 33.3499C60.5979 33.9859 60.6539 34.5559 60.7659 35.0599C60.8819 35.5599 61.0559 35.9559 61.2879 36.2479C61.5199 36.5399 61.8139 36.6879 62.1699 36.6919Z';
-
-
-var grpnodedata1 = 'M6.5 43.5H34.5V7.5H6.5V43.5Z';
-var grpnodedata2 = 'M6 44H35V7H6V44ZM7 43V8H34V43H7Z';
-var grpnodedata3 = 'M62.75 31.5C59.5744 31.5 57 28.9256 57 25.75C57 22.5744 59.5744 20 62.75 20C65.9256 20 68.5 22.5744 68.5 25.75C68.5 28.9256 65.9256 31.5 62.75 31.5ZM56 25.75C56 26.1771 56.0397 26.5949 56.1155 27C56.7017 30.1307 59.4492 32.5 62.75 32.5C66.4779 32.5 69.5 29.4779 69.5 25.75C69.5 22.0221 66.4779 19 62.75 19C59.2756 19 56.4143 21.625 56.0412 25C56.014 25.2463 56 25.4965 56 25.75Z';
-var grpnodedata4 = 'M42 52H0V0H42V25H56.0412C56.014 25.2463 56 25.4965 56 25.75C56 26.1771 56.0397 26.5949 56.1155 27H42V52ZM2 50V2H40V50H2Z';
-var grpnodedata5 = 'M30.5 25.5H30.56L32.5 37.5H8.5L10.44 25.5H10.5H30.5Z';
-var grpnodedata6 = 'M30.5 25.5H10.5V10.5H30.5V25.5Z';
-var grpnodedata7 = 'M9.5 40.5L8.5 37.5H32.5L31.5 40.5H9.5Z';
-var grpnodedata8 = 'M9.02566 40.6581C9.09372 40.8623 9.28478 41 9.5 41H31.5C31.7152 41 31.9063 40.8623 31.9743 40.6581L32.9743 37.6581C32.9999 37.5815 33.0065 37.4999 32.9936 37.4202L31.0536 25.4202C31.0444 25.3636 31.026 25.3105 31 25.2624V10H10V25.2624C9.97399 25.3105 9.95556 25.3636 9.94641 25.4202L8.00641 37.4202C7.99352 37.4999 8.00013 37.5815 8.02566 37.6581L9.02566 40.6581ZM11 25V11H30V25H11ZM30.1343 26L31.9127 37H9.08733L10.8657 26H30.1343ZM9.19371 38H31.8063L31.1396 40H9.86038L9.19371 38Z';
-
-var n1 = creategpNode('Node1', 1200, 300, 60, 40, grpnodedata1, '#00FFFF');
-var n2 = creategpNode('Node2', 1200, 300, 60, 40, grpnodedata2, '#000000');
-var n3 = creategpNode('Node3', 1200, 300, 60, 40, grpnodedata3, '#000000');
-var n4 = creategpNode('Node4', 1200, 300, 60, 40, grpnodedata4, '#000000');
-var n5 = creategpNode('Node5', 1200, 300, 60, 40, grpnodedata5, '#FFFFFF');
-var n6 = creategpNode('Node6', 1200, 300, 60, 40, grpnodedata6, '#FFFFFF');
-var n7 = creategpNode('Node7', 1200, 300, 60, 40, grpnodedata7, '#FFFFFF');
-var n8 = creategpNode('Node8', 1200, 300, 60, 40, grpnodedata8, '#000000');
-
-var grp = { id: 'group', children: ['n1', 'n2', 'n3', 'n4', 'n5', 'n6', 'n7', 'n8'] };
-
-function creategpNode(id, offsetX, offsetY, height, width, pathData, fill) {
-    var node = {};
-    node.id = id;
-    node.offsetX = offsetX;
-    node.offsetY = offsetY;
-    node.height = height;
-    node.width = width;
-    node.shape = { type: 'Path', data: pathData };
-    node.style = { fill: fill };
-    return node;
-}
+var pullupdata = 'M32 0C31.4477 0 31 0.447715 31 1V22H11.917C11.441 19.1623 8.973 17 6 17C2.68629 17 0 19.6863 0 23C0 26.3137 2.68629 29 6 29C8.973 29 11.441 26.8377 11.917 24H31V46C31 46.5523 31.4477 47 32 47H71V24H88.083C88.559 26.8377 91.027 29 94 29C97.3137 29 100 26.3137 100 23C100 19.6863 97.3137 17 94 17C91.027 17 88.559 19.1623 88.083 22H71V0H32ZM33 45V2H69V45H33ZM54.8685 16L51 10.1972L47.1315 16H50V18.2792L44.6838 20.0513L44.8356 21.9864L52.093 23.196L44.7575 25.0299V26.9701L52.8769 29L44.7575 31.0299L44.8356 32.9864L50 33.8471V39H52V32.1529L49.907 31.804L57.2425 29.9701V28.0299L49.1231 26L57.2425 23.9701L57.1644 22.0136L49.1358 20.6755L52 19.7208V16H54.8685ZM51 13.8028L51.1315 14H50.8685L51 13.8028ZM2 23C2 20.7909 3.79086 19 6 19C8.20914 19 10 20.7909 10 23C10 25.2091 8.20914 27 6 27C3.79086 27 2 25.2091 2 23ZM90 23C90 20.7909 91.7909 19 94 19C96.2091 19 98 20.7909 98 23C98 25.2091 96.2091 27 94 27C91.7909 27 90 25.2091 90 23ZM39.4041 12.312C39.7561 12.232 40.0001 12.168 40.1361 12.12V17.172L38.6961 17.292V18H43.2681V17.292L41.9001 17.16V10.56L40.9521 10.428H40.9401C40.6441 10.676 40.2601 10.916 39.7881 11.148C39.3241 11.372 38.8761 11.528 38.4441 11.616L38.5761 12.456C38.7761 12.432 39.0521 12.384 39.4041 12.312Z';
+var pulldowndata = 'M70 0H31V22H11.917C11.441 19.1623 8.973 17 6 17C2.68629 17 0 19.6863 0 23C0 26.3137 2.68629 29 6 29C8.973 29 11.441 26.8377 11.917 24H31V47H70C70.5523 47 71 46.5523 71 46V24H88.083C88.559 26.8377 91.027 29 94 29C97.3137 29 100 26.3137 100 23C100 19.6863 97.3137 17 94 17C91.027 17 88.559 19.1623 88.083 22H71V1C71 0.447715 70.5523 0 70 0ZM33 45V2H69V45H33ZM52 18.8471V12H50V17.1529L44.8356 18.0136L44.7575 19.9701L52.8769 22L44.7575 24.0299V25.9701L52.093 27.804L44.8356 29.0136L44.6838 30.9487L50 32.7208V35H47.1315L51 40.8028L54.8685 35H52V31.2792L49.1358 30.3245L57.1644 28.9864L57.2425 27.0299L49.1231 25L57.2425 22.9701V21.0299L49.907 19.196L52 18.8471ZM2 23C2 20.7909 3.79086 19 6 19C8.20914 19 10 20.7909 10 23C10 25.2091 8.20914 27 6 27C3.79086 27 2 25.2091 2 23ZM90 23C90 20.7909 91.7909 19 94 19C96.2091 19 98 20.7909 98 23C98 25.2091 96.2091 27 94 27C91.7909 27 90 25.2091 90 23ZM62.1219 38.0959C61.4979 38.0959 60.9639 37.9679 60.5199 37.7119C60.0799 37.4559 59.7199 37.1079 59.4399 36.6679C59.1639 36.2239 58.9619 35.7219 58.8339 35.1619C58.7059 34.5979 58.6439 34.0099 58.6479 33.3979C58.6599 32.4979 58.8259 31.7179 59.1459 31.0579C59.4699 30.3939 59.9019 29.8819 60.4419 29.5219C60.9819 29.1619 61.5899 28.9819 62.2659 28.9819C62.8979 28.9819 63.4319 29.1019 63.8679 29.3419C64.3079 29.5779 64.6619 29.9039 64.9299 30.3199C65.2019 30.7359 65.3979 31.2159 65.5179 31.7599C65.6379 32.2999 65.6959 32.8739 65.6919 33.4819C65.6839 34.4099 65.5259 35.2199 65.2179 35.9119C64.9139 36.5999 64.4939 37.1359 63.9579 37.5199C63.4219 37.9039 62.8099 38.0959 62.1219 38.0959ZM62.1699 36.6919C62.6859 36.6959 63.0779 36.4419 63.3459 35.9299C63.6179 35.4179 63.7539 34.6219 63.7539 33.5419C63.7539 32.9019 63.6979 32.3459 63.5859 31.8739C63.4739 31.4019 63.3019 31.0359 63.0699 30.7759C62.8379 30.5159 62.5459 30.3859 62.1939 30.3859C61.6779 30.3859 61.2819 30.6339 61.0059 31.1299C60.7339 31.6259 60.5979 32.3659 60.5979 33.3499C60.5979 33.9859 60.6539 34.5559 60.7659 35.0599C60.8819 35.5599 61.0559 35.9559 61.2879 36.2479C61.5199 36.5399 61.8139 36.6879 62.1699 36.6919Z';
 
 var bulbport =
     [
@@ -103,6 +72,11 @@ var otherPort =
         { id: 'Or_port3', offset: { x: 0.06, y: 0.70 } }, { id: 'Or_port4', offset: { x: 0.94, y: 0.48 } }
     ];
 
+var pullPort =
+    [
+        { id: 'Pull_port1', offset: { x: 0.06, y: 0.48 } },{ id: 'Pull_port2', offset: { x: 0.94, y: 0.48 } }
+    ];
+
 var andPort =
     [
         { id: 'And_port1', offset: { x: 0.05, y: 0.25 } },
@@ -117,50 +91,49 @@ var notPort =
 var DigitPorts = [{ id: 'digitport1', offset: { x: 0.07, y: 0.13 } }, { id: 'digitport2', offset: { x: 0.07, y: 0.38 } },
 { id: 'digitport3', offset: { x: 0.07, y: 0.62 } }, { id: 'digitport4', offset: { x: 0.07, y: 0.86 } }];
 
-var DTPorts = [{ id: 'DTport', offset: { x: 0.05, y: 0.430 } }, {id: 'clkport', offset: { x: 0.05, y: 0.590 } },
-{id: 'qport', offset: { x: 0.95, y: 0.430 } }, {id: 'q1port', offset: { x: 0.95, y: 0.590 } },
-{id: 'preport', offset: { x: 0.5, y: 0.05 } }, {id: 'clrport', offset: { x: 0.5, y: 0.95 } }];
+var DTPorts = [{ id: 'DTport', offset: { x: 0.05, y: 0.430 } }, { id: 'clkport', offset: { x: 0.05, y: 0.590 } },
+{ id: 'qport', offset: { x: 0.95, y: 0.430 } }, { id: 'q1port', offset: { x: 0.95, y: 0.590 } },
+{ id: 'preport', offset: { x: 0.5, y: 0.05 } }, { id: 'clrport', offset: { x: 0.5, y: 0.95 } }];
 
-var jkPorts = [{id: 'jport', offset: { x: 0.06, y: 0.350 } }, {id: 'clkport', offset: { x: 0.06, y: 0.5 } },
-{ id: 'kport', offset: { x: 0.06, y: 0.650 } }, {id: 'qport', offset: { x: 0.95, y: 0.430 } }, {id: 'q1port', offset: { x: 0.95, y: 0.590 } },
-{ id: 'preport', offset: { x: 0.5, y: 0.05 } }, {id: 'clrport', offset: { x: 0.5, y: 0.95 } }];
+var jkPorts = [{ id: 'jport', offset: { x: 0.06, y: 0.350 } }, { id: 'clkport', offset: { x: 0.06, y: 0.5 } },
+{ id: 'kport', offset: { x: 0.06, y: 0.650 } }, { id: 'qport', offset: { x: 0.95, y: 0.430 } }, { id: 'q1port', offset: { x: 0.95, y: 0.590 } },
+{ id: 'preport', offset: { x: 0.5, y: 0.05 } }, { id: 'clrport', offset: { x: 0.5, y: 0.95 } }];
 
-var srPorts = [{id: 'sport', offset: { x: 0.06, y: 0.25 } }, {id: 'clkport', offset: { x: 0.06, y: 0.5 } }, {id: 'rport', offset: { x: 0.06, y: 0.75 } },
-{id: 'qport', offset: { x: 0.95, y: 0.39 } }, {id: 'q1port', offset: { x: 0.95, y: 0.63 } }];
+var srPorts = [{ id: 'sport', offset: { x: 0.06, y: 0.25 } }, { id: 'clkport', offset: { x: 0.06, y: 0.5 } }, { id: 'rport', offset: { x: 0.06, y: 0.75 } },
+{ id: 'qport', offset: { x: 0.95, y: 0.39 } }, { id: 'q1port', offset: { x: 0.95, y: 0.63 } }];
 
 var gates =
     [
         {
-            id: 'OR Gate', shape: { type: 'Path', data: orData, shape: 'OR Gate' }, ports: orPort, style: { fill: '#000000' }
+            id: 'OR Gate', shape: { type: 'Path', data: orData, shape: 'OR Gate' }, ports: orPort, style: { fill: '#000000' }, height: 45, width: 80,
+        },
+        {
+            id: 'NOR Gate', shape: { type: 'Path', data: nordata, shape: 'NOR Gate' }, ports: orPort, style: { fill: '#000000' }, height: 45, width: 80,
         },
 
         {
-            id: 'NOR Gate', shape: { type: 'Path', data: nordata, shape: 'NOR Gate' }, ports: orPort, style: { fill: '#000000' }
+            id: 'AND Gate', shape: { type: 'Path', data: andData, shape: 'AND Gate' }, ports: andPort, style: { fill: '#000000' }, height: 45, width: 80,
         },
 
         {
-            id: 'AND Gate', shape: { type: 'Path', data: andData, shape: 'AND Gate' }, ports: andPort, style: { fill: '#000000' }
-        },
-
-        {
-            id: 'NAND Gate', shape: { type: 'Path', data: nanddata, shape: 'NAND Gate' }, ports: andPort, style: { fill: '#000000' }
+            id: 'NAND Gate', shape: { type: 'Path', data: nanddata, shape: 'NAND Gate' }, ports: andPort, style: { fill: '#000000' }, height: 45, width: 80,
         },
 
         {
             id: 'Buffer Gate', ports: [{ offset: { x: 0.01, y: 0.5 } }, { offset: { x: 0.99, y: 0.5 } }],
-            shape: { type: 'Path', data: buffer, shape: 'Buffer' }, style: { fill: '#000000' }
+            shape: { type: 'Path', data: buffer, shape: 'Buffer' }, style: { fill: '#000000' }, height: 45, width: 80,
         },
 
         {
-            id: 'Not Gate', shape: { type: 'Path', data: notData, shape: 'NOT Gate' }, ports: notPort, style: { fill: '#000000' }
+            id: 'Not Gate', shape: { type: 'Path', data: notData, shape: 'NOT Gate' }, ports: notPort, style: { fill: '#000000' }, height: 45, width: 80,
         },
 
         {
-            id: 'XOR Gate', ports: orPort, shape: { type: 'Path', data: xorData, shape: 'XOR Gate' }, style: { fill: '#000000' }
+            id: 'XOR Gate', ports: orPort, shape: { type: 'Path', data: xorData, shape: 'XOR Gate' }, style: { fill: '#000000' }, height: 45, width: 80,
         },
 
         {
-            id: 'XNOR Gate', ports: orPort, shape: { type: 'Path', data: xnorData, shape: 'XNOR Gate' }, style: { fill: '#000000' }
+            id: 'XNOR Gate', ports: orPort, shape: { type: 'Path', data: xnorData, shape: 'XNOR Gate' }, style: { fill: '#000000' }, height: 45, width: 80,
         },
     ];
 
@@ -169,25 +142,25 @@ var flipflops =
         {
             id: 'JK Flip-Flop',
             shape: { shape: 'JK Flip-Flop', type: 'Path', data: jkflipflopdata },
-            style: { fill: '#000000' }
+            style: { fill: '#000000' }, height: 80, width: 85,
         },
 
         {
             id: 'D Flip-Flop',
             shape: { shape: 'D Flip-Flop', type: 'Path', data: dflipflop },
-            style: { fill: '#000000' }
+            style: { fill: '#000000' }, height: 80, width: 85,
         },
 
         {
             id: 'T Flip-Flop',
             shape: { shape: 'T Flip-Flop', type: 'Path', data: tflipflopdata },
-            style: { fill: '#000000' }
+            style: { fill: '#000000' }, height: 80, width: 85,
         },
 
         {
             id: 'SR Flip-Flop',
             shape: { shape: 'SR Flip-Flop', type: 'Path', data: srflipflopdata },
-            style: { fill: '#000000' }
+            style: { fill: '#000000' }, height: 80, width: 85,
         },
     ];
 
@@ -196,31 +169,31 @@ var input =
         {
             id: 'Toggle Switch',
             shape: { shape: 'Toggle Switch', type: 'Path', data: toggleswitchdata },
-            style: { fill: '#000000' },
+            style: { fill: '#000000' }, height: 52, width: 50,
         },
 
         {
             id: 'Push Button',
             shape: { shape: 'Push Button', type: 'Path', data: pushbuttondata },
-            style: { fill: '#000000' }
+            style: { fill: '#000000' }, height: 52, width: 50,
         },
 
         {
             id: 'Clock',
             shape: { shape: 'Clock', type: 'Path', data: clockdata },
-            style: { fill: '#000000' }
+            style: { fill: '#000000' }, height: 52, width: 50,
         },
 
         {
             id: 'High Constant',
             shape: { shape: 'High Constant', type: 'Path', data: highconstantdata },
-            style: { fill: '#000000' }
+            style: { fill: '#000000' }, height: 52, width: 50,
         },
 
         {
             id: 'Low Constant',
             shape: { shape: 'Low Constant', type: 'Path', data: lowconstantdata },
-            style: { fill: '#000000' }
+            style: { fill: '#000000' }, height: 52, width: 50,
         },
     ];
 
@@ -229,13 +202,13 @@ var output =
         {
             id: 'Bulb',
             shape: { type: 'Path', data: bulbdata, shape: 'Light Bulb' },
-            style: { fill: '#000000' },
+            style: { fill: '#000000' }, height: 65, width: 40,
         },
 
         {
             id: '4-Bit Digit',
             shape: { type: 'Path', data: digitdata, shape: '4-Bit Digit' },
-            style: { fill: '#000000' }
+            style: { fill: '#000000' }, height: 66, width: 73,
         },
     ];
 
@@ -244,25 +217,33 @@ var other =
         {
             id: 'Label',
             shape: { type: 'Path', data: Labeldata, shape: 'Label' },
-            style: { fill: '#FFFFFF' }
+            style: { fill: '#FFFFFF' },
+            height: 45,
+            width: 85,
         },
 
         {
             id: 'Bus',
             shape: { type: 'Path', data: busdata, shape: 'Bus' },
-            style: { fill: '#000000' }
+            style: { fill: '#000000' },
+            height: 45,
+            width: 85,
         },
 
         {
             id: 'Pull Up',
             shape: { type: 'Path', data: pullupdata, shape: 'Pull Up' },
-            style: { fill: '#000000' }
+            style: { fill: '#000000' },
+            height: 45,
+            width: 85,
         },
 
         {
             id: 'Pull Down',
             shape: { type: 'Path', data: pulldowndata, shape: 'Pull Down' },
-            style: { fill: '#000000' }
+            style: { fill: '#000000' },
+            height: 45,
+            width: 85,
         },
     ];
 
@@ -277,17 +258,13 @@ var palette = new ej.diagrams.SymbolPalette({
             { id: 'other', expanded: true, symbols: other, title: 'Other' },
         ],
     width: '100%', height: '100%',
-    symbolMargin: { left: 10, right: 10, top: 10, bottom: 10 },
-    symbolHeight: 100, symbolWidth: 67,
+    symbolMargin: { left: 10, right: 10, top: 10, bottom: 10 },    
     getNodeDefaults: function (symbol) {
-        symbol.width = 55;
-        symbol.height = 40;
-        symbol.offsetX = 20;
-        symbol.offsetY = 20;
+        
     },
     symbolPreview: { height: 50, width: 50 },
     getSymbolInfo: function (symbol) {
-        return { fit: true, description: { text: symbol.shape['shape'], overflow: 'Wrap', fontSize: 11 } };
+        return { description: { text: symbol.shape['shape'], overflow: 'Wrap', fontSize: 11, margin : {top : 10, left : 0, right : 0, bottom :0} } };
     }
 });
 palette.appendTo('#symbolpalette');
@@ -303,6 +280,8 @@ function createNode(id, offsetX, offsetY, height, width, pathData, ports, fill, 
     node.shape = { type: 'Path', data: pathData };
     node.ports = ports;
     node.ports.forEach(element => {
+        element.height = 12;
+        element.width = 10;        
         element.shape = 'Circle';
         element.visibility = ej.diagrams.PortVisibility.Visible;
         element.constraints = ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw;
@@ -334,37 +313,37 @@ function createConnector(id, sourcePoint, targetPoint, sourceID, targetID, sourc
 }
 
 var nodes =
-    [
-        // createNode('Switch1', 140, 100, 60, 80, toggleswitchdata, toggleswitchport, '#000000', 1, 'inputcontrol'),
-        // createNode('PushButton1', 140, 270, 60, 80, pushbuttondata, pushbuttonport, '#000000', 0, 'inputcontrol'),
-        // createNode('Clock', 140, 470, 60, 80, clockdata, pushbuttonport, '#000000', 0, 'inputcontrol'),
-        // createNode('Switch2', 140, 630, 60, 80, toggleswitchdata, toggleswitchport, '#000000', 1, 'inputcontrol'),
-        // createNode('OR1', 350, 350, 40, 100, orData, orPort, '#000000', null, 'gate'),
-        // createNode('And1', 350, 180, 40, 100, andData, andPort, '#000000', null, 'gate'),
-        // createNode('And2', 350, 520, 40, 100, andData, andPort, '#000000', null, 'gate'),
-        // createNode('And3', 550, 440, 40, 100, andData, andPort, '#000000', null, 'gate'),
-        // createNode('OR2', 750, 280, 40, 100, orData, orPort, '#000000', null, 'gate'),
-        // createNode('Not', 750, 520, 40, 100, notData, notPort, '#000000', null, 'gate'),
-        // createNode('XOR', 950, 420, 40, 100, xorData, orPort, '#000000', null, 'gate'),
-        // createNode('Bulb', 1050, 170, 60, 40, bulbdata, bulbport, '#000000', null, 'outputcontrol'),
-    ];
+[
+        createNode('Switch1', 140, 100, 60, 80, toggleswitchdata, toggleswitchport, '#000000', 0, 'inputcontrol'),
+        createNode('PushButton1', 140, 270, 60, 80, pushbuttondata, pushbuttonport, '#000000', 0, 'inputcontrol'),
+        createNode('Clock', 140, 470, 60, 80, clockdata, pushbuttonport, '#000000', 0, 'inputcontrol'),
+        createNode('Switch2', 140, 630, 60, 80, toggleswitchdata, toggleswitchport, '#000000', 0, 'inputcontrol'),
+        createNode('OR1', 350, 350, 40, 100, orData, orPort, '#000000', null, 'gate'),
+        createNode('And1', 350, 180, 40, 100, andData, andPort, '#000000', null, 'gate'),
+        createNode('And2', 350, 520, 40, 100, andData, andPort, '#000000', null, 'gate'),
+        createNode('And3', 550, 440, 40, 100, andData, andPort, '#000000', null, 'gate'),
+        createNode('OR2', 750, 280, 40, 100, orData, orPort, '#000000', null, 'gate'),
+        createNode('Not', 750, 520, 40, 100, notData, notPort, '#000000', null, 'gate'),
+        createNode('XOR', 950, 420, 40, 100, xorData, orPort, '#000000', null, 'gate'),
+        createNode('Bulb', 1050, 170, 60, 40, bulbdata, bulbport, '#000000', null, 'outputcontrol'),
+];
 
 var connectors =
     [
-        // createConnector('con1', null, null, 'And1', 'OR2', 'And_port4', 'Or_port1', 0),
-        // createConnector('con2', null, null, 'OR1', 'And3', 'Or_port4', 'And_port1', 0),
-        // createConnector('con3', null, null, 'And2', 'And3', 'And_port4', 'And_port3', 0),
-        // createConnector('con4', null, null, 'And3', 'OR2', 'And_port4', 'Or_port3', 0),
-        // createConnector('con5', null, null, 'OR2', 'XOR', 'Or_port4', 'Or_port1', 0),
-        // createConnector('con6', null, null, 'Not', 'XOR', 'Not_port2', 'Or_port3', 0),
-        // createConnector('con7', null, null, 'Switch1', 'And1', 'toggleport1', 'And_port1', 0),
-        // createConnector('con8', null, null, 'PushButton1', 'And1', 'pushbuttonport1', 'And_port3', 0),
-        // createConnector('con9', null, null, 'PushButton1', 'OR1', 'pushbuttonport1', 'Or_port1', 0),
-        // createConnector('con10', null, null, 'PushButton1', 'And2', 'pushbuttonport1', 'And_port1', 0),
-        // createConnector('con11', null, null, 'Clock', 'OR1', 'pushbuttonport1', 'Or_port3', 0),
-        // createConnector('con12', null, null, 'Clock', 'And2', 'pushbuttonport1', 'And_port3', 0),
-        // createConnector('con13', null, null, 'Switch2', 'Not', 'toggleport1', 'Not_port1', 0),
-        // createConnector('con14', null, null, 'XOR', 'Bulb', 'Or_port4', 'Bulb_port', 0),
+        createConnector('con1', null, null, 'And1', 'OR2', 'And_port4', 'Or_port1', 0),
+        createConnector('con2', null, null, 'OR1', 'And3', 'Or_port4', 'And_port1', 0),
+        createConnector('con3', null, null, 'And2', 'And3', 'And_port4', 'And_port3', 0),
+        createConnector('con4', null, null, 'And3', 'OR2', 'And_port4', 'Or_port3', 0),
+        createConnector('con5', null, null, 'OR2', 'XOR', 'Or_port4', 'Or_port1', 0),
+        createConnector('con6', null, null, 'Not', 'XOR', 'Not_port2', 'Or_port3', 0),
+        createConnector('con7', null, null, 'Switch1', 'And1', 'toggleport1', 'And_port1', 0),
+        createConnector('con8', null, null, 'PushButton1', 'And1', 'pushbuttonport1', 'And_port3', 0),
+        createConnector('con9', null, null, 'PushButton1', 'OR1', 'pushbuttonport1', 'Or_port1', 0),
+        createConnector('con10', null, null, 'PushButton1', 'And2', 'pushbuttonport1', 'And_port1', 0),
+        createConnector('con11', null, null, 'Clock', 'OR1', 'pushbuttonport1', 'Or_port3', 0),
+        createConnector('con12', null, null, 'Clock', 'And2', 'pushbuttonport1', 'And_port3', 0),
+        createConnector('con13', null, null, 'Switch2', 'Not', 'toggleport1', 'Not_port1', 0),
+        createConnector('con14', null, null, 'XOR', 'Bulb', 'Or_port4', 'Bulb_port', 0),
     ];
 
 var diagram = new ej.diagrams.Diagram({
@@ -372,10 +351,10 @@ var diagram = new ej.diagrams.Diagram({
     nodes: nodes, connectors: connectors, drawingObject: { type: 'Orthogonal' },
     created: created, click: click, mouseLeave: mouseLeave, drop: drop, getConnectorDefaults: getConnectorDefaults,
     connectionChange: connectionChange, sourcePointChange: sourcePointChange, targetPointChange: targetPointChange,
-    elementDraw: elementDraw,
+    elementDraw: elementDraw, selectedItems: { constraints: ej.diagrams.SelectorConstraints.All & ~ej.diagrams.SelectorConstraints.ResizeAll & ~ ej.diagrams.SelectorConstraints.Rotate}
 });
 
-//window.setInterval(changeState, 3000);
+window.setInterval(changeState, 3000);
 
 function elementDraw(args) {
     if (args.state == "Completed" && args.objectType == "Connector") {
@@ -404,7 +383,7 @@ function getConnectorDefaults(connector) {
 
 function drop(args) {
     if (args.element.id.indexOf("Switch") != -1) {
-        args.element.addInfo = { binarystate: 1, controltype: 'inputcontrol' };
+        args.element.addInfo = { binarystate: 0, controltype: 'inputcontrol' };
         args.element.ports = toggleswitchport;
         args.element.width = 80;
         args.element.height = 60;
@@ -501,9 +480,20 @@ function drop(args) {
             element.constraints = ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw;
         });
     }
-    else if (args.element.id.indexOf("Pull") != -1 || args.element.id.indexOf("Bus") != -1) {
+    else if (args.element.id.indexOf("Bus") != -1) {
         args.element.addInfo = { binarystate: 0, controltype: 'othercontrol' };
         args.element.ports = otherPort;
+        args.element.width = 100;
+        args.element.height = 50;
+        args.element.ports.forEach(element => {
+            element.shape = 'Circle';
+            element.visibility = ej.diagrams.PortVisibility.Visible;
+            element.constraints = ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw;
+        });
+    }
+    else if (args.element.id.indexOf("Pull") != -1) {
+        args.element.addInfo = { binarystate: 0, controltype: 'othercontrol' };
+        args.element.ports = pullPort;
         args.element.width = 100;
         args.element.height = 50;
         args.element.ports.forEach(element => {
@@ -573,7 +563,7 @@ function click(args) {
                 OnInputChanged(element);
             }
         });
-    };
+    }
 };
 
 function mouseLeave(args) {
@@ -695,7 +685,7 @@ function OutputControl(element) {
     }
 };
 
-function FlipFlopOutput(element){
+function FlipFlopOutput(element) {
     if (element.id.indexOf("JK") != -1) {
         var InputCon1 = diagram.getObject(element.inEdges[0]);
         var InputCon2 = diagram.getObject(element.inEdges[1]);
@@ -737,11 +727,11 @@ function FlipFlopOutput(element){
         else if (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 1 && Inputstate5 == 1) {
             outstate1 = 1;
             outstate2 = 1;
-        }        
+        }
         else if (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 0 && Inputstate5 == 1) {
             outstate1 = 1;
             outstate2 = 0;
-        }        
+        }
         else if (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 0 && Inputstate5 == 1) {
             outstate1 = 1;
             outstate2 = 1;
@@ -766,7 +756,7 @@ function FlipFlopOutput(element){
             outstate1 = 0;
             outstate2 = 0;
         }
-        
+
         element.addInfo.binarystate1 = outstate1;
         element.addInfo.binarystate2 = outstate2;
 
@@ -805,7 +795,7 @@ function FlipFlopOutput(element){
         }
     }
 
-    else if(element.id.indexOf("D") != -1){
+    else if (element.id.indexOf("D") != -1) {
         var InputCon1 = diagram.getObject(element.inEdges[0]);
         var InputCon2 = diagram.getObject(element.inEdges[1]);
         var InputCon3 = diagram.getObject(element.inEdges[2]);
@@ -873,8 +863,8 @@ function FlipFlopOutput(element){
         else if (Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 0) {
             outstate1 = 1;
             outstate2 = 0;
-        }        
-        else{
+        }
+        else {
             outstate1 = 0;
             outstate2 = 0;
         }
@@ -917,7 +907,7 @@ function FlipFlopOutput(element){
         }
     }
 
-    else if(element.id.indexOf("T") != -1){
+    else if (element.id.indexOf("T") != -1) {
         var InputCon1 = diagram.getObject(element.inEdges[0]);
         var InputCon2 = diagram.getObject(element.inEdges[1]);
         var InputCon3 = diagram.getObject(element.inEdges[2]);
@@ -985,12 +975,12 @@ function FlipFlopOutput(element){
         else if (Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 0) {
             outstate1 = 0;
             outstate2 = 1;
-        }        
-        else{
+        }
+        else {
             outstate1 = 0;
             outstate2 = 0;
         }
-                
+
         element.addInfo.binarystate1 = outstate1;
         element.addInfo.binarystate2 = outstate2;
 
@@ -1029,7 +1019,7 @@ function FlipFlopOutput(element){
         }
     }
 
-    else if(element.id.indexOf("SR") != -1){
+    else if (element.id.indexOf("SR") != -1) {
         var InputCon1 = diagram.getObject(element.inEdges[0]);
         var InputCon2 = diagram.getObject(element.inEdges[1]);
         var InputCon3 = diagram.getObject(element.inEdges[2]);
@@ -1085,11 +1075,11 @@ function FlipFlopOutput(element){
             outstate1 = 0;
             outstate2 = 1;
         }
-        else{
+        else {
             outstate1 = 0;
             outstate2 = 0;
         }
-                
+
         element.addInfo.binarystate1 = outstate1;
         element.addInfo.binarystate2 = outstate2;
 
@@ -1226,21 +1216,21 @@ function OtherControl(element) {
         var InputCon = diagram.getObject(element.inEdges[0]);
         if (InputCon != undefined) {
             var Inputstate = InputCon.addInfo.binarystate;
-            var state = Inputstate1;
+            var state = Inputstate;
             element.addInfo.binarystate = state;
             if (state == 1) {
                 var con = diagram.getObject(element.outEdges[0]);
                 if (con != undefined) {
-                    con.addInfo = { binarystate: 1 };
-                    con.style.strokeColor = "#05DAC5";
+                    con.addInfo = { binarystate: 0 };
+                    con.style.strokeColor = "black";
                     con.style.strokeWidth = 2;
                 }
             }
             else {
                 var con = diagram.getObject(element.outEdges[0]);
                 if (con != undefined) {
-                    con.addInfo = { binarystate: 0 };
-                    con.style.strokeColor = "black";
+                    con.addInfo = { binarystate: 1 };
+                    con.style.strokeColor = "#05DAC5";
                     con.style.strokeWidth = 2;
                 }
             }
@@ -1527,13 +1517,13 @@ function OnInputChanged(args) {
     if (args.id.indexOf("Switch") != -1) {
         if (args.addInfo.binarystate == 1) {
             args.addInfo.binarystate = 0;
-            args.shape.data = switchoffdata;
-            args.style.fill = "#05DAC5";
+            args.shape.data = toggleswitchdata;
+            args.style.fill = "black";
         }
         else if (args.addInfo.binarystate == 0) {
             args.addInfo.binarystate = 1;
-            args.shape.data = toggleswitchdata;
-            args.style.fill = "black";
+            args.shape.data = switchoffdata;
+            args.style.fill = "#05DAC5";
         }
     }
     else if (args.id.indexOf("Push") != -1) {
@@ -1561,8 +1551,7 @@ function RunSimulation() {
         }
     }
 
-    for (let i= 0; i < diagram.nodes.length; i++)
-    {
+    for (let i = 0; i < diagram.nodes.length; i++) {
         var element = diagram.nodes[i];
         if (element.addInfo.controltype == "flipflop") {
             regulatednodes.push(element);
@@ -1594,7 +1583,7 @@ function RunSimulation() {
             GatesOutput(element);
         }
 
-        else if(element.addInfo.controltype == "flipflop") {
+        else if (element.addInfo.controltype == "flipflop") {
             FlipFlopOutput(element);
         }
 
