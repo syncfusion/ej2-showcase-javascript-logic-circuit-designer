@@ -2211,6 +2211,7 @@
   margin: 0;
   min-width: 24px;
   width: auto;
+  padding-top: 1.5px;
 }
 
 .e-toolbar .e-toolbar-items .e-toolbar-item > * {
@@ -2456,7 +2457,7 @@
 }
 
 .e-toolbar .e-toolbar-items .e-toolbar-item.e-overlay {
-  background: #fafafa;
+  background: #e3e3e3;
 }
 
 .e-toolbar .e-toolbar-items .e-toolbar-item.e-overlay .e-tbar-btn-text {
@@ -7695,7 +7696,6 @@ ejs-sidebar {
   background: #fff;
   height: 100%;
   overflow: auto;
-  width: 300px;
   position: fixed;
   top: 0;
   transition: none;
@@ -20681,7 +20681,7 @@ ejs-multiselect {
 .e-btn,
 .e-css.e-btn {
   -webkit-tap-highlight-color: transparent;
-  background-color: #fafafa;
+  /* background-color: #fafafa; */
   border-color: transparent;
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   color: rgba(0, 0, 0, 0.87);
@@ -20692,7 +20692,7 @@ ejs-multiselect {
 .e-css.e-btn:hover {
   background-color: rgba(226, 226, 226, 0.9844);
   border-color: transparent;
-  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+ /* box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12); */
   color: rgba(0, 0, 0, 0.87);
 }
 
@@ -20806,14 +20806,14 @@ ejs-multiselect {
 
 .e-btn.e-primary,
 .e-css.e-btn.e-primary {
-  background-color: #e3165b;
+  /* background-color: #e3165b; */
   border-color: transparent;
   color: #fff;
 }
 
 .e-btn.e-primary:hover,
 .e-css.e-btn.e-primary:hover {
-  background-color: #e6326f;
+  /* background-color: #e6326f; */
   border-color: transparent;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   color: #fff;
@@ -20821,7 +20821,7 @@ ejs-multiselect {
 
 .e-btn.e-primary:focus,
 .e-css.e-btn.e-primary:focus {
-  background-color: #ea4e82;
+  /* background-color: #ea4e82; */
   border-color: transparent;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   color: #fff;
@@ -20830,7 +20830,7 @@ ejs-multiselect {
 
 .e-btn.e-primary:active,
 .e-css.e-btn.e-primary:active {
-  background-color: #ec618f;
+  /* background-color: #ec618f; */
   border-color: transparent;
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
   color: #fff;
@@ -20839,7 +20839,7 @@ ejs-multiselect {
 
 .e-btn.e-primary.e-active,
 .e-css.e-btn.e-primary.e-active {
-  background-color: #ec618f;
+  /* background-color: #ec618f; */
   border-color: transparent;
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
   color: #fff;
@@ -21353,20 +21353,20 @@ ejs-multiselect {
 .e-btn.e-outline.e-primary,
 .e-css.e-btn.e-outline.e-primary {
   background-color: transparent;
-  border-color: #e3165b;
-  color: #e3165b;
+  /* border-color: #e3165b;
+  color: #e3165b; */
 }
 
 .e-btn.e-outline.e-primary:hover,
 .e-css.e-btn.e-outline.e-primary:hover {
-  background-color: #e6326f;
+  /* background-color: #e6326f; */
   border-color: transparent;
   color: #fff;
 }
 
 .e-btn.e-outline.e-primary:focus,
 .e-css.e-btn.e-outline.e-primary:focus {
-  background-color: #ea4e82;
+  /* background-color: #ea4e82; */
   border-color: transparent;
   color: #fff;
 }
@@ -21374,7 +21374,7 @@ ejs-multiselect {
 .e-btn.e-outline.e-primary:active, .e-btn.e-outline.e-primary.e-active,
 .e-css.e-btn.e-outline.e-primary:active,
 .e-css.e-btn.e-outline.e-primary.e-active {
-  background-color: #ec618f;
+  /* background-color: #ec618f; */
   border-color: transparent;
   box-shadow: none;
   color: #fff;
@@ -21382,7 +21382,7 @@ ejs-multiselect {
 
 .e-btn.e-outline.e-primary:disabled,
 .e-css.e-btn.e-outline.e-primary:disabled {
-  background-color: transparent;
+  /* background-color: transparent; */
   border-color: rgba(0, 0, 0, 0.26);
   box-shadow: none;
   color: rgba(0, 0, 0, 0.26);
@@ -21390,9 +21390,9 @@ ejs-multiselect {
 
 .e-btn.e-outline.e-success,
 .e-css.e-btn.e-outline.e-success {
-  background-color: transparent;
+  /* background-color: transparent; */
   border-color: #4d841d;
-  color: #4d841d;
+  /* color: #4d841d; */
 }
 
 .e-btn.e-outline.e-success:hover,

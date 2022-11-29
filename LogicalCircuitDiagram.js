@@ -46,10 +46,9 @@ var busdata = 'M31 0C30.4477 0 30 0.447715 30 1V12H11.917C11.441 9.16229 8.973 7
 var pullupdata = 'M32 0C31.4477 0 31 0.447715 31 1V22H11.917C11.441 19.1623 8.973 17 6 17C2.68629 17 0 19.6863 0 23C0 26.3137 2.68629 29 6 29C8.973 29 11.441 26.8377 11.917 24H31V46C31 46.5523 31.4477 47 32 47H71V24H88.083C88.559 26.8377 91.027 29 94 29C97.3137 29 100 26.3137 100 23C100 19.6863 97.3137 17 94 17C91.027 17 88.559 19.1623 88.083 22H71V0H32ZM33 45V2H69V45H33ZM54.8685 16L51 10.1972L47.1315 16H50V18.2792L44.6838 20.0513L44.8356 21.9864L52.093 23.196L44.7575 25.0299V26.9701L52.8769 29L44.7575 31.0299L44.8356 32.9864L50 33.8471V39H52V32.1529L49.907 31.804L57.2425 29.9701V28.0299L49.1231 26L57.2425 23.9701L57.1644 22.0136L49.1358 20.6755L52 19.7208V16H54.8685ZM51 13.8028L51.1315 14H50.8685L51 13.8028ZM2 23C2 20.7909 3.79086 19 6 19C8.20914 19 10 20.7909 10 23C10 25.2091 8.20914 27 6 27C3.79086 27 2 25.2091 2 23ZM90 23C90 20.7909 91.7909 19 94 19C96.2091 19 98 20.7909 98 23C98 25.2091 96.2091 27 94 27C91.7909 27 90 25.2091 90 23ZM39.4041 12.312C39.7561 12.232 40.0001 12.168 40.1361 12.12V17.172L38.6961 17.292V18H43.2681V17.292L41.9001 17.16V10.56L40.9521 10.428H40.9401C40.6441 10.676 40.2601 10.916 39.7881 11.148C39.3241 11.372 38.8761 11.528 38.4441 11.616L38.5761 12.456C38.7761 12.432 39.0521 12.384 39.4041 12.312Z';
 var pulldowndata = 'M70 0H31V22H11.917C11.441 19.1623 8.973 17 6 17C2.68629 17 0 19.6863 0 23C0 26.3137 2.68629 29 6 29C8.973 29 11.441 26.8377 11.917 24H31V47H70C70.5523 47 71 46.5523 71 46V24H88.083C88.559 26.8377 91.027 29 94 29C97.3137 29 100 26.3137 100 23C100 19.6863 97.3137 17 94 17C91.027 17 88.559 19.1623 88.083 22H71V1C71 0.447715 70.5523 0 70 0ZM33 45V2H69V45H33ZM52 18.8471V12H50V17.1529L44.8356 18.0136L44.7575 19.9701L52.8769 22L44.7575 24.0299V25.9701L52.093 27.804L44.8356 29.0136L44.6838 30.9487L50 32.7208V35H47.1315L51 40.8028L54.8685 35H52V31.2792L49.1358 30.3245L57.1644 28.9864L57.2425 27.0299L49.1231 25L57.2425 22.9701V21.0299L49.907 19.196L52 18.8471ZM2 23C2 20.7909 3.79086 19 6 19C8.20914 19 10 20.7909 10 23C10 25.2091 8.20914 27 6 27C3.79086 27 2 25.2091 2 23ZM90 23C90 20.7909 91.7909 19 94 19C96.2091 19 98 20.7909 98 23C98 25.2091 96.2091 27 94 27C91.7909 27 90 25.2091 90 23ZM62.1219 38.0959C61.4979 38.0959 60.9639 37.9679 60.5199 37.7119C60.0799 37.4559 59.7199 37.1079 59.4399 36.6679C59.1639 36.2239 58.9619 35.7219 58.8339 35.1619C58.7059 34.5979 58.6439 34.0099 58.6479 33.3979C58.6599 32.4979 58.8259 31.7179 59.1459 31.0579C59.4699 30.3939 59.9019 29.8819 60.4419 29.5219C60.9819 29.1619 61.5899 28.9819 62.2659 28.9819C62.8979 28.9819 63.4319 29.1019 63.8679 29.3419C64.3079 29.5779 64.6619 29.9039 64.9299 30.3199C65.2019 30.7359 65.3979 31.2159 65.5179 31.7599C65.6379 32.2999 65.6959 32.8739 65.6919 33.4819C65.6839 34.4099 65.5259 35.2199 65.2179 35.9119C64.9139 36.5999 64.4939 37.1359 63.9579 37.5199C63.4219 37.9039 62.8099 38.0959 62.1219 38.0959ZM62.1699 36.6919C62.6859 36.6959 63.0779 36.4419 63.3459 35.9299C63.6179 35.4179 63.7539 34.6219 63.7539 33.5419C63.7539 32.9019 63.6979 32.3459 63.5859 31.8739C63.4739 31.4019 63.3019 31.0359 63.0699 30.7759C62.8379 30.5159 62.5459 30.3859 62.1939 30.3859C61.6779 30.3859 61.2819 30.6339 61.0059 31.1299C60.7339 31.6259 60.5979 32.3659 60.5979 33.3499C60.5979 33.9859 60.6539 34.5559 60.7659 35.0599C60.8819 35.5599 61.0559 35.9559 61.2879 36.2479C61.5199 36.5399 61.8139 36.6879 62.1699 36.6919Z';
 
-
 var SwitchOffOuterRect = 'M60 27C60 29.7614 62.2386 32 65 32C67.7614 32 70 29.7614 70 27C70 24.2386 67.7614 22 65 22C62.2386 22 60 24.2386 60 27ZM60 27H43M43 27V1H1V53H43V27Z';
 var SwitchOffInnerRect = 'M36 46V8H7V46H36Z';
-var SwitchoffButton = 'M33 39L31.5 42H11L10 39M33 39H10M33 39L31 27M10 39L12 27M12 27H31M12 27V12H31V27';
+var SwitchoffButton = 'M33 15L32 12H11L10 15M33 15H10M33 15L31 27M10 15L12 27M31 27H12M31 27V42H12V27';
 
 var SwitchOnOuterRect = 'M60 27C60 29.7614 62.2386 32 65 32C67.7614 32 70 29.7614 70 27C70 24.2386 67.7614 22 65 22C62.2386 22 60 24.2386 60 27ZM60 27H43M43 27V1H1V53H43V27Z';
 var SwitchOnInnerRect = 'M36 46V8H7V46H36Z';
@@ -59,98 +58,280 @@ var PushButtonOuterRect = 'M1 1V0H0V1H1ZM43 1H44V0H43V1ZM43 53V54H44V53H43ZM1 53
 var PushButtonInnerCircle = 'M29 27C29 30.866 25.866 34 22 34C18.134 34 15 30.866 15 27C15 23.134 18.134 20 22 20C25.866 20 29 23.134 29 27Z';
 var PushButtonOuterCircle = 'M34 27C34 33.6274 28.6274 39 22 39C15.3726 39 10 33.6274 10 27C10 20.3726 15.3726 15 22 15C28.6274 15 34 20.3726 34 27Z';
 
-var ClockOuterRectangle = 'M14.5 25.5H10.5V13.5H26.5V26.5H34.5V18.5H38.5V30.5H22.5V17.5H14.5V25.5Z';
-var ClockInnerPart = 'M49 22H61M49 22V1H1V43H49V22ZM61 22C61 24.7614 63.2386 27 66 27C68.7614 27 71 24.7614 71 22C71 19.2386 68.7614 17 66 17C63.2386 17 61 19.2386 61 22Z';
+var ClockOuterRectangle = 'M49 22H61M49 22V1H1V43H49V22ZM61 22C61 24.7614 63.2386 27 66 27C68.7614 27 71 24.7614 71 22C71 19.2386 68.7614 17 66 17C63.2386 17 61 19.2386 61 22Z';
+var ClockInnerPart = 'M14.5 25.5H10.5V13.5H26.5V26.5H34.5V18.5H38.5V30.5H22.5V17.5H14.5V25.5Z';
 
+var BulbCompletePath = 'M9 37.0015H10C10 36.687 9.85204 36.3908 9.60058 36.2019L9 37.0015ZM33 37.0015L32.3994 36.2019C32.148 36.3908 32 36.687 32 37.0015H33ZM11 19L11.6247 18.2191C11.2928 17.9536 10.8292 17.9269 10.469 18.1526C10.1088 18.3783 9.93066 18.8071 10.0249 19.2216L11 19ZM16 23L15.3753 23.7809C15.5866 23.9499 15.8575 24.0261 16.1259 23.992C16.3944 23.958 16.6376 23.8165 16.8 23.6L16 23ZM19 19L19.8 18.4C19.6111 18.1482 19.3148 18 19 18C18.6852 18 18.3889 18.1482 18.2 18.4L19 19ZM22 23L21.2 23.6C21.3889 23.8518 21.6852 24 22 24C22.3148 24 22.6111 23.8518 22.8 23.6L22 23ZM25 19L25.8944 18.5528C25.7394 18.2428 25.435 18.0352 25.0898 18.004C24.7446 17.9729 24.4079 18.1227 24.2 18.4L25 19ZM27 23L26.1056 23.4472C26.2406 23.7173 26.4905 23.9119 26.7855 23.9767C27.0804 24.0415 27.3889 23.9695 27.6247 23.7809L27 23ZM32 19L32.9648 19.2631C33.0787 18.8454 32.9109 18.4019 32.549 18.1642C32.1871 17.9265 31.7134 17.9487 31.3753 18.2191L32 19ZM21 62.5C17.6863 62.5 15 65.1863 15 68.5L17 68.5C17 66.2909 18.7909 64.5 21 64.5L21 62.5ZM15 68.5C15 71.8137 17.6863 74.5 21 74.5L21 72.5C18.7909 72.5 17 70.7091 17 68.5L15 68.5ZM21 74.5C24.3137 74.5 27 71.8137 27 68.5L25 68.5C25 70.7091 23.2091 72.5 21 72.5L21 74.5ZM27 68.5C27 65.1863 24.3137 62.5 21 62.5L21 64.5C23.2091 64.5 25 66.2909 25 68.5L27 68.5ZM22 63.5V55H20V63.5H22ZM2 21C2 10.5066 10.5066 2 21 2V0C9.40202 0 0 9.40202 0 21H2ZM21 2C31.4934 2 40 10.5066 40 21H42C42 9.40202 32.598 0 21 0V2ZM21 54C17.7065 54 14.9584 52.9731 13.0457 51.2436C11.1421 49.5222 10 47.0473 10 44H8C8 47.5801 9.35785 50.6052 11.7043 52.727C14.0416 54.8406 17.2935 56 21 56V54ZM32 44C32 47.0473 30.8579 49.5222 28.9543 51.2436C27.0416 52.9731 24.2935 54 21 54V56C24.7065 56 27.9584 54.8406 30.2957 52.727C32.6421 50.6052 34 47.5801 34 44H32ZM9.60058 36.2019C4.98342 32.7338 2 27.2155 2 21H0C0 27.8711 3.301 33.9715 8.39942 37.801L9.60058 36.2019ZM40 21C40 27.2155 37.0166 32.7338 32.3994 36.2019L33.6006 37.801C38.699 33.9715 42 27.8711 42 21H40ZM10 44V41H8V44H10ZM10 41V37.0015H8V41H10ZM32 37.0015V41H34V37.0015H32ZM32 41V44H34V41H32ZM9 42H33V40H9V42ZM16.9751 40.7784L11.9751 18.7784L10.0249 19.2216L15.0249 41.2216L16.9751 40.7784ZM10.3753 19.7809L15.3753 23.7809L16.6247 22.2191L11.6247 18.2191L10.3753 19.7809ZM16.8 23.6L19.8 19.6L18.2 18.4L15.2 22.4L16.8 23.6ZM18.2 19.6L21.2 23.6L22.8 22.4L19.8 18.4L18.2 19.6ZM22.8 23.6L25.8 19.6L24.2 18.4L21.2 22.4L22.8 23.6ZM24.1056 19.4472L26.1056 23.4472L27.8944 22.5528L25.8944 18.5528L24.1056 19.4472ZM27.6247 23.7809L32.6247 19.7809L31.3753 18.2191L26.3753 22.2191L27.6247 23.7809ZM31.0352 18.7369L25.0352 40.7369L26.9648 41.2631L32.9648 19.2631L31.0352 18.7369ZM33 40H26V42H33V40ZM26 40H16V42H26V40ZM16 40H9V42H16V40Z';
+var BulbBlackPart = 'M9 44C9 50.6274 14 55 21 55C28 55 33 50.6274 33 44V41H26H16H9V44Z';
+var BulbInnerBluePart = 'M16 41H26L32 19L27 23L25 19L22 23L19 19L16 23L11 19L16 41Z';
+var BulbOuterBluePart = 'M21 1C9.9543 1 1 9.9543 1 21C1 27.5433 4.14221 33.3526 9 37.0015V41H16L11 19L16 23L19 19L22 23L25 19L27 23L32 19L26 41H33V37.0015C37.8578 33.3526 41 27.5433 41 21C41 9.9543 32.0457 1 21 1Z';
 
 var bulbport =
     [
-        { id: 'Bulb_port', offset: { x: 0.5, y: 0.95 } },
+        {
+            id: 'Bulb_port', offset: { x: 0.5, y: 0.95 },
+            height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        },
     ];
 
 var toggleswitchport =
     [
-        { id: 'toggleport1', offset: { x: 0.92, y: 0.5 } },
+        {
+            id: 'toggleport1', offset: { x: 0.92, y: 0.5 },
+            height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        },
     ];
 
 var pushbuttonport =
     [
-        { id: 'pushbuttonport1', offset: { x: 0.92, y: 0.5 } },
+        {
+            id: 'pushbuttonport1', offset: { x: 0.92, y: 0.5 },
+            height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        },
     ];
+
 var orPort =
     [
-        { id: 'Or_port1', offset: { x: 0.05, y: 0.25 } },
-        { id: 'Or_port3', offset: { x: 0.05, y: 0.73 } }, { id: 'Or_port4', offset: { x: 0.94, y: 0.5 } }
+        {
+            id: 'Or_port1', offset: { x: 0.05, y: 0.25 },
+            height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        },
+        {
+            id: 'Or_port3', offset: { x: 0.05, y: 0.73 },
+            height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        },
+        {
+            id: 'Or_port4', offset: { x: 0.94, y: 0.5 },
+            height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        },
     ];
 
 var otherPort =
     [
-        { id: 'Or_port1', offset: { x: 0.06, y: 0.30 } },
-        { id: 'Or_port3', offset: { x: 0.06, y: 0.70 } }, { id: 'Or_port4', offset: { x: 0.94, y: 0.48 } }
+        {
+            id: 'Or_port1', offset: { x: 0.06, y: 0.30 },
+            height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        },
+        {
+            id: 'Or_port3', offset: { x: 0.06, y: 0.70 },
+            height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        },
+        {
+            id: 'Or_port4', offset: { x: 0.94, y: 0.48 },
+            height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        },
     ];
 
 var pullPort =
     [
-        { id: 'Pull_port1', offset: { x: 0.06, y: 0.48 } },{ id: 'Pull_port2', offset: { x: 0.94, y: 0.48 } }
+        {
+            id: 'Pull_port1', offset: { x: 0.06, y: 0.48 },
+            height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        },
+        {
+            id: 'Pull_port2', offset: { x: 0.94, y: 0.48 },
+            height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        },
     ];
 
 var andPort =
     [
-        { id: 'And_port1', offset: { x: 0.05, y: 0.25 } },
-        { id: 'And_port3', offset: { x: 0.05, y: 0.73 } }, { id: 'And_port4', offset: { x: 0.94, y: 0.5 } }
+        {
+            id: 'And_port1', offset: { x: 0.05, y: 0.25 },
+            height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        },
+        {
+            id: 'And_port3', offset: { x: 0.05, y: 0.73 },
+            height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        },
+        {
+            id: 'And_port4', offset: { x: 0.94, y: 0.5 },
+            height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        },
     ];
 
 var notPort =
     [
-        { id: 'Not_port1', offset: { x: 0.05, y: 0.5 } }, { id: 'Not_port2', offset: { x: 0.94, y: 0.5 } }
+        {
+            id: 'Not_port1', offset: { x: 0.05, y: 0.5 },
+            height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        },
+        {
+            id: 'Not_port2', offset: { x: 0.94, y: 0.5 },
+            height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        },
     ];
 
-var DigitPorts = [{ id: 'digitport1', offset: { x: 0.07, y: 0.13 } }, { id: 'digitport2', offset: { x: 0.07, y: 0.38 } },
-{ id: 'digitport3', offset: { x: 0.07, y: 0.62 } }, { id: 'digitport4', offset: { x: 0.07, y: 0.86 } }];
+var DigitPorts =
+    [{
+        id: 'digitport1', offset: { x: 0.07, y: 0.15 },
+        height: 15, width: 13, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+    },
+    {
+        id: 'digitport2', offset: { x: 0.07, y: 0.38 },
+        height: 15, width: 13, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+    },
 
-var DTPorts = [{ id: 'DTport', offset: { x: 0.05, y: 0.430 } }, { id: 'clkport', offset: { x: 0.05, y: 0.590 } },
-{ id: 'qport', offset: { x: 0.95, y: 0.430 } }, { id: 'q1port', offset: { x: 0.95, y: 0.590 } },
-{ id: 'preport', offset: { x: 0.5, y: 0.05 } }, { id: 'clrport', offset: { x: 0.5, y: 0.95 } }];
+    {
+        id: 'digitport3', offset: { x: 0.071, y: 0.62 },
+        height: 15, width: 13, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+    },
+    {
+        id: 'digitport4', offset: { x: 0.072, y: 0.85 },
+        height: 15, width: 13, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+    }];
 
-var jkPorts = [{ id: 'jport', offset: { x: 0.06, y: 0.350 } }, { id: 'clkport', offset: { x: 0.06, y: 0.5 } },
-{ id: 'kport', offset: { x: 0.06, y: 0.650 } }, { id: 'qport', offset: { x: 0.95, y: 0.430 } }, { id: 'q1port', offset: { x: 0.95, y: 0.590 } },
-{ id: 'preport', offset: { x: 0.5, y: 0.05 } }, { id: 'clrport', offset: { x: 0.5, y: 0.95 } }];
+var DTPorts =
+    [{
+        id: 'DTport', offset: { x: 0.053, y: 0.425 },
+        height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+    },
+    {
+        id: 'clkport', offset: { x: 0.053, y: 0.590 },
+        height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+    },
+    {
+        id: 'qport', offset: { x: 0.947, y: 0.425 },
+        height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+    },
+    {
+        id: 'q1port', offset: { x: 0.947, y: 0.590 },
+        height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+    },
 
-var srPorts = [{ id: 'sport', offset: { x: 0.06, y: 0.25 } }, { id: 'clkport', offset: { x: 0.06, y: 0.5 } }, { id: 'rport', offset: { x: 0.06, y: 0.75 } },
-{ id: 'qport', offset: { x: 0.95, y: 0.39 } }, { id: 'q1port', offset: { x: 0.95, y: 0.63 } }];
+    {
+        id: 'preport', offset: { x: 0.5, y: 0.057 },
+        height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+    },
+    {
+        id: 'clrport', offset: { x: 0.5, y: 0.93 },
+        height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+    }];
+
+var jkPorts =
+    [{
+        id: 'jport', offset: { x: 0.06, y: 0.350 },
+        height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+    },
+    {
+        id: 'clkport', offset: { x: 0.06, y: 0.5 },
+        height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+    },
+
+    {
+        id: 'kport', offset: { x: 0.06, y: 0.650 },
+        height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+    },
+    {
+        id: 'qport', offset: { x: 0.95, y: 0.430 },
+        height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+    },
+    {
+        id: 'q1port', offset: { x: 0.95, y: 0.590 },
+        height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+    },
+    {
+        id: 'preport', offset: { x: 0.5, y: 0.05 },
+        height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+    },
+    {
+        id: 'clrport', offset: { x: 0.5, y: 0.95 },
+        height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+    }];
+
+var srPorts =
+    [{
+        id: 'sport', offset: { x: 0.06, y: 0.25 },
+        height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+    },
+    {
+        id: 'clkport', offset: { x: 0.06, y: 0.5 },
+        height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+    },
+    {
+        id: 'rport', offset: { x: 0.06, y: 0.75 },
+        height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+    },
+
+    {
+        id: 'qport', offset: { x: 0.95, y: 0.39 },
+        height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+    },
+    {
+        id: 'q1port', offset: { x: 0.95, y: 0.63 },
+        height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+    }];
 
 var gates =
     [
         {
-            id: 'OR Gate', shape: { type: 'Path', data: orData, shape: 'OR Gate' }, ports: orPort, style: { fill: '#000000' }, height: 45, width: 80,
+            id: 'OR Gate', shape: { type: 'Path', data: orData, shape: 'OR Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
         },
         {
-            id: 'NOR Gate', shape: { type: 'Path', data: nordata, shape: 'NOR Gate' }, ports: orPort, style: { fill: '#000000' }, height: 45, width: 80,
-        },
-
-        {
-            id: 'AND Gate', shape: { type: 'Path', data: andData, shape: 'AND Gate' }, ports: andPort, style: { fill: '#000000' }, height: 45, width: 80,
+            id: 'NOR Gate', shape: { type: 'Path', data: nordata, shape: 'NOR Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
         },
 
         {
-            id: 'NAND Gate', shape: { type: 'Path', data: nanddata, shape: 'NAND Gate' }, ports: andPort, style: { fill: '#000000' }, height: 45, width: 80,
+            id: 'AND Gate', shape: { type: 'Path', data: andData, shape: 'AND Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
         },
 
         {
-            id: 'Buffer Gate', ports: [{ offset: { x: 0.01, y: 0.5 } }, { offset: { x: 0.99, y: 0.5 } }],
-            shape: { type: 'Path', data: buffer, shape: 'Buffer' }, style: { fill: '#000000' }, height: 45, width: 80,
+            id: 'NAND Gate', shape: { type: 'Path', data: nanddata, shape: 'NAND Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
         },
 
         {
-            id: 'Not Gate', shape: { type: 'Path', data: notData, shape: 'NOT Gate' }, ports: notPort, style: { fill: '#000000' }, height: 45, width: 80,
+            id: 'Buffer Gate',
+            shape: { type: 'Path', data: buffer, shape: 'Buffer' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
         },
 
         {
-            id: 'XOR Gate', ports: orPort, shape: { type: 'Path', data: xorData, shape: 'XOR Gate' }, style: { fill: '#000000' }, height: 45, width: 80,
+            id: 'Not Gate', shape: { type: 'Path', data: notData, shape: 'NOT Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
         },
 
         {
-            id: 'XNOR Gate', ports: orPort, shape: { type: 'Path', data: xnorData, shape: 'XNOR Gate' }, style: { fill: '#000000' }, height: 45, width: 80,
+            id: 'XOR Gate', shape: { type: 'Path', data: xorData, shape: 'XOR Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
+        },
+
+        {
+            id: 'XNOR Gate', shape: { type: 'Path', data: xnorData, shape: 'XNOR Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
         },
     ];
 
@@ -159,73 +340,229 @@ var flipflops =
         {
             id: 'JK Flip-Flop',
             shape: { shape: 'JK Flip-Flop', type: 'Path', data: jkflipflopdata },
-            style: { fill: '#000000' }, height: 80, width: 85,
+            style: { fill: '#000000', strokeWidth: 0 }, height: 125, width: 93,
         },
 
         {
             id: 'D Flip-Flop',
             shape: { shape: 'D Flip-Flop', type: 'Path', data: dflipflop },
-            style: { fill: '#000000' }, height: 80, width: 85,
+            style: { fill: '#000000', strokeWidth: 0 }, height: 125, width: 93,
         },
 
         {
             id: 'T Flip-Flop',
             shape: { shape: 'T Flip-Flop', type: 'Path', data: tflipflopdata },
-            style: { fill: '#000000' }, height: 80, width: 85,
+            style: { fill: '#000000', strokeWidth: 0 }, height: 125, width: 93,
         },
 
         {
             id: 'SR Flip-Flop',
             shape: { shape: 'SR Flip-Flop', type: 'Path', data: srflipflopdata },
-            style: { fill: '#000000' }, height: 80, width: 85,
+            style: { fill: '#000000', strokeWidth: 0 }, height: 95, width: 93,
         },
     ];
 
 var input =
     [
         {
+            id: 'SwOffOuter',
+            height: 60,
+            width: 80,
+            offsetX: 140,
+            offsetY: 100,
+            shape: { type: 'Path', data: SwitchOffOuterRect },
+            style: { strokeColor: 'black', strokeWidth: 2, fill: 'transparent' },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+        },
+
+        {
+            id: 'SwOffInner',
+            height: 50,
+            width: 40,
+            offsetX: 125,
+            offsetY: 100,
+            shape: { type: 'Path', data: SwitchOffInnerRect },
+            style: { strokeColor: 'black', strokeWidth: 2 },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+        },
+
+        {
+            id: 'SwOff',
+            height: 40,
+            width: 30,
+            offsetX: 125,
+            offsetY: 100,
+            shape: { type: 'Path', data: SwitchoffButton },
+            style: { strokeColor: 'black', strokeWidth: 2 },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+        },
+
+        {
+            id: 'SwOn',
+            height: 40,
+            width: 30,
+            offsetX: 125,
+            offsetY: 100,
+            shape: { type: 'Path', data: SWitchOnButton },
+            style: { strokeColor: 'transparent', strokeWidth: 2, fill: 'transparent' },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+            visible: false,
+        },
+
+
+        {
             id: 'Toggle Switch',
-            shape: { shape: 'Toggle Switch', type: 'Path', data: toggleswitchdata },
-            style: { fill: '#000000' }, height: 62, width: 80,
+            children: ['SwOffOuter', 'SwOffInner', 'SwOff', 'SwOn'],
+            offsetX: 140,
+            offsetY: 100,
+            shape: { shape: 'Toggle Switch' },
+        },
+
+        {
+            id: 'PBOuterRect',
+            height: 60,
+            width: 80,
+            offsetX: 140,
+            offsetY: 100,
+            shape: { type: 'Path', data: PushButtonOuterRect },
+            style: { strokeColor: 'black', strokeWidth: 0, fill: 'black' },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+        },
+
+        {
+            id: 'PBOuterCircle',
+            height: 40,
+            width: 30,
+            offsetX: 125,
+            offsetY: 100,
+            shape: { type: 'Path', data: PushButtonOuterCircle },
+            style: { strokeColor: 'black', strokeWidth: 2, fill: 'white' },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+        },
+
+        {
+            id: 'PBInnerCircle',
+            height: 30,
+            width: 20,
+            offsetX: 125,
+            offsetY: 100,
+            shape: { type: 'Path', data: PushButtonInnerCircle },
+            style: { strokeColor: 'black', strokeWidth: 2 },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
         },
 
         {
             id: 'Push Button',
-            shape: { shape: 'Push Button', type: 'Path', data: pushbuttondata },
-            style: { fill: '#000000' }, height: 62, width: 80,
+            children: ['PBOuterRect', 'PBOuterCircle', 'PBInnerCircle'],
+            offsetX: 340,
+            offsetY: 100,
+            shape: { shape: 'Push Button' }
+        },
+
+        {
+            id: 'CLKOuterRect',
+            height: 60,
+            width: 80,
+            offsetX: 140,
+            offsetY: 100,
+            shape: { type: 'Path', data: ClockOuterRectangle },
+            style: { strokeColor: 'black', strokeWidth: 2 },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+        },
+
+        {
+            id: 'CLKInnerPart',
+            height: 30,
+            width: 30,
+            offsetX: 125,
+            offsetY: 100,
+            shape: { type: 'Path', data: ClockInnerPart },
+            style: { strokeColor: 'black', strokeWidth: 2, fill: 'white' },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
         },
 
         {
             id: 'Clock',
-            shape: { shape: 'Clock', type: 'Path', data: clockdata },
-            style: { fill: '#000000' }, height: 62, width: 80,
+            children: ['CLKOuterRect', 'CLKInnerPart'],
+            offsetX: 440,
+            offsetY: 100,
+            shape: { shape: 'Clock' },
         },
 
         {
             id: 'High Constant',
             shape: { shape: 'High Constant', type: 'Path', data: highconstantdata },
-            style: { fill: '#000000' }, height: 62, width: 80,
+            style: { fill: '#000000', strokeWidth: 0 }, height: 76, width: 94,
         },
 
         {
             id: 'Low Constant',
             shape: { shape: 'Low Constant', type: 'Path', data: lowconstantdata },
-            style: { fill: '#000000' }, height: 62, width: 80,
+            style: { fill: '#000000', strokeWidth: 0 }, height: 75, width: 96,
         },
     ];
 
 var output =
     [
+
+        {
+            id: 'FullPath',
+            height: 60,
+            width: 40,
+            offsetX: 140,
+            offsetY: 100,
+            shape: { type: 'Path', data: BulbCompletePath },
+            style: { strokeColor: 'black', fill: 'black' },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+        },
+
+        {
+            id: 'BlackPart',
+            height: 12,
+            width: 20,
+            offsetX: 140,
+            offsetY: 110,
+            shape: { type: 'Path', data: BulbBlackPart },
+            style: { strokeColor: 'black', fill: 'black' },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+        },
+
+        {
+            id: 'InnerBluePart',
+            height: 16,
+            width: 20,
+            offsetX: 140,
+            offsetY: 95,
+            shape: { type: 'Path', data: BulbInnerBluePart },
+            style: { strokeColor: 'black', fill: 'white' },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+            visible: false,
+        },
+
+        {
+            id: 'OuterBluePart',
+            height: 32,
+            width: 36,
+            offsetX: 140,
+            offsetY: 87,
+            shape: { type: 'Path', data: BulbOuterBluePart },
+            style: { strokeColor: 'black', fill: 'white' },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+            visible: false,
+        },
+
         {
             id: 'Bulb',
-            shape: { type: 'Path', data: bulbdata, shape: 'Light Bulb' },
-            style: { fill: '#000000' }, height: 65, width: 40,
+            children: ['FullPath', 'BlackPart', 'InnerBluePart', 'OuterBluePart'],
+            offsetX: 540,
+            offsetY: 100,
+            shape: { shape: 'Light Bulb' },
         },
 
         {
             id: '4-Bit Digit',
             shape: { type: 'Path', data: digitdata, shape: '4-Bit Digit' },
-            style: { fill: '#000000' }, height: 66, width: 73,
+            style: { fill: '#000000', strokeWidth: 0 }, height: 72, width: 80,
         },
     ];
 
@@ -234,33 +571,33 @@ var other =
         {
             id: 'Label',
             shape: { type: 'Path', data: Labeldata, shape: 'Label' },
-            style: { fill: '#FFFFFF' },
-            height: 45,
-            width: 85,
+            style: { fill: '#000000', strokeWidth: 0 },
+            height: 55,
+            width: 65,
         },
 
         {
             id: 'Bus',
             shape: { type: 'Path', data: busdata, shape: 'Bus' },
-            style: { fill: '#000000' },
-            height: 45,
-            width: 85,
+            style: { fill: '#000000', strokeWidth: 0 },
+            height: 55,
+            width: 120,
         },
 
         {
             id: 'Pull Up',
             shape: { type: 'Path', data: pullupdata, shape: 'Pull Up' },
-            style: { fill: '#000000' },
-            height: 45,
-            width: 85,
+            style: { fill: '#000000', strokeWidth: 0 },
+            height: 60,
+            width: 93,
         },
 
         {
             id: 'Pull Down',
             shape: { type: 'Path', data: pulldowndata, shape: 'Pull Down' },
-            style: { fill: '#000000' },
-            height: 45,
-            width: 85,
+            style: { fill: '#000000', strokeWidth: 0 },
+            height: 60,
+            width: 93,
         },
     ];
 
@@ -275,16 +612,17 @@ var palette = new ej.diagrams.SymbolPalette({
             { id: 'other', expanded: true, symbols: other, title: 'Other' },
         ],
     width: '100%', height: '100%',
-    symbolMargin: { left: 10, right: 10, top: 10, bottom: 10 },    
+    symbolMargin: { left: 5, right: 5, top: 5, bottom: 5 },
     getNodeDefaults: function (symbol) {
-        
+
     },
     symbolPreview: { height: 50, width: 50 },
     getSymbolInfo: function (symbol) {
-        return { description: { text: symbol.shape['shape'], overflow: 'Wrap', fontSize: 11, margin : {top : 10, left : 0, right : 0, bottom :0} } };
+        return { description: { text: symbol.shape['shape'], overflow: 'Wrap', fontSize: 12, margin: { top: 10, left: 0, right: 0, bottom: 0 } } };
     }
 });
 palette.appendTo('#symbolpalette');
+
 
 
 function createNode(id, offsetX, offsetY, height, width, pathData, ports, fill, binarystate, controltype) {
@@ -298,12 +636,12 @@ function createNode(id, offsetX, offsetY, height, width, pathData, ports, fill, 
     node.ports = ports;
     node.ports.forEach(element => {
         element.height = 12;
-        element.width = 10;        
+        element.width = 10;
         element.shape = 'Circle';
         element.visibility = ej.diagrams.PortVisibility.Visible;
         element.constraints = ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw;
     });
-    node.style = { fill: fill };
+    node.style = { fill: fill, strokeWidth: 0 };
     node.addInfo = { binarystate: binarystate, controltype: controltype };
     return node;
 }
@@ -329,28 +667,193 @@ function createConnector(id, sourcePoint, targetPoint, sourceID, targetID, sourc
     return connector;
 }
 
-var SwitchOffOuterRect = 'M60 27C60 29.7614 62.2386 32 65 32C67.7614 32 70 29.7614 70 27C70 24.2386 67.7614 22 65 22C62.2386 22 60 24.2386 60 27ZM60 27H43M43 27V1H1V53H43V27Z';
-var SwitchOffInnerRect = 'M36 46V8H7V46H36Z';
-var SwitchoffButton = 'M33 39L31.5 42H11L10 39M33 39H10M33 39L31 27M10 39L12 27M12 27H31M12 27V12H31V27';
-
-var SwitchOnOuterRect = 'M60 27C60 29.7614 62.2386 32 65 32C67.7614 32 70 29.7614 70 27C70 24.2386 67.7614 22 65 22C62.2386 22 60 24.2386 60 27ZM60 27H43M43 27V1H1V53H43V27Z';
-var SwitchOnInnerRect = 'M36 46V8H7V46H36Z';
-var SWitchOnButton = 'M33 39L31.5 42H11L10 39M33 39H10M33 39L31 27M10 39L12 27M12 27H31M12 27V12H31V27';
-
-var PushButtonOuterRect = 'M1 1V0H0V1H1ZM43 1H44V0H43V1ZM43 53V54H44V53H43ZM1 53H0V54H1V53ZM69 27C69 29.2091 67.2091 31 65 31V33C68.3137 33 71 30.3137 71 27H69ZM65 31C62.7909 31 61 29.2091 61 27H59C59 30.3137 61.6863 33 65 33V31ZM61 27C61 24.7909 62.7909 23 65 23V21C61.6863 21 59 23.6863 59 27H61ZM65 23C67.2091 23 69 24.7909 69 27H71C71 23.6863 68.3137 21 65 21V23ZM43 28H60V26H43V28ZM1 2H43V0H1V2ZM43 52H1V54H43V52ZM2 53V1H0V53H2ZM42 1V27H44V1H42ZM42 27V53H44V27H42Z';
-var PushButtonInnerCircle = 'M29 27C29 30.866 25.866 34 22 34C18.134 34 15 30.866 15 27C15 23.134 18.134 20 22 20C25.866 20 29 23.134 29 27Z';
-var PushButtonOuterCircle = 'M34 27C34 33.6274 28.6274 39 22 39C15.3726 39 10 33.6274 10 27C10 20.3726 15.3726 15 22 15C28.6274 15 34 20.3726 34 27Z';
-
-var ClockOuterRectangle = 'M14.5 25.5H10.5V13.5H26.5V26.5H34.5V18.5H38.5V30.5H22.5V17.5H14.5V25.5Z';
-var ClockInnerPart = 'M49 22H61M49 22V1H1V43H49V22ZM61 22C61 24.7614 63.2386 27 66 27C68.7614 27 71 24.7614 71 22C71 19.2386 68.7614 17 66 17C63.2386 17 61 19.2386 61 22Z';
-
-
 var nodes =
-[
-        createNode('Switch1', 140, 100, 60, 80, toggleswitchdata, toggleswitchport, '#000000', 0, 'inputcontrol'),
-        createNode('PushButton1', 140, 270, 60, 80, pushbuttondata, pushbuttonport, '#000000', 0, 'inputcontrol'),
-        createNode('Clock', 140, 470, 60, 80, clockdata, pushbuttonport, '#000000', 0, 'inputcontrol'),
-        createNode('Switch2', 140, 630, 60, 80, toggleswitchdata, toggleswitchport, '#000000', 0, 'inputcontrol'),
+    [
+        {
+            id: 'SwOffOuter',
+            height: 60,
+            width: 80,
+            offsetX: 140,
+            offsetY: 100,
+            shape: { type: 'Path', data: SwitchOffOuterRect },
+            style: { strokeColor: 'black', strokeWidth: 2 },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+        },
+
+        {
+            id: 'SwOffInner',
+            height: 50,
+            width: 40,
+            offsetX: 125,
+            offsetY: 100,
+            shape: { type: 'Path', data: SwitchOffInnerRect },
+            style: { strokeColor: 'black', strokeWidth: 2, },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+        },
+
+        {
+            id: 'SwOff',
+            height: 40,
+            width: 30,
+            offsetX: 125,
+            offsetY: 100,
+            shape: { type: 'Path', data: SwitchoffButton },
+            style: { strokeColor: 'black', strokeWidth: 2 },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+        },
+
+        {
+            id: 'SwOn',
+            height: 40,
+            width: 30,
+            offsetX: 125,
+            offsetY: 100,
+            shape: { type: 'Path', data: SWitchOnButton },
+            style: { strokeColor: 'black', strokeWidth: 2 },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+            visible: false,
+        },
+
+        {
+            id: 'Switch1',
+            children: ['SwOffOuter', 'SwOffInner', 'SwOff', 'SwOn'],
+            offsetX: 140,
+            offsetY: 100,
+            ports: toggleswitchport,
+            addInfo: { binarystate: 0, controltype: 'inputcontrol' },
+            style: { fill: 'transparent', strokeWidth: 0 },
+        },
+
+        {
+            id: 'PBOuterRect',
+            height: 60,
+            width: 80,
+            offsetX: 140,
+            offsetY: 100,
+            shape: { type: 'Path', data: PushButtonOuterRect },
+            style: { strokeColor: 'black', strokeWidth: 0, fill: 'black' },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+        },
+
+        {
+            id: 'PBOuterCircle',
+            height: 40,
+            width: 30,
+            offsetX: 125,
+            offsetY: 100,
+            shape: { type: 'Path', data: PushButtonOuterCircle },
+            style: { strokeColor: 'black', strokeWidth: 2, fill: 'white' },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+        },
+
+        {
+            id: 'PBInnerCircle',
+            height: 30,
+            width: 20,
+            offsetX: 125,
+            offsetY: 100,
+            shape: { type: 'Path', data: PushButtonInnerCircle },
+            style: { strokeColor: 'black', strokeWidth: 2 },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+        },
+
+        {
+            id: 'PushButton1',
+            children: ['PBOuterRect', 'PBOuterCircle', 'PBInnerCircle'],
+            offsetX: 140,
+            offsetY: 270,
+            ports: pushbuttonport,
+            addInfo: { binarystate: 0, controltype: 'inputcontrol' },
+            style: { fill: 'transparent', strokeWidth: 0 },
+        },
+
+        {
+            id: 'CLKOuterRect',
+            height: 60,
+            width: 80,
+            offsetX: 140,
+            offsetY: 100,
+            shape: { type: 'Path', data: ClockOuterRectangle },
+            style: { strokeColor: 'black', strokeWidth: 2 },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+        },
+
+        {
+            id: 'CLKInnerPart',
+            height: 30,
+            width: 30,
+            offsetX: 125,
+            offsetY: 100,
+            shape: { type: 'Path', data: ClockInnerPart },
+            style: { strokeColor: 'black', strokeWidth: 2, fill: 'white' },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+        },
+
+        {
+            id: 'Clock',
+            children: ['CLKOuterRect', 'CLKInnerPart'],
+            offsetX: 140,
+            offsetY: 470,
+            ports: pushbuttonport,
+            addInfo: { binarystate: 0, controltype: 'inputcontrol' },
+            style: { fill: 'transparent', strokeWidth: 0 },
+        },
+
+        {
+            id: 'SwOffOuter2',
+            height: 60,
+            width: 80,
+            offsetX: 140,
+            offsetY: 100,
+            shape: { type: 'Path', data: SwitchOffOuterRect },
+            style: { strokeColor: 'black', strokeWidth: 2 },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+        },
+
+        {
+            id: 'SwOffInner2',
+            height: 50,
+            width: 40,
+            offsetX: 125,
+            offsetY: 100,
+            shape: { type: 'Path', data: SwitchOffInnerRect },
+            style: { strokeColor: 'black', strokeWidth: 2 },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+        },
+
+        {
+            id: 'SwOff2',
+            height: 40,
+            width: 30,
+            offsetX: 125,
+            offsetY: 100,
+            shape: { type: 'Path', data: SwitchoffButton },
+            style: { strokeColor: 'black', strokeWidth: 2 },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+        },
+
+        {
+            id: 'SwOn2',
+            height: 40,
+            width: 30,
+            offsetX: 125,
+            offsetY: 100,
+            shape: { type: 'Path', data: SWitchOnButton },
+            style: { strokeColor: 'black', strokeWidth: 2 },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+            visible: false,
+        },
+
+        {
+            id: 'Switch2',
+            children: ['SwOffOuter2', 'SwOffInner2', 'SwOff2', 'SwOn2'],
+            offsetX: 140,
+            offsetY: 630,
+            ports: toggleswitchport,
+            addInfo: { binarystate: 0, controltype: 'inputcontrol' },
+            style: { fill: 'transparent', strokeWidth: 0 },
+        },
+
         createNode('OR1', 350, 350, 40, 100, orData, orPort, '#000000', null, 'gate'),
         createNode('And1', 350, 180, 40, 100, andData, andPort, '#000000', null, 'gate'),
         createNode('And2', 350, 520, 40, 100, andData, andPort, '#000000', null, 'gate'),
@@ -358,8 +861,64 @@ var nodes =
         createNode('OR2', 750, 280, 40, 100, orData, orPort, '#000000', null, 'gate'),
         createNode('Not', 750, 520, 40, 100, notData, notPort, '#000000', null, 'gate'),
         createNode('XOR', 950, 420, 40, 100, xorData, orPort, '#000000', null, 'gate'),
-        createNode('Bulb', 1050, 170, 60, 40, bulbdata, bulbport, '#000000', null, 'outputcontrol'),
-];
+
+        {
+            id: 'FullPath',
+            height: 60,
+            width: 40,
+            offsetX: 140,
+            offsetY: 100,
+            shape: { type: 'Path', data: BulbCompletePath },
+            style: { strokeColor: 'black', fill: 'black' },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+        },
+
+        {
+            id: 'BlackPart',
+            height: 12,
+            width: 20,
+            offsetX: 140,
+            offsetY: 110,
+            shape: { type: 'Path', data: BulbBlackPart },
+            style: { strokeColor: 'black', fill: 'black' },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+        },
+
+        {
+            id: 'InnerBluePart',
+            height: 16,
+            width: 20,
+            offsetX: 140,
+            offsetY: 95,
+            shape: { type: 'Path', data: BulbInnerBluePart },
+            style: { strokeColor: 'black', fill: 'white' },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+            visible: false,
+        },
+
+        {
+            id: 'OuterBluePart',
+            height: 32,
+            width: 36,
+            offsetX: 140,
+            offsetY: 87,
+            shape: { type: 'Path', data: BulbOuterBluePart },
+            style: { strokeColor: 'black', fill: 'white' },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+            visible: false,
+        },
+
+        {
+            id: 'Bulb',
+            children: ['FullPath', 'BlackPart', 'InnerBluePart', 'OuterBluePart'],
+            offsetX: 1050,
+            offsetY: 170,
+            height: 60,
+            width: 40,
+            ports: bulbport,
+            addInfo: { binarystate: null, controltype: 'outputcontrol' },
+        },
+    ];
 
 var connectors =
     [
@@ -381,10 +940,125 @@ var connectors =
 
 var diagram = new ej.diagrams.Diagram({
     width: '100%', height: '100%',
-    nodes: nodes, connectors: connectors, drawingObject: { type: 'Orthogonal' },
+    nodes: nodes, connectors: connectors, drawingObject: { type: 'Bezier' },
     created: created, click: click, mouseLeave: mouseLeave, drop: drop, getConnectorDefaults: getConnectorDefaults,
-    connectionChange: connectionChange, sourcePointChange: sourcePointChange, targetPointChange: targetPointChange,
-    elementDraw: elementDraw, selectedItems: { constraints: ej.diagrams.SelectorConstraints.All & ~ej.diagrams.SelectorConstraints.ResizeAll & ~ ej.diagrams.SelectorConstraints.Rotate}
+    elementDraw: elementDraw, selectedItems: { constraints: ej.diagrams.SelectorConstraints.All & ~ej.diagrams.SelectorConstraints.ResizeAll & ~ej.diagrams.SelectorConstraints.Rotate },
+    pageSettings: { showPageBreaks: true },
+    pageSettings: {
+        background: { color: '#FFFFFF' }, width: 600, height: 1460, margin: { left: 5, top: 5 },
+        orientation: 'Landscape', showPageBreaks: true,
+    }, scrollSettings: { canAutoScroll: true, scrollLimit: 'Infinity', minZoom: 0.25, maxZoom: 30 },
+    rulerSettings: {
+        showRulers: true, dynamicGrid: true, horizontalRuler: { interval: 10, segmentWidth: 100, thickness: 25, },
+        verticalRuler: { interval: 10, segmentWidth: 100, thickness: 25, },
+    },
+    commandManager: {
+        commands: [{
+            name: 'New',
+            canExecute: function () {
+                return true
+            },
+            execute: function () {
+                diagram.clear();
+            },
+            gesture: {
+                key: ej.diagrams.Keys.N,
+                keyModifiers: ej.diagrams.KeyModifiers.Shift
+            }
+        },
+        {
+            name: 'Save',
+            canExecute: function () {
+                return true
+            },
+            execute: function () {
+                UtilityMethods.prototype.download(diagram.saveDiagram());
+            },
+            gesture: {
+                key: ej.diagrams.Keys.S,
+                keyModifiers: ej.diagrams.KeyModifiers.Control
+            }
+        },
+        {
+            name: 'Open',
+            canExecute: function () {
+                return true
+            },
+            execute: function () {
+                document.getElementsByClassName('e-file-select-wrap')[0].querySelector('button').click();
+            },
+            gesture: {
+                key: ej.diagrams.Keys.O,
+                keyModifiers: ej.diagrams.KeyModifiers.Control
+            }
+        },
+        {
+            name: 'Rotate Right 90',
+            canExecute: function () {
+                if (diagram.selectedItems.nodes.length > 0 || diagram.selectedItems.connectors.length > 0) {
+                    return true
+                }
+                return false
+            },
+            execute: function () {
+                diagram.rotate(diagram.selectedItems, 90);
+            },
+            gesture: {
+                key: ej.diagrams.Keys.R,
+                keyModifiers: ej.diagrams.KeyModifiers.Control
+            }
+        },
+        {
+            name: 'Rotate Left 90',
+            canExecute: function () {
+                if (diagram.selectedItems.nodes.length > 0 || diagram.selectedItems.connectors.length > 0) {
+                    return true
+                }
+                return false
+            },
+            execute: function () {
+                diagram.rotate(diagram.selectedItems, -90);
+            },
+            gesture: {
+                key: ej.diagrams.Keys.L,
+                keyModifiers: ej.diagrams.KeyModifiers.Control
+            }
+        },
+        {
+            name: 'Flip Horizontal',
+            canExecute: function () {
+                if (diagram.selectedItems.nodes.length > 0 || diagram.selectedItems.connectors.length > 0) {
+                    return true
+                }
+                return false
+            },
+            execute: function () {
+                flipObjects('Flip Horizontal');
+            },
+            gesture: {
+                key: ej.diagrams.Keys.H,
+                keyModifiers: ej.diagrams.KeyModifiers.Control
+            }
+        },
+        {
+            name: 'Flip Vertical',
+            canExecute: function () {
+                if (diagram.selectedItems.nodes.length > 0 || diagram.selectedItems.connectors.length > 0) {
+                    return true
+                }
+                return false
+            },
+            execute: function () {
+                flipObjects('Flip Vertical');
+            },
+            gesture: {
+                key: ej.diagrams.Keys.J,
+                keyModifiers: ej.diagrams.KeyModifiers.Control
+            }
+        },
+        ]
+    },
+
 });
 
 window.setInterval(changeState, 3000);
@@ -392,21 +1066,29 @@ window.setInterval(changeState, 3000);
 function elementDraw(args) {
     if (args.state == "Completed" && args.objectType == "Connector") {
         var sourcenode = diagram.getObject(args.source.sourceID);
-        args.source.addInfo = { binarystate: sourcenode.addInfo.binarystate };
+        var targetnode = diagram.getObject(args.source.targetID);
+        var sourceport = diagram.getObject(args.source.sourcePortID);
+        var targetport = diagram.getObject(args.source.targetPortID);
 
-        RunSimulation();
+        if (args.source.sourcePortID != "" && args.source.targetPortID != ""
+            && args.source.sourcePortID != undefined && args.source.targetPortID != undefined
+            && sourcenode.addInfo != undefined && sourcenode.addInfo.binarystate != undefined) {
+            args.source.addInfo = { binarystate: sourcenode.addInfo.binarystate };
+            RunSimulation();
+        }
+        else {
+            diagram.cut();
+        }
     }
 }
 
-function sourcePointChange(args) {
+document.getElementById("diagram").onMouseUp = function (args) {
+
 
 }
 
-function targetPointChange(args) {
+document.getElementById("diagram").onMouseDown = function (args) {
 
-}
-
-function connectionChange(args) {
 
 }
 
@@ -436,7 +1118,6 @@ function drop(args) {
             element.visibility = ej.diagrams.PortVisibility.Visible;
             element.constraints = ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw;
         });
-        window.setInterval(changeState, 3000);
     }
     else if (args.element.id.indexOf("Low") != -1) {
         args.element.addInfo = { binarystate: 0, controltype: 'inputcontrol' };
@@ -565,13 +1246,15 @@ function changeState() {
         if (element.id.indexOf("Clock") != -1) {
             if (element.addInfo.binarystate == 0) {
                 element.addInfo.binarystate = 1;
-                element.style.fill = "#05DAC5";
+                var child = diagram.getObject(element.children[1]);
+                child.style.fill = "#05DAC5";
 
                 setBinaryStateFromInput(element);
             }
             else {
                 element.addInfo.binarystate = 0;
-                element.style.fill = "black";
+                var child = diagram.getObject(element.children[1]);
+                child.style.fill = "white";
 
                 setBinaryStateFromInput(element);
             }
@@ -601,7 +1284,8 @@ function click(args) {
 
 function mouseLeave(args) {
     if (args.element.id.indexOf("Push") != -1) {
-        args.element.style.fill = "black";
+        var child1 = diagram.getObject(args.element.children[1]);
+        child1.style.fill = "white";
         if (args.element.addInfo != undefined) {
             args.element.addInfo.binarystate = 0;
             diagram.clearSelection();
@@ -613,7 +1297,7 @@ function mouseLeave(args) {
 
 function created(args) {
 
-    diagram.fitToPage();
+    diagram.fitToPage({ mode: 'Width'});
 
     RunSimulation();
 };
@@ -624,16 +1308,24 @@ function OutputControl(element) {
         if (InputCon1 != undefined && InputCon1.addInfo != undefined) {
             var Inputstate1 = InputCon1.addInfo.binarystate;
             if (Inputstate1 == 0) {
-                element.style.fill = "black";
-                element.style.strokeColor = "black";
+                var child1 = diagram.getObject(element.children[2]);
+                var child2 = diagram.getObject(element.children[3]);
+                child1.visible = false;
+                child2.visible = false;
             }
             else if (Inputstate1 == 1) {
-                element.style.fill = "#05DAC5";
-                element.style.strokeColor = "#05DAC5";
+                var child1 = diagram.getObject(element.children[2]);
+                var child2 = diagram.getObject(element.children[3]);
+                child1.style.fill = '#05DAC5';
+                child2.style.fill = '#05DAC5';
+                child1.visible = true;
+                child2.visible = true;
             }
             else {
-                element.style.fill = "black";
-                element.style.strokeColor = "black";
+                var child1 = diagram.getObject(element.children[2]);
+                var child2 = diagram.getObject(element.children[3]);
+                child1.visible = false;
+                child2.visible = false;
             }
         }
     }
@@ -1550,17 +2242,29 @@ function OnInputChanged(args) {
     if (args.id.indexOf("Switch") != -1) {
         if (args.addInfo.binarystate == 1) {
             args.addInfo.binarystate = 0;
-            args.shape.data = toggleswitchdata;
-            args.style.fill = "black";
+            var Child3 = diagram.getObject(args.children[3]);
+            var Child2 = diagram.getObject(args.children[2]);
+            var Child1 = diagram.getObject(args.children[1]);
+            Child3.visible = false;
+            Child2.visible = true;
+            Child1.style.fill = "white";
         }
         else if (args.addInfo.binarystate == 0) {
             args.addInfo.binarystate = 1;
-            args.shape.data = switchoffdata;
-            args.style.fill = "#05DAC5";
+            var Child3 = diagram.getObject(args.children[3]);
+            var Child2 = diagram.getObject(args.children[2]);
+            var Child1 = diagram.getObject(args.children[1]);
+            Child3.visible = true;
+            Child2.visible = false;
+            Child3.style.fill = 'white';
+            Child3.style.strokeColor = 'black';
+            Child3.style.strokeWidth = 2;
+            Child1.style.fill = "#05DAC5";
         }
     }
     else if (args.id.indexOf("Push") != -1) {
-        args.style.fill = "#05DAC5";
+        var child1 = diagram.getObject(args.children[1]);
+        child1.style.fill = "#05DAC5";
         args.addInfo.binarystate = 1;
     }
 
@@ -1572,35 +2276,35 @@ function RunSimulation() {
     var regulatednodes = [];
     for (let i = 0; i < diagram.nodes.length; i++) {
         var element = diagram.nodes[i];
-        if (element.addInfo.controltype == "inputcontrol") {
+        if (element.addInfo != undefined && element.addInfo.controltype == "inputcontrol") {
             regulatednodes.push(element);
         }
     }
 
     for (let i = 0; i < diagram.nodes.length; i++) {
         var element = diagram.nodes[i];
-        if (element.addInfo.controltype == "gate") {
+        if (element.addInfo != undefined && element.addInfo.controltype == "gate") {
             regulatednodes.push(element);
         }
     }
 
     for (let i = 0; i < diagram.nodes.length; i++) {
         var element = diagram.nodes[i];
-        if (element.addInfo.controltype == "flipflop") {
+        if (element.addInfo != undefined && element.addInfo.controltype == "flipflop") {
             regulatednodes.push(element);
         }
     }
 
     for (let i = 0; i < diagram.nodes.length; i++) {
         var element = diagram.nodes[i];
-        if (element.addInfo.controltype == "othercontrol") {
+        if (element.addInfo != undefined && element.addInfo.controltype == "othercontrol") {
             regulatednodes.push(element);
         }
     }
 
     for (let i = 0; i < diagram.nodes.length; i++) {
         var element = diagram.nodes[i];
-        if (element.addInfo.controltype == "outputcontrol") {
+        if (element.addInfo != undefined && element.addInfo.controltype == "outputcontrol") {
             regulatednodes.push(element);
         }
     }
@@ -1628,1741 +2332,4 @@ function RunSimulation() {
             OutputControl(element);
         }
     }
-}
-
-window.onload = function () {
-    document.getElementById('btnHideToolbar').onclick = hideMenuBar.bind(this);
-    document.onmouseover = menumouseover.bind(this);
-    zoomCurrentValue = document.getElementById("btnZoomIncrement").ej2_instances[0];
-}
-
-function hideMenuBar() {
-    var expandcollapseicon = document.getElementById('btnHideToolbar');
-    var button1 = expandcollapseicon.ej2_instances[0];
-    if (button1.iconCss.indexOf('sf-icon-Collapse tb-icons') > -1) {
-        button1.iconCss = 'sf-icon-DownArrow2 tb-icons';
-    } else {
-        button1.iconCss = 'sf-icon-Collapse tb-icons';
-    }
-    hideElements('hide-menubar', diagram);
-    // diagram.refresh();
-};
-
-function hideElements(elementType, diagram, diagramType) {
-    var diagramContainer = document.getElementsByClassName('diagrambuilder-container')[0];
-    if (diagramContainer.classList.contains(elementType)) {
-        if (!(diagramType === 'mindmap-diagram' || diagramType === 'orgchart-diagram')) {
-            diagramContainer.classList.remove(elementType);
-        }
-    }
-    else {
-        diagramContainer.classList.add(elementType);
-    }
-    if (diagram) {
-        diagram.updateViewPort();
-    }
-};
-
-var ExportSettings = (function () {
-    function ExportSettings() {
-        this.m_fileName = 'Diagram';
-        this.m_format = 'JPG';
-        this.m_region = 'PageSettings';
-    }
-    Object.defineProperty(ExportSettings.prototype, "fileName", {
-        get: function () {
-            return this.m_fileName;
-        },
-        set: function (fileName) {
-            this.m_fileName = fileName;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(ExportSettings.prototype, "format", {
-        get: function () {
-            return this.m_format;
-        },
-        set: function (format) {
-            this.m_format = format;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(ExportSettings.prototype, "region", {
-        get: function () {
-            return this.m_region;
-        },
-        set: function (region) {
-            this.m_region = region;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    return ExportSettings;
-}());
-
-var exportSettings = new ExportSettings();
-
-var PrintSettings = (function () {
-    function PrintSettings() {
-        this.m_region = 'PageSettings';
-        this.m_pageWidth = 0;
-        this.m_pageHeight = 0;
-        this.m_isPortrait = true;
-        this.m_isLandscape = false;
-        this.m_multiplePage = false;
-        this.m_paperSize = 'Letter';
-    }
-    Object.defineProperty(PrintSettings.prototype, "region", {
-        get: function () {
-            return this.m_region;
-        },
-        set: function (region) {
-            this.m_region = region;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PrintSettings.prototype, "pageWidth", {
-        get: function () {
-            return this.m_pageWidth;
-        },
-        set: function (pageWidth) {
-            this.m_pageWidth = pageWidth;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PrintSettings.prototype, "pageHeight", {
-        get: function () {
-            return this.m_pageHeight;
-        },
-        set: function (pageHeight) {
-            this.m_pageHeight = pageHeight;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PrintSettings.prototype, "isPortrait", {
-        get: function () {
-            return this.m_isPortrait;
-        },
-        set: function (isPortrait) {
-            this.m_isPortrait = isPortrait;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PrintSettings.prototype, "isLandscape", {
-        get: function () {
-            return this.m_isLandscape;
-        },
-        set: function (isLandscape) {
-            this.m_isLandscape = isLandscape;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PrintSettings.prototype, "multiplePage", {
-        get: function () {
-            return this.m_multiplePage;
-        },
-        set: function (multiplePage) {
-            this.m_multiplePage = multiplePage;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(PrintSettings.prototype, "paperSize", {
-        get: function () {
-            return this.m_paperSize;
-        },
-        set: function (paperSize) {
-            this.m_paperSize = paperSize;
-            document.getElementById('printCustomSize').style.display = 'none';
-            document.getElementById('printOrientation').style.display = 'none';
-            if (paperSize === 'Custom') {
-                document.getElementById('printCustomSize').style.display = '';
-            }
-            else {
-                document.getElementById('printOrientation').style.display = '';
-            }
-        },
-        enumerable: true,
-        configurable: true
-    });
-    return PrintSettings;
-}());
-
-var printSettings = new PrintSettings();
-
-var PageSettings = (function () {
-    function PageSettings() {
-        this.pageWidth = 1056;
-        this.pageHeight = 816;
-        this.backgroundColor = '#ffffff';
-        this.isPortrait = false;
-        this.isLandscape = true;
-        this.paperSize = 'Letter';
-        this.pageBreaks = false;
-    }
-    return PageSettings;
-}());
-
-var pageSettings = new PageSettings();
-
-
-function renameDiagram(args) {
-    document.getElementsByClassName('db-diagram-name-container')[0].classList.add('db-edit-name');
-    var element = document.getElementById('diagramEditable');
-    element.value = document.getElementById('diagramName').innerHTML;
-    element.focus();
-    element.select();
-}
-
-function diagramNameKeyDown(args) {
-    if (args.which === 13) {
-        document.getElementById('diagramName').innerHTML = document.getElementById('diagramEditable').value;
-        document.getElementsByClassName('db-diagram-name-container')[0].classList.remove('db-edit-name');
-    }
-}
-
-function diagramNameChange(args) {
-    document.getElementById('diagramName').innerHTML = document.getElementById('diagramEditable').value;
-    document.getElementsByClassName('db-diagram-name-container')[0].classList.remove('db-edit-name');
-    document.getElementById("exportfileName").value = document.getElementById('diagramName').innerHTML;
-}
-
-function getFileMenuItems() {
-    var items = [
-        { text: 'New', iconCss: 'sf-icon-New' },
-        { text: 'Open', iconCss: 'sf-icon-Open' },
-        { separator: true },
-        { text: 'Save', iconCss: 'sf-icon-Save' },
-        { separator: true },
-        {
-            text: 'Export', iconCss: 'sf-icon-Export',
-            items: [
-                { text: 'JPG' }, { text: 'PNG' }, { text: 'BMP' }, { text: 'SVG' }
-            ]
-        },
-        { text: 'Print', iconCss: 'sf-icon-Print' },
-
-    ]
-    return items;
-};
-
-function getEditMenuItems() {
-    var items = [
-        { text: 'Undo', iconCss: 'sf-icon-Undo' },
-        { text: 'Redo', iconCss: 'sf-icon-Redo' },
-        { separator: true },
-        { text: 'Cut', iconCss: 'sf-icon-Cut' },
-        { text: 'Copy', iconCss: 'sf-icon-Copy' },
-        { text: 'Paste', iconCss: 'sf-icon-Paste' },
-        { separator: true },
-        {
-            text: 'Rotate', iconCss: '', items: [
-                { text: 'Rotate Right 90', iconCss: 'sf-icon-Redo' },
-                { text: 'Rotate Left 90', iconCss: 'sf-icon-Undo' },
-                { text: 'Flip Vertical', iconCss: 'sf-icon-Undo' },
-                { text: 'Flip Horizontal', iconCss: 'sf-icon-Undo' },
-            ]
-        },
-        { text: 'Delete', iconCss: 'sf-icon-Delete' },
-        { separator: true },
-        {
-            text: 'Order Commands', iconCss: 'tb-item-end tb-item-order tb-dropdown-btn-icon',
-            items: [{ text: 'Bring Forward', iconCss: 'sf-icon-BringForward' },
-            { text: 'Bring To Front', iconCss: 'sf-icon-BringFront' },
-            { text: 'Send Backward', iconCss: 'sf-icon-SendBackward' },
-            { text: 'Send To Back', iconCss: 'sf-icon-Sendback' },
-            ]
-        }
-    ]
-    return items;
-};
-
-function getDesignMenuItems() {
-    var items = [
-        {
-            text: 'Orientation',
-            items: [
-                { text: 'Landscape', iconCss: 'sf-icon-Selection' },
-                { text: 'Portrait', iconCss: '' }
-            ]
-        },
-        {
-            text: 'Size', iconCss: 'em-icons e-copy',
-            items: paperList1()
-        },
-    ]
-    return items;
-};
-
-function paperList() {
-    var paperList = [
-        { text: 'Letter (8.5 in x 11 in)', value: 'Letter' }, { text: 'Legal (8.5 in x 14 in)', value: 'Legal' },
-        { text: 'Tabloid (279 mm x 432 mm)', value: 'Tabloid' }, { text: 'A3 (297 mm x 420 mm)', value: 'A3' },
-        { text: 'A4 (210 mm x 297 mm)', value: 'A4' }, { text: 'A5 (148 mm x 210 mm)', value: 'A5' },
-        { text: 'A6 (105 mm x 148 mm)', value: 'A6' }, { text: 'Custom', value: 'Custom' },
-    ];
-    return paperList;
-};
-function paperList1() {
-    var paperList1 = [
-        { text: 'Letter (8.5 in x 11 in)', value: 'Letter', iconCss: 'sf-icon-Selection' }, { text: 'Legal (8.5 in x 14 in)', value: 'Legal' },
-        { text: 'Tabloid (279 mm x 432 mm)', value: 'Tabloid' }, { text: 'A3 (297 mm x 420 mm)', value: 'A3' },
-        { text: 'A4 (210 mm x 297 mm)', value: 'A4' }, { text: 'A5 (148 mm x 210 mm)', value: 'A5' },
-        { text: 'A6 (105 mm x 148 mm)', value: 'A6' },
-    ];
-    return paperList1;
-};
-
-function getSelectMenuItems() {
-    var items = [
-        { text: 'Select All', iconCss: 'em-icons e-cut' },
-        { text: 'Select All Nodes', iconCss: 'em-icons e-copy' },
-        { text: 'Select All Connectors', iconCss: 'em-icons e-paste' },
-        { text: 'Deselect All', iconCss: 'em-icons e-paste' }
-    ]
-    return items;
-};
-
-function getToolsMenuItems() {
-    var items1 = [
-        { text: 'Selection Tool', iconCss: 'sf-icon-Selector tb-icons' },
-        { text: 'Pan Tool', iconCss: 'sf-icon-Pan tb-icons' },
-        { separator: true },
-        {
-            text: 'Connector Tool', iconCss: 'sf-icon-ConnectorMode', items: [
-                { text: 'Straight', iconCss: 'sf-icon-StraightLine' },
-                { text: 'Orthogonal', iconCss: 'sf-icon-ConnectorMode' },
-                { text: 'Bezier', iconCss: 'sf-icon-BeizerLine' },
-            ]
-        }
-    ]
-    return items1;
-};
-
-function getViewMenuItems() {
-    var items = [
-        { text: 'Show Lines', iconCss: 'sf-icon-Selection' },
-        { text: 'Snap To Grid', iconCss: 'sf-icon-Selection' },
-        { text: 'Snap To Object', iconCss: 'sf-icon-Selection' },
-        { text: 'Show Ruler', iconCss: 'sf-icon-Selection' },
-        { text: 'Show Page Breaks', iconCss: 'sf-icon-Selection' },
-        { text: 'Show Multiple page', iconCss: '' },
-        { separator: true },
-        { text: 'Fit To Width' },
-        { text: 'Fit To Page' },
-    ]
-    return items;
-};
-
-var btnFileMenu = new ej.splitbuttons.DropDownButton({
-    cssClass: 'db-dropdown-menu',
-    items: getFileMenuItems(),
-    content: 'File',
-    select: menuClick,
-    beforeItemRender: beforeItemRender,
-    beforeOpen: arrangeMenuBeforeOpen,
-    beforeClose: arrangeMenuBeforeClose
-});
-btnFileMenu.appendTo('#btnFileMenu');
-
-
-var btnSelectMenu = new ej.splitbuttons.DropDownButton({
-    cssClass: 'db-dropdown-menu',
-    items: getSelectMenuItems(),
-    content: 'Select',
-    select: menuClick,
-    beforeItemRender: beforeItemRender,
-    beforeOpen: arrangeMenuBeforeOpen,
-    beforeClose: arrangeMenuBeforeClose
-});
-btnSelectMenu.appendTo('#btnSelectMenu');
-
-
-
-var btnViewMenu = new ej.splitbuttons.DropDownButton({
-    cssClass: 'db-dropdown-menu',
-    items: getViewMenuItems(),
-    content: 'View',
-    select: menuClick,
-    beforeItemRender: beforeItemRender,
-    beforeOpen: arrangeMenuBeforeOpen,
-    beforeClose: arrangeMenuBeforeClose
-});
-btnViewMenu.appendTo('#btnViewMenu');
-
-function toolsContextMenuOpen(args) {
-    if (args.element.classList.contains('e-menu-parent')) {
-        var popup = document.querySelector('#btnToolsMenu-popup');
-        args.element.style.left = ej.base.formatUnit(parseInt(args.element.style.left, 10) - parseInt(popup.style.left, 10));
-        args.element.style.top = ej.base.formatUnit(parseInt(args.element.style.top, 10) - parseInt(popup.style.top, 10));
-    }
-}
-function designContextMenuOpen(args) {
-    if (args.element.classList.contains('e-menu-parent')) {
-        var popup = document.querySelector('#btnDesignMenu-popup');
-        args.element.style.left = ej.base.formatUnit(parseInt(args.element.style.left, 10) - parseInt(popup.style.left, 10));
-        args.element.style.top = ej.base.formatUnit(parseInt(args.element.style.top, 10) - parseInt(popup.style.top, 10));
-    }
-}
-function editContextMenuOpen(args) {
-    if (args.element.classList.contains('e-menu-parent')) {
-        var popup = document.querySelector('#btnEditMenu-popup');
-        args.element.style.left = ej.base.formatUnit(parseInt(args.element.style.left, 10) - parseInt(popup.style.left, 10));
-        args.element.style.top = ej.base.formatUnit(parseInt(args.element.style.top, 10) - parseInt(popup.style.top, 10));
-    }
-}
-
-function arrangeMenuBeforeOpen(args) {
-    for (var i = 0; i < args.element.children.length; i++) {
-        args.element.children[i].style.display = 'block';
-    }
-    if (args.event && ej.base.closest(args.event.target, '.e-dropdown-btn') !== null) {
-        args.cancel = true;
-    }
-}
-
-function arrangeMenuBeforeClose(args) {
-    if (args.event && ej.base.closest(args.event.target, '.e-dropdown-btn') !== null) {
-        args.cancel = true;
-    }
-    if (!args.element) {
-        args.cancel = true;
-    }
-}
-
-function beforeItemRender(args) {
-    var shortCutText = getShortCutKey(args.item.text);
-    if (shortCutText) {
-        var shortCutSpan = document.createElement('span');
-        var text = args.item.text;
-        shortCutSpan.textContent = shortCutText;
-        shortCutSpan.style.pointerEvents = 'none';
-        args.element.appendChild(shortCutSpan);
-        shortCutSpan.setAttribute('class', 'db-shortcut');
-    }
-    var status = enableMenuItems(args.item.text, diagram);
-    if (status) {
-        args.element.classList.add('e-disabled');
-    } else {
-        if (args.element.classList.contains('e-disabled')) {
-            args.element.classList.remove('e-disabled');
-        }
-    }
-}
-
-function getShortCutKey(menuItem) {
-    var shortCutKey = navigator.platform.indexOf('Mac') > -1 ? 'Cmd' : 'Ctrl';
-    switch (menuItem) {
-        case 'New':
-            shortCutKey = 'Shift' + '+N';
-            break;
-        case 'Open':
-            shortCutKey = shortCutKey + '+O';
-            break;
-        case 'Save':
-            shortCutKey = shortCutKey + '+S';
-            break;
-        case 'Undo':
-            shortCutKey = shortCutKey + '+Z';
-            break;
-        case 'Redo':
-            shortCutKey = shortCutKey + '+Y';
-            break;
-        case 'Cut':
-            shortCutKey = shortCutKey + '+X';
-            break;
-        case 'Copy':
-            shortCutKey = shortCutKey + '+C';
-            break;
-        case 'Paste':
-            shortCutKey = shortCutKey + '+V';
-            break;
-        case 'Delete':
-            shortCutKey = 'Delete';
-            break;
-        case 'Select All':
-            shortCutKey = shortCutKey + '+A';
-            break;
-        case 'Zoom In':
-            shortCutKey = shortCutKey + '++';
-            break;
-        case 'Zoom Out':
-            shortCutKey = shortCutKey + '+-';
-            break;
-        default:
-            shortCutKey = '';
-            break;
-    }
-    return shortCutKey;
-}
-
-function enableMenuItems(itemText, diagram) {
-    var selectedItems = diagram.selectedItems.nodes;
-    selectedItems = selectedItems.concat(diagram.selectedItems.connectors);
-    if (itemText) {
-        var commandType = itemText.replace(/[' ']/g, '');
-        if (selectedItems.length === 0) {
-            switch (commandType.toLowerCase()) {
-                case 'cut':
-                    return true;
-                case 'copy':
-                    return true;
-                case 'delete':
-                    return true;
-            }
-        }
-        if (!(diagram.commandHandler.clipboardData.pasteIndex !== undefined
-            && diagram.commandHandler.clipboardData.clipObject !== undefined) && itemText === 'Paste') {
-            return true;
-        }
-        if (itemText === 'Undo' && diagram.historyManager.undoStack.length < 1) {
-            return true;
-        }
-        if (itemText === 'Redo' && diagram.historyManager.redoStack.length < 1) {
-            return true;
-        }
-        if (itemText === 'Rotate Clockwise' && diagram.selectedItems.nodes.length < 1) {
-            return true;
-        }
-        if (itemText === 'Rotate Counter Clockwise' && diagram.selectedItems.nodes.length < 1) {
-            return true;
-        }
-        if (itemText === 'Send To Back' && selectedItems.length === 0) {
-            return true;
-        }
-        if (itemText === 'Bring To Front' && selectedItems.length === 0) {
-            return true;
-        }
-        if (itemText === 'Bring Forward' && selectedItems.length === 0) {
-            return true;
-        }
-        if (itemText === 'Send Backward' && selectedItems.length === 0) {
-            return true;
-        }
-    }
-    return false;
-};
-
-function menumouseover(args) {
-    var target = args.target;
-    if (target && (target.className === 'e-control e-dropdown-btn e-lib e-btn db-dropdown-menu' ||
-        target.className === 'e-control e-dropdown-btn e-lib e-btn db-dropdown-menu e-ddb-active')) {
-        if (this.buttonInstance && this.buttonInstance.id !== target.id) {
-            if (this.buttonInstance.getPopUpElement().classList.contains('e-popup-open')) {
-                this.buttonInstance.toggle();
-                var buttonElement = document.getElementById(this.buttonInstance.element.id);
-                buttonElement.classList.remove('e-btn-hover');
-            }
-        }
-        var button1 = target.ej2_instances[0];
-        this.buttonInstance = button1;
-        if (button1.getPopUpElement().classList.contains('e-popup-close')) {
-            button1.toggle();
-            if (button1.element.id === 'btnEditMenu') {
-                enableEditMenuItems(diagram);
-            }
-            var buttonElement1 = document.getElementById(this.buttonInstance.element.id);
-            buttonElement1.classList.add('e-btn-hover');
-        }
-    } else {
-        if (ej.base.closest(target, '.e-dropdown-popup') === null && ej.base.closest(target, '.e-dropdown-btn') === null) {
-            if (this.buttonInstance && this.buttonInstance.getPopUpElement().classList.contains('e-popup-open')) {
-                this.buttonInstance.toggle();
-                var buttonElement2 = document.getElementById(this.buttonInstance.element.id);
-                buttonElement2.classList.remove('e-btn-hover');
-            }
-        }
-    }
-};
-
-function enableEditMenuItems(diagram) {
-    var contextInstance = document.getElementById('editContextMenu');
-    var contextMenu = contextInstance.ej2_instances[0];
-    var selectedItems = diagram.selectedItems.nodes;
-    selectedItems = selectedItems.concat(diagram.selectedItems.connectors);
-    for (var i = 0; i < contextMenu.items.length; i++) {
-        contextMenu.enableItems([contextMenu.items[i].text], false);
-    }
-    var objects = diagram.selectedItems.nodes.concat(diagram.selectedItems.connectors);
-    if (objects.length > 0) {
-        contextMenu.enableItems(['Cut', 'Copy', 'Delete', 'Order Commands', 'Rotate']);
-    }
-    if (diagram.historyManager.undoStack.length > 0) {
-        contextMenu.enableItems(['Undo']);
-    }
-    if (diagram.historyManager.redoStack.length > 0) {
-        contextMenu.enableItems(['Redo']);
-    }
-    if ((diagram.commandHandler.clipboardData.pasteIndex !== undefined
-        && diagram.commandHandler.clipboardData.clipObject !== undefined)) {
-        contextMenu.enableItems(['Paste']);
-    }
-}
-
-var disabledItems = ['Cut', 'Copy', 'Send To Back', 'Bring To Front', 'Delete'];
-var undoRedoItems = ['Undo', 'Redo'];
-var rotateItems = ['Rotate Clockwise', 'Rotate Counter Clockwise'];
-var pasteItem = ['Paste'];
-
-//Initialize Toolbar component
-var toolbarObj = new ej.navigations.Toolbar({
-    clicked: toolbarClick,
-    items: [
-        { prefixIcon: 'e-ddb-icons e-paste', tooltipText: 'New Diagram', cssClass: 'tb-item-start' },
-        { prefixIcon: 'e-icons e-copy', tooltipText: 'Open Diagram', cssClass: 'tb-item-middle' },
-        { prefixIcon: 'sf-icon-Save', tooltipText: 'Save Diagram', cssClass: 'tb-item-middle' },
-        { prefixIcon: 'e-print e-icons', tooltipText: 'Print Diagram', cssClass: 'tb-item-middle' },
-        { type: 'Input', tooltipText: 'Export Diagram', template: '<button id="custombtn" style="width:100%;"></button>', cssClass: 'tb-item-end tb-dropdown-btn-icon' },
-        { type: 'Separator' },
-        { prefixIcon: 'e-icons e-undo', tooltipText: 'Undo', disabled: true, cssClass: 'tb-item-start' },
-        { prefixIcon: 'e-icons e-redo', tooltipText: 'Redo', disabled: true, cssClass: 'tb-item-end' },
-        { type: 'Seperator' },
-        { prefixIcon: 'sf-icon-Cut', tooltipText: 'Cut', click: pasteClick, disabled: true, cssClass: 'tb-item-start' },
-        { prefixIcon: 'sf-icon-Copy', tooltipText: 'Copy', click: pasteClick, disabled: true, cssClass: 'tb-item-middle' },
-        { prefixIcon: 'e-icons e-paste', tooltipText: 'Paste', disabled: true, cssClass: 'tb-item-end' },
-        { type: 'Separator' },
-        {
-            prefixIcon: 'sf-icon-ZoomOut tb-icons', tooltipText: 'Zoom Out(Ctrl + -)', cssClass: 'tb-item-start'
-        },
-        {
-            cssClass: 'tb-item-end tb-zoom-dropdown-btn', template: '<button id="btnZoomIncrement"></button>'
-        },
-        {
-            prefixIcon: 'sf-icon-ZoomIn tb-icons', tooltipText: 'Zoom In(Ctrl + +)', cssClass: 'tb-item-end'
-        },
-        {
-            type: 'Separator'
-        },
-        { prefixIcon: 'sf-icon-Pan tb-icons', tooltipText: 'Pan Tool', cssClass: 'tb-item-start' },
-        { prefixIcon: 'sf-icon-Selector tb-icons', tooltipText: 'Select Tool', cssClass: 'tb-item-middle tb-item-selected' },
-        { tooltipText: 'Change Connector Type', template: '<button id="conTypeBtn" style="width:100%;"></button>', cssClass: 'tb-item-end' },
-        { type: 'Separator' },
-
-        { prefixIcon: 'sf-icon-Lock tb-icons', tooltipText: 'Lock', disabled: true, cssClass: 'tb-item-start' },
-        { prefixIcon: 'sf-icon-Delete', tooltipText: 'Delete', disabled: true, cssClass: 'tb-item-end' },
-        { type: 'Separator' },
-        { prefixIcon: 'sf-icon-Redo', tooltipText: 'Rotate Clockwise', disabled: true, cssClass: 'tb-item-start' },
-        { prefixIcon: 'sf-icon-Undo', tooltipText: 'Rotate Counter-clockwise', disabled: true, cssClass: 'tb-item-end' },
-        { type: 'Separator' },
-        { prefixIcon: 'sf-icon-BringFront', tooltipText: 'Bring To Front', disabled: true, cssClass: 'tb-item-start' },
-        { prefixIcon: 'sf-icon-Sendback', tooltipText: 'Send To Back', disabled: true, cssClass: 'tb-item-middle' },
-        { prefixIcon: 'sf-icon-BringForward', tooltipText: 'Bring Forward', disabled: true, cssClass: 'tb-item-middle' },
-        { prefixIcon: 'sf-icon-SendBackward', tooltipText: 'Send Backward', disabled: true, cssClass: 'tb-item-end' },
-        { type: 'Separator' },
-        { prefixIcon: 'sf-icon-Flip-Horizontal', tooltipText: 'Flip Horizontal', disabled: true, cssClass: 'tb-item-start' },
-        { prefixIcon: 'sf-icon-Flip-Vertical', tooltipText: 'Flip Vertical', disabled: true, cssClass: 'tb-item-end' },
-
-    ],
-    width: '100%'
-});
-//Render initialized Toolbar component
-var items = [{ text: 'JPG' }, { text: 'PNG' }, { text: 'BMP' }, { text: 'SVG' }];
-var conTypeItems = [
-    { text: 'Straight', iconCss: 'sf-icon-StraightLine' },
-    { text: 'Orthogonal', iconCss: 'sf-icon-ConnectorMode' },
-    { text: 'Bezier', iconCss: 'sf-icon-BeizerLine' }
-];
-var zoomMenuItems = [
-    { text: '400%' }, { text: '300%' }, { text: '200%' }, { text: '150%' },
-    { text: '100%' }, { text: '75%' }, { text: '50%' }, { text: '25%' }, { separator: true },
-    { text: 'Fit To Screen' }
-];
-var fontType = [
-    { type: 'Arial', text: 'Arial' },
-    { type: 'Aharoni', text: 'Aharoni' },
-    { type: 'Bell MT', text: 'Bell MT' },
-    { type: 'Fantasy', text: 'Fantasy' },
-    { type: 'Times New Roman', text: 'Times New Roman' },
-    { type: 'Segoe UI', text: 'Segoe UI' },
-    { type: 'Verdana', text: 'Verdana' }
-];
-btnObj = new ej.splitbuttons.DropDownButton({
-    items: items, iconCss: 'sf-icon-Export', select: onselectExport,
-});
-conTypeBtn = new ej.splitbuttons.DropDownButton({
-    items: conTypeItems, iconCss: 'sf-icon-ConnectorMode', select: onConnectorSelect
-});
-
-function onConnectorSelect(args) {
-    diagram.clearSelection();
-    diagram.drawingObject.sourceID = '';
-    diagram.drawingObject.type = args.item.text;
-    diagram.tool = ej.diagrams.DiagramTools.ContinuousDraw;
-    diagram.selectedItems.userHandles = [];
-    diagram.dataBind();
-    removeSelectedToolbarItem();
-    document.getElementById('conTypeBtn').classList.add('tb-item-selected');
-}
-
-var uploadObj = new ej.inputs.Uploader({
-    asyncSettings: {
-        saveUrl: 'https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save',
-        removeUrl: 'https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove'
-    },
-    success: onUploadSuccess,
-    showFileList: false
-});
-uploadObj.appendTo('#fileupload');
-
-
-toolbarObj.appendTo('#toolbarEditor');
-var btnHideToolbar = new ej.buttons.Button({ iconCss: 'sf-icon-Collapse tb-icons' });
-btnHideToolbar.appendTo('#btnHideToolbar');
-btnObj.appendTo('#custombtn');
-conTypeBtn.appendTo('#conTypeBtn');
-
-
-function menuClick(args) {
-    var buttonElement = document.getElementsByClassName('e-btn-hover')[0];
-    if (buttonElement) {
-        buttonElement.classList.remove('e-btn-hover');
-    }
-    var option = args.item.text;
-    switch (option) {
-        case 'New':
-            diagram.clear();
-            historyChange();
-            break;
-        case 'Save':
-            download(diagram.saveDiagram());
-            break;
-        case 'Print':
-            printSettings.pageHeight = pageSettings.pageHeight;
-            printSettings.pageWidth = pageSettings.pageWidth;
-            printSettings.paperSize = pageSettings.paperSize;
-            printSettings.isPortrait = pageSettings.isPortrait;
-            printSettings.isLandscape = !pageSettings.isPortrait;
-            printDialog.show();
-            break;
-        case 'Export':
-            exportDialog.show();
-            break;
-        case 'JPG':
-        case 'PNG':
-        case 'BMP':
-        case 'SVG':
-            onselectExport(args);
-            break;
-        case 'Open':
-            document.getElementsByClassName('e-file-select-wrap')[0].querySelector('button').click();
-            break;
-        case 'Undo':
-            diagram.undo();
-            break;
-        case 'Redo':
-            diagram.redo();
-            break;
-        case 'Cut':
-            diagram.cut();
-            pasteClick();
-            break;
-        case 'Copy':
-            diagram.copy();
-            pasteClick();
-            break;
-        case 'Paste':
-            diagram.paste();
-            break;
-        case 'Rotate Right 90':
-            diagram.rotate(diagram.selectedItems, 90);
-            break;
-        case 'Rotate Left 90':
-            diagram.rotate(diagram.selectedItems, -90);
-            break;
-        case 'Flip Vertical':
-            flipObjects(option);
-            break;
-        case 'Flip Horizontal':
-            flipObjects(option);
-            break;
-        case 'Delete':
-            diagram.remove();
-        case 'Send To Back':
-            diagram.sendToBack();
-            break;
-        case 'Bring To Front':
-            diagram.bringToFront();
-            break;
-        case 'Send Backward':
-            diagram.sendBackward();
-            break;
-        case 'Bring Forward':
-            diagram.moveForward();
-            break;
-        case 'Landscape':
-            args.item.parentObj.items[1].iconCss = '';
-            args.item.iconCss = 'sf-icon-Selection';
-            diagram.pageSettings.orientation = 'Landscape';
-            pagePortrait.checked = false;
-            pageLandscape.checked = true;
-            break;
-        case 'Portrait':
-            args.item.parentObj.items[0].iconCss = '';
-            args.item.iconCss = 'sf-icon-Selection';
-            diagram.pageSettings.orientation = 'Portrait';
-            pagePortrait.checked = true;
-            pageLandscape.checked = false;
-            break;
-        case 'Letter (8.5 in x 11 in)':
-        case 'Legal (8.5 in x 14 in)':
-        case 'A3 (297 mm x 420 mm)':
-        case 'A4 (210 mm x 297 mm)':
-        case 'A5 (148 mm x 210 mm)':
-        case 'A6 (105 mm x 148 mm)':
-        case 'Tabloid (279 mm x 432 mm)':
-            paperListChange(args)
-            pageSettingsList.text = args.item.text;
-            updateSelection(args.item)
-            break;
-        case 'Select All':
-            diagram.clearSelection();
-            diagram.selectAll();
-            break;
-        case 'Select All Nodes':
-            diagram.clearSelection();
-            diagram.select(diagram.nodes);
-            break;
-        case 'Select All Connectors':
-            diagram.clearSelection();
-            diagram.select(diagram.connectors);
-            break;
-        case 'Deselect All':
-            diagram.clearSelection();
-            // diagram.selectedItems.nodes = [];
-            // diagram.selectedItems.connectors = [];
-            break;
-        case 'Selection Tool':
-            diagram.tool = ej.diagrams.DiagramTools.Default;
-            removeSelectedToolbarItem();
-            break;
-        case 'Pan Tool':
-            diagram.clearSelection();
-            diagram.tool = ej.diagrams.DiagramTools.ZoomPan;
-            removeSelectedToolbarItem();
-            break;
-        case 'Orthogonal':
-            diagram.clearSelection();
-            diagram.drawingObject.sourceID = '';
-            diagram.tool = ej.diagrams.DiagramTools.ContinuousDraw;
-            diagram.selectedItems.userHandles = [];
-            diagram.drawingObject.type = 'Orthogonal';
-            removeSelectedToolbarItem();
-            break;
-        case 'Straight':
-            diagram.clearSelection();
-            diagram.drawingObject.sourceID = '';
-            diagram.tool = ej.diagrams.DiagramTools.ContinuousDraw;
-            diagram.selectedItems.userHandles = [];
-            diagram.drawingObject.type = 'Straight';
-            removeSelectedToolbarItem();
-            break;
-        case 'Bezier':
-            diagram.clearSelection();
-            diagram.drawingObject.sourceID = '';
-            diagram.tool = ej.diagrams.DiagramTools.ContinuousDraw;
-            diagram.selectedItems.userHandles = [];
-            diagram.drawingObject.type = 'Bezier';
-            removeSelectedToolbarItem();
-            break;
-        case 'Show Lines':
-            diagram.snapSettings.constraints = diagram.snapSettings.constraints ^ ej.diagrams.SnapConstraints.ShowLines;
-            args.item.iconCss = args.item.iconCss ? '' : 'sf-icon-Selection';
-            break;
-        case 'Snap To Grid':
-            diagram.snapSettings.constraints = diagram.snapSettings.constraints ^ ej.diagrams.SnapConstraints.SnapToLines;
-            args.item.iconCss = args.item.iconCss ? '' : 'sf-icon-Selection';
-            break;
-        case 'Snap To Object':
-            diagram.snapSettings.constraints = diagram.snapSettings.constraints ^ ej.diagrams.SnapConstraints.SnapToObject;
-            args.item.iconCss = args.item.iconCss ? '' : 'sf-icon-Selection';
-            break;
-        case 'Show Ruler':
-            args.item.iconCss = args.item.iconCss ? '' : 'sf-icon-Selection';
-            diagram.rulerSettings.showRulers = !diagram.rulerSettings.showRulers;
-            break;
-        case 'Show Page Breaks':
-            args.item.iconCss = args.item.iconCss ? '' : 'sf-icon-Selection';
-            diagram.pageSettings.showPageBreaks = !diagram.pageSettings.showPageBreaks;
-            showPageBreaks.checked = !showPageBreaks.checked;
-            break;
-        case 'Show Multiple page':
-            args.item.iconCss = args.item.iconCss ? '' : 'sf-icon-Selection';
-            diagram.pageSettings.multiplePage = !diagram.pageSettings.multiplePage;
-            break;
-        case 'Fit To Width':
-            diagram.fitToPage({ mode: 'Width' });
-            break;
-        case 'Fit To Page':
-            diagram.fitToPage({ mode: 'Page', region: 'Content' });
-            break;
-    }
-    if (option === 'Pan Tool') {
-        if (toolbarObj.items[17].cssClass.indexOf('tb-item-selected') === -1) {
-            toolbarObj.items[17].cssClass += ' tb-item-selected';
-        }
-    }
-    else if (option === 'Selection Tool') {
-        if (toolbarObj.items[18].cssClass.indexOf('tb-item-selected') === -1) {
-            toolbarObj.items[18].cssClass += ' tb-item-selected';
-        }
-    }
-    else if (option === 'Orthogonal' || option === 'Straight' || option === 'Bezier') {
-        document.getElementById('conTypeBtn').classList.add('tb-item-selected');
-    }
-
-    diagram.dataBind();
-}
-
-function updateSelection(item) {
-    for (i = 0; i < item.parentObj.items.length; i++) {
-        if (item.text === item.parentObj.items[i].text) {
-            item.parentObj.items[i].iconCss = 'sf-icon-Selection';
-        }
-        else {
-            item.parentObj.items[i].iconCss = '';
-        }
-    }
-}
-
-
-function toolbarClick(args) {
-    let item = args.item.tooltipText;
-    var zoomCurrentValue = document.getElementById("btnZoomIncrement").ej2_instances[0];
-    switch (item) {
-        case 'Undo':
-            diagram.undo();
-            break;
-        case 'Redo':
-            diagram.redo();
-            break;
-        case 'Zoom In(Ctrl + +)':
-            diagram.zoomTo({ type: 'ZoomIn', zoomFactor: 0.2 });
-            zoomCurrentValue.content = diagram.scrollSettings.currentZoom = (diagram.scrollSettings.currentZoom * 100).toFixed() + '%';
-            break;
-        case 'Zoom Out(Ctrl + -)':
-            diagram.zoomTo({ type: 'ZoomOut', zoomFactor: 0.2 });
-            zoomCurrentValue.content = diagram.scrollSettings.currentZoom = (diagram.scrollSettings.currentZoom * 100).toFixed() + '%';
-            break;
-        case 'Lock':
-            lockObject();
-            break;
-        case 'Cut':
-            diagram.cut();
-            break;
-        case 'Copy':
-            diagram.copy();
-            break;
-        case 'Paste':
-            diagram.paste();
-            break;
-        case 'Delete':
-            diagram.remove();
-            break;
-        case 'Select Tool':
-            diagram.tool = ej.diagrams.DiagramTools.Default;
-            break;
-        case 'Pan Tool':
-            diagram.tool = ej.diagrams.DiagramTools.ZoomPan;
-            break;
-        case 'Rotate Clockwise':
-            diagram.rotate(diagram.selectedItems, 90);
-            break;
-        case 'Rotate Counter-clockwise':
-            diagram.rotate(diagram.selectedItems, -90);
-            break;
-        case 'Bring To Front':
-            diagram.bringToFront();
-            break;
-        case 'Send To Back':
-            diagram.sendToBack();
-            break;
-        case 'Bring Forward':
-            diagram.moveForward();
-            break;
-        case 'Send Backward':
-            diagram.sendBackward();
-            break;
-        case 'New Diagram':
-            diagram.clear();
-            historyChange();
-            break;
-        case 'Print Diagram':
-            printDialog.show();
-            // var options = {};
-            // options.mode = 'Data';
-            // diagram.print(options)
-            break;
-        case 'Save Diagram':
-            download(diagram.saveDiagram());
-            break;
-        case 'Open Diagram':
-            document.getElementsByClassName('e-file-select-wrap')[0].querySelector('button').click();
-            break;
-        case 'Flip Vertical':
-            flipObjects(item);
-            break;
-        case 'Flip Horizontal':
-            flipObjects(item);
-            break;
-    }
-    if (item === 'Select Tool' || item === 'Pan Tool' || item === 'Connector Tool') {
-        if (args.item.cssClass.indexOf('tb-item-selected') === -1) {
-            removeSelectedToolbarItem();
-            args.item.cssClass += ' tb-item-selected';
-        }
-    }
-    diagram.dataBind();
-}
-
-function removeSelectedToolbarItem(args) {
-    // var toolbarEd = selectedItem.utilityMethods.toolbarEditor;
-    for (var i = 0; i < toolbarObj.items.length; i++) {
-        var item = toolbarObj.items[i];
-        if (item.cssClass.indexOf('tb-item-selected') !== -1) {
-            item.cssClass = item.cssClass.replace(' tb-item-selected', '');
-        }
-    }
-    toolbarObj.dataBind();
-    document.getElementById('conTypeBtn').classList.remove('tb-item-selected');
-}
-
-function flipObjects(flipType) {
-    var selectedObjects = diagram.selectedItems.nodes.concat(diagram.selectedItems.connectors);
-    for (i = 0; i < selectedObjects.length; i++) {
-        selectedObjects[i].flip = flipType === 'Flip Horizontal' ? 'Horizontal' : 'Vertical';
-    }
-    diagram.dataBind();
-}
-
-function onUploadSuccess(args) {
-    var file1 = args.file;
-    var file = file1.rawFile;
-    var reader = new FileReader();
-    reader.readAsText(file);
-    reader.onloadend = loadDiagram;
-}
-//Load the diagraming object.
-function loadDiagram(event) {
-    diagram.loadDiagram(event.target.result);
-}
-
-function lockObject(args) {
-    for (var i = 0; i < diagram.selectedItems.nodes.length; i++) {
-        var node = diagram.selectedItems.nodes[i];
-        if (node.constraints & ej.diagrams.NodeConstraints.Drag) {
-            node.constraints = ej.diagrams.NodeConstraints.PointerEvents | ej.diagrams.NodeConstraints.Select;
-        } else {
-            node.constraints = ej.diagrams.NodeConstraints.Default;
-        }
-    }
-    for (var j = 0; j < diagram.selectedItems.connectors.length; j++) {
-        var connector = diagram.selectedItems.connectors[j];
-        if (connector.constraints & ej.diagrams.ConnectorConstraints.Drag) {
-            connector.constraints = ej.diagrams.ConnectorConstraints.PointerEvents | ej.diagrams.ConnectorConstraints.Select;
-        } else {
-            connector.constraints = ej.diagrams.ConnectorConstraints.Default;
-        }
-    }
-    diagram.dataBind();
-}
-
-function zoomChange(args) {
-    var zoomCurrentValue = document.getElementById("btnZoomIncrement").ej2_instances[0];
-    if (args.item.text === 'Custom') {
-        var ss = '';
-    } else if (args.item.text === 'Fit To Screen') {
-        zoomCurrentValue.content = diagram.scrollSettings.currentZoom = 'Fit ...';
-        diagram.fitToPage({ mode: 'Page', region: 'Content', margin: { left: 0, top: 0, right: 0, bottom: 0 } });
-    } else {
-        var currentZoom = diagram.scrollSettings.currentZoom;
-        var zoom = {};
-        switch (args.item.text) {
-            case '400%':
-                zoom.zoomFactor = (4 / currentZoom) - 1;
-                break;
-            case '300%':
-                zoom.zoomFactor = (3 / currentZoom) - 1;
-                break;
-            case '200%':
-                zoom.zoomFactor = (2 / currentZoom) - 1;
-                break;
-            case '150%':
-                zoom.zoomFactor = (1.5 / currentZoom) - 1;
-                break;
-            case '100%':
-                zoom.zoomFactor = (1 / currentZoom) - 1;
-                break;
-            case '75%':
-                zoom.zoomFactor = (0.75 / currentZoom) - 1;
-                break;
-            case '50%':
-                zoom.zoomFactor = (0.5 / currentZoom) - 1;
-                break;
-            case '25%':
-                zoom.zoomFactor = (0.25 / currentZoom) - 1;
-                break;
-        }
-        zoomCurrentValue.content = diagram.scrollSettings.currentZoom = args.item.text;
-        diagram.zoomTo(zoom);
-    }
-}
-function pasteClick() {
-    toolbarObj.items[11].disabled = false;
-}
-
-function onClickDisable(args) {
-    if (args === false) {
-        toolbarObj.items[9].disabled = false;
-        toolbarObj.items[10].disabled = false;
-        toolbarObj.items[21].disabled = false;
-        toolbarObj.items[22].disabled = false;
-        toolbarObj.items[24].disabled = false;
-        toolbarObj.items[25].disabled = false;
-        toolbarObj.items[27].disabled = false;
-        toolbarObj.items[28].disabled = false;
-        toolbarObj.items[29].disabled = false;
-        toolbarObj.items[30].disabled = false;
-        toolbarObj.items[32].disabled = false;
-        toolbarObj.items[33].disabled = false;
-    }
-    else if (args === true) {
-        var isTrue;
-
-        if (diagram.selectedItems.connectors.length > 0) {
-            isTrue = false;
-            // toolbarObj.items[24].disabled = true;
-            // toolbarObj.items[25].disabled = true;
-        }
-        else {
-            isTrue = true;
-            // toolbarObj.items[24].disabled = true;
-            // toolbarObj.items[25].disabled = true;
-        }
-        toolbarObj.items[9].disabled = isTrue;
-        toolbarObj.items[10].disabled = isTrue;
-        toolbarObj.items[21].disabled = isTrue;
-        toolbarObj.items[22].disabled = isTrue;
-        toolbarObj.items[24].disabled = isTrue;
-        toolbarObj.items[25].disabled = isTrue;
-        toolbarObj.items[27].disabled = isTrue;
-        toolbarObj.items[28].disabled = isTrue;
-        toolbarObj.items[29].disabled = isTrue;
-        toolbarObj.items[30].disabled = isTrue;
-        toolbarObj.items[32].disabled = isTrue;
-        toolbarObj.items[33].disabled = isTrue;
-    }
-}
-
-function download(data) {
-    if (window.navigator.msSaveBlob) {
-        var blob = new Blob([data], { type: 'data:text/json;charset=utf-8,' });
-        window.navigator.msSaveOrOpenBlob(blob, 'Diagram.json');
-    }
-    else {
-        var dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(data);
-        var a = document.createElement('a');
-        a.href = dataStr;
-        a.download = document.getElementById('diagramName').innerHTML + '.json';
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-    }
-}
-function onfocus(args) {
-    document.getElementById('menu').focus();
-}
-
-//Export the diagraming object based on the format.
-function onselectExport(args) {
-    exportFormat.value = args.item.text;
-    exportDialog.show();
-}
-
-function selectionChange(args) {
-    if (args.state === 'Changed') {
-        var selectedItems = diagram.selectedItems.nodes;
-        selectedItems = selectedItems.concat(diagram.selectedItems.connectors);
-        var nodeContainer = document.getElementById('nodePropertyContainer');
-        nodeContainer.classList.remove('multiple');
-        nodeContainer.classList.remove('connector');
-        if (selectedItems.length > 1) {
-            multipleSelectionSettings(selectedItems);
-        }
-        else if (selectedItems.length === 1) {
-            singleSelectionSettings(selectedItems[0]);
-        }
-        else {
-            objectTypeChange('diagram');
-        }
-        if (args.newValue.length > 0 && args.newValue[0] instanceof ej.diagrams.Node) {
-            diagram.selectedItems = { constraints: ej.diagrams.SelectorConstraints.All | ej.diagrams.SelectorConstraints.UserHandle, userHandles: handles };
-            onClickDisable(false);
-            if (diagram.selectedItems.nodes.length > 0) {
-                drawingNode = diagram.selectedItems.nodes[diagram.selectedItems.nodes.length - 1];
-            }
-        }
-        else {
-            diagram.selectedItems = { constraints: ej.diagrams.SelectorConstraints.All & ~ej.diagrams.SelectorConstraints.UserHandle };
-            onClickDisable(true);
-        }
-    }
-}
-
-function historyChange() {
-    diagram.historyManager.undoStack.length > 0 ? toolbarObj.items[6].disabled = false : toolbarObj.items[6].disabled = true
-    diagram.historyManager.redoStack.length > 0 ? toolbarObj.items[7].disabled = false : toolbarObj.items[7].disabled = true
-}
-
-var PaperSize = (function () {
-    function PaperSize() {
-    }
-    return PaperSize;
-}());
-
-function getPaperSize(args) {
-    var paperSize = new PaperSize();
-    switch (args) {
-        case 'Letter':
-            paperSize.pageWidth = 816;
-            paperSize.pageHeight = 1056;
-            break;
-        case 'Legal':
-            paperSize.pageWidth = 816;
-            paperSize.pageHeight = 1344;
-            break;
-        case 'Tabloid':
-            paperSize.pageWidth = 1056;
-            paperSize.pageHeight = 1632;
-            break;
-        case 'A0':
-            paperSize.pageWidth = 3179;
-            paperSize.pageHeight = 4494;
-            break;
-        case 'A1':
-            paperSize.pageWidth = 2245;
-            paperSize.pageHeight = 3179;
-            break;
-        case 'A2':
-            paperSize.pageWidth = 1587;
-            paperSize.pageHeight = 2245;
-            break;
-        case 'A3':
-            paperSize.pageWidth = 1122;
-            paperSize.pageHeight = 1587;
-            break;
-        case 'A4':
-            paperSize.pageWidth = 793;
-            paperSize.pageHeight = 1122;
-            break;
-        case 'A5':
-            paperSize.pageWidth = 559;
-            paperSize.pageHeight = 793;
-            break;
-        case 'A6':
-            paperSize.pageWidth = 396;
-            paperSize.pageHeight = 559;
-            break;
-    }
-    return paperSize
-}
-
-function paperListChange(args) {
-    document.getElementById('pageDimension').style.display = 'none';
-    document.getElementById('pageOrientation').style.display = '';
-    var value = args.value || args.item.value;
-    var paperSize = getPaperSize(value);
-    var pageWidth = paperSize.pageWidth;
-    var pageHeight = paperSize.pageHeight;
-    if (pageWidth && pageHeight) {
-        if (diagram.pageSettings.orientation === 'Portrait') {
-            if (pageWidth > pageHeight) {
-                var temp = pageWidth;
-                pageWidth = pageHeight;
-                pageHeight = temp;
-            }
-        }
-        else {
-            if (pageHeight > pageWidth) {
-                var temp = pageHeight;
-                pageHeight = pageWidth;
-                pageWidth = temp;
-            }
-        }
-        diagram.pageSettings.width = pageWidth;
-        diagram.pageSettings.height = pageHeight;
-
-
-    }
-    else {
-        document.getElementById('pageOrientation').style.display = 'none';
-        document.getElementById('pageDimension').style.display = '';
-        diagram.pageSettings.width = 1460;
-        diagram.pageSettings.height = 600;
-    }
-    updatePaperSelection(designContextMenu.items[1], args.value);
-    diagram.dataBind();
-}
-
-function updatePaperSelection(items, value) {
-    for (i = 0; i < items.items.length; i++) {
-        if (value === items.items[i].value) {
-            items.items[i].iconCss = 'sf-icon-Selection';
-        }
-        else {
-            items.items[i].iconCss = '';
-        }
-    }
-}
-
-var editContextMenu = new ej.navigations.ContextMenu({
-    animationSettings: { effect: 'None' },
-    items: getEditMenuItems(),
-    onOpen: editContextMenuOpen,
-    cssClass: "EditMenu",
-    beforeItemRender: beforeItemRender,
-    select: menuClick,
-    beforeClose: arrangeMenuBeforeClose
-})
-editContextMenu.appendTo('#editContextMenu');
-
-var designContextMenu = new ej.navigations.ContextMenu({
-    animationSettings: { effect: 'None' },
-    items: getDesignMenuItems(),
-    onOpen: designContextMenuOpen,
-    cssClass: "DesignMenu",
-    beforeItemRender: beforeItemRender,
-    select: menuClick,
-    beforeClose: arrangeMenuBeforeClose
-})
-designContextMenu.appendTo('#designContextMenu');
-
-var toolsContextMenu = new ej.navigations.ContextMenu({
-    animationSettings: { effect: 'None' },
-    items: getToolsMenuItems(),
-    onOpen: toolsContextMenuOpen,
-    cssClass: "ToolsMenu",
-    beforeItemRender: beforeItemRender,
-    select: menuClick,
-    beforeClose: arrangeMenuBeforeClose
-});
-toolsContextMenu.appendTo('#toolsContextMenu');
-
-var btnDesignMenu = new ej.splitbuttons.DropDownButton({
-    cssClass: 'db-dropdown-menu',
-    target: '.e-contextmenu-wrapper.designMenu',
-    content: 'Design',
-    select: menuClick,
-    beforeItemRender: beforeItemRender,
-    beforeOpen: arrangeMenuBeforeOpen,
-    beforeClose: arrangeMenuBeforeClose
-});
-btnDesignMenu.appendTo('#btnDesignMenu');
-var btnToolsMenu = new ej.splitbuttons.DropDownButton({
-    cssClass: 'db-dropdown-menu',
-    target: '.e-contextmenu-wrapper.toolsMenu',
-    content: 'Tools',
-    items: getToolsMenuItems(),
-    select: menuClick,
-    beforeItemRender: beforeItemRender,
-    beforeOpen: arrangeMenuBeforeOpen,
-    beforeClose: arrangeMenuBeforeClose
-});
-btnToolsMenu.appendTo('#btnToolsMenu');
-
-var btnEditMenu = new ej.splitbuttons.DropDownButton({
-    cssClass: 'db-dropdown-menu',
-    target: '.e-contextmenu-wrapper.editMenu',
-    content: 'Edit',
-    select: menuClick,
-    beforeItemRender: beforeItemRender,
-    beforeOpen: arrangeMenuBeforeOpen,
-    beforeClose: arrangeMenuBeforeClose
-});
-btnEditMenu.appendTo('#btnEditMenu');
-var btnZoomIncrement = new ej.splitbuttons.DropDownButton({ items: zoomMenuItems, content: Math.round(diagram.scrollSettings.currentZoom * 100) + ' %', select: zoomChange });
-btnZoomIncrement.appendTo('#btnZoomIncrement');
-var hyperlinkDialog = new ej.popups.Dialog({
-    width: '400px',
-    header: 'Insert Link',
-    target: document.body,
-    isModal: true,
-    animationSettings: { effect: 'None' },
-    showCloseIcon: true,
-    visible: false,
-    buttons: getDialogButtons('hyperlink'),
-    content: '<div id="hyperlinkDialogContent"><div class="row"><div class="row">Enter URL</div><div class="row db-dialog-child-prop-row"><input type="text" id="hyperlink">' +
-        '</div></div><div class="row db-dialog-prop-row"><div class="row">Link Text (Optional)</div><div class="row db-dialog-child-prop-row"><input type="text" id="hyperlinkText"></div></div></div>'
-});
-hyperlinkDialog.appendTo('#hyperlinkDialog');
-
-var fileUploadDialog = new ej.popups.Dialog({
-    width: '500px',
-    height: '485px',
-    header: 'Upload File',
-    target: document.body,
-    isModal: true,
-    animationSettings: { effect: 'None' },
-    buttons: getUploadButtons(),
-    visible: false,
-    showCloseIcon: true,
-    allowDragging: true,
-    content: ' <div id="uploadDialogContent" class="db-upload-content firstPage"> <div id="tooltip"> <div id="uploadInformationDiv" class="row db-dialog-prop-row" style="margin-top: 0px;">' +
-        ' <div class="row"> <div class="row" style="font-size: 12px;font-weight: 500;color: black;"><div class="db-info-text">Choose Format</div>' +
-        ' <div class="db-format-type" style="display: none"> </div> </div><div class="row db-dialog-child-prop-row"><div class="col-xs-3 db-prop-col-style">' +
-        ' <input id="csvFormat" type="radio"></div> <div class="col-xs-3 db-prop-col-style"><input id="xmlFormat" type="radio"></div> <div class="col-xs-3 db-prop-col-style">' +
-        '<input id="jsonFormat" type="radio"> </div> </div> </div> <div class="row db-dialog-prop-row" style="padding: 10px; background-color: #FFF7B5; border: 1px solid #FFF7B5">' +
-        '<div class="db-info-parent" style="width: 10%; background-color:transparent; height: 60px;"></div> <div style="float:left; width: calc(90% - 5px)">' +
-        ' <ul style="padding-left: 25px; margin-bottom: 0px"><li style="margin-bottom: 5px"><span id="descriptionText1" style="color: #515151;font-size: 11px;line-height: 15px;">Makesure that the every column of your table has a header</span>' +
-        '</li><li><span id="descriptionText2" style="color: #515151;font-size: 11px;line-height: 15px;">Each employee should have a reporting person (except for top most employee of the organization) and it should be indicated by any field from your data source.</span></li></ul>' +
-        '</div></div><div class="row db-dialog-prop-row"><button id="btnDownloadFile"></button></div><div class="row"> <div id="dropArea">' +
-        '<span id="dropRegion" class="droparea"> Drop files here or <a href="" id="browseFile"><u>Browse</u></a></span><input type="file" id="defaultfileupload" name="UploadFiles"/>' +
-        '</div></div></div><div id="parentChildRelationDiv" class="row db-dialog-prop-row"> <div class="row db-dialog-child-prop-row" style="margin-top:20px">' +
-        '<div class="row"><div class="db-info-text">Employee Id</div><div class="db-info-style db-employee-id"></div></div><div class="row db-dialog-child-prop-row">' +
-        '<input type="text" id="employeeId"/></div></div><div class="row db-dialog-prop-row"><div class="row"><div class="db-info-text"> Supervisor Id</div>' +
-        ' <div class="db-info-style db-supervisor-id"> </div> </div> <div class="row db-dialog-child-prop-row"><input type="text" id="superVisorId"/></div></div></div>' +
-        '<div id="moreInformationDiv" class="row db-dialog-prop-row"><div id="bindingFields" class="row"><div class="row"><div class="db-info-text">Name</div>' +
-        '<div class="db-info-style db-nameField-id"></div></div><div class="row db-dialog-child-prop-row"><input type="text" id="orgNameField"/></div></div>' +
-        '<div id="bindingFields" class="row db-dialog-prop-row" style="margin-top:20px"><div class="row"><div class="db-info-text">Binding Fields</div><div class="db-info-style db-bindingField-id">' +
-        '</div></div><div class="row db-dialog-child-prop-row"><input type="text" id="orgBindingFields" /></div></div><div id="imageFields" class="row db-dialog-prop-row">' +
-        '<div class="row"><div class="db-info-text">Image Field</div><div class="db-info-style db-imageField-id"></div></div>' +
-        '<div class="row db-dialog-child-prop-row"><input type="text" id="orgImageField"/></div></div> <div id="additionalFields" class="row db-dialog-prop-row">' +
-        '<div class="row"><div class="db-info-text">Additional Fields</div><div class="db-info-style db-additionalField-id"></div></div><div class="row db-dialog-child-prop-row">' +
-        '<input type="text" id="orgAdditionalField"/></div></div></div></div></div>'
-});
-fileUploadDialog.appendTo('#fileUploadDialog');
-
-var printDialog = new ej.popups.Dialog({
-    width: '335px',
-    header: 'Print Diagram',
-    target: document.body,
-    isModal: true,
-    animationSettings: { effect: 'None' },
-    buttons: getDialogButtons('print'),
-    visible: false,
-    showCloseIcon: true,
-    content: '<div id="printDialogContent"><div class="row"><div class="row">Region</div> <div class="row db-dialog-child-prop-row">' +
-        '<input type="text" id="printRegionDropdown"/> </div> </div><div class="row db-dialog-prop-row"><div class="row">Print Settings</div>' +
-        '<div class="row db-dialog-child-prop-row"><input type="text" id="printPaperSizeDropdown"/> </div> </div>' +
-        '<div id="printCustomSize" class="row db-dialog-prop-row" style="display:none; height: 28px;"> <div class="col-xs-6 db-col-left">' +
-        '<div class="db-text-container"><div class="db-text"><span>W</span></div><div class="db-text-input"><input id="printPageWidth" type="text" />' +
-        '</div> </div> </div> <div class="col-xs-6 db-col-right"><div class="db-text-container"> <div class="db-text"><span>H</span></div>' +
-        '<div class="db-text-input"><input id="printPageHeight" type="text" /></div></div></div></div><div id="printOrientation" class="row db-dialog-prop-row" style="height: 28px; padding: 5px 0px;">' +
-        '<div class="col-xs-3 db-prop-col-style" style="margin-right: 8px;"><input id="printPortrait" type="radio"></div> <div class="col-xs-3 db-prop-col-style">' +
-        '<input id="printLandscape" type="radio"></div></div> <div class="row db-dialog-prop-row" style="margin-top: 16px"> <input id="printMultiplePage" type="checkbox" /> </div> </div>'
-});
-printDialog.appendTo('#printDialog');
-
-// dropdown template for printDialog control
-var printRegionDropdown = new ej.dropdowns.DropDownList({
-    dataSource: diagramRegions(),
-    fields: { text: 'text', value: 'value' },
-    value: printSettings.region
-});
-printRegionDropdown.appendTo('#printRegionDropdown');
-
-// dropdown template for printDialog control
-var printPaperSizeDropdown = new ej.dropdowns.DropDownList({
-    dataSource: paperList(),
-    fields: { text: 'text', value: 'value' },
-    value: printSettings.paperSize
-});
-printPaperSizeDropdown.appendTo('#printPaperSizeDropdown');
-
-// numerictextbox template for printDialog control
-var printPageWidth = new ej.inputs.NumericTextBox({
-    min: 100,
-    step: 1,
-    format: 'n0',
-    value: printSettings.pageWidth
-});
-printPageWidth.appendTo('#printPageWidth');
-
-// numerictextbox template for printDialog control
-var printPageHeight = new ej.inputs.NumericTextBox({
-    min: 100,
-    step: 1,
-    format: 'n0',
-    value: printSettings.pageHeight
-});
-printPageHeight.appendTo('#printPageHeight');
-
-// radiobutton template for printDialog control
-var printPortrait = new ej.buttons.RadioButton({ label: 'Portrait', name: 'printSettings', checked: printSettings.isPortrait });
-printPortrait.appendTo('#printPortrait');
-
-// radiobutton template for printDialog control
-var printLandscape = new ej.buttons.RadioButton({ label: 'Landscape', name: 'printSettings', checked: printSettings.isLandscape });
-printLandscape.appendTo('#printLandscape');
-
-// checkbox template for printDialog control
-var printMultiplePage = new ej.buttons.CheckBox({
-    label: 'Scale to fit 1 page', checked: printSettings.multiplePage,
-    change: function (args) { multiplePage(args); }
-});
-printMultiplePage.appendTo('#printMultiplePage');
-
-function multiplePage(args) {
-    if (args.event) {
-        printSettings.multiplePage = args.checked;
-    }
-};
-function diagramRegions() {
-    var diagramRegions = [
-        { text: 'Content', value: 'Content' }, { text: 'PageSettings', value: 'PageSettings' }
-    ];
-    return diagramRegions;
-};
-
-var exportDialog = new ej.popups.Dialog({
-    width: '400px',
-    header: 'Export Diagram',
-    target: document.body,
-    isModal: true,
-    animationSettings: { effect: 'None' },
-    buttons: getDialogButtons('export'),
-    visible: false,
-    showCloseIcon: true,
-    content: '<div id="exportDialogContent"><div class="row"><div class="row"> File Name </div> <div class="row db-dialog-child-prop-row">' +
-        '<input type="text" id="exportfileName" value = "Untitled Diagram"></div></div>' +
-        '<div class="row db-dialog-prop-row"> <div class="col-xs-6 db-col-left"> <div class="row"> Format </div>' +
-        '<div class="row db-dialog-child-prop-row"> <input type="text" id="exportFormat"/> </div> </div>' +
-        '<div class="col-xs-6 db-col-right"> <div class="row"> Region </div> <div class="row db-dialog-child-prop-row">' +
-        '<input type="text" id="exportRegion"/></div></div></div></div>'
-});
-exportDialog.appendTo('#exportDialog');
-
-var exportFormat = new ej.dropdowns.DropDownList({
-    dataSource: fileFormats(),
-    fields: { text: 'text', value: 'value' },
-    value: exportSettings.format,
-});
-exportFormat.appendTo('#exportFormat');
-
-// dropdown template for exportDialog control
-var exportRegion = new ej.dropdowns.DropDownList({
-    dataSource: diagramRegions(),
-    fields: { text: 'text', value: 'value' },
-    value: exportSettings.region
-});
-exportRegion.appendTo('#exportRegion');
-
-
-function fileFormats() {
-    var fileFormats = [
-        { text: 'JPG', value: 'JPG' }, { text: 'PNG', value: 'PNG' },
-        { text: 'BMP', value: 'BMP' }, { text: 'SVG', value: 'SVG' }
-    ];
-    return fileFormats;
-};
-function diagramRegions() {
-    var diagramRegions = [
-        { text: 'Content', value: 'Content' }, { text: 'PageSettings', value: 'PageSettings' }
-    ];
-    return diagramRegions;
-};
-function toolbarInsertClick(args) {
-    var commandType = args.item.tooltipText.replace(/[' ']/g, '');
-    if (diagram.selectedItems.nodes.length > 0) {
-        switch (commandType.toLowerCase()) {
-            case 'insertlink':
-                document.getElementById('hyperlink').value = '';
-                document.getElementById('hyperlinkText').value = '';
-                if (diagram.selectedItems.nodes[0].annotations.length > 0) {
-                    var annotation = diagram.selectedItems.nodes[0].annotations[0];
-                    if (annotation.hyperlink.link || annotation.content) {
-                        document.getElementById('hyperlink').value = annotation.hyperlink.link;
-                        document.getElementById('hyperlinkText').value = annotation.hyperlink.content || annotation.content;
-                    }
-                }
-                hyperlinkDialog.show();
-                break;
-            case 'insertimage':
-                openUploadBox(false, '.jpg,.png,.bmp');
-                break;
-        }
-    }
-}
-function openUploadBox(isOpen, extensionType) {
-    var defaultUpload = document.getElementById('defaultfileupload');
-    defaultUpload = defaultUpload.ej2_instances[0];
-    defaultUpload.clearAll();
-    diagram.orgDataSettings.extensionType = defaultUpload.allowedExtensions = extensionType;
-    defaultUpload.dataBind();
-    diagram.isOpen = isOpen;
-    document.getElementsByClassName('e-file-select-wrap')[0].children[0].click();
-}
-
-function getDialogButtons(dialogType) {
-    var buttons = [];
-    switch (dialogType) {
-        case 'export':
-            buttons.push({
-                click: btnExportClick.bind(this), buttonModel: { content: 'Export', cssClass: 'e-flat e-db-primary', isPrimary: true }
-            });
-            break;
-        case 'print':
-            buttons.push({
-                click: btnPrintClick.bind(this),
-                buttonModel: { content: 'Print', cssClass: 'e-flat e-db-primary', isPrimary: true }
-            });
-            break;
-        case 'hyperlink':
-            buttons.push({
-                click: btnHyperLink.bind(this),
-                buttonModel: { content: 'Apply', cssClass: 'e-flat e-db-primary', isPrimary: true }
-            });
-            break;
-
-    }
-    buttons.push({
-        click: btnCancelClick.bind(this),
-        buttonModel: { content: 'Cancel', cssClass: 'e-flat', isPrimary: true }
-    });
-    return buttons;
-}
-
-function btnCancelClick(args) {
-    var ss = args.target;
-    var key = ss.offsetParent.id;
-    switch (key) {
-        case 'exportDialog':
-            exportDialog.hide();
-            break;
-        case 'printDialog':
-            printDialog.hide();
-            break;
-        case 'saveDialog':
-            saveDialog.hide();
-            break;
-        case 'customPropertyDialog':
-            this.customPropertyDialog.hide();
-            break;
-        case 'tooltipDialog':
-            tooltipDialog.hide();
-            break;
-        case 'hyperlinkDialog':
-            this.hyperlinkDialog.hide();
-            break;
-        case 'deleteConfirmationDialog':
-            this.deleteConfirmationDialog.hide();
-            break;
-        case 'fileUploadDialog':
-            OrgChartUtilityMethods.uploadDialog.hide();
-            OrgChartUtilityMethods.isUploadSuccess = false;
-            break;
-        case 'moreShapesDialog':
-            moreShapesDialog.hide();
-            break;
-    }
-}
-
-function btnHyperLink() {
-    var node = diagram.selectedItems.nodes[0];
-    if (node.annotations.length > 0) {
-        node.annotations[0].hyperlink.link = document.getElementById('hyperlink').value;
-        node.annotations[0].hyperlink.content = document.getElementById('hyperlinkText').value;
-        applyToolTipforHyperlink(node);
-        diagram.dataBind();
-    } else {
-        var annotation = {
-            hyperlink: {
-                content: document.getElementById('hyperlinkText').value,
-                link: document.getElementById('hyperlink').value
-            }
-        };
-        diagram.addLabels(node, [annotation]);
-        applyToolTipforHyperlink(node);
-        diagram.dataBind();
-    }
-    hyperlinkDialog.hide();
-}
-
-function btnExportClick() {
-    diagram.exportDiagram({
-        fileName: document.getElementById("exportfileName").value,
-        format: exportFormat.value,
-        region: exportRegion.value
-    });
-    exportDialog.hide();
-}
-
-function btnPrintClick() {
-    var pageWidth = printSettings.pageWidth;
-    var pageHeight = printSettings.pageHeight;
-    var paperSize = getPaperSize(printSettings.paperSize);
-    if (paperSize.pageHeight && paperSize.pageWidth) {
-        pageWidth = paperSize.pageWidth;
-        pageHeight = paperSize.pageHeight;
-    }
-    if (pageSettings.isPortrait) {
-        if (pageWidth > pageHeight) {
-            var temp = pageWidth;
-            pageWidth = pageHeight;
-            pageHeight = temp;
-        }
-    } else {
-        if (pageHeight > pageWidth) {
-            var temp1 = pageHeight;
-            pageHeight = pageWidth;
-            pageWidth = temp1;
-        }
-    }
-    diagram.print({
-        region: printRegionDropdown.value, pageHeight: pageHeight, pageWidth: pageWidth,
-        multiplePage: printMultiplePage.checked,
-        pageOrientation: printPortrait.checked ? 'Portrait' : 'Landscape'
-    });
-    printDialog.hide();
-}
-
-function applyToolTipforHyperlink(node) {
-    node.constraints = ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InheritTooltip | ej.diagrams.NodeConstraints.Tooltip;
-    node.tooltip = {
-        content: node.annotations[0].hyperlink.link, relativeMode: 'Object',
-        position: 'TopCenter', showTipPointer: true,
-    };
-}
-
-function getUploadButtons() {
-    var buttons = [];
-    buttons.push({
-        click: btnCancelClick.bind(this),
-        buttonModel: { content: 'Cancel', cssClass: 'e-flat', isPrimary: true }
-    });
-    return buttons;
-}
-
-var splitObj = new ej.layouts.Splitter({
-    height: '500px',
-    paneSettings: [
-        { size: '75%', collapsible: false },
-        { collapsible: true }
-    ],
-    separatorSize: 5,
-    expanded: spliterExpanded,
-    collapsed: splitterColapsed,
-    width: '100%'
-});
-splitObj.appendTo('#splitter');
-// document.getElementById('splitter').onclick = (args) =>{
-// var proPan = document.getElementById('propertyPanel').style.display;
-// if(proPan !== 'none'){
-//     document.getElementById('propertyPanel').style.display = 'none';
-// }
-// else{
-//     document.getElementById('propertyPanel').style.display = 'block';
-// }
-// }
-function spliterExpanded(args) {
-    args.pane[1].style.display = 'none';
-}
-function splitterColapsed(args) {
-    args.pane[1].style.display = 'block';
 }
