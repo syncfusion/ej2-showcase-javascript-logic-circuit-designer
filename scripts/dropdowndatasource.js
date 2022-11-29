@@ -92,7 +92,7 @@ var DropDownDataSources = (function () {
             { text: 'Snap To Grid',iconCss : 'sf-icon-check-tick'},
             { text: 'Snap To Object',iconCss : 'sf-icon-check-tick'},
             { text: 'Show Ruler',iconCss: 'sf-icon-check-tick'},
-            { text: 'Show Page Breaks',iconCss: 'sf-icon-check-tick'},
+            { text: 'Show Page Breaks',iconCss: ''},
             { text: 'Show Multiple page',iconCss: ''},
             { separator: true },
             { text: 'Fit To Width'},
@@ -211,7 +211,7 @@ var DropDownDataSources = (function () {
                             { type: 'Separator' },
             { prefixIcon: 'sf-icon-pan', tooltipText: 'Pan Tool',cssClass:'tb-item-start'},
             { prefixIcon: 'sf-icon-pointer', tooltipText: 'Select Tool',cssClass:'tb-item-middle tb-item-selected'},
-            { tooltipText: 'Change Connector Type',template: '<button id="conTypeBtn" style="width:100%;"></button>',cssClass:'tb-item-middle'},
+            // { tooltipText: 'Change Connector Type',template: '<button id="conTypeBtn" style="width:100%;"></button>',cssClass:'tb-item-middle'},
             
             { prefixIcon: 'sf-icon-group', tooltipText:'Group', template: '<div></div>', cssClass: 'tb-item-start tb-item-align-category'},
                             { type: 'Separator', visible: false },
@@ -253,14 +253,11 @@ var DropDownDataSources = (function () {
             { prefixIcon: 'sf-icon-font-color', tooltipText: 'Font Color', template: '<div></div>',cssClass: 'tb-item-end tb-item-stroke'},
                             { type: 'Separator', visible: false },
                         {
-                            type: 'Separator',template:'<div style="margin-left:200px;"></div>'
+                            type: 'Separator',template:'<div style="margin-left:575px;"></div>'
                         },
             {
                 cssClass: 'tb-item-end tb-zoom-dropdown-btn', template: '<button id="btnZoomIncrement"></button>'
             },
-                            {
-                                type: 'Separator'
-                            },
             { prefixIcon: 'sf-icon-properties' , tooltipText: 'Hide property',template:'<button id="hideProperty"></button>'}
         ];
         return items;
