@@ -2337,7 +2337,7 @@ function RunSimulation() {
 
 
 window.onload = function () {
-    //diagram.fitToPage({ mode: 'page', region: 'Content', margin: { left: 0, top: 0, right: 0, bottom: 0 } });    
+        
     document.onmouseover = menumouseover.bind(this);
     zoomCurrentValue = document.getElementById("btnZoomIncrement").ej2_instances[0];
 }
@@ -2536,8 +2536,6 @@ var btnSelectMenu = new ej.splitbuttons.DropDownButton({
 });
 btnSelectMenu.appendTo('#btnSelectMenu');
 
-
-
 var btnViewMenu = new ej.splitbuttons.DropDownButton({
     cssClass: 'db-dropdown-menu',
     items: DropDownDataSources.prototype.getViewMenuItems(),
@@ -2548,6 +2546,72 @@ var btnViewMenu = new ej.splitbuttons.DropDownButton({
     beforeClose: arrangeMenuBeforeClose
 });
 btnViewMenu.appendTo('#btnViewMenu');
+
+var editContextMenu = new ej.navigations.ContextMenu({
+    animationSettings: { effect: 'None' },
+    items: DropDownDataSources.prototype.getEditMenuItems(),
+    onOpen: editContextMenuOpen,
+    cssClass: "EditMenu",
+    beforeItemRender: beforeItemRender,
+    select: function (args) { UtilityMethods.prototype.menuClick(args) },
+    beforeClose: arrangeMenuBeforeClose
+})
+editContextMenu.appendTo('#editContextMenu');
+
+var btnEditMenu = new ej.splitbuttons.DropDownButton({
+    cssClass: 'db-dropdown-menu',
+    target: '.e-contextmenu-wrapper.editMenu',
+    content: 'Edit',
+    select: function (args) { UtilityMethods.prototype.menuClick(args) },
+    beforeItemRender: beforeItemRender,
+    beforeOpen: arrangeMenuBeforeOpen,
+    beforeClose: arrangeMenuBeforeClose
+});
+btnEditMenu.appendTo('#btnEditMenu');
+
+var designContextMenu = new ej.navigations.ContextMenu({
+    animationSettings: { effect: 'None' },
+    items: DropDownDataSources.prototype.getDesignMenuItems(),
+    onOpen: designContextMenuOpen,
+    cssClass: "DesignMenu",
+    beforeItemRender: beforeItemRender,
+    select: function (args) { UtilityMethods.prototype.menuClick(args) },
+    beforeClose: arrangeMenuBeforeClose
+})
+designContextMenu.appendTo('#designContextMenu');
+
+var btnDesignMenu = new ej.splitbuttons.DropDownButton({
+    cssClass: 'db-dropdown-menu',
+    target: '.e-contextmenu-wrapper.designMenu',
+    content: 'Design',
+    select: function (args) { UtilityMethods.prototype.menuClick(args) },
+    beforeItemRender: beforeItemRender,
+    beforeOpen: arrangeMenuBeforeOpen,
+    beforeClose: arrangeMenuBeforeClose
+});
+btnDesignMenu.appendTo('#btnDesignMenu');
+
+var toolsContextMenu = new ej.navigations.ContextMenu({
+    animationSettings: { effect: 'None' },
+    items: DropDownDataSources.prototype.getToolsMenuItems(),
+    onOpen: toolsContextMenuOpen,
+    cssClass: "ToolsMenu",
+    beforeItemRender: beforeItemRender,
+    select: function (args) { UtilityMethods.prototype.menuClick(args) },
+    beforeClose: arrangeMenuBeforeClose
+});
+toolsContextMenu.appendTo('#toolsContextMenu');
+
+var btnToolsMenu = new ej.splitbuttons.DropDownButton({
+    cssClass: 'db-dropdown-menu',
+    target: '.e-contextmenu-wrapper.toolsMenu',
+    content: 'Tools',
+    select: function (args) { UtilityMethods.prototype.menuClick(args) },
+    beforeItemRender: beforeItemRender,
+    beforeOpen: arrangeMenuBeforeOpen,
+    beforeClose: arrangeMenuBeforeClose
+});
+btnToolsMenu.appendTo('#btnToolsMenu');
 
 
 function toolsContextMenuOpen(args) {
@@ -2717,7 +2781,7 @@ function menumouseover(args) {
         }
         var button1 = target.ej2_instances[0];
         this.buttonInstance = button1;
-        if (button1.getPopUpElement().classList.contains('e-popup-close')) {
+        if (button1.getPopUpElement().classList.contains('e-popup-close')) {              
             button1.toggle();
             if (button1.element.id === 'btnEditMenu') {
                 enableEditMenuItems(diagram);
@@ -2850,18 +2914,6 @@ function enableToolbarItems(selectedItems) {
     }
 };
 
-function multipleSelection() {
-    for (i = 8; i < 29; i++) {
-        if (toolbarObj.items[i].type !== 'Separator') {
-            if (i !== 27 && i !== 28) {
-                toolbarObj.items[i].template = '';
-            }
-            if (i == 27 || i == 28) {
-                toolbarObj.items[i].template = '<div></div>';
-            }
-        }
-    }
-}
 var uploadObj = new ej.inputs.Uploader({
     asyncSettings: {
         saveUrl: 'https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save',
@@ -2881,14 +2933,6 @@ hidePropertyBtn = new ej.buttons.Button({
     iconCss: 'sf-icon-properties', isPrimary: true
 });
 hidePropertyBtn.appendTo('#hideProperty');
-
-function flipObjects(flipType) {
-    var selectedObjects = diagram.selectedItems.nodes.concat(diagram.selectedItems.connectors);
-    for (i = 0; i < selectedObjects.length; i++) {
-        selectedObjects[i].flip = flipType === 'Flip Horizontal' ? 'Horizontal' : 'Vertical';
-    }
-    diagram.dataBind();
-}
 
 
 function onUploadSuccess(args) {
@@ -2978,87 +3022,8 @@ var PaperSize = (function () {
     return PaperSize;
 }());
 
-
-var editContextMenu = new ej.navigations.ContextMenu({
-    animationSettings: { effect: 'None' },
-    items: DropDownDataSources.prototype.getEditMenuItems(),
-    onOpen: editContextMenuOpen,
-    cssClass: "EditMenu",
-    beforeItemRender: beforeItemRender,
-    select: function (args) { UtilityMethods.prototype.menuClick(args) },
-    beforeClose: arrangeMenuBeforeClose
-})
-editContextMenu.appendTo('#editContextMenu');
-
-var designContextMenu = new ej.navigations.ContextMenu({
-    animationSettings: { effect: 'None' },
-    items: DropDownDataSources.prototype.getDesignMenuItems(),
-    onOpen: designContextMenuOpen,
-    cssClass: "DesignMenu",
-    beforeItemRender: beforeItemRender,
-    select: function (args) { UtilityMethods.prototype.menuClick(args) },
-    beforeClose: arrangeMenuBeforeClose
-})
-designContextMenu.appendTo('#designContextMenu');
-
-var toolsContextMenu = new ej.navigations.ContextMenu({
-    animationSettings: { effect: 'None' },
-    items: DropDownDataSources.prototype.getToolsMenuItems(),
-    onOpen: toolsContextMenuOpen,
-    cssClass: "ToolsMenu",
-    beforeItemRender: beforeItemRender,
-    select: function (args) { UtilityMethods.prototype.menuClick(args) },
-    beforeClose: arrangeMenuBeforeClose
-});
-toolsContextMenu.appendTo('#toolsContextMenu');
-
-var btnDesignMenu = new ej.splitbuttons.DropDownButton({
-    cssClass: 'db-dropdown-menu',
-    target: '.e-contextmenu-wrapper.designMenu',
-    content: 'Design',
-    select: function (args) { UtilityMethods.prototype.menuClick(args) },
-    beforeItemRender: beforeItemRender,
-    beforeOpen: arrangeMenuBeforeOpen,
-    beforeClose: arrangeMenuBeforeClose
-});
-btnDesignMenu.appendTo('#btnDesignMenu');
-
-var btnToolsMenu = new ej.splitbuttons.DropDownButton({
-    cssClass: 'db-dropdown-menu',
-    target: '.e-contextmenu-wrapper.toolsMenu',
-    content: 'Tools',
-    select: function (args) { UtilityMethods.prototype.menuClick(args) },
-    beforeItemRender: beforeItemRender,
-    beforeOpen: arrangeMenuBeforeOpen,
-    beforeClose: arrangeMenuBeforeClose
-});
-btnToolsMenu.appendTo('#btnToolsMenu');
-
-var btnEditMenu = new ej.splitbuttons.DropDownButton({
-    cssClass: 'db-dropdown-menu',
-    target: '.e-contextmenu-wrapper.editMenu',
-    content: 'Edit',
-    select: function (args) { UtilityMethods.prototype.menuClick(args) },
-    beforeItemRender: beforeItemRender,
-    beforeOpen: arrangeMenuBeforeOpen,
-    beforeClose: arrangeMenuBeforeClose
-});
-btnEditMenu.appendTo('#btnEditMenu');
-
-function minValue() {
-    var size;
-    if (diagram.selectedItems.nodes.length > 0) {
-        size = diagram.selectedItems.nodes[0].annotations[0].style.fontSize;
-    }
-    else if (diagram.selectedItems.connectors.length > 0) {
-        size = diagram.selectedItems.connectors[0].annotations[0].style.fontSize;
-    }
-    return size;
-}
-
 var btnZoomIncrement = new ej.splitbuttons.DropDownButton({ items: zoomMenuItems, content: Math.round(diagram.scrollSettings.currentZoom * 100) + ' %', select: zoomChange });
 btnZoomIncrement.appendTo('#btnZoomIncrement');
-
 
 var printDialog = new ej.popups.Dialog({
     width: '335px',
