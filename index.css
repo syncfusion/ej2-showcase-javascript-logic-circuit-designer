@@ -2,15 +2,21 @@
     display: none;
 }
 .sb-mobile-palette {
-    width:250px;
+    width:240px;
     height:100%;
     float:left;
 }
 .sb-mobile-diagram {
-    width:calc(100% - 257px);
+    width:calc(100% - 242px);
     height: 100%;
     float: left;
 }
+/* .hide {
+    display: none;
+} */
 
+/* #orderBtn{
+    display: none;
+} */
 
 

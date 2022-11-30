@@ -138,7 +138,7 @@ input, button, select, textarea {
 .sidebar {
     position: absolute;
     bottom: 0;
-    width: 260px;
+    width: 260;
     left: 0px;
     height: calc(100% - 112px);
 }
@@ -148,7 +148,7 @@ input, button, select, textarea {
     left:260px;
     height: calc(100% - 112px);
     position:absolute;
-    width:calc(100% - 260px);
+    width:calc(100%);
 }
 
 .db-palette-parent {
@@ -241,6 +241,18 @@ input, button, select, textarea {
     padding-right: 10px;
 }
 
+.db-property-editor-container {
+    width: 260px;
+    background: #e3e3e3;
+    height: 100%;
+    float: left;
+    padding: 10px;
+    overflow: auto;
+    border-left: 1px solid #CBCBCB;
+    border-top: 1px solid #CBCBCB;
+    display: none;
+}
+
 /* SymbolPalette - Customization Start */
 
 .e-accordion .e-acrdn-item.e-select {
@@ -318,7 +330,7 @@ input, button, select, textarea {
 }
 
 .db-diagram-container {
-    width:calc(100%);
+    width:calc(100% - 260px);
     height: 100%;
     float: left;
 }

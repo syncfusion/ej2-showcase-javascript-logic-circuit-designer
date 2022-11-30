@@ -212,7 +212,8 @@ var DropDownDataSources = (function () {
             { prefixIcon: 'sf-icon-pan', tooltipText: 'Pan Tool',cssClass:'tb-item-start'},
             { prefixIcon: 'sf-icon-pointer', tooltipText: 'Select Tool',cssClass:'tb-item-middle tb-item-selected'},
             // { tooltipText: 'Change Connector Type',template: '<button id="conTypeBtn" style="width:100%;"></button>',cssClass:'tb-item-middle'},
-            
+            // { prefixIcon: 'sf-icon-text', tooltipText: 'Text Tool',cssClass:'tb-item-end' },
+            //                 { type: 'Separator',template:'<div style="margin-left:70px;"></div>'},
             { prefixIcon: 'sf-icon-group', tooltipText:'Group', template: '<div></div>', cssClass: 'tb-item-start tb-item-align-category'},
                             { type: 'Separator', visible: false },
             {
@@ -253,12 +254,15 @@ var DropDownDataSources = (function () {
             { prefixIcon: 'sf-icon-font-color', tooltipText: 'Font Color', template: '<div></div>',cssClass: 'tb-item-end tb-item-stroke'},
                             { type: 'Separator', visible: false },
                         {
-                            type: 'Separator',template:'<div style="margin-left:575px;"></div>'
+                            type: 'Separator',template:'<div style="margin-left:645px;"></div>'
                         },
             {
                 cssClass: 'tb-item-end tb-zoom-dropdown-btn', template: '<button id="btnZoomIncrement"></button>'
             },
-            { prefixIcon: 'sf-icon-properties' , tooltipText: 'Hide property',template:'<button id="hideProperty"></button>'}
+            //                 {
+            //                     type: 'Separator'
+            //                 },
+            // { prefixIcon: 'sf-icon-properties' , tooltipText: 'Hide property',template:'<button id="hideProperty"></button>'}
         ];
         return items;
     };

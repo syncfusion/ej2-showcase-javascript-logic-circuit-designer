@@ -1,3 +1,4 @@
+ej.diagrams.Diagram.Inject(ej.diagrams.ConnectorEditing, ej.diagrams.UndoRedo);
 var conTypeBtn;
 var orderBtn;
 var hidePropertyBtn;
@@ -6,7 +7,11 @@ var diagramEvents = new DiagramClientSideEvents();
 var dropDownDataSources = new DropDownDataSources();
 var propertyChange = new PropertyChange();
 var utilityMethods = new UtilityMethods();
-ej.diagrams.Diagram.Inject(ej.diagrams.ConnectorEditing, ej.diagrams.UndoRedo);
+
+window.onload = function () {
+    document.onmouseover = menumouseover.bind(this);
+    zoomCurrentValue = document.getElementById("btnZoomIncrement").ej2_instances[0];
+}
 
 var orData = 'M70.9412 20L69.9412 20.0012L70.9412 20ZM33.5076 11L34.4744 10.7444L33.5076 11ZM33.7565 29L34.7303 29.2276L33.7565 29ZM29 1L29.0345 0.000594001C28.6575 -0.0124037 28.3053 0.187777 28.1237 0.518291C27.942 0.848804 27.9617 1.25342 28.1747 1.56469L29 1ZM29 40L28.1747 39.4353C27.9617 39.7466 27.942 40.1512 28.1237 40.4817C28.3053 40.8122 28.6575 41.0124 29.0345 40.9994L29 40ZM66.5674 29.1936L67.3548 29.8101L67.3548 29.8101L66.5674 29.1936ZM45.21 39.441L45.2445 40.4404L45.2445 40.4404L45.21 39.441ZM45.6846 1.57533L45.719 0.575923L45.6846 1.57533ZM66.5 11L67.2718 10.3641L66.5 11ZM10 11C10 13.2091 8.20914 15 6 15V17C9.31371 17 12 14.3137 12 11H10ZM6 15C3.79086 15 2 13.2091 2 11H0C0 14.3137 2.68629 17 6 17V15ZM2 11C2 8.79086 3.79086 7 6 7V5C2.68629 5 0 7.68629 0 11H2ZM6 7C8.20914 7 10 8.79086 10 11H12C12 7.68629 9.31371 5 6 5V7ZM10 29C10 31.2091 8.20914 33 6 33V35C9.31371 35 12 32.3137 12 29H10ZM6 33C3.79086 33 2 31.2091 2 29H0C0 32.3137 2.68629 35 6 35V33ZM2 29C2 26.7909 3.79086 25 6 25V23C2.68629 23 0 25.6863 0 29H2ZM6 25C8.20914 25 10 26.7909 10 29H12C12 25.6863 9.31371 23 6 23V25ZM98 20C98 22.2091 96.2091 24 94 24V26C97.3137 26 100 23.3137 100 20H98ZM94 24C91.7909 24 90 22.2091 90 20H88C88 23.3137 90.6863 26 94 26V24ZM90 20C90 17.7909 91.7909 16 94 16V14C90.6863 14 88 16.6863 88 20H90ZM94 16C96.2091 16 98 17.7909 98 20H100C100 16.6863 97.3137 14 94 14V16ZM70.9412 21H89V19H70.9412V21ZM11 12H33.5076V10H11V12ZM11 30H33.7565V28H11V30ZM28.9655 1.99941L45.6501 2.57474L45.719 0.575923L29.0345 0.000594001L28.9655 1.99941ZM45.1755 38.4416L28.9655 39.0006L29.0345 40.9994L45.2445 40.4404L45.1755 38.4416ZM65.7801 28.5771C60.9514 34.7438 53.1021 38.1683 45.1755 38.4416L45.2445 40.4404C53.6589 40.1503 62.1031 36.517 67.3548 29.8101L65.7801 28.5771ZM45.6501 2.57474C53.3279 2.83949 60.9322 5.81523 65.7282 11.6359L67.2718 10.3641C62.0267 3.99837 53.8221 0.85534 45.719 0.575923L45.6501 2.57474ZM34.4744 10.7444C33.499 7.05472 31.9517 3.54311 29.8253 0.435311L28.1747 1.56469C30.1606 4.46711 31.6183 7.76579 32.5408 11.2556L34.4744 10.7444ZM29.8253 40.5647C32.1482 37.1698 33.7801 33.2928 34.7303 29.2276L32.7827 28.7724C31.8833 32.6208 30.3442 36.2645 28.1747 39.4353L29.8253 40.5647ZM34.7303 29.2276C36.1399 23.1963 36.055 16.7243 34.4744 10.7444L32.5408 11.2556C34.0374 16.9173 34.1184 23.0575 32.7827 28.7724L34.7303 29.2276ZM65.7282 11.6359C68.669 15.205 69.9383 17.651 69.9412 20.0012L71.9412 19.9988C71.9374 16.896 70.246 13.9738 67.2718 10.3641L65.7282 11.6359ZM69.9412 20.0012C69.944 22.3473 68.6863 24.8654 65.7801 28.5771L67.3548 29.8101C70.2867 26.0656 71.9449 23.0763 71.9412 19.9988L69.9412 20.0012Z';
 var andData = 'M29 1C29 0.447715 29.4477 0 30 0H52.5C63.4538 0 72.4534 8.14084 72.976 19H88.083C88.559 16.1623 91.027 14 94 14C97.3137 14 100 16.6863 100 20C100 23.3137 97.3137 26 94 26C91.027 26 88.559 23.8377 88.083 21H72.9761C72.4556 31.8562 63.5176 41 52.5 41H30C29.4477 41 29 40.5523 29 40V30H11.917C11.441 32.8377 8.973 35 6 35C2.68629 35 0 32.3137 0 29C0 25.6863 2.68629 23 6 23C8.973 23 11.441 25.1623 11.917 28H29V12H11.917C11.441 14.8377 8.973 17 6 17C2.68629 17 0 14.3137 0 11C0 7.68629 2.68629 5 6 5C8.973 5 11.441 7.16229 11.917 10H29V1ZM31 2V39H52.5C62.6847 39 71 30.2504 71 20C71 9.81642 62.7516 2 52.5 2H31ZM6 7C3.79086 7 2 8.79086 2 11C2 13.2091 3.79086 15 6 15C8.20914 15 10 13.2091 10 11C10 8.79086 8.20914 7 6 7ZM94 16C91.7909 16 90 17.7909 90 20C90 22.2091 91.7909 24 94 24C96.2091 24 98 22.2091 98 20C98 17.7909 96.2091 16 94 16ZM6 25C3.79086 25 2 26.7909 2 29C2 31.2091 3.79086 33 6 33C8.20914 33 10 31.2091 10 29C10 26.7909 8.20914 25 6 25Z';
@@ -78,7 +83,7 @@ var bulbport =
         {
             id: 'Bulb_port', offset: { x: 0.5, y: 0.95 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+            constraints: (ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect) | ej.diagrams.PortConstraints.Draw 
         },
     ];
 
@@ -87,7 +92,7 @@ var toggleswitchport =
         {
             id: 'toggleport1', offset: { x: 0.92, y: 0.5 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
         },
     ];
 
@@ -96,7 +101,7 @@ var pushbuttonport =
         {
             id: 'pushbuttonport1', offset: { x: 0.92, y: 0.5 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
         },
     ];
 
@@ -105,17 +110,17 @@ var orPort =
         {
             id: 'Or_port1', offset: { x: 0.05, y: 0.25 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
         },
         {
             id: 'Or_port3', offset: { x: 0.05, y: 0.73 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
         },
         {
             id: 'Or_port4', offset: { x: 0.94, y: 0.5 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
         },
     ];
 
@@ -124,17 +129,17 @@ var otherPort =
         {
             id: 'Or_port1', offset: { x: 0.06, y: 0.30 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
         },
         {
             id: 'Or_port3', offset: { x: 0.06, y: 0.70 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
         },
         {
             id: 'Or_port4', offset: { x: 0.94, y: 0.48 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
         },
     ];
 
@@ -143,12 +148,12 @@ var pullPort =
         {
             id: 'Pull_port1', offset: { x: 0.06, y: 0.48 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
         },
         {
             id: 'Pull_port2', offset: { x: 0.94, y: 0.48 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
         },
     ];
 
@@ -157,17 +162,17 @@ var andPort =
         {
             id: 'And_port1', offset: { x: 0.05, y: 0.25 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
         },
         {
             id: 'And_port3', offset: { x: 0.05, y: 0.73 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
         },
         {
             id: 'And_port4', offset: { x: 0.94, y: 0.5 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
         },
     ];
 
@@ -176,12 +181,12 @@ var notPort =
         {
             id: 'Not_port1', offset: { x: 0.05, y: 0.5 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
         },
         {
             id: 'Not_port2', offset: { x: 0.94, y: 0.5 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
         },
     ];
 
@@ -189,156 +194,163 @@ var DigitPorts =
     [{
         id: 'digitport1', offset: { x: 0.07, y: 0.15 },
         height: 15, width: 13, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
     },
     {
         id: 'digitport2', offset: { x: 0.07, y: 0.38 },
         height: 15, width: 13, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
     },
 
     {
         id: 'digitport3', offset: { x: 0.071, y: 0.62 },
         height: 15, width: 13, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
     },
     {
         id: 'digitport4', offset: { x: 0.072, y: 0.85 },
         height: 15, width: 13, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
     }];
 
 var DTPorts =
     [{
         id: 'DTport', offset: { x: 0.053, y: 0.425 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
     },
     {
         id: 'clkport', offset: { x: 0.053, y: 0.590 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
     },
     {
         id: 'qport', offset: { x: 0.947, y: 0.425 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
     },
     {
         id: 'q1port', offset: { x: 0.947, y: 0.590 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
     },
 
     {
         id: 'preport', offset: { x: 0.5, y: 0.057 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
     },
     {
         id: 'clrport', offset: { x: 0.5, y: 0.93 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
     }];
 
 var jkPorts =
     [{
         id: 'jport', offset: { x: 0.06, y: 0.350 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
     },
     {
         id: 'clkport', offset: { x: 0.06, y: 0.5 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
     },
 
     {
         id: 'kport', offset: { x: 0.06, y: 0.650 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
     },
     {
         id: 'qport', offset: { x: 0.95, y: 0.430 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
     },
     {
         id: 'q1port', offset: { x: 0.95, y: 0.590 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
     },
     {
         id: 'preport', offset: { x: 0.5, y: 0.05 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
     },
     {
         id: 'clrport', offset: { x: 0.5, y: 0.95 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
     }];
 
 var srPorts =
     [{
         id: 'sport', offset: { x: 0.06, y: 0.25 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
     },
     {
         id: 'clkport', offset: { x: 0.06, y: 0.5 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
     },
     {
         id: 'rport', offset: { x: 0.06, y: 0.75 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
     },
 
     {
         id: 'qport', offset: { x: 0.95, y: 0.39 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
     },
     {
         id: 'q1port', offset: { x: 0.95, y: 0.63 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw
+        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
     }];
 
 var gates =
     [
         {
             id: 'OR Gate', shape: { type: 'Path', data: orData, shape: 'OR Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
         {
             id: 'NOR Gate', shape: { type: 'Path', data: nordata, shape: 'NOR Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
             id: 'AND Gate', shape: { type: 'Path', data: andData, shape: 'AND Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
             id: 'NAND Gate', shape: { type: 'Path', data: nanddata, shape: 'NAND Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
-            id: 'Buffer Gate',
-            shape: { type: 'Path', data: buffer, shape: 'Buffer' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
+            id: 'Buffer Gate', shape: { type: 'Path', data: buffer, shape: 'Buffer' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
             id: 'Not Gate', shape: { type: 'Path', data: notData, shape: 'NOT Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
             id: 'XOR Gate', shape: { type: 'Path', data: xorData, shape: 'XOR Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
             id: 'XNOR Gate', shape: { type: 'Path', data: xnorData, shape: 'XNOR Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
     ];
 
@@ -348,24 +360,28 @@ var flipflops =
             id: 'JK Flip-Flop',
             shape: { shape: 'JK Flip-Flop', type: 'Path', data: jkflipflopdata },
             style: { fill: '#000000', strokeWidth: 0 }, height: 125, width: 93,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
             id: 'D Flip-Flop',
             shape: { shape: 'D Flip-Flop', type: 'Path', data: dflipflop },
             style: { fill: '#000000', strokeWidth: 0 }, height: 125, width: 93,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
             id: 'T Flip-Flop',
             shape: { shape: 'T Flip-Flop', type: 'Path', data: tflipflopdata },
             style: { fill: '#000000', strokeWidth: 0 }, height: 125, width: 93,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
             id: 'SR Flip-Flop',
             shape: { shape: 'SR Flip-Flop', type: 'Path', data: srflipflopdata },
             style: { fill: '#000000', strokeWidth: 0 }, height: 95, width: 93,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
     ];
 
@@ -379,7 +395,7 @@ var input =
             offsetY: 100,
             shape: { type: 'Path', data: SwitchOffOuterRect },
             style: { strokeColor: 'black', strokeWidth: 2, fill: 'transparent' },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
@@ -390,7 +406,7 @@ var input =
             offsetY: 100,
             shape: { type: 'Path', data: SwitchOffInnerRect },
             style: { strokeColor: 'black', strokeWidth: 2 },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
@@ -401,7 +417,7 @@ var input =
             offsetY: 100,
             shape: { type: 'Path', data: SwitchoffButton },
             style: { strokeColor: 'black', strokeWidth: 2 },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
@@ -412,7 +428,7 @@ var input =
             offsetY: 100,
             shape: { type: 'Path', data: SWitchOnButton },
             style: { strokeColor: 'transparent', strokeWidth: 2, fill: 'transparent' },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
             visible: false,
         },
 
@@ -423,6 +439,7 @@ var input =
             offsetX: 140,
             offsetY: 100,
             shape: { shape: 'Toggle Switch' },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
@@ -433,7 +450,7 @@ var input =
             offsetY: 100,
             shape: { type: 'Path', data: PushButtonOuterRect },
             style: { strokeColor: 'black', strokeWidth: 0, fill: 'black' },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
@@ -444,7 +461,7 @@ var input =
             offsetY: 100,
             shape: { type: 'Path', data: PushButtonOuterCircle },
             style: { strokeColor: 'black', strokeWidth: 2, fill: 'white' },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
@@ -455,7 +472,7 @@ var input =
             offsetY: 100,
             shape: { type: 'Path', data: PushButtonInnerCircle },
             style: { strokeColor: 'black', strokeWidth: 2 },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
@@ -463,7 +480,8 @@ var input =
             children: ['PBOuterRect', 'PBOuterCircle', 'PBInnerCircle'],
             offsetX: 340,
             offsetY: 100,
-            shape: { shape: 'Push Button' }
+            shape: { shape: 'Push Button' },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
@@ -474,7 +492,7 @@ var input =
             offsetY: 100,
             shape: { type: 'Path', data: ClockOuterRectangle },
             style: { strokeColor: 'black', strokeWidth: 2 },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
@@ -485,7 +503,7 @@ var input =
             offsetY: 100,
             shape: { type: 'Path', data: ClockInnerPart },
             style: { strokeColor: 'black', strokeWidth: 2, fill: 'white' },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
@@ -494,18 +512,21 @@ var input =
             offsetX: 440,
             offsetY: 100,
             shape: { shape: 'Clock' },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
             id: 'High Constant',
             shape: { shape: 'High Constant', type: 'Path', data: highconstantdata },
             style: { fill: '#000000', strokeWidth: 0 }, height: 76, width: 94,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
             id: 'Low Constant',
             shape: { shape: 'Low Constant', type: 'Path', data: lowconstantdata },
             style: { fill: '#000000', strokeWidth: 0 }, height: 75, width: 96,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
     ];
 
@@ -520,7 +541,7 @@ var output =
             offsetY: 100,
             shape: { type: 'Path', data: BulbCompletePath },
             style: { strokeColor: 'black', fill: 'black' },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
@@ -531,7 +552,7 @@ var output =
             offsetY: 110,
             shape: { type: 'Path', data: BulbBlackPart },
             style: { strokeColor: 'black', fill: 'black' },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
@@ -542,7 +563,7 @@ var output =
             offsetY: 95,
             shape: { type: 'Path', data: BulbInnerBluePart },
             style: { strokeColor: 'black', fill: 'white' },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
             visible: false,
         },
 
@@ -554,7 +575,7 @@ var output =
             offsetY: 87,
             shape: { type: 'Path', data: BulbOuterBluePart },
             style: { strokeColor: 'black', fill: 'white' },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
             visible: false,
         },
 
@@ -564,12 +585,14 @@ var output =
             offsetX: 540,
             offsetY: 100,
             shape: { shape: 'Light Bulb' },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
             id: '4-Bit Digit',
             shape: { type: 'Path', data: digitdata, shape: '4-Bit Digit' },
             style: { fill: '#000000', strokeWidth: 0 }, height: 72, width: 80,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
     ];
 
@@ -581,6 +604,7 @@ var other =
             style: { fill: '#000000', strokeWidth: 0 },
             height: 55,
             width: 65,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
@@ -589,6 +613,7 @@ var other =
             style: { fill: '#000000', strokeWidth: 0 },
             height: 55,
             width: 120,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
@@ -597,6 +622,7 @@ var other =
             style: { fill: '#000000', strokeWidth: 0 },
             height: 60,
             width: 93,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
@@ -605,6 +631,7 @@ var other =
             style: { fill: '#000000', strokeWidth: 0 },
             height: 60,
             width: 93,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
     ];
 
@@ -641,13 +668,14 @@ function createNode(id, offsetX, offsetY, height, width, pathData, ports, fill, 
     node.width = width;
     node.shape = { type: 'Path', data: pathData };
     node.ports = ports;
-    node.ports.forEach(element => {
-        element.height = 12;
-        element.width = 10;
-        element.shape = 'Circle';
-        element.visibility = ej.diagrams.PortVisibility.Visible;
-        element.constraints = ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw;
-    });
+    node.constraints = ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
+        node.ports.forEach(element => {
+            element.height = 12;
+            element.width = 10;
+            element.shape = 'Circle';
+            element.visibility = ej.diagrams.PortVisibility.Visible;
+            element.constraints = ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw;
+        });
     node.style = { fill: fill, strokeWidth: 0 };
     node.addInfo = { binarystate: binarystate, controltype: controltype };
     return node;
@@ -676,281 +704,287 @@ function createConnector(id, sourcePoint, targetPoint, sourceID, targetID, sourc
 
 var nodes =
     [
-        {
-            id: 'SwOffOuter',
-            height: 60,
-            width: 80,
-            offsetX: 140,
-            offsetY: 100,
-            shape: { type: 'Path', data: SwitchOffOuterRect },
-            style: { strokeColor: 'black', strokeWidth: 2 },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
-        },
+        // {
+        //     id: 'SwOffOuter',
+        //     height: 60,
+        //     width: 80,
+        //     offsetX: 140,
+        //     offsetY: 100,
+        //     shape: { type: 'Path', data: SwitchOffOuterRect },
+        //     style: { strokeColor: 'black', strokeWidth: 2 },
+        //     constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
+        // },
 
-        {
-            id: 'SwOffInner',
-            height: 50,
-            width: 40,
-            offsetX: 125,
-            offsetY: 100,
-            shape: { type: 'Path', data: SwitchOffInnerRect },
-            style: { strokeColor: 'black', strokeWidth: 2, },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
-        },
+        // {
+        //     id: 'SwOffInner',
+        //     height: 50,
+        //     width: 40,
+        //     offsetX: 125,
+        //     offsetY: 100,
+        //     shape: { type: 'Path', data: SwitchOffInnerRect },
+        //     style: { strokeColor: 'black', strokeWidth: 2, },
+        //     constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
+        // },
 
-        {
-            id: 'SwOff',
-            height: 40,
-            width: 30,
-            offsetX: 125,
-            offsetY: 100,
-            shape: { type: 'Path', data: SwitchoffButton },
-            style: { strokeColor: 'black', strokeWidth: 2 },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
-        },
+        // {
+        //     id: 'SwOff',
+        //     height: 40,
+        //     width: 30,
+        //     offsetX: 125,
+        //     offsetY: 100,
+        //     shape: { type: 'Path', data: SwitchoffButton },
+        //     style: { strokeColor: 'black', strokeWidth: 2 },
+        //     constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
+        // },
 
-        {
-            id: 'SwOn',
-            height: 40,
-            width: 30,
-            offsetX: 125,
-            offsetY: 100,
-            shape: { type: 'Path', data: SWitchOnButton },
-            style: { strokeColor: 'black', strokeWidth: 2 },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
-            visible: false,
-        },
+        // {
+        //     id: 'SwOn',
+        //     height: 40,
+        //     width: 30,
+        //     offsetX: 125,
+        //     offsetY: 100,
+        //     shape: { type: 'Path', data: SWitchOnButton },
+        //     style: { strokeColor: 'black', strokeWidth: 2 },
+        //     constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
+        //     visible: false,
+        // },
 
-        {
-            id: 'Switch1',
-            children: ['SwOffOuter', 'SwOffInner', 'SwOff', 'SwOn'],
-            offsetX: 140,
-            offsetY: 100,
-            ports: toggleswitchport,
-            addInfo: { binarystate: 0, controltype: 'inputcontrol' },
-            style: { fill: 'transparent', strokeWidth: 0 },
-        },
+        // {
+        //     id: 'Switch1',
+        //     children: ['SwOffOuter', 'SwOffInner', 'SwOff', 'SwOn'],
+        //     offsetX: 140,
+        //     offsetY: 100,
+        //     ports: toggleswitchport,
+        //     addInfo: { binarystate: 0, controltype: 'inputcontrol' },
+        //     style: { fill: 'transparent', strokeWidth: 0 },
+        //     constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
+        // },
 
-        {
-            id: 'PBOuterRect',
-            height: 60,
-            width: 80,
-            offsetX: 140,
-            offsetY: 100,
-            shape: { type: 'Path', data: PushButtonOuterRect },
-            style: { strokeColor: 'black', strokeWidth: 0, fill: 'black' },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
-        },
+        // {
+        //     id: 'PBOuterRect',
+        //     height: 60,
+        //     width: 80,
+        //     offsetX: 140,
+        //     offsetY: 100,
+        //     shape: { type: 'Path', data: PushButtonOuterRect },
+        //     style: { strokeColor: 'black', strokeWidth: 0, fill: 'black' },
+        //     constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
+        // },
 
-        {
-            id: 'PBOuterCircle',
-            height: 40,
-            width: 30,
-            offsetX: 125,
-            offsetY: 100,
-            shape: { type: 'Path', data: PushButtonOuterCircle },
-            style: { strokeColor: 'black', strokeWidth: 2, fill: 'white' },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
-        },
+        // {
+        //     id: 'PBOuterCircle',
+        //     height: 40,
+        //     width: 30,
+        //     offsetX: 125,
+        //     offsetY: 100,
+        //     shape: { type: 'Path', data: PushButtonOuterCircle },
+        //     style: { strokeColor: 'black', strokeWidth: 2, fill: 'white' },
+        //     constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
+        // },
 
-        {
-            id: 'PBInnerCircle',
-            height: 30,
-            width: 20,
-            offsetX: 125,
-            offsetY: 100,
-            shape: { type: 'Path', data: PushButtonInnerCircle },
-            style: { strokeColor: 'black', strokeWidth: 2 },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
-        },
+        // {
+        //     id: 'PBInnerCircle',
+        //     height: 30,
+        //     width: 20,
+        //     offsetX: 125,
+        //     offsetY: 100,
+        //     shape: { type: 'Path', data: PushButtonInnerCircle },
+        //     style: { strokeColor: 'black', strokeWidth: 2 },
+        //     constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
+        // },
 
-        {
-            id: 'PushButton1',
-            children: ['PBOuterRect', 'PBOuterCircle', 'PBInnerCircle'],
-            offsetX: 140,
-            offsetY: 270,
-            ports: pushbuttonport,
-            addInfo: { binarystate: 0, controltype: 'inputcontrol' },
-            style: { fill: 'transparent', strokeWidth: 0 },
-        },
+        // {
+        //     id: 'PushButton1',
+        //     children: ['PBOuterRect', 'PBOuterCircle', 'PBInnerCircle'],
+        //     offsetX: 140,
+        //     offsetY: 270,
+        //     ports: pushbuttonport,
+        //     addInfo: { binarystate: 0, controltype: 'inputcontrol' },
+        //     style: { fill: 'transparent', strokeWidth: 0 },
+        //     constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
+        // },
 
-        {
-            id: 'CLKOuterRect',
-            height: 60,
-            width: 80,
-            offsetX: 140,
-            offsetY: 100,
-            shape: { type: 'Path', data: ClockOuterRectangle },
-            style: { strokeColor: 'black', strokeWidth: 2 },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
-        },
+        // {
+        //     id: 'CLKOuterRect',
+        //     height: 60,
+        //     width: 80,
+        //     offsetX: 140,
+        //     offsetY: 100,
+        //     shape: { type: 'Path', data: ClockOuterRectangle },
+        //     style: { strokeColor: 'black', strokeWidth: 2 },
+        //     constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
+        // },
 
-        {
-            id: 'CLKInnerPart',
-            height: 30,
-            width: 30,
-            offsetX: 125,
-            offsetY: 100,
-            shape: { type: 'Path', data: ClockInnerPart },
-            style: { strokeColor: 'black', strokeWidth: 2, fill: 'white' },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
-        },
+        // {
+        //     id: 'CLKInnerPart',
+        //     height: 30,
+        //     width: 30,
+        //     offsetX: 125,
+        //     offsetY: 100,
+        //     shape: { type: 'Path', data: ClockInnerPart },
+        //     style: { strokeColor: 'black', strokeWidth: 2, fill: 'white' },
+        //     constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
+        // },
 
-        {
-            id: 'Clock',
-            children: ['CLKOuterRect', 'CLKInnerPart'],
-            offsetX: 140,
-            offsetY: 470,
-            ports: pushbuttonport,
-            addInfo: { binarystate: 0, controltype: 'inputcontrol' },
-            style: { fill: 'transparent', strokeWidth: 0 },
-        },
+        // {
+        //     id: 'Clock',
+        //     children: ['CLKOuterRect', 'CLKInnerPart'],
+        //     offsetX: 140,
+        //     offsetY: 470,
+        //     ports: pushbuttonport,
+        //     addInfo: { binarystate: 0, controltype: 'inputcontrol' },
+        //     style: { fill: 'transparent', strokeWidth: 0 },
+        //     constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
+        // },
 
-        {
-            id: 'SwOffOuter2',
-            height: 60,
-            width: 80,
-            offsetX: 140,
-            offsetY: 100,
-            shape: { type: 'Path', data: SwitchOffOuterRect },
-            style: { strokeColor: 'black', strokeWidth: 2 },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
-        },
+        // {
+        //     id: 'SwOffOuter2',
+        //     height: 60,
+        //     width: 80,
+        //     offsetX: 140,
+        //     offsetY: 100,
+        //     shape: { type: 'Path', data: SwitchOffOuterRect },
+        //     style: { strokeColor: 'black', strokeWidth: 2 },
+        //     constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
+        // },
 
-        {
-            id: 'SwOffInner2',
-            height: 50,
-            width: 40,
-            offsetX: 125,
-            offsetY: 100,
-            shape: { type: 'Path', data: SwitchOffInnerRect },
-            style: { strokeColor: 'black', strokeWidth: 2 },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
-        },
+        // {
+        //     id: 'SwOffInner2',
+        //     height: 50,
+        //     width: 40,
+        //     offsetX: 125,
+        //     offsetY: 100,
+        //     shape: { type: 'Path', data: SwitchOffInnerRect },
+        //     style: { strokeColor: 'black', strokeWidth: 2 },
+        //     constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
+        // },
 
-        {
-            id: 'SwOff2',
-            height: 40,
-            width: 30,
-            offsetX: 125,
-            offsetY: 100,
-            shape: { type: 'Path', data: SwitchoffButton },
-            style: { strokeColor: 'black', strokeWidth: 2 },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
-        },
+        // {
+        //     id: 'SwOff2',
+        //     height: 40,
+        //     width: 30,
+        //     offsetX: 125,
+        //     offsetY: 100,
+        //     shape: { type: 'Path', data: SwitchoffButton },
+        //     style: { strokeColor: 'black', strokeWidth: 2 },
+        //     constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
+        // },
 
-        {
-            id: 'SwOn2',
-            height: 40,
-            width: 30,
-            offsetX: 125,
-            offsetY: 100,
-            shape: { type: 'Path', data: SWitchOnButton },
-            style: { strokeColor: 'black', strokeWidth: 2 },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
-            visible: false,
-        },
+        // {
+        //     id: 'SwOn2',
+        //     height: 40,
+        //     width: 30,
+        //     offsetX: 125,
+        //     offsetY: 100,
+        //     shape: { type: 'Path', data: SWitchOnButton },
+        //     style: { strokeColor: 'black', strokeWidth: 2 },
+        //     constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
+        //     visible: false,
+        // },
 
-        {
-            id: 'Switch2',
-            children: ['SwOffOuter2', 'SwOffInner2', 'SwOff2', 'SwOn2'],
-            offsetX: 140,
-            offsetY: 630,
-            ports: toggleswitchport,
-            addInfo: { binarystate: 0, controltype: 'inputcontrol' },
-            style: { fill: 'transparent', strokeWidth: 0 },
-        },
+        // {
+        //     id: 'Switch2',
+        //     children: ['SwOffOuter2', 'SwOffInner2', 'SwOff2', 'SwOn2'],
+        //     offsetX: 140,
+        //     offsetY: 630,
+        //     ports: toggleswitchport,
+        //     addInfo: { binarystate: 0, controltype: 'inputcontrol' },
+        //     style: { fill: 'transparent', strokeWidth: 0 },
+        //     constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
+        // },
 
-        createNode('OR1', 350, 350, 40, 100, orData, orPort, '#000000', null, 'gate'),
-        createNode('And1', 350, 180, 40, 100, andData, andPort, '#000000', null, 'gate'),
-        createNode('And2', 350, 520, 40, 100, andData, andPort, '#000000', null, 'gate'),
-        createNode('And3', 550, 440, 40, 100, andData, andPort, '#000000', null, 'gate'),
-        createNode('OR2', 750, 280, 40, 100, orData, orPort, '#000000', null, 'gate'),
-        createNode('Not', 750, 520, 40, 100, notData, notPort, '#000000', null, 'gate'),
-        createNode('XOR', 950, 420, 40, 100, xorData, orPort, '#000000', null, 'gate'),
+        // createNode('OR1', 350, 350, 40, 100, orData, orPort, '#000000', null, 'gate'),
+        // createNode('AND1', 350, 180, 40, 100, andData, andPort, '#000000', null, 'gate'),
+        // createNode('AND2', 350, 520, 40, 100, andData, andPort, '#000000', null, 'gate'),
+        // createNode('AND3', 550, 440, 40, 100, andData, andPort, '#000000', null, 'gate'),
+        // createNode('OR2', 750, 280, 40, 100, orData, orPort, '#000000', null, 'gate'),
+        // createNode('Not', 750, 520, 40, 100, notData, notPort, '#000000', null, 'gate'),
+        // createNode('XOR', 950, 420, 40, 100, xorData, orPort, '#000000', null, 'gate'),
 
-        {
-            id: 'FullPath',
-            height: 60,
-            width: 40,
-            offsetX: 140,
-            offsetY: 100,
-            shape: { type: 'Path', data: BulbCompletePath },
-            style: { strokeColor: 'black', fill: 'black' },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
-        },
+        // {
+        //     id: 'FullPath',
+        //     height: 60,
+        //     width: 40,
+        //     offsetX: 140,
+        //     offsetY: 100,
+        //     shape: { type: 'Path', data: BulbCompletePath },
+        //     style: { strokeColor: 'black', fill: 'black' },
+        //     constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
+        // },
 
-        {
-            id: 'BlackPart',
-            height: 12,
-            width: 20,
-            offsetX: 140,
-            offsetY: 110,
-            shape: { type: 'Path', data: BulbBlackPart },
-            style: { strokeColor: 'black', fill: 'black' },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
-        },
+        // {
+        //     id: 'BlackPart',
+        //     height: 12,
+        //     width: 20,
+        //     offsetX: 140,
+        //     offsetY: 110,
+        //     shape: { type: 'Path', data: BulbBlackPart },
+        //     style: { strokeColor: 'black', fill: 'black' },
+        //     constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
+        // },
 
-        {
-            id: 'InnerBluePart',
-            height: 16,
-            width: 20,
-            offsetX: 140,
-            offsetY: 95,
-            shape: { type: 'Path', data: BulbInnerBluePart },
-            style: { strokeColor: 'black', fill: 'white' },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
-            visible: false,
-        },
+        // {
+        //     id: 'InnerBluePart',
+        //     height: 16,
+        //     width: 20,
+        //     offsetX: 140,
+        //     offsetY: 95,
+        //     shape: { type: 'Path', data: BulbInnerBluePart },
+        //     style: { strokeColor: 'black', fill: 'white' },
+        //     constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
+        //     visible: false,
+        // },
 
-        {
-            id: 'OuterBluePart',
-            height: 32,
-            width: 36,
-            offsetX: 140,
-            offsetY: 87,
-            shape: { type: 'Path', data: BulbOuterBluePart },
-            style: { strokeColor: 'black', fill: 'white' },
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select,
-            visible: false,
-        },
+        // {
+        //     id: 'OuterBluePart',
+        //     height: 32,
+        //     width: 36,
+        //     offsetX: 140,
+        //     offsetY: 87,
+        //     shape: { type: 'Path', data: BulbOuterBluePart },
+        //     style: { strokeColor: 'black', fill: 'white' },
+        //     constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
+        //     visible: false,
+        // },
 
-        {
-            id: 'Bulb',
-            children: ['FullPath', 'BlackPart', 'InnerBluePart', 'OuterBluePart'],
-            offsetX: 1050,
-            offsetY: 170,
-            height: 60,
-            width: 40,
-            ports: bulbport,
-            addInfo: { binarystate: null, controltype: 'outputcontrol' },
-        },
+        // {
+        //     id: 'Bulb',
+        //     children: ['FullPath', 'BlackPart', 'InnerBluePart', 'OuterBluePart'],
+        //     offsetX: 1050,
+        //     offsetY: 170,
+        //     height: 60,
+        //     width: 40,
+        //     ports: bulbport,
+        //     addInfo: { binarystate: null, controltype: 'outputcontrol' },
+        //     constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
+        // },
     ];
 
 var connectors =
     [
-        createConnector('con1', null, null, 'And1', 'OR2', 'And_port4', 'Or_port1', 0),
-        createConnector('con2', null, null, 'OR1', 'And3', 'Or_port4', 'And_port1', 0),
-        createConnector('con3', null, null, 'And2', 'And3', 'And_port4', 'And_port3', 0),
-        createConnector('con4', null, null, 'And3', 'OR2', 'And_port4', 'Or_port3', 0),
-        createConnector('con5', null, null, 'OR2', 'XOR', 'Or_port4', 'Or_port1', 0),
-        createConnector('con6', null, null, 'Not', 'XOR', 'Not_port2', 'Or_port3', 0),
-        createConnector('con7', null, null, 'Switch1', 'And1', 'toggleport1', 'And_port1', 0),
-        createConnector('con8', null, null, 'PushButton1', 'And1', 'pushbuttonport1', 'And_port3', 0),
-        createConnector('con9', null, null, 'PushButton1', 'OR1', 'pushbuttonport1', 'Or_port1', 0),
-        createConnector('con10', null, null, 'PushButton1', 'And2', 'pushbuttonport1', 'And_port1', 0),
-        createConnector('con11', null, null, 'Clock', 'OR1', 'pushbuttonport1', 'Or_port3', 0),
-        createConnector('con12', null, null, 'Clock', 'And2', 'pushbuttonport1', 'And_port3', 0),
-        createConnector('con13', null, null, 'Switch2', 'Not', 'toggleport1', 'Not_port1', 0),
-        createConnector('con14', null, null, 'XOR', 'Bulb', 'Or_port4', 'Bulb_port', 0),
+        // createConnector('con1', null, null, 'AND1', 'OR2', 'And_port4', 'Or_port1', 0),
+        // createConnector('con2', null, null, 'OR1', 'AND3', 'Or_port4', 'And_port1', 0),
+        // createConnector('con3', null, null, 'AND2', 'AND3', 'And_port4', 'And_port3', 0),
+        // createConnector('con4', null, null, 'AND3', 'OR2', 'And_port4', 'Or_port3', 0),
+        // createConnector('con5', null, null, 'OR2', 'XOR', 'Or_port4', 'Or_port1', 0),
+        // createConnector('con6', null, null, 'Not', 'XOR', 'Not_port2', 'Or_port3', 0),
+        // createConnector('con7', null, null, 'Switch1', 'AND1', 'toggleport1', 'And_port1', 0),
+        // createConnector('con8', null, null, 'PushButton1', 'AND1', 'pushbuttonport1', 'And_port3', 0),
+        // createConnector('con9', null, null, 'PushButton1', 'OR1', 'pushbuttonport1', 'Or_port1', 0),
+        // createConnector('con10', null, null, 'PushButton1', 'AND2', 'pushbuttonport1', 'And_port1', 0),
+        // createConnector('con11', null, null, 'Clock', 'OR1', 'pushbuttonport1', 'Or_port3', 0),
+        // createConnector('con12', null, null, 'Clock', 'AND2', 'pushbuttonport1', 'And_port3', 0),
+        // createConnector('con13', null, null, 'Switch2', 'Not', 'toggleport1', 'Not_port1', 0),
+        // createConnector('con14', null, null, 'XOR', 'Bulb', 'Or_port4', 'Bulb_port', 0),
     ];
 
 var diagram = new ej.diagrams.Diagram({
     width: '100%', height: '100%',
     nodes: nodes, connectors: connectors, drawingObject: { type: 'Bezier' },
-    created: created, click: click, mouseLeave: mouseLeave, drop: drop, getConnectorDefaults: getConnectorDefaults,
+    created: created, click: click, drop: drop, getConnectorDefaults: getConnectorDefaults, //mouseLeave: mouseLeave,
     elementDraw: elementDraw, selectedItems: { constraints: ej.diagrams.SelectorConstraints.All & ~ej.diagrams.SelectorConstraints.ResizeAll & ~ej.diagrams.SelectorConstraints.Rotate },
     pageSettings: { showPageBreaks: false },
+    collectionChange: collectionChange,
     pageSettings: {
         background: { color: '#FFFFFF' }, width: 600, height: 1460, margin: { left: 5, top: 5 },
         orientation: 'Landscape', showPageBreaks: false,
@@ -958,120 +992,45 @@ var diagram = new ej.diagrams.Diagram({
     rulerSettings: {
         showRulers: true, dynamicGrid: true, horizontalRuler: { interval: 10, segmentWidth: 100, thickness: 25, },
         verticalRuler: { interval: 10, segmentWidth: 100, thickness: 25, },
-    },   
-    
+    },
     selectionChange: function (args) { DiagramClientSideEvents.prototype.selectionChange(args) },
     historyChange: function (args) { DiagramClientSideEvents.prototype.historyChange(args) },
-    commandManager: {
-        commands: [{
-            name: 'New',
-            canExecute: function () {
-                return true
-            },
-            execute: function () {
-                diagram.clear();
-            },
-            gesture: {
-                key: ej.diagrams.Keys.N,
-                keyModifiers: ej.diagrams.KeyModifiers.Shift
-            }
-        },
-        {
-            name: 'Save',
-            canExecute: function () {
-                return true
-            },
-            execute: function () {
-                UtilityMethods.prototype.download(diagram.saveDiagram());
-            },
-            gesture: {
-                key: ej.diagrams.Keys.S,
-                keyModifiers: ej.diagrams.KeyModifiers.Control
-            }
-        },
-        {
-            name: 'Open',
-            canExecute: function () {
-                return true
-            },
-            execute: function () {
-                document.getElementsByClassName('e-file-select-wrap')[0].querySelector('button').click();
-            },
-            gesture: {
-                key: ej.diagrams.Keys.O,
-                keyModifiers: ej.diagrams.KeyModifiers.Control
-            }
-        },
-        {
-            name: 'Rotate Right 90',
-            canExecute: function () {
-                if (diagram.selectedItems.nodes.length > 0 || diagram.selectedItems.connectors.length > 0) {
-                    return true
-                }
-                return false
-            },
-            execute: function () {
-                diagram.rotate(diagram.selectedItems, 90);
-            },
-            gesture: {
-                key: ej.diagrams.Keys.R,
-                keyModifiers: ej.diagrams.KeyModifiers.Control
-            }
-        },
-        {
-            name: 'Rotate Left 90',
-            canExecute: function () {
-                if (diagram.selectedItems.nodes.length > 0 || diagram.selectedItems.connectors.length > 0) {
-                    return true
-                }
-                return false
-            },
-            execute: function () {
-                diagram.rotate(diagram.selectedItems, -90);
-            },
-            gesture: {
-                key: ej.diagrams.Keys.L,
-                keyModifiers: ej.diagrams.KeyModifiers.Control
-            }
-        },
-        {
-            name: 'Flip Horizontal',
-            canExecute: function () {
-                if (diagram.selectedItems.nodes.length > 0 || diagram.selectedItems.connectors.length > 0) {
-                    return true
-                }
-                return false
-            },
-            execute: function () {
-                flipObjects('Flip Horizontal');
-            },
-            gesture: {
-                key: ej.diagrams.Keys.H,
-                keyModifiers: ej.diagrams.KeyModifiers.Control
-            }
-        },
-        {
-            name: 'Flip Vertical',
-            canExecute: function () {
-                if (diagram.selectedItems.nodes.length > 0 || diagram.selectedItems.connectors.length > 0) {
-                    return true
-                }
-                return false
-            },
-            execute: function () {
-                flipObjects('Flip Vertical');
-            },
-            gesture: {
-                key: ej.diagrams.Keys.J,
-                keyModifiers: ej.diagrams.KeyModifiers.Control
-            }
-        },
-        ]
-    },
-
 });
 
-window.setInterval(changeState, 3000);
+function collectionChange(args) {
+    RunSimulation();
+}
+
+document.getElementById('diagram').onmouseup = function(args)
+{
+    if(args.target.id.indexOf('PB') != -1 || args.target.id.indexOf('Push') != -1 )
+    {
+        var node = diagram.getObject(args.target.id);
+        var child1 = diagram.getObject(node.children[1])
+        child1.style.fill = "white";
+        if (node.addInfo != undefined) {
+            node.addInfo.binarystate = 0;            
+            setBinaryStateFromInput(args.element);
+            RunSimulation();
+        }
+    }
+}
+
+document.getElementById('diagram').onmousedown = function(args)
+{
+    if(args.target.id.indexOf('PB') != -1 || args.target.id.indexOf('Push') != -1 )
+    {
+        var targetNode = diagram.findObjectsUnderMouse({x: args.layerX, y: args.layerY}, args.target.id);      
+        
+        var child1 = diagram.getObject(targetNode.children[1])
+        child1.style.fill = "#05DAC5";
+        args.addInfo.binarystate = 1;            
+        setBinaryStateFromInput(args.element);
+        RunSimulation();
+    }
+}
+
+//window.setInterval(changeState, 3000);
 
 function elementDraw(args) {
     if (args.state == "Completed" && args.objectType == "Connector") {
@@ -1087,13 +1046,14 @@ function elementDraw(args) {
             RunSimulation();
         }
         else {
-            diagram.cut();
+            diagram.remove();
         }
     }
 }
 
 function getConnectorDefaults(connector) {
     connector.type = 'Bezier';
+    connector.constraints = ej.diagrams.ConnectorConstraints.Default &~ ej.diagrams.ConnectorConstraints.Drag;
 };
 
 function drop(args) {
@@ -1105,7 +1065,7 @@ function drop(args) {
         args.element.ports.forEach(element => {
             element.shape = 'Circle';
             element.visibility = ej.diagrams.PortVisibility.Visible;
-            element.constraints = ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw;
+            element.constraints = ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw;
         });
     }
     else if (args.element.id.indexOf("Clock") != -1) {
@@ -1116,7 +1076,7 @@ function drop(args) {
         args.element.ports.forEach(element => {
             element.shape = 'Circle';
             element.visibility = ej.diagrams.PortVisibility.Visible;
-            element.constraints = ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw;
+            element.constraints = ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw;
         });
     }
     else if (args.element.id.indexOf("Low") != -1) {
@@ -1127,7 +1087,7 @@ function drop(args) {
         args.element.ports.forEach(element => {
             element.shape = 'Circle';
             element.visibility = ej.diagrams.PortVisibility.Visible;
-            element.constraints = ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw;
+            element.constraints = ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw;
         });
     }
     else if (args.element.id.indexOf("High") != -1) {
@@ -1138,7 +1098,7 @@ function drop(args) {
         args.element.ports.forEach(element => {
             element.shape = 'Circle';
             element.visibility = ej.diagrams.PortVisibility.Visible;
-            element.constraints = ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw;
+            element.constraints = ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw;
         });
     }
     else if (args.element.id.indexOf("Push") != -1) {
@@ -1149,7 +1109,7 @@ function drop(args) {
         args.element.ports.forEach(element => {
             element.shape = 'Circle';
             element.visibility = ej.diagrams.PortVisibility.Visible;
-            element.constraints = ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw;
+            element.constraints = ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw;
         });
     }
     else if (args.element.id.indexOf("Gate") != -1) {
@@ -1168,7 +1128,15 @@ function drop(args) {
         args.element.ports.forEach(element => {
             element.shape = 'Circle';
             element.visibility = ej.diagrams.PortVisibility.Visible;
-            element.constraints = ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw;
+            if(element.id.indexOf('1') != -1 || element.id.indexOf('3') != -1)
+            {
+                element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect) | ej.diagrams.PortConstraints.Draw;
+            }
+            else
+            {
+                element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect) | ej.diagrams.PortConstraints.Draw;
+            }
+
         });
     }
     else if (args.element.id.indexOf("Flop") != -1) {
@@ -1202,7 +1170,14 @@ function drop(args) {
         args.element.ports.forEach(element => {
             element.shape = 'Circle';
             element.visibility = ej.diagrams.PortVisibility.Visible;
-            element.constraints = ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw;
+            if(element.id.indexOf('1') != -1 || element.id.indexOf('3') != -1)
+            {
+                element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect) | ej.diagrams.PortConstraints.Draw;
+            }
+            else
+            {
+                element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect) | ej.diagrams.PortConstraints.Draw;
+            }
         });
     }
     else if (args.element.id.indexOf("Pull") != -1) {
@@ -1213,7 +1188,14 @@ function drop(args) {
         args.element.ports.forEach(element => {
             element.shape = 'Circle';
             element.visibility = ej.diagrams.PortVisibility.Visible;
-            element.constraints = ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw;
+            if(element.id.indexOf('1') != -1 || element.id.indexOf('3') != -1)
+            {
+                element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect) | ej.diagrams.PortConstraints.Draw;
+            }
+            else
+            {
+                element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect) | ej.diagrams.PortConstraints.Draw;
+            }
         });
     }
     else if (args.element.id.indexOf("Bulb") != -1) {
@@ -1224,8 +1206,8 @@ function drop(args) {
         args.element.ports.forEach(element => {
             element.shape = 'Circle';
             element.visibility = ej.diagrams.PortVisibility.Visible;
-            element.constraints = ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw;
-        });
+            element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect) | ej.diagrams.PortConstraints.Draw;
+        });        
     }
     else if (args.element.id.indexOf("Digit") != -1) {
         args.element.addInfo = { binarystate1: 0, binarystate2: 0, binarystate3: 0, binarystate4: 0, controltype: 'outputcontrol' };
@@ -1235,9 +1217,10 @@ function drop(args) {
         args.element.ports.forEach(element => {
             element.shape = 'Circle';
             element.visibility = ej.diagrams.PortVisibility.Visible;
-            element.constraints = ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw;
+            element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect) | ej.diagrams.PortConstraints.Draw;
         });
     }
+    diagram.dataBind();
 }
 
 function changeState() {
@@ -1248,14 +1231,12 @@ function changeState() {
                 element.addInfo.binarystate = 1;
                 var child = diagram.getObject(element.children[1]);
                 child.style.fill = "#05DAC5";
-
                 setBinaryStateFromInput(element);
             }
             else {
                 element.addInfo.binarystate = 0;
                 var child = diagram.getObject(element.children[1]);
                 child.style.fill = "white";
-
                 setBinaryStateFromInput(element);
             }
         }
@@ -1327,6 +1308,12 @@ function OutputControl(element) {
                 child1.visible = false;
                 child2.visible = false;
             }
+        }
+        else {
+            var child1 = diagram.getObject(element.children[2]);
+            var child2 = diagram.getObject(element.children[3]);
+            child1.visible = false;
+            child2.visible = false;
         }
     }
 
@@ -2222,17 +2209,21 @@ function setBinaryStateFromInput(element) {
         if (element.addInfo.binarystate == 0) {
             element.outEdges.forEach(cons => {
                 var con = diagram.getObject(cons);
-                con.addInfo = { binarystate: 0 };
-                con.style.strokeColor = "black";
-                con.style.strokeWidth = 2;
+                if (con != undefined) {
+                    con.addInfo = { binarystate: 0 };
+                    con.style.strokeColor = "black";
+                    con.style.strokeWidth = 2;
+                }
             });
         }
         else {
             element.outEdges.forEach(cons => {
                 var con = diagram.getObject(cons);
-                con.addInfo = { binarystate: 1 };
-                con.style.strokeColor = "#05DAC5";
-                con.style.strokeWidth = 2;
+                if (con != undefined) {
+                    con.addInfo = { binarystate: 1 };
+                    con.style.strokeColor = "#05DAC5";
+                    con.style.strokeWidth = 2;
+                }
             });
         }
     }
@@ -2262,17 +2253,31 @@ function OnInputChanged(args) {
             Child1.style.fill = "#05DAC5";
         }
     }
-    else if (args.id.indexOf("Push") != -1) {
-        var child1 = diagram.getObject(args.children[1]);
-        child1.style.fill = "#05DAC5";
-        args.addInfo.binarystate = 1;
-    }
+    // else if (args.id.indexOf("Push") != -1) {
+    //     var child1 = diagram.getObject(args.children[1]);
+    //     child1.style.fill = "#05DAC5";
+    //     args.addInfo.binarystate = 1;
+    // }
 
     RunSimulation();
 }
 
 
 function RunSimulation() {
+
+    var needToDeleteConnector = [];
+
+    diagram.connectors.forEach(element => {
+        if(element.sourcePortID == "" || element.sourcePortID == undefined 
+        ||element.targetPortID == "" || element.targetPortID == undefined){
+            needToDeleteConnector.push(element);
+        }
+    });
+
+    needToDeleteConnector.forEach(element => {
+        diagram.remove();
+    });
+
     var regulatednodes = [];
     for (let i = 0; i < diagram.nodes.length; i++) {
         var element = diagram.nodes[i];
@@ -2332,14 +2337,8 @@ function RunSimulation() {
             OutputControl(element);
         }
     }
-}
 
-
-
-window.onload = function () {
-        
-    document.onmouseover = menumouseover.bind(this);
-    zoomCurrentValue = document.getElementById("btnZoomIncrement").ej2_instances[0];
+    diagram.dataBind();
 }
 
 var ExportSettings = (function () {
@@ -2536,6 +2535,8 @@ var btnSelectMenu = new ej.splitbuttons.DropDownButton({
 });
 btnSelectMenu.appendTo('#btnSelectMenu');
 
+
+
 var btnViewMenu = new ej.splitbuttons.DropDownButton({
     cssClass: 'db-dropdown-menu',
     items: DropDownDataSources.prototype.getViewMenuItems(),
@@ -2546,72 +2547,6 @@ var btnViewMenu = new ej.splitbuttons.DropDownButton({
     beforeClose: arrangeMenuBeforeClose
 });
 btnViewMenu.appendTo('#btnViewMenu');
-
-var editContextMenu = new ej.navigations.ContextMenu({
-    animationSettings: { effect: 'None' },
-    items: DropDownDataSources.prototype.getEditMenuItems(),
-    onOpen: editContextMenuOpen,
-    cssClass: "EditMenu",
-    beforeItemRender: beforeItemRender,
-    select: function (args) { UtilityMethods.prototype.menuClick(args) },
-    beforeClose: arrangeMenuBeforeClose
-})
-editContextMenu.appendTo('#editContextMenu');
-
-var btnEditMenu = new ej.splitbuttons.DropDownButton({
-    cssClass: 'db-dropdown-menu',
-    target: '.e-contextmenu-wrapper.editMenu',
-    content: 'Edit',
-    select: function (args) { UtilityMethods.prototype.menuClick(args) },
-    beforeItemRender: beforeItemRender,
-    beforeOpen: arrangeMenuBeforeOpen,
-    beforeClose: arrangeMenuBeforeClose
-});
-btnEditMenu.appendTo('#btnEditMenu');
-
-var designContextMenu = new ej.navigations.ContextMenu({
-    animationSettings: { effect: 'None' },
-    items: DropDownDataSources.prototype.getDesignMenuItems(),
-    onOpen: designContextMenuOpen,
-    cssClass: "DesignMenu",
-    beforeItemRender: beforeItemRender,
-    select: function (args) { UtilityMethods.prototype.menuClick(args) },
-    beforeClose: arrangeMenuBeforeClose
-})
-designContextMenu.appendTo('#designContextMenu');
-
-var btnDesignMenu = new ej.splitbuttons.DropDownButton({
-    cssClass: 'db-dropdown-menu',
-    target: '.e-contextmenu-wrapper.designMenu',
-    content: 'Design',
-    select: function (args) { UtilityMethods.prototype.menuClick(args) },
-    beforeItemRender: beforeItemRender,
-    beforeOpen: arrangeMenuBeforeOpen,
-    beforeClose: arrangeMenuBeforeClose
-});
-btnDesignMenu.appendTo('#btnDesignMenu');
-
-var toolsContextMenu = new ej.navigations.ContextMenu({
-    animationSettings: { effect: 'None' },
-    items: DropDownDataSources.prototype.getToolsMenuItems(),
-    onOpen: toolsContextMenuOpen,
-    cssClass: "ToolsMenu",
-    beforeItemRender: beforeItemRender,
-    select: function (args) { UtilityMethods.prototype.menuClick(args) },
-    beforeClose: arrangeMenuBeforeClose
-});
-toolsContextMenu.appendTo('#toolsContextMenu');
-
-var btnToolsMenu = new ej.splitbuttons.DropDownButton({
-    cssClass: 'db-dropdown-menu',
-    target: '.e-contextmenu-wrapper.toolsMenu',
-    content: 'Tools',
-    select: function (args) { UtilityMethods.prototype.menuClick(args) },
-    beforeItemRender: beforeItemRender,
-    beforeOpen: arrangeMenuBeforeOpen,
-    beforeClose: arrangeMenuBeforeClose
-});
-btnToolsMenu.appendTo('#btnToolsMenu');
 
 
 function toolsContextMenuOpen(args) {
@@ -2637,10 +2572,10 @@ function editContextMenuOpen(args) {
 }
 
 function arrangeMenuBeforeOpen(args) {
-
     for (var i = 0; i < args.element.children.length; i++) {
         args.element.children[i].style.display = 'block';
     }
+    //(args.element.children[0]).style.display = 'block';
     if (args.event && ej.base.closest(args.event.target, '.e-dropdown-btn') !== null) {
         args.cancel = true;
     }
@@ -2781,7 +2716,7 @@ function menumouseover(args) {
         }
         var button1 = target.ej2_instances[0];
         this.buttonInstance = button1;
-        if (button1.getPopUpElement().classList.contains('e-popup-close')) {              
+        if (button1.getPopUpElement().classList.contains('e-popup-close')) {
             button1.toggle();
             if (button1.element.id === 'btnEditMenu') {
                 enableEditMenuItems(diagram);
@@ -2799,7 +2734,6 @@ function menumouseover(args) {
         }
     }
 };
-
 
 function enableEditMenuItems(diagram) {
     var contextInstance = document.getElementById('editContextMenu');
@@ -2926,13 +2860,7 @@ uploadObj.appendTo('#fileupload');
 
 
 toolbarObj.appendTo('#toolbarEditor');
-var btnHideMenubar = new ej.buttons.Button({ iconCss: 'sf-icon-chevron-up' });
 conTypeBtn.appendTo('#conTypeBtn');
-btnHideMenubar.appendTo('#btnHideMenubar');
-hidePropertyBtn = new ej.buttons.Button({
-    iconCss: 'sf-icon-properties', isPrimary: true
-});
-hidePropertyBtn.appendTo('#hideProperty');
 
 
 function onUploadSuccess(args) {
@@ -2947,25 +2875,6 @@ function loadDiagram(event) {
     diagram.loadDiagram(event.target.result);
 }
 
-function lockObject(args) {
-    for (var i = 0; i < diagram.selectedItems.nodes.length; i++) {
-        var node = diagram.selectedItems.nodes[i];
-        if (node.constraints & ej.diagrams.NodeConstraints.Drag) {
-            node.constraints = ej.diagrams.NodeConstraints.PointerEvents | ej.diagrams.NodeConstraints.Select;
-        } else {
-            node.constraints = ej.diagrams.NodeConstraints.Default;
-        }
-    }
-    for (var j = 0; j < diagram.selectedItems.connectors.length; j++) {
-        var connector = diagram.selectedItems.connectors[j];
-        if (connector.constraints & ej.diagrams.ConnectorConstraints.Drag) {
-            connector.constraints = ej.diagrams.ConnectorConstraints.PointerEvents | ej.diagrams.ConnectorConstraints.Select;
-        } else {
-            connector.constraints = ej.diagrams.ConnectorConstraints.Default;
-        }
-    }
-    diagram.dataBind();
-}
 
 function zoomChange(args) {
     var zoomCurrentValue = document.getElementById("btnZoomIncrement").ej2_instances[0];
@@ -3016,14 +2925,84 @@ function zoomChange(args) {
     }
 }
 
+
 var PaperSize = (function () {
     function PaperSize() {
     }
     return PaperSize;
 }());
+var editContextMenu = new ej.navigations.ContextMenu({
+    animationSettings: { effect: 'None' },
+    items: DropDownDataSources.prototype.getEditMenuItems(),
+    onOpen: editContextMenuOpen,
+    cssClass: "EditMenu",
+    beforeItemRender: beforeItemRender,
+    select: function (args) { UtilityMethods.prototype.menuClick(args) },
+    beforeClose: arrangeMenuBeforeClose
+})
+editContextMenu.appendTo('#editContextMenu');
+
+var designContextMenu = new ej.navigations.ContextMenu({
+    animationSettings: { effect: 'None' },
+    items: DropDownDataSources.prototype.getDesignMenuItems(),
+    onOpen: designContextMenuOpen,
+    cssClass: "DesignMenu",
+    beforeItemRender: beforeItemRender,
+    select: function (args) { UtilityMethods.prototype.menuClick(args) },
+    beforeClose: arrangeMenuBeforeClose
+})
+designContextMenu.appendTo('#designContextMenu');
+
+var toolsContextMenu = new ej.navigations.ContextMenu({
+    animationSettings: { effect: 'None' },
+    items: DropDownDataSources.prototype.getToolsMenuItems(),
+    onOpen: toolsContextMenuOpen,
+    cssClass: "ToolsMenu",
+    beforeItemRender: beforeItemRender,
+    select: function (args) { UtilityMethods.prototype.menuClick(args) },
+    beforeClose: arrangeMenuBeforeClose
+});
+toolsContextMenu.appendTo('#toolsContextMenu');
+
+var btnDesignMenu = new ej.splitbuttons.DropDownButton({
+    cssClass: 'db-dropdown-menu',
+    target: '.e-contextmenu-wrapper.designMenu',
+    content: 'Design',
+    select: function (args) { UtilityMethods.prototype.menuClick(args) },
+    beforeItemRender: beforeItemRender,
+    beforeOpen: arrangeMenuBeforeOpen,
+    beforeClose: arrangeMenuBeforeClose
+});
+btnDesignMenu.appendTo('#btnDesignMenu');
+var btnToolsMenu = new ej.splitbuttons.DropDownButton({
+    cssClass: 'db-dropdown-menu',
+    target: '.e-contextmenu-wrapper.toolsMenu',
+    content: 'Tools',
+    select: function (args) { UtilityMethods.prototype.menuClick(args) },
+    beforeItemRender: beforeItemRender,
+    beforeOpen: arrangeMenuBeforeOpen,
+    beforeClose: arrangeMenuBeforeClose
+});
+btnToolsMenu.appendTo('#btnToolsMenu');
+
+var btnEditMenu = new ej.splitbuttons.DropDownButton({
+    cssClass: 'db-dropdown-menu',
+    target: '.e-contextmenu-wrapper.editMenu',
+    content: 'Edit',
+    select: function (args) { UtilityMethods.prototype.menuClick(args) },
+    beforeItemRender: beforeItemRender,
+    beforeOpen: arrangeMenuBeforeOpen,
+    beforeClose: arrangeMenuBeforeClose
+});
+btnEditMenu.appendTo('#btnEditMenu');
+
 
 var btnZoomIncrement = new ej.splitbuttons.DropDownButton({ items: zoomMenuItems, content: Math.round(diagram.scrollSettings.currentZoom * 100) + ' %', select: zoomChange });
 btnZoomIncrement.appendTo('#btnZoomIncrement');
+
+
+// Property panel
+
 
 var printDialog = new ej.popups.Dialog({
     width: '335px',

@@ -10,8 +10,8 @@ var DiagramClientSideEvents = (function () {
                 selectedItems = selectedItems.concat(diagram.selectedItems.connectors);
                 enableToolbarItems(selectedItems);
                 var nodeContainer = document.getElementById('nodePropertyContainer');
-                nodeContainer.classList.remove('multiple');
-                nodeContainer.classList.remove('connector');
+                //nodeContainer.classList.remove('multiple');
+                //nodeContainer.classList.remove('connector');
                 if(selectedItems.length>0)
                 {
                     // toolbarObj.hideItem(18,false);
@@ -59,16 +59,17 @@ var DiagramClientSideEvents = (function () {
                     //toolbarObj.hideItem(17,true);
                     // toolbarObj.items[23].template = '<div style="margin-left:345px;"></div>';
                 }
-                if(args.newValue.length>0 && args.newValue[0] instanceof ej.diagrams.Node){
-                    diagram.selectedItems = { constraints: ej.diagrams.SelectorConstraints.All|ej.diagrams.SelectorConstraints.UserHandle, userHandles: handles };
+
+                if(args.newValue.length>0 && args.newValue[0] instanceof ej.diagrams.Connector){
+                    diagram.selectedItems = { constraints: ej.diagrams.SelectorConstraints.All };
                     // UtilityMethods.prototype.onClickDisable(false);
                     // enable();
-                    if(diagram.selectedItems.nodes.length>0){
-                        drawingNode = diagram.selectedItems.nodes[diagram.selectedItems.nodes.length-1];
-                    }
+                    // if(diagram.selectedItems.nodes.length>0){
+                    //     drawingNode = diagram.selectedItems.nodes[diagram.selectedItems.nodes.length-1];
+                    //}
                 }
                 else{
-                diagram.selectedItems = { constraints: ej.diagrams.SelectorConstraints.All&~ej.diagrams.SelectorConstraints.UserHandle };
+                diagram.selectedItems = { constraints: ej.diagrams.SelectorConstraints.All & ~ej.diagrams.SelectorConstraints.Rotate & ~ej.diagrams.SelectorConstraints.ResizeAll };
                 // UtilityMethods.prototype.onClickDisable(true);
                 // disable();
                 }
@@ -562,93 +563,94 @@ var DiagramClientSideEvents = (function () {
     }
     DiagramClientSideEvents.prototype.objectTypeChange = function(objectType)
     {
-        document.getElementById('diagramPropertyContainer').style.display = 'none';
-        document.getElementById('nodePropertyContainer').style.display = 'none';
-        document.getElementById('textPropertyContainer').style.display = 'none';
-        document.getElementById('connectorPropertyContainer').style.display = 'none';
-        switch (objectType) {
-            case 'diagram':
-                document.getElementById('diagramPropertyContainer').style.display = '';
-                break;
-            case 'node':
-                document.getElementById('nodePropertyContainer').style.display = '';
-                break;
-            case 'connector':
-                document.getElementById('connectorPropertyContainer').style.display = '';
-                break;
-        }
+        //document.getElementById('diagramPropertyContainer').style.display = 'none';
+        //document.getElementById('nodePropertyContainer').style.display = 'none';
+        //document.getElementById('textPropertyContainer').style.display = 'none';
+        //document.getElementById('connectorPropertyContainer').style.display = 'none';
+        // switch (objectType) {
+        //     case 'diagram':
+        //         document.getElementById('diagramPropertyContainer').style.display = '';
+        //         break;
+        //     case 'node':
+        //         document.getElementById('nodePropertyContainer').style.display = '';
+        //         break;
+        //     case 'connector':
+        //         document.getElementById('connectorPropertyContainer').style.display = '';
+        //         break;
+        // }
     }
+    
     DiagramClientSideEvents.prototype.bindNodeProperties = function(node)
     {
-        nodeProperties.offsetX.value = node.offsetX;
-        nodeProperties.offsetY.value = node.offsetY;
-        nodeProperties.width.value = node.width;
-        nodeProperties.height.value = node.height;
-        nodeProperties.rotateAngle.value = node.rotateAngle;
-        nodeProperties.rotateAngle.value = node.rotateAngle;
-        nodeProperties.fillColor.value = UtilityMethods.prototype.getHexColor(node.style.fill);
-        nodeProperties.strokeColor.value = UtilityMethods.prototype.getHexColor(node.style.strokeColor);
-        nodeProperties.strokeWidth.value = node.style.strokeWidth;
-        nodeProperties.strokeStyle.value = node.style.strokeDashArray ? node.style.strokeDashArray : 'None';
-        nodeProperties.opacity.value = node.style.opacity * 100;
-        nodeProperties.aspectRatio.cssClass = node.constraints & ej.diagrams.NodeConstraints.AspectRatio ? document.getElementById('aspectRatioBtn').classList.add('e-active') : document.getElementById('aspectRatioBtn').classList.remove('e-active');
-        node.constraints & ej.diagrams.NodeConstraints.AspectRatio ? aspectRatioBtn.iconCss = 'sf-icon-lock': aspectRatioBtn.iconCss = 'sf-icon-unlock';
-        nodeProperties.gradient.value = node.style.gradient.type !== 'None' ? 'Gradient' : 'Solid';
-         var gradientElement = document.getElementById('gradientStyle');
-             if (nodeProperties.gradient.value === 'Gradient') {
-                 gradientElement.className = 'row db-prop-row db-gradient-style-show';
-                 nodeProperties.gradientColor.value = node.style.gradient.stops[1].color;
-                 var gradient = node.style.gradient;
-                 if (gradient.x1) {
-                     nodeProperties.gradientDirection.value = 'North';
-                 }
-                 else if (gradient.x2) {
-                     nodeProperties.gradientDirection.value = 'East';
-                 }
-                 else if (gradient.y1) {
-                     nodeProperties.gradientDirection.value = 'West';
-                 }
-                 else if (gradient.y2) {
-                     nodeProperties.gradientDirection.value = 'South';
-                 }
-             }
-             else {
-                 gradientElement.className = 'row db-prop-row db-gradient-style-hide';
-                 nodeProperties.gradientColor.value = '#ffffff';
-                 nodeProperties.gradientDirection.value = 'South';
-             }     
+        // nodeProperties.offsetX.value = node.offsetX;
+        // nodeProperties.offsetY.value = node.offsetY;
+        // nodeProperties.width.value = node.width;
+        // nodeProperties.height.value = node.height;
+        // nodeProperties.rotateAngle.value = node.rotateAngle;
+        // nodeProperties.rotateAngle.value = node.rotateAngle;
+        // nodeProperties.fillColor.value = UtilityMethods.prototype.getHexColor(node.style.fill);
+        // nodeProperties.strokeColor.value = UtilityMethods.prototype.getHexColor(node.style.strokeColor);
+        // nodeProperties.strokeWidth.value = node.style.strokeWidth;
+        // nodeProperties.strokeStyle.value = node.style.strokeDashArray ? node.style.strokeDashArray : 'None';
+        // nodeProperties.opacity.value = node.style.opacity * 100;
+        // nodeProperties.aspectRatio.cssClass = node.constraints & ej.diagrams.NodeConstraints.AspectRatio ? document.getElementById('aspectRatioBtn').classList.add('e-active') : document.getElementById('aspectRatioBtn').classList.remove('e-active');
+        // node.constraints & ej.diagrams.NodeConstraints.AspectRatio ? aspectRatioBtn.iconCss = 'sf-icon-lock': aspectRatioBtn.iconCss = 'sf-icon-unlock';
+        // nodeProperties.gradient.value = node.style.gradient.type !== 'None' ? 'Gradient' : 'Solid';
+        //  var gradientElement = document.getElementById('gradientStyle');
+        //      if (nodeProperties.gradient.value === 'Gradient') {
+        //          gradientElement.className = 'row db-prop-row db-gradient-style-show';
+        //          nodeProperties.gradientColor.value = node.style.gradient.stops[1].color;
+        //          var gradient = node.style.gradient;
+        //          if (gradient.x1) {
+        //              nodeProperties.gradientDirection.value = 'North';
+        //          }
+        //          else if (gradient.x2) {
+        //              nodeProperties.gradientDirection.value = 'East';
+        //          }
+        //          else if (gradient.y1) {
+        //              nodeProperties.gradientDirection.value = 'West';
+        //          }
+        //          else if (gradient.y2) {
+        //              nodeProperties.gradientDirection.value = 'South';
+        //          }
+        //      }
+        //      else {
+        //          gradientElement.className = 'row db-prop-row db-gradient-style-hide';
+        //          nodeProperties.gradientColor.value = '#ffffff';
+        //          nodeProperties.gradientDirection.value = 'South';
+        //      }     
      }
 
      DiagramClientSideEvents.prototype.bindConnectorProperties = function(connector)
      {
-        connectorProperties.lineType.value  = connector.type;
-        connectorProperties.lineColor.value = UtilityMethods.prototype.getHexColor(connector.style.strokeColor);
-        connectorProperties.lineStyle.value = connector.style.strokeDashArray ? connector.style.strokeDashArray : '';
-        connectorProperties.lineWidth.value = connector.style.strokeWidth;
-        connectorProperties.sourceType.value = connector.sourceDecorator.shape;
-        connectorProperties.sourceSize.value = connector.sourceDecorator.width;
-        connectorProperties.targetType.value = connector.targetDecorator.shape;
-        connectorProperties.targetSize.value = connector.targetDecorator.width;
-        connectorProperties.opacity.value = connector.style.opacity * 100;
-        connectorProperties.lineJumpSize.value = connector.bridgeSpace;
-        connectorProperties.lineJump.checked = connector.constraints & ej.diagrams.ConnectorConstraints.Bridging ? true : false;
+        // connectorProperties.lineType.value  = connector.type;
+        // connectorProperties.lineColor.value = UtilityMethods.prototype.getHexColor(connector.style.strokeColor);
+        // connectorProperties.lineStyle.value = connector.style.strokeDashArray ? connector.style.strokeDashArray : '';
+        // connectorProperties.lineWidth.value = connector.style.strokeWidth;
+        // connectorProperties.sourceType.value = connector.sourceDecorator.shape;
+        // connectorProperties.sourceSize.value = connector.sourceDecorator.width;
+        // connectorProperties.targetType.value = connector.targetDecorator.shape;
+        // connectorProperties.targetSize.value = connector.targetDecorator.width;
+        // connectorProperties.opacity.value = connector.style.opacity * 100;
+        // connectorProperties.lineJumpSize.value = connector.bridgeSpace;
+        // connectorProperties.lineJump.checked = connector.constraints & ej.diagrams.ConnectorConstraints.Bridging ? true : false;
      };
      DiagramClientSideEvents.prototype.bindTextProperties = function(text)
      {
-        textProperties.fontColor.value = UtilityMethods.prototype.getHexColor(text.color);
-        textProperties.fontFamily.value = text.fontFamily;
-        textProperties.fontSize.value = text.fontSize;
-        textProperties.opacity.value = text.opacity * 100;
-        var toolbarTextStyle = document.getElementById('toolbarTextStyle');
-        if (toolbarTextStyle) {
-            toolbarTextStyle = toolbarTextStyle.ej2_instances[0];
-        }
-        if (toolbarTextStyle) {
-            toolbarTextStyle.items[0].cssClass = text.bold ? 'tb-item-start tb-item-selected' : 'tb-item-start';
-            toolbarTextStyle.items[1].cssClass = text.italic ? 'tb-item-middle tb-item-selected' : 'tb-item-middle';
-            toolbarTextStyle.items[2].cssClass = text.textDecoration === 'Underline' ? 'tb-item-end tb-item-selected' : 'tb-item-end';
-        }
-        UtilityMethods.prototype.updateTextAlign(text.textAlign);
+        // textProperties.fontColor.value = UtilityMethods.prototype.getHexColor(text.color);
+        // textProperties.fontFamily.value = text.fontFamily;
+        // textProperties.fontSize.value = text.fontSize;
+        // textProperties.opacity.value = text.opacity * 100;
+        // var toolbarTextStyle = document.getElementById('toolbarTextStyle');
+        // if (toolbarTextStyle) {
+        //     toolbarTextStyle = toolbarTextStyle.ej2_instances[0];
+        // }
+        // if (toolbarTextStyle) {
+        //     toolbarTextStyle.items[0].cssClass = text.bold ? 'tb-item-start tb-item-selected' : 'tb-item-start';
+        //     toolbarTextStyle.items[1].cssClass = text.italic ? 'tb-item-middle tb-item-selected' : 'tb-item-middle';
+        //     toolbarTextStyle.items[2].cssClass = text.textDecoration === 'Underline' ? 'tb-item-end tb-item-selected' : 'tb-item-end';
+        // }
+        // UtilityMethods.prototype.updateTextAlign(text.textAlign);
      }
      return DiagramClientSideEvents;
 }());
