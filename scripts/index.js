@@ -83,7 +83,6 @@ var bulbport =
         {
             id: 'Bulb_port', offset: { x: 0.5, y: 0.95 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: (ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect) | ej.diagrams.PortConstraints.Draw 
         },
     ];
 
@@ -92,7 +91,7 @@ var toggleswitchport =
         {
             id: 'toggleport1', offset: { x: 0.92, y: 0.5 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
+            constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw
         },
     ];
 
@@ -101,7 +100,7 @@ var pushbuttonport =
         {
             id: 'pushbuttonport1', offset: { x: 0.92, y: 0.5 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
+            constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw
         },
     ];
 
@@ -110,17 +109,17 @@ var orPort =
         {
             id: 'Or_port1', offset: { x: 0.05, y: 0.25 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+            constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
         },
         {
             id: 'Or_port3', offset: { x: 0.05, y: 0.73 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+            constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
         },
         {
             id: 'Or_port4', offset: { x: 0.94, y: 0.5 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
+            constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw
         },
     ];
 
@@ -129,17 +128,17 @@ var otherPort =
         {
             id: 'Or_port1', offset: { x: 0.06, y: 0.30 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+            constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
         },
         {
             id: 'Or_port3', offset: { x: 0.06, y: 0.70 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+            constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
         },
         {
             id: 'Or_port4', offset: { x: 0.94, y: 0.48 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
+            constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw
         },
     ];
 
@@ -148,12 +147,12 @@ var pullPort =
         {
             id: 'Pull_port1', offset: { x: 0.06, y: 0.48 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+            constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
         },
         {
             id: 'Pull_port2', offset: { x: 0.94, y: 0.48 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
+            constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw
         },
     ];
 
@@ -162,17 +161,17 @@ var andPort =
         {
             id: 'And_port1', offset: { x: 0.05, y: 0.25 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+            constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
         },
         {
             id: 'And_port3', offset: { x: 0.05, y: 0.73 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+            constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
         },
         {
             id: 'And_port4', offset: { x: 0.94, y: 0.5 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
+            constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw
         },
     ];
 
@@ -181,12 +180,12 @@ var notPort =
         {
             id: 'Not_port1', offset: { x: 0.05, y: 0.5 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+            constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
         },
         {
             id: 'Not_port2', offset: { x: 0.94, y: 0.5 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-            constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
+            constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw
         },
     ];
 
@@ -194,122 +193,122 @@ var DigitPorts =
     [{
         id: 'digitport1', offset: { x: 0.07, y: 0.15 },
         height: 15, width: 13, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+        constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
     },
     {
         id: 'digitport2', offset: { x: 0.07, y: 0.38 },
         height: 15, width: 13, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+        constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
     },
 
     {
         id: 'digitport3', offset: { x: 0.071, y: 0.62 },
         height: 15, width: 13, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+        constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
     },
     {
         id: 'digitport4', offset: { x: 0.072, y: 0.85 },
         height: 15, width: 13, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+        constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
     }];
 
 var DTPorts =
     [{
         id: 'DTport', offset: { x: 0.053, y: 0.425 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+        constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
     },
     {
         id: 'clkport', offset: { x: 0.053, y: 0.590 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+        constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
     },
     {
         id: 'qport', offset: { x: 0.947, y: 0.425 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
+        constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw
     },
     {
         id: 'q1port', offset: { x: 0.947, y: 0.590 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
+        constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw
     },
 
     {
         id: 'preport', offset: { x: 0.5, y: 0.057 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+        constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
     },
     {
         id: 'clrport', offset: { x: 0.5, y: 0.93 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+        constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
     }];
 
 var jkPorts =
     [{
         id: 'jport', offset: { x: 0.06, y: 0.350 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+        constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
     },
     {
         id: 'clkport', offset: { x: 0.06, y: 0.5 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+        constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
     },
 
     {
         id: 'kport', offset: { x: 0.06, y: 0.650 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+        constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
     },
     {
         id: 'qport', offset: { x: 0.95, y: 0.430 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
+        constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw
     },
     {
         id: 'q1port', offset: { x: 0.95, y: 0.590 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
+        constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw
     },
     {
         id: 'preport', offset: { x: 0.5, y: 0.05 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+        constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
     },
     {
         id: 'clrport', offset: { x: 0.5, y: 0.95 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+        constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
     }];
 
 var srPorts =
     [{
         id: 'sport', offset: { x: 0.06, y: 0.25 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+        constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
     },
     {
         id: 'clkport', offset: { x: 0.06, y: 0.5 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+        constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
     },
     {
         id: 'rport', offset: { x: 0.06, y: 0.75 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw 
+        constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect | ej.diagrams.PortConstraints.Draw
     },
 
     {
         id: 'qport', offset: { x: 0.95, y: 0.39 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
+        constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw
     },
     {
         id: 'q1port', offset: { x: 0.95, y: 0.63 },
         height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
-        constraints: ej.diagrams.PortConstraints.Default & ~ ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw 
+        constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect | ej.diagrams.PortConstraints.Draw
     }];
 
 var gates =
@@ -438,6 +437,8 @@ var input =
             children: ['SwOffOuter', 'SwOffInner', 'SwOff', 'SwOn'],
             offsetX: 140,
             offsetY: 100,
+            height: 20,
+            width: 20,
             shape: { shape: 'Toggle Switch' },
             constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
@@ -479,6 +480,8 @@ var input =
             id: 'Push Button',
             children: ['PBOuterRect', 'PBOuterCircle', 'PBInnerCircle'],
             offsetX: 340,
+            height: 30,
+            width: 20,
             offsetY: 100,
             shape: { shape: 'Push Button' },
             constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
@@ -511,6 +514,8 @@ var input =
             children: ['CLKOuterRect', 'CLKInnerPart'],
             offsetX: 440,
             offsetY: 100,
+            height: 30,
+            width: 20,
             shape: { shape: 'Clock' },
             constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
@@ -518,14 +523,14 @@ var input =
         {
             id: 'High Constant',
             shape: { shape: 'High Constant', type: 'Path', data: highconstantdata },
-            style: { fill: '#000000', strokeWidth: 0 }, height: 76, width: 94,
+            style: { fill: '#000000', strokeWidth: 0 }, height: 65, width: 80,
             constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
             id: 'Low Constant',
             shape: { shape: 'Low Constant', type: 'Path', data: lowconstantdata },
-            style: { fill: '#000000', strokeWidth: 0 }, height: 75, width: 96,
+            style: { fill: '#000000', strokeWidth: 0 }, height: 60, width: 80,
             constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
     ];
@@ -584,6 +589,8 @@ var output =
             children: ['FullPath', 'BlackPart', 'InnerBluePart', 'OuterBluePart'],
             offsetX: 540,
             offsetY: 100,
+            height: 30,
+            width: 20,
             shape: { shape: 'Light Bulb' },
             constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
@@ -591,7 +598,7 @@ var output =
         {
             id: '4-Bit Digit',
             shape: { type: 'Path', data: digitdata, shape: '4-Bit Digit' },
-            style: { fill: '#000000', strokeWidth: 0 }, height: 72, width: 80,
+            style: { fill: '#000000', strokeWidth: 0 }, height: 60, width: 80,
             constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
     ];
@@ -600,11 +607,11 @@ var other =
     [
         {
             id: 'Label',
-            shape: { type: 'Path', data: Labeldata, shape: 'Label' },
-            style: { fill: '#000000', strokeWidth: 0 },
+            shape: { type: 'Text', content: 'Text'},
+            style: { strokeColor: 'black', strokeWidth: 2, fill: 'black', color: 'white' },
             height: 55,
             width: 65,
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ (ej.diagrams.NodeConstraints.InConnect | ej.diagrams.NodeConstraints.OutConnect),
         },
 
         {
@@ -1001,36 +1008,55 @@ function collectionChange(args) {
     RunSimulation();
 }
 
-document.getElementById('diagram').onmouseup = function(args)
-{
-    if(args.target.id.indexOf('PB') != -1 || args.target.id.indexOf('Push') != -1 )
-    {
-        var node = diagram.getObject(args.target.id);
-        var child1 = diagram.getObject(node.children[1])
-        child1.style.fill = "white";
-        if (node.addInfo != undefined) {
-            node.addInfo.binarystate = 0;            
-            setBinaryStateFromInput(args.element);
-            RunSimulation();
+document.getElementById('diagram').onmouseup = function (args) {
+    if (args.target.id.indexOf('PB') != -1 || args.target.id.indexOf('Push') != -1) {
+        var targetNode = diagram.findObjectsUnderMouse({ x: args.layerX, y: args.layerY }, args.target.id);
+        if (targetNode.length != 0 && targetNode[0].id != undefined) {
+            if (targetNode[0].id.indexOf('PB') != -1) {
+                var node = diagram.getObject(targetNode[0].parentId);
+                var child1 = diagram.getObject(node.children[1])
+                child1.style.fill = "white";
+                node.addInfo.binarystate = 0;
+                setBinaryStateFromInput(node);
+                RunSimulation();
+            }
+            else {
+                var node = diagram.getObject(targetNode.id);
+                var child1 = diagram.getObject(node.children[1])
+                child1.style.fill = "white";
+                node.binarystate = 0;
+                setBinaryStateFromInput(node);
+                RunSimulation();
+            }
         }
     }
 }
 
-document.getElementById('diagram').onmousedown = function(args)
-{
-    if(args.target.id.indexOf('PB') != -1 || args.target.id.indexOf('Push') != -1 )
-    {
-        var targetNode = diagram.findObjectsUnderMouse({x: args.layerX, y: args.layerY}, args.target.id);      
-        
-        var child1 = diagram.getObject(targetNode.children[1])
-        child1.style.fill = "#05DAC5";
-        args.addInfo.binarystate = 1;            
-        setBinaryStateFromInput(args.element);
-        RunSimulation();
+document.getElementById('diagram').onmousedown = function (args) {
+    if (args.target.id.indexOf('PB') != -1 || args.target.id.indexOf('Push') != -1) {
+        var targetNode = diagram.findObjectsUnderMouse({ x: args.layerX, y: args.layerY }, args.target.id);
+        if (targetNode.length != 0 && targetNode[0].id != undefined) {
+            if (targetNode[0].id.indexOf('PB') != -1) {
+                var node = diagram.getObject(targetNode[0].parentId);
+                var child1 = diagram.getObject(node.children[1])
+                child1.style.fill = "#05DAC5";
+                node.addInfo.binarystate = 1;
+                setBinaryStateFromInput(node);
+                RunSimulation();
+            }
+            else {
+                var node = diagram.getObject(targetNode.id);
+                var child1 = diagram.getObject(node.children[1])
+                child1.style.fill = "#05DAC5";
+                node.binarystate = 1;
+                setBinaryStateFromInput(node);
+                RunSimulation();
+            }
+        }
     }
 }
 
-//window.setInterval(changeState, 3000);
+window.setInterval(changeState, 3000);
 
 function elementDraw(args) {
     if (args.state == "Completed" && args.objectType == "Connector") {
@@ -1041,8 +1067,23 @@ function elementDraw(args) {
 
         if (args.source.sourcePortID != "" && args.source.targetPortID != ""
             && args.source.sourcePortID != undefined && args.source.targetPortID != undefined
-            && sourcenode.addInfo != undefined && sourcenode.addInfo.binarystate != undefined) {
-            args.source.addInfo = { binarystate: sourcenode.addInfo.binarystate };
+            && sourcenode.addInfo != undefined) 
+            {
+                if(args.sourcenode.id.indexOf('Flop') != -1)
+                {
+                    if(args.source.sourcePortID.indexOf('q') != -1 && sourcenode.addInfo.binarystate1 != undefined)
+                    {
+                        args.source.addInfo = { binarystate: sourcenode.addInfo.binarystate1 };            
+                    }
+                    else if(args.source.sourcePortID.indexOf('q1') != -1 && sourcenode.addInfo.binarystate2 != undefined)
+                    {
+                        args.source.addInfo = { binarystate: sourcenode.addInfo.binarystate2 };
+                    }
+                }
+                else
+                {
+                    args.source.addInfo = { binarystate: sourcenode.addInfo.binarystate };
+                }
             RunSimulation();
         }
         else {
@@ -1053,7 +1094,7 @@ function elementDraw(args) {
 
 function getConnectorDefaults(connector) {
     connector.type = 'Bezier';
-    connector.constraints = ej.diagrams.ConnectorConstraints.Default &~ ej.diagrams.ConnectorConstraints.Drag;
+    connector.constraints = ej.diagrams.ConnectorConstraints.Default & ~ej.diagrams.ConnectorConstraints.Drag;
 };
 
 function drop(args) {
@@ -1128,12 +1169,10 @@ function drop(args) {
         args.element.ports.forEach(element => {
             element.shape = 'Circle';
             element.visibility = ej.diagrams.PortVisibility.Visible;
-            if(element.id.indexOf('1') != -1 || element.id.indexOf('3') != -1)
-            {
-                element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect) | ej.diagrams.PortConstraints.Draw;
+            if (element.id.indexOf('1') != -1 || element.id.indexOf('3') != -1) {
+                element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect);
             }
-            else
-            {
+            else {
                 element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect) | ej.diagrams.PortConstraints.Draw;
             }
 
@@ -1159,7 +1198,12 @@ function drop(args) {
         args.element.ports.forEach(element => {
             element.shape = 'Circle';
             element.visibility = ej.diagrams.PortVisibility.Visible;
-            element.constraints = ej.diagrams.PortConstraints.Default | ej.diagrams.PortConstraints.Draw;
+            if (element.id.indexOf('q') != -1 || element.id.indexOf('q1') != -1) {
+                element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect) | ej.diagrams.PortConstraints.Draw;
+            }
+            else {
+                element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect);
+            }
         });
     }
     else if (args.element.id.indexOf("Bus") != -1) {
@@ -1170,12 +1214,10 @@ function drop(args) {
         args.element.ports.forEach(element => {
             element.shape = 'Circle';
             element.visibility = ej.diagrams.PortVisibility.Visible;
-            if(element.id.indexOf('1') != -1 || element.id.indexOf('3') != -1)
-            {
-                element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect) | ej.diagrams.PortConstraints.Draw;
+            if (element.id.indexOf('1') != -1 || element.id.indexOf('3') != -1) {
+                element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect);
             }
-            else
-            {
+            else {
                 element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect) | ej.diagrams.PortConstraints.Draw;
             }
         });
@@ -1188,12 +1230,10 @@ function drop(args) {
         args.element.ports.forEach(element => {
             element.shape = 'Circle';
             element.visibility = ej.diagrams.PortVisibility.Visible;
-            if(element.id.indexOf('1') != -1 || element.id.indexOf('3') != -1)
-            {
-                element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect) | ej.diagrams.PortConstraints.Draw;
+            if (element.id.indexOf('1') != -1 || element.id.indexOf('3') != -1) {
+                element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect);
             }
-            else
-            {
+            else {
                 element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.InConnect) | ej.diagrams.PortConstraints.Draw;
             }
         });
@@ -1207,7 +1247,7 @@ function drop(args) {
             element.shape = 'Circle';
             element.visibility = ej.diagrams.PortVisibility.Visible;
             element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect) | ej.diagrams.PortConstraints.Draw;
-        });        
+        });
     }
     else if (args.element.id.indexOf("Digit") != -1) {
         args.element.addInfo = { binarystate1: 0, binarystate2: 0, binarystate3: 0, binarystate4: 0, controltype: 'outputcontrol' };
@@ -1217,8 +1257,15 @@ function drop(args) {
         args.element.ports.forEach(element => {
             element.shape = 'Circle';
             element.visibility = ej.diagrams.PortVisibility.Visible;
-            element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect) | ej.diagrams.PortConstraints.Draw;
+            element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect);
         });
+    }
+    else if(args.element.id.indexOf("Label") != -1)
+    {
+        args.element.width = 80;
+        args.element.height = 40;
+        args.element.style.fill = 'white';
+        args.element.style.color = 'black';
     }
     diagram.dataBind();
 }
@@ -1432,43 +1479,58 @@ function FlipFlopOutput(element) {
             }
         });
 
-        if (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 1 && Inputstate5 == 1) {
-            outstate1 = 1;
-            outstate2 = 0;
-        }
-        else if (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 1 && Inputstate5 == 1) {
-            outstate1 = 1;
-            outstate2 = 1;
-        }
-        else if (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 0 && Inputstate5 == 1) {
-            outstate1 = 1;
-            outstate2 = 0;
-        }
-        else if (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 0 && Inputstate5 == 1) {
-            outstate1 = 1;
-            outstate2 = 1;
-        }
-        else if (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 1 && Inputstate5 == 0) {
+        if ((Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 1 && Inputstate5 == 0)
+        || (Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 0 && Inputstate4 == 1 && Inputstate5 == 0)
+        || (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 0 && Inputstate4 == 1 && Inputstate5 == 0)
+        || (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 0 && Inputstate4 == 1 && Inputstate5 == 1)
+        || (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 1 && Inputstate5 == 0)
+        || (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 1 && Inputstate5 == 1)
+        || (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 0 && Inputstate4 == 1 && Inputstate5 == 0)
+        || (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 1 && Inputstate5 == 0)
+        || (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 0 && Inputstate4 == 1 && Inputstate5 == 0)
+        || (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 1 && Inputstate5 == 0))
+        {
             outstate1 = 0;
             outstate2 = 1;
         }
-        else if (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 1 && Inputstate5 == 0) {
-            outstate1 = 0;
-            outstate2 = 1;
-        }
-        else if (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 0 && Inputstate5 == 0) {
-            outstate1 = 0;
-            outstate2 = 1;
-        }
-        else if (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 1 && Inputstate5 == 0) {
+
+        else if ((Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 0 && Inputstate4 == 0 && Inputstate5 == 1)
+        || (Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 0 && Inputstate5 == 1)
+        || (Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 1 && Inputstate5 == 1)
+        || (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 0 && Inputstate4 == 0 && Inputstate5 == 1)
+        || (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 0 && Inputstate5 == 1)
+        || (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 0 && Inputstate4 == 0 && Inputstate5 == 1)
+        || (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 0 && Inputstate4 == 1 && Inputstate5 == 1)
+        || (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 0 && Inputstate5 == 1)
+        || (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 1 && Inputstate5 == 1)
+        || (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 0 && Inputstate4 == 0 && Inputstate5 == 1)
+        || (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 0 && Inputstate4 == 1 && Inputstate5 == 1)
+        || (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 0 && Inputstate5 == 1)
+        || (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 1 && Inputstate5 == 1))
+        {
             outstate1 = 1;
-            outstate2 = 0;
-        }
-        else {
-            outstate1 = 0;
             outstate2 = 0;
         }
 
+        else if ((Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 0 && Inputstate4 == 0 && Inputstate5 == 0)
+        || (Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 0 && Inputstate5 == 0)
+        || (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 0 && Inputstate4 == 0 && Inputstate5 == 0)
+        || (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 0 && Inputstate5 == 0)
+        || (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 0 && Inputstate4 == 0 && Inputstate5 == 0)
+        || (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 0 && Inputstate5 == 0)
+        || (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 0 && Inputstate4 == 0 && Inputstate5 == 0)
+        || (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 0 && Inputstate5 == 0))
+        {
+            outstate1 = 1;
+            outstate2 = 1;
+        }
+
+        else if((Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 0 && Inputstate4 == 1 && Inputstate5 == 1))
+        {
+            outstate1 = 0;
+            outstate2 = 0;            
+        }
+        
         element.addInfo.binarystate1 = outstate1;
         element.addInfo.binarystate2 = outstate2;
 
@@ -1536,47 +1598,34 @@ function FlipFlopOutput(element) {
             }
         });
 
-        if (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 1) {
-            outstate1 = 1;
-            outstate2 = 0;
-        }
-        else if (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 1) {
-            outstate1 = 0;
-            outstate2 = 0;
-        }
-        else if (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 0 && Inputstate4 == 1) {
+        if ((Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 0 && Inputstate4 == 1) 
+        || (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 0 && Inputstate4 == 0) 
+        || (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 0 && Inputstate4 == 1) 
+        || (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 0) 
+        || (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 1) 
+        || (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 0)) 
+        {
             outstate1 = 0;
             outstate2 = 1;
         }
-        else if (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 0 && Inputstate4 == 1) {
-            outstate1 = 0;
+        else if ((Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 0) 
+        || (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 0 && Inputstate4 == 0) 
+        || (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 0 && Inputstate4 == 1) 
+        || (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 0) 
+        || (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 1) 
+        || (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 0 && Inputstate4 == 1) 
+        || (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 1))
+        {
+            outstate1 = 1;
+            outstate2 = 0;
+        }        
+        else if ((Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 1) 
+        || (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 0 && Inputstate4 == 0))
+        {
+            outstate1 = 1;
             outstate2 = 1;
         }
-        else if (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 0 && Inputstate4 == 1) {
-            outstate1 = 0;
-            outstate2 = 1;
-        }
-        else if (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 0 && Inputstate4 == 1) {
-            outstate1 = 1;
-            outstate2 = 1;
-        }
-        else if (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 0 && Inputstate4 == 0) {
-            outstate1 = 1;
-            outstate2 = 0;
-        }
-        else if (Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 0 && Inputstate4 == 0) {
-            outstate1 = 1;
-            outstate2 = 0;
-        }
-        else if (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 0) {
-            outstate1 = 1;
-            outstate2 = 0;
-        }
-        else if (Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 0) {
-            outstate1 = 1;
-            outstate2 = 0;
-        }
-        else {
+        else if(Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 0 && Inputstate4 == 0){
             outstate1 = 0;
             outstate2 = 0;
         }
@@ -1648,47 +1697,34 @@ function FlipFlopOutput(element) {
             }
         });
 
-        if (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 1) {
-            outstate1 = 1;
-            outstate2 = 1;
-        }
-        else if (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 1) {
-            outstate1 = 1;
-            outstate2 = 1;
-        }
-        else if (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 0 && Inputstate4 == 1) {
-            outstate1 = 1;
-            outstate2 = 0;
-        }
-        else if (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 0 && Inputstate4 == 1) {
-            outstate1 = 1;
-            outstate2 = 0;
-        }
-        else if (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 0 && Inputstate4 == 1) {
+        if ((Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 0) 
+        || (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 0) 
+        || (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 1) 
+        || (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 0) 
+        || (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 0)) 
+        {
             outstate1 = 0;
             outstate2 = 1;
         }
-        else if (Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 0 && Inputstate4 == 1) {
-            outstate1 = 0;
-            outstate2 = 0;
-        }
-        else if (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 0 && Inputstate4 == 0) {
+        else if ((Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 0 && Inputstate4 == 1) 
+        || (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 0 && Inputstate4 == 1) 
+        || (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 1) 
+        || (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 0 && Inputstate4 == 1) 
+        || (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 0 && Inputstate4 == 1) 
+        || (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 1))
+        {
             outstate1 = 1;
             outstate2 = 0;
-        }
-        else if (Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 0 && Inputstate4 == 0) {
+        }        
+        else if ((Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 0 && Inputstate4 == 0) 
+        || (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 0 && Inputstate4 == 0) 
+        || (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 0 && Inputstate4 == 0) 
+        || (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 0 && Inputstate4 == 0))
+        {
             outstate1 = 1;
-            outstate2 = 0;
-        }
-        else if (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 1 && Inputstate4 == 0) {
-            outstate1 = 0;
             outstate2 = 1;
         }
-        else if (Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 0) {
-            outstate1 = 0;
-            outstate2 = 1;
-        }
-        else {
+        else if(Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 1 && Inputstate4 == 1){
             outstate1 = 0;
             outstate2 = 0;
         }
@@ -1755,43 +1791,16 @@ function FlipFlopOutput(element) {
             }
         });
 
-        if (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 1) {
-            outstate1 = 0;
-            outstate2 = 1;
-        }
-        else if (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 1) {
-            outstate1 = 0;
-            outstate2 = 1;
-        }
-        else if (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 1) {
+        if((Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 0) || (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 1))
+        {
             outstate1 = 1;
             outstate2 = 0;
         }
-        else if (Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 1) {
+        else
+        {
             outstate1 = 0;
-            outstate2 = 1;
-        }
-        else if (Inputstate1 == 0 && Inputstate2 == 1 && Inputstate3 == 0) {
-            outstate1 = 1;
-            outstate2 = 0;
-        }
-        else if (Inputstate1 == 0 && Inputstate2 == 0 && Inputstate3 == 0) {
-            outstate1 = 0;
-            outstate2 = 1;
-        }
-        else if (Inputstate1 == 1 && Inputstate2 == 1 && Inputstate3 == 0) {
-            outstate1 = 0;
-            outstate2 = 1;
-        }
-        else if (Inputstate1 == 1 && Inputstate2 == 0 && Inputstate3 == 0) {
-            outstate1 = 0;
-            outstate2 = 1;
-        }
-        else {
-            outstate1 = 0;
-            outstate2 = 0;
-        }
-
+            outstate2 = 1;            
+        }   
         element.addInfo.binarystate1 = outstate1;
         element.addInfo.binarystate2 = outstate2;
 
@@ -2265,18 +2274,18 @@ function OnInputChanged(args) {
 
 function RunSimulation() {
 
-    var needToDeleteConnector = [];
+    // var needToDeleteConnector = [];
 
-    diagram.connectors.forEach(element => {
-        if(element.sourcePortID == "" || element.sourcePortID == undefined 
-        ||element.targetPortID == "" || element.targetPortID == undefined){
-            needToDeleteConnector.push(element);
-        }
-    });
+    // diagram.connectors.forEach(element => {
+    //     if(element.sourcePortID == "" || element.sourcePortID == undefined 
+    //     ||element.targetPortID == "" || element.targetPortID == undefined){
+    //         needToDeleteConnector.push(element);
+    //     }
+    // });
 
-    needToDeleteConnector.forEach(element => {
-        diagram.remove();
-    });
+    // needToDeleteConnector.forEach(element => {
+    //     diagram.remove();
+    // });
 
     var regulatednodes = [];
     for (let i = 0; i < diagram.nodes.length; i++) {
