@@ -298,7 +298,7 @@ var UtilityMethods = (function () {
             case 'Show Page Breaks':
                 args.item.iconCss = args.item.iconCss ? '' : 'sf-icon-check-tick';
                 diagram.pageSettings.showPageBreaks = !diagram.pageSettings.showPageBreaks;
-                showPageBreaks.checked = !showPageBreaks.checked;
+                //showPageBreaks.checked = !showPageBreaks.checked;
                 break;
             case 'Show Multiple page':
                 args.item.iconCss = args.item.iconCss ? '' : 'sf-icon-check-tick';
@@ -420,7 +420,7 @@ var UtilityMethods = (function () {
             }
         }
         toolbarObj.dataBind();
-        document.getElementById('conTypeBtn').classList.remove('tb-item-selected');
+        //document.getElementById('conTypeBtn').classList.remove('tb-item-selected');
     };
     UtilityMethods.prototype.getPaperSize = function(args)
     {
