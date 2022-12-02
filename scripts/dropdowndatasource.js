@@ -213,10 +213,7 @@ var DropDownDataSources = (function () {
             { prefixIcon: 'sf-icon-pointer', tooltipText: 'Select Tool',cssClass:'tb-item-middle tb-item-selected'},
             { type: 'Separator' },
             {
-                template: '<div style="margin-left:10px;">Clock</div>', visible: false, 
-            },
-            {
-                template: '<input id="numeric" type="text" style="margin-left:10px;" />', visible: false, 
+                template: '<input id="numeric" type="text" style="margin-left:10px;" />', visible: false, tooltipText: 'Signal Duration(ms)'
             },
             {
                 type: 'Separator',template:'<div style="margin-left:1220px;"></div>'

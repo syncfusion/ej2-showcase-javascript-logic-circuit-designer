@@ -471,9 +471,7 @@ var UtilityMethods = (function () {
     };
     UtilityMethods.prototype.paperListChange = function(args)
     {
-        document.getElementById('pageDimension').style.display = 'none';
-        document.getElementById('pageOrientation').style.display = '';
-        var value = args.value || args.item.value;
+        var value = args.item.value;
         var paperSize = this.getPaperSize(value);
         var pageWidth = paperSize.pageWidth;
         var pageHeight = paperSize.pageHeight;
@@ -496,12 +494,10 @@ var UtilityMethods = (function () {
             diagram.pageSettings.height = pageHeight;
         }
         else{
-            document.getElementById('pageOrientation').style.display = 'none';
-            document.getElementById('pageDimension').style.display = '';
             diagram.pageSettings.width = 1460;
             diagram.pageSettings.height = 600;
         }
-        this.updatePaperSelection(designContextMenu.items[1],args.value);
+        this.updatePaperSelection(designContextMenu.items[1],args.item.value);
         diagram.dataBind();
     };
     UtilityMethods.prototype.pageOrientationChange = function(args)

@@ -1186,7 +1186,7 @@ input[type="color"]::-moz-color-swatch {
 }
 
 .e-numeric.e-input-group {
-    height: 28px;
+    
     border: 1px solid #E0E0E0;
     background-color: #ffffff;
 }

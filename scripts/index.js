@@ -83,6 +83,7 @@ var bulbport =
         {
             id: 'Bulb_port', offset: { x: 0.5, y: 0.95 },
             height: 12, width: 10, shape: 'Circle', visibility: ej.diagrams.PortVisibility.Visible,
+            constraints: ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect,
         },
     ];
 
@@ -314,41 +315,41 @@ var srPorts =
 var gates =
     [
         {
-            id: 'OR Gate', shape: { type: 'Path', data: orData, shape: 'OR Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
+            id: 'OR Gate', shape: { type: 'Path', data: orData, shape: 'OR Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 60, width: 94,
             constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
         {
-            id: 'NOR Gate', shape: { type: 'Path', data: nordata, shape: 'NOR Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
-        },
-
-        {
-            id: 'AND Gate', shape: { type: 'Path', data: andData, shape: 'AND Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
+            id: 'NOR Gate', shape: { type: 'Path', data: nordata, shape: 'NOR Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 60, width: 94,
             constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
-            id: 'NAND Gate', shape: { type: 'Path', data: nanddata, shape: 'NAND Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
+            id: 'AND Gate', shape: { type: 'Path', data: andData, shape: 'AND Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 60, width: 94,
             constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
-            id: 'Buffer Gate', shape: { type: 'Path', data: buffer, shape: 'Buffer' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
+            id: 'NAND Gate', shape: { type: 'Path', data: nanddata, shape: 'NAND Gate' }, style: { fill: '#000000', strokeWidth: 0 },  height: 60, width: 94,
             constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
-            id: 'Not Gate', shape: { type: 'Path', data: notData, shape: 'NOT Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
+            id: 'Buffer Gate', shape: { type: 'Path', data: buffer, shape: 'Buffer' }, style: { fill: '#000000', strokeWidth: 0 },  height: 60, width: 94,
             constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
-            id: 'XOR Gate', shape: { type: 'Path', data: xorData, shape: 'XOR Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
+            id: 'Not Gate', shape: { type: 'Path', data: notData, shape: 'NOT Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 60, width: 94,
             constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
-            id: 'XNOR Gate', shape: { type: 'Path', data: xnorData, shape: 'XNOR Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 55, width: 90,
+            id: 'XOR Gate', shape: { type: 'Path', data: xorData, shape: 'XOR Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 60, width: 94,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
+        },
+
+        {
+            id: 'XNOR Gate', shape: { type: 'Path', data: xnorData, shape: 'XNOR Gate' }, style: { fill: '#000000', strokeWidth: 0 }, height: 60, width: 94,
             constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
     ];
@@ -435,10 +436,6 @@ var input =
         {
             id: 'Toggle Switch',
             children: ['SwOffOuter', 'SwOffInner', 'SwOff', 'SwOn'],
-            height: 60,
-            width: 80,
-            offsetX: 140,
-            offsetY: 100,
             shape: { shape: 'Toggle Switch' },
             style: { fill: 'none' },
             constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
@@ -457,8 +454,8 @@ var input =
 
         {
             id: 'PBOuterCircle',
-            height: 40,
-            width: 30,
+            height: 35,
+            width: 35,
             offsetX: 125,
             offsetY: 100,
             shape: { type: 'Path', data: PushButtonOuterCircle },
@@ -468,24 +465,20 @@ var input =
 
         {
             id: 'PBInnerCircle',
-            height: 30,
-            width: 20,
+            height: 25,
+            width: 25,
             offsetX: 125,
             offsetY: 100,
             shape: { type: 'Path', data: PushButtonInnerCircle },
-            style: { strokeColor: 'black', strokeWidth: 2 },
+            style: { strokeColor: 'black', strokeWidth: 2, fill: 'white' },
             constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Select & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
-            id: 'Push Button',
+            id: 'PushButton',
             children: ['PBOuterRect', 'PBOuterCircle', 'PBInnerCircle'],
-            offsetX: 340,
-            height: 30,
-            width: 20,
-            offsetY: 100,
             shape: { shape: 'Push Button' },
-            style: { fill: 'none' },
+            style: { fill: 'white' },
             constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
@@ -502,9 +495,9 @@ var input =
 
         {
             id: 'CLKInnerPart',
-            height: 30,
-            width: 30,
-            offsetX: 125,
+            height: 25,
+            width: 37,
+            offsetX: 128,
             offsetY: 100,
             shape: { type: 'Path', data: ClockInnerPart },
             style: { strokeColor: 'black', strokeWidth: 2, fill: 'white' },
@@ -514,10 +507,6 @@ var input =
         {
             id: 'Clock',
             children: ['CLKOuterRect', 'CLKInnerPart'],
-            offsetX: 440,
-            offsetY: 100,
-            height: 30,
-            width: 20,
             shape: { shape: 'Clock' },
             style: { fill: 'none' },
             constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
@@ -526,14 +515,14 @@ var input =
         {
             id: 'High Constant',
             shape: { shape: 'High Constant', type: 'Path', data: highconstantdata },
-            style: { fill: '#000000', strokeWidth: 0 }, height: 65, width: 80,
+            style: { fill: '#000000', strokeWidth: 0 }, height: 76, width: 95,
             constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
             id: 'Low Constant',
             shape: { shape: 'Low Constant', type: 'Path', data: lowconstantdata },
-            style: { fill: '#000000', strokeWidth: 0 }, height: 60, width: 80,
+            style: { fill: '#000000', strokeWidth: 0 }, height: 75, width: 95,
             constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
     ];
@@ -590,19 +579,15 @@ var output =
         {
             id: 'Bulb',
             children: ['FullPath', 'BlackPart', 'InnerBluePart', 'OuterBluePart'],
-            offsetX: 540,
-            offsetY: 100,
-            height: 30,
-            width: 20,
             shape: { shape: 'Light Bulb' },
-            style: { fill: 'none' },
+            style: { fill: 'none', padding: '2' },
             constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
 
         {
             id: '4-Bit Digit',
             shape: { type: 'Path', data: digitdata, shape: '4-Bit Digit' },
-            style: { fill: '#000000', strokeWidth: 0 }, height: 60, width: 80,
+            style: { fill: '#000000', strokeWidth: 0 }, height: 80, width: 90,
             constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect,
         },
     ];
@@ -1012,49 +997,41 @@ function collectionChange(args) {
 }
 
 document.getElementById('diagram').onmouseup = function (args) {
-    if (args.target.id.indexOf('PB') != -1 || args.target.id.indexOf('Push') != -1) {
-        var targetNode = diagram.findObjectsUnderMouse({ x: args.layerX, y: args.layerY }, args.target.id);
-        if (targetNode.length != 0 && targetNode[0].id != undefined) {
-            if (targetNode[0].id.indexOf('PB') != -1) {
-                var node = diagram.getObject(targetNode[0].parentId);
-                var child1 = diagram.getObject(node.children[1])
-                child1.style.fill = "white";
-                node.addInfo.binarystate = 0;
-                setBinaryStateFromInput(node);
-                RunSimulation();
+    if (args.target.id.indexOf('Push') != -1) {
+        var targetid = args.target.id.replace("group_container", "");
+        var targetnode = undefined;
+        diagram.nodes.forEach(element => {
+            if (element.id == targetid) {
+                targetnode = element;
             }
-            else {
-                var node = diagram.getObject(targetNode.id);
-                var child1 = diagram.getObject(node.children[1])
-                child1.style.fill = "white";
-                node.binarystate = 0;
-                setBinaryStateFromInput(node);
-                RunSimulation();
-            }
+        });
+
+        if (targetnode != undefined) {
+            var child1 = diagram.getObject(targetnode.children[1]);
+            child1.style.fill = "white";
+            targetnode.addInfo.binarystate = 0;
+            setBinaryStateFromInput(targetnode);
+            RunSimulation();
         }
     }
 }
 
 document.getElementById('diagram').onmousedown = function (args) {
-    if (args.target.id.indexOf('PB') != -1 || args.target.id.indexOf('Push') != -1) {
-        var targetNode = diagram.findObjectsUnderMouse({ x: args.layerX, y: args.layerY }, args.target.id);
-        if (targetNode.length != 0 && targetNode[0].id != undefined) {
-            if (targetNode[0].id.indexOf('PB') != -1) {
-                var node = diagram.getObject(targetNode[0].parentId);
-                var child1 = diagram.getObject(node.children[1])
-                child1.style.fill = "#05DAC5";
-                node.addInfo.binarystate = 1;
-                setBinaryStateFromInput(node);
-                RunSimulation();
+    if (args.target.id.indexOf('Push') != -1) {
+        var targetid = args.target.id.replace("group_container", "");
+        var targetnode = undefined;
+        diagram.nodes.forEach(element => {
+            if (element.id == targetid) {
+                targetnode = element;
             }
-            else {
-                var node = diagram.getObject(targetNode.id);
-                var child1 = diagram.getObject(node.children[1])
-                child1.style.fill = "#05DAC5";
-                node.binarystate = 1;
-                setBinaryStateFromInput(node);
-                RunSimulation();
-            }
+        });
+
+        if (targetnode != undefined) {
+            var child1 = diagram.getObject(targetnode.children[1]);
+            child1.style.fill = "#05DAC5";
+            targetnode.addInfo.binarystate = 1;
+            setBinaryStateFromInput(targetnode);
+            RunSimulation();
         }
     }
 }
@@ -1082,7 +1059,7 @@ function elementDraw(args) {
         if (args.source.sourcePortID != "" && args.source.targetPortID != ""
             && args.source.sourcePortID != undefined && args.source.targetPortID != undefined
             && sourcenode.addInfo != undefined) {
-            if (args.sourcenode.id.indexOf('Flop') != -1) {
+            if (sourcenode.id.indexOf('Flop') != -1) {
                 if (args.source.sourcePortID.indexOf('q') != -1 && sourcenode.addInfo.binarystate1 != undefined) {
                     args.source.addInfo = { binarystate: sourcenode.addInfo.binarystate1 };
                 }
@@ -1266,7 +1243,7 @@ function drop(args) {
         args.element.ports.forEach(element => {
             element.shape = 'Circle';
             element.visibility = ej.diagrams.PortVisibility.Visible;
-            element.constraints = (ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect);
+            element.constraints = ej.diagrams.PortConstraints.Default & ~ej.diagrams.PortConstraints.OutConnect;
         });
     }
     else if (args.element.id.indexOf("Label") != -1) {
@@ -3030,6 +3007,7 @@ var numeric = new ej.inputs.NumericTextBox({
     // based on the step value.
     step: 1000,
     format: '###',
+    height: 30,
     change: function (args) {
 
         window.clearInterval(clockinterval);
