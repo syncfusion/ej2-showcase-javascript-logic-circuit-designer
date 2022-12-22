@@ -982,6 +982,7 @@ var diagram = new ej.diagrams.Diagram({
     elementDraw: elementDraw, selectedItems: { constraints: ej.diagrams.SelectorConstraints.All & ~ej.diagrams.SelectorConstraints.ResizeAll & ~ej.diagrams.SelectorConstraints.Rotate },
     pageSettings: { showPageBreaks: false },
     collectionChange: collectionChange,
+    scrollChange:scrollChange,
     pageSettings: {
         background: { color: '#FFFFFF' }, width: 600, height: 1460, margin: { left: 5, top: 5 },
         orientation: 'Landscape', showPageBreaks: false,
@@ -998,6 +999,11 @@ function collectionChange(args) {
     RunSimulation();
 }
 
+ function scrollChange(args){
+    if(args.panState !=='Start'){
+    btnZoomIncrement.content = Math.round(diagram.scrollSettings.currentZoom * 100) + ' %';
+    }
+ }
 document.getElementById('diagram').onmouseup = function (args) {
     if (args.target.id.indexOf('Push') != -1) {
         var targetid = args.target.id.replace("group_container", "");
@@ -1046,7 +1052,10 @@ function elementDraw(args) {
         var targetnode = diagram.getObject(args.source.targetID);
         var sourceport = undefined;
         var targetport = undefined;
-
+        for(i=0;i<args.source.segments.length;i++)
+        {
+            args.source.segments[i].isInternalSegment = true;
+        }
         if (targetnode != undefined && targetnode.ports.length > 0) {
             targetnode.ports.forEach(element => {
                 if (element.id == args.source.targetPortID) {
@@ -3119,6 +3128,12 @@ var pasteItem = ['Paste'];
 //Initialize Toolbar component
 var toolbarObj = new ej.navigations.Toolbar({
     clicked: function (args) { UtilityMethods.prototype.toolbarClick(args) },
+    created: function (args) {
+        if(diagram !== undefined){
+            var btnZoomIncrement = new ej.splitbuttons.DropDownButton({ items: zoomMenuItems, content: Math.round(diagram.scrollSettings.currentZoom * 100) + ' %', select: zoomChange });
+            btnZoomIncrement.appendTo('#btnZoomIncrement');
+        }
+    },
     items: DropDownDataSources.prototype.toolbarItems(),
     width: '100%',
     overflowMode: 'Popup'
