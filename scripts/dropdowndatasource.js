@@ -215,11 +215,11 @@ var DropDownDataSources = (function () {
             {
                 template: ' <div class="db-text-container" style="margin-left:10px;"><div class="db-text-input"><input id="numeric" type="text" style="margin-left:10px;" /></div></div>', visible: false, tooltipText: 'Signal Duration(ms)'
             },
+            // {
+            //     type: 'Separator',template:'<div style="margin-left:1000px;"></div>'
+            // },
             {
-                type: 'Separator',template:'<div style="margin-left:1000px;"></div>'
-            },
-            {
-                cssClass: 'tb-item-end tb-zoom-dropdown-btn', template: '<button id="btnZoomIncrement"></button>',
+                cssClass: 'tb-item-end tb-zoom-dropdown-btn', template: '<button id="btnZoomIncrement"></button>',align:'Right'
             },
         ];
         return items;

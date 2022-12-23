@@ -11,19 +11,19 @@ var DiagramClientSideEvents = (function () {
                 if(args.newValue.length>0 && args.newValue[0] instanceof ej.diagrams.Connector){
                     diagram.selectedItems = { constraints: ej.diagrams.SelectorConstraints.All };
                     toolbarObj.hideItem(6,true);
-                    toolbarObj.items[7].template = '<div style="margin-left:1000px;"></div>';
+                    // toolbarObj.items[7].template = '<div style="margin-left:1000px;"></div>';
                 }
                 else{
                     if(diagram.selectedItems.nodes.length > 0 &&
                          diagram.selectedItems.nodes[0].id.indexOf('Clock') != -1)
                     {
                         toolbarObj.hideItem(6,false);
-                        toolbarObj.items[7].template = '<div style="margin-left:900px;"></div>';
+                        // toolbarObj.items[7].template = '<div style="margin-left:900px;"></div>';
                     }
                     else
                     {
                         toolbarObj.hideItem(6,true);
-                        toolbarObj.items[7].template = '<div style="margin-left:1000px;"></div>';
+                        // toolbarObj.items[7].template = '<div style="margin-left:1000px;"></div>';
                     }
                 diagram.selectedItems = { constraints: ej.diagrams.SelectorConstraints.All & ~ej.diagrams.SelectorConstraints.Rotate & ~ej.diagrams.SelectorConstraints.ResizeAll };
                 }
