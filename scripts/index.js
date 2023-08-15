@@ -978,9 +978,9 @@ var diagram = new ej.diagrams.Diagram({
     width: '100%', height: '100%',
     nodes: nodes, connectors: connectors, drawingObject: { type: 'Bezier',bezierSettings:{ controlPointsVisibility: ej.diagrams.ControlPointsVisibility.Source | ej.diagrams.ControlPointsVisibility.Target
         ,smoothness: ej.diagrams.BezierSmoothness.SymmetricDistance } },
-    created: created, click: click, drop: drop, getConnectorDefaults: getConnectorDefaults, //mouseLeave: mouseLeave,
+    created: created, click: click, drop: drop, getConnectorDefaults: getConnectorDefaults,  getNodeDefaults: getNodeDefaults,
     elementDraw: elementDraw, selectedItems: { constraints: ej.diagrams.SelectorConstraints.All & ~ej.diagrams.SelectorConstraints.ResizeAll & ~ej.diagrams.SelectorConstraints.Rotate },
-    pageSettings: { showPageBreaks: false },
+    pageSettings: { showPageBreaks: false ,multiplePage:true},
     collectionChange: collectionChange,
     scrollChange:scrollChange,
     pageSettings: {
@@ -1098,7 +1098,10 @@ function getConnectorDefaults(connector) {
     ,smoothness: ej.diagrams.BezierSmoothness.SymmetricDistance }
     connector.constraints = ej.diagrams.ConnectorConstraints.Default & ~ej.diagrams.ConnectorConstraints.Drag;
 };
-
+function getNodeDefaults(node){
+    node.constraints = ej.diagrams.NodeConstraints.Default &~ ej.diagrams.NodeConstraints.InConnect &~ ej.diagrams.NodeConstraints.OutConnect;
+    node.annotations =[{ constraints: ej.diagrams.AnnotationConstraints.ReadOnly}]
+}
 function drop(args) {
     if (args.element.id.indexOf("Switch") != -1) {
         args.element.addInfo = { binarystate: 0, controltype: 'inputcontrol' };
@@ -1387,7 +1390,7 @@ function mouseLeave(args) {
 
 function created(args) {
 
-    diagram.fitToPage({ mode: 'Width' });
+   diagram.fitToPage({ mode: 'Width' });
 
     RunSimulation();
 };
@@ -3278,7 +3281,8 @@ function zoomChange(args){
                 zoomCurrentValue.content = (diagram.scrollSettings.currentZoom * 100).toFixed() + '%';
                 break;
             case 'Zoom to Fit':
-                diagram.fitToPage({ mode: 'Page', region: 'Content'});
+                zoom.zoomFactor = 1 / currentZoom - 1;
+                diagram.zoomTo(zoom);
                 zoomCurrentValue.content = diagram.scrollSettings.currentZoom;
                 break;
             case 'Zoom to 50%':
